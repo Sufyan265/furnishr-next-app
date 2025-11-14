@@ -1,6 +1,7 @@
-
 import type { Product, Category, Review, BlogPost, Faq } from './types';
 import { categoryImages, productImages as productImagesMap, blogImages as blogImagesMap } from './placeholder-images';
+
+const futureDate = (days: number) => new Date(new Date().getTime() + days * 24 * 60 * 60 * 1000).toISOString();
 
 export const categories: Category[] = [
   { id: '1', slug: 'living-room', name: 'Living Room', imageId: 'category-living-room', imageUrl: categoryImages['living-room'].imageUrl, imageHint: categoryImages['living-room'].imageHint },
@@ -26,6 +27,10 @@ export const products: Product[] = [
     style: 'Modern',
     material: 'Linen',
     stock: 15,
+    deal: {
+      discountPercentage: 15,
+      expiresAt: futureDate(3),
+    },
   },
   {
     id: '2',
@@ -77,6 +82,10 @@ export const products: Product[] = [
     style: 'Mid-Century',
     material: 'Leather',
     stock: 8,
+    deal: {
+      discountPercentage: 20,
+      expiresAt: futureDate(1),
+    },
   },
   {
     id: '5',

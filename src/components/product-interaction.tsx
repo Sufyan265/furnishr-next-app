@@ -12,11 +12,12 @@ import {
 import { Button } from '@/components/ui/button';
 import { useCart } from '@/context/cart-context';
 import { useToast } from '@/hooks/use-toast';
-import { Minus, Plus, ShoppingCart, Info } from 'lucide-react';
+import { Minus, Plus, ShoppingCart, Info, Percent } from 'lucide-react';
 import type { Product } from '@/lib/types';
 import { getImages } from '@/lib/placeholder-images';
 import { Badge } from './ui/badge';
 import { cn } from '@/lib/utils';
+import CountdownTimer from './countdown-timer';
 
 interface ProductInteractionProps {
   product: Product;
@@ -40,8 +41,11 @@ export default function ProductInteraction({ product }: ProductInteractionProps)
 
   const productImages = getImages(product.imageIds);
 
+  const isDealActive = product.deal && new Date(product.deal.expiresAt) > new Date();
+  const discountedPrice = isDealActive ? product.price * (1 - product.deal.discountPercentage / 100) : product.price;
+
   const handleAddToCart = () => {
-    addToCart(product, quantity);
+    addToCart({ ...product, price: discountedPrice }, quantity);
     toast({
       title: "Added to Cart",
       description: `${quantity} x ${product.name} has been added to your cart.`,
@@ -70,6 +74,11 @@ export default function ProductInteraction({ product }: ProductInteractionProps)
                     fill
                     className="object-cover"
                   />
+                  {isDealActive && (
+                    <Badge className="absolute top-4 left-4 text-lg bg-destructive hover:bg-destructive">
+                      <Percent className="mr-2 h-5 w-5" /> {product.deal.discountPercentage}% OFF
+                    </Badge>
+                  )}
                 </div>
               </CarouselItem>
             ))}
@@ -95,10 +104,29 @@ export default function ProductInteraction({ product }: ProductInteractionProps)
           <p className="text-sm text-muted-foreground">{product.category}</p>
           <h1 className="font-headline text-3xl md:text-4xl font-bold">{product.name}</h1>
           
-          <div className="flex items-center gap-4">
-            <p className="text-3xl font-semibold text-primary">£{product.price.toFixed(2)}</p>
+          <div className="flex items-center gap-4 flex-wrap">
+            <div className="flex items-baseline gap-3">
+              <p className={cn(
+                "text-3xl font-semibold text-primary",
+                isDealActive && "text-destructive"
+              )}>
+                £{discountedPrice.toFixed(2)}
+              </p>
+              {isDealActive && (
+                <p className="text-xl font-medium text-muted-foreground line-through">
+                  £{product.price.toFixed(2)}
+                </p>
+              )}
+            </div>
             <StockBadge stock={product.stock} />
           </div>
+
+          {isDealActive && (
+            <div className="space-y-2">
+                <p className="text-sm font-semibold text-destructive">Limited Time Offer! Ends in:</p>
+                <CountdownTimer targetDate={product.deal.expiresAt} />
+            </div>
+          )}
 
           <div className="flex items-center space-x-2">
             <div className="flex items-center space-x-2 border rounded-md p-1">

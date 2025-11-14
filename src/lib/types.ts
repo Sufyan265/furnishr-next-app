@@ -1,4 +1,3 @@
-
 import type { ImagePlaceholder } from "./placeholder-images";
 
 export interface Product {
@@ -21,6 +20,10 @@ export interface Product {
   style: string;
   material: string;
   stock: number;
+  deal?: {
+    discountPercentage: number;
+    expiresAt: string;
+  };
 }
 
 export interface Review {
