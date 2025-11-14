@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, Award, Truck, Undo, Sparkles, Feather, ShieldCheck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import {
   Carousel,
   CarouselContent,
@@ -10,12 +10,16 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
-import { categories, featuredProducts } from '@/lib/data';
+import { categories, featuredProducts, reviews } from '@/lib/data';
 import ProductCard from '@/components/product-card';
 import { heroImages, getImage } from '@/lib/placeholder-images';
+import StarRating from '@/components/star-rating';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 
 export default function Home() {
   const chooseUsImage = getImage('category-living-room');
+  const featuredReviews = reviews.filter(r => r.rating >= 4.5).slice(0, 3);
+
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <section className="w-full pt-0">
@@ -122,6 +126,35 @@ export default function Home() {
             <Button asChild variant="outline">
               <Link href="/products">View All Products <ArrowRight className="ml-2 h-4 w-4" /></Link>
             </Button>
+          </div>
+        </div>
+      </section>
+
+       <section>
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="font-headline text-3xl md:text-4xl font-bold">What Our Customers Say</h2>
+            <p className="mt-2 text-lg text-muted-foreground">Real stories from happy homeowners.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {featuredReviews.map((review) => (
+              <Card key={review.id} className="flex flex-col justify-between">
+                <CardHeader>
+                  <div className="flex items-center gap-4">
+                    <Avatar>
+                        <AvatarFallback>{review.author.charAt(0)}</AvatarFallback>
+                    </Avatar>
+                    <div>
+                        <p className="font-semibold">{review.author}</p>
+                        <StarRating rating={review.rating} />
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <blockquote className="text-muted-foreground italic">"{review.comment}"</blockquote>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
