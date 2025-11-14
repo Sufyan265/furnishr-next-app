@@ -64,7 +64,7 @@ export default function Home() {
             </p>
           </div>
           <div className="mt-16 grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <Card className="bg-secondary/50">
                   <CardContent className="p-6 text-center flex flex-col items-center gap-3">
                     <Award className="h-10 w-10 text-primary" />
@@ -113,7 +113,7 @@ export default function Home() {
             <h2 className="font-headline text-3xl md:text-4xl font-bold">Featured Products</h2>
             <p className="mt-2 text-lg text-muted-foreground">Handpicked for you, loved by many.</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
             {featuredProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
@@ -132,7 +132,7 @@ export default function Home() {
             <h2 className="font-headline text-3xl md:text-4xl font-bold">Shop by Category</h2>
             <p className="mt-2 text-lg text-muted-foreground">Find the perfect pieces for every room.</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
             {categories.map((category) => (
               <Link key={category.id} href={`/products?category=${category.slug}`} className="group relative block">
                 <Card className="overflow-hidden">

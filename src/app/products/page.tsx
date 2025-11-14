@@ -39,7 +39,7 @@ export default function ProductsPage({
         </p>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-8">
+      <div className="flex flex-col md:flex-row gap-8 lg:gap-12">
         {/* Filters Sidebar */}
         <aside className="w-full md:w-1/4 lg:w-1/5">
           <div className="sticky top-20">
@@ -98,10 +98,10 @@ export default function ProductsPage({
 
         {/* Products Grid */}
         <main className="w-full md:w-3/4 lg:w-4/5">
-          <div className="flex justify-between items-center mb-4">
+          <div className="flex flex-col sm:flex-row justify-between items-center mb-4 gap-4">
             <p className="text-muted-foreground text-sm">{filteredProducts.length} products</p>
             <Select>
-              <SelectTrigger className="w-[180px]">
+              <SelectTrigger className="w-full sm:w-[180px]">
                 <SelectValue placeholder="Sort by" />
               </SelectTrigger>
               <SelectContent>
@@ -112,7 +112,7 @@ export default function ProductsPage({
               </SelectContent>
             </Select>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
             {filteredProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}

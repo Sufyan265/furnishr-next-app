@@ -41,8 +41,8 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
       <section className="container mx-auto px-4">
         <ProductInteraction product={product} />
 
-        <div className="grid md:grid-cols-3 gap-12 mt-16">
-          <div className="md:col-span-2">
+        <div className="grid md:grid-cols-3 gap-12 mt-12 md:mt-16">
+          <div className="md:col-span-2 space-y-12">
             <Card>
               <CardHeader>
                 <CardTitle className="font-headline text-2xl">Product Details</CardTitle>
@@ -50,7 +50,7 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed">{product.description}</p>
                 <Separator className="my-6" />
-                <div className="grid sm:grid-cols-2 gap-6">
+                <div className="grid sm:grid-cols-2 gap-x-6 gap-y-8">
                   <div>
                     <h3 className="font-semibold mb-3">Features</h3>
                     <ul className="list-disc list-inside space-y-2 text-muted-foreground">
@@ -68,8 +68,41 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                 </div>
               </CardContent>
             </Card>
+
+            <div>
+              <h2 className="font-headline text-3xl font-bold mb-8 text-center">Customer Reviews</h2>
+              {reviews.length > 0 ? (
+                <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
+                  {reviews.map(review => (
+                    <Card key={review.id}>
+                      <CardHeader>
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-3">
+                            <Avatar>
+                              <AvatarFallback>{review.author.charAt(0)}</AvatarFallback>
+                            </Avatar>
+                            <div>
+                              <p className="font-semibold">{review.author}</p>
+                              <p className="text-xs text-muted-foreground">{new Date(review.date).toLocaleDateString()}</p>
+                            </div>
+                          </div>
+                          <StarRating rating={review.rating} />
+                        </div>
+                      </CardHeader>
+                      <CardContent>
+                        <h3 className="font-semibold mb-2">{review.title}</h3>
+                        <p className="text-muted-foreground text-sm leading-relaxed">"{review.comment}"</p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              ) : (
+                <p className="text-center text-muted-foreground">This product doesn't have any reviews yet.</p>
+              )}
+            </div>
+
           </div>
-          <div className="space-y-6">
+          <div className="space-y-6 md:sticky md:top-24 h-fit">
               <Card className="bg-card">
                   <CardContent className="p-6 space-y-4">
                        <div className="flex items-center gap-4">
@@ -114,38 +147,6 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                   </CardContent>
               </Card>
           </div>
-        </div>
-
-        <div className="mt-16">
-          <h2 className="font-headline text-3xl font-bold mb-8 text-center">Customer Reviews</h2>
-          {reviews.length > 0 ? (
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {reviews.map(review => (
-                <Card key={review.id}>
-                  <CardHeader>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <Avatar>
-                          <AvatarFallback>{review.author.charAt(0)}</AvatarFallback>
-                        </Avatar>
-                        <div>
-                          <p className="font-semibold">{review.author}</p>
-                          <p className="text-xs text-muted-foreground">{new Date(review.date).toLocaleDateString()}</p>
-                        </div>
-                      </div>
-                      <StarRating rating={review.rating} />
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <h3 className="font-semibold mb-2">{review.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">"{review.comment}"</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          ) : (
-            <p className="text-center text-muted-foreground">This product doesn't have any reviews yet.</p>
-          )}
         </div>
       </section>
     </div>
