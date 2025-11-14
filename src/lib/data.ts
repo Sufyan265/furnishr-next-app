@@ -24,6 +24,7 @@ export const products: Product[] = [
     dimensions: { width: '280cm', height: '85cm', depth: '160cm' },
     style: 'Modern',
     material: 'Linen',
+    stock: 15,
   },
   {
     id: '2',
@@ -40,6 +41,7 @@ export const products: Product[] = [
     dimensions: { width: '180cm', height: '75cm', depth: '90cm' },
     style: 'Scandinavian',
     material: 'Oak',
+    stock: 25,
   },
   {
     id: '3',
@@ -56,6 +58,7 @@ export const products: Product[] = [
     dimensions: { width: '160cm', height: '110cm', depth: '210cm' },
     style: 'Contemporary',
     material: 'Velvet',
+    stock: 0,
   },
   {
     id: '4',
@@ -72,6 +75,7 @@ export const products: Product[] = [
     dimensions: { width: '75cm', height: '80cm', depth: '85cm' },
     style: 'Mid-Century',
     material: 'Leather',
+    stock: 8,
   },
   {
     id: '5',
@@ -88,6 +92,7 @@ export const products: Product[] = [
     dimensions: { width: '140cm', height: '76cm', depth: '60cm' },
     style: 'Classic',
     material: 'Walnut',
+    stock: 12,
   },
   {
     id: '6',
@@ -104,6 +109,7 @@ export const products: Product[] = [
     dimensions: { width: '60cm', height: '180cm', depth: '50cm' },
     style: 'Industrial',
     material: 'Metal',
+    stock: 30,
   },
   {
     id: '7',
@@ -120,6 +126,7 @@ export const products: Product[] = [
     dimensions: { width: '120cm', height: '200cm', depth: '30cm' },
     style: 'Modern',
     material: 'Brass',
+    stock: 4,
   },
   {
     id: '8',
@@ -136,6 +143,7 @@ export const products: Product[] = [
     dimensions: { width: '240cm', height: '1cm', depth: '170cm' },
     style: 'Bohemian',
     material: 'Wool',
+    stock: 40,
   },
 ];
 

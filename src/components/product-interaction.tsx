@@ -12,13 +12,25 @@ import {
 import { Button } from '@/components/ui/button';
 import { useCart } from '@/context/cart-context';
 import { useToast } from '@/hooks/use-toast';
-import { Minus, Plus, ShoppingCart } from 'lucide-react';
+import { Minus, Plus, ShoppingCart, Info } from 'lucide-react';
 import type { Product } from '@/lib/types';
 import { getImages } from '@/lib/placeholder-images';
+import { Badge } from './ui/badge';
+import { cn } from '@/lib/utils';
 
 interface ProductInteractionProps {
   product: Product;
 }
+
+const StockBadge = ({ stock }: { stock: number }) => {
+  if (stock === 0) {
+    return <Badge variant="destructive">Out of Stock</Badge>;
+  }
+  if (stock <= 5) {
+    return <Badge variant="secondary" className="bg-yellow-100 text-yellow-800 border-yellow-200">Low Stock ({stock} left)</Badge>;
+  }
+  return <Badge variant="secondary" className="bg-green-100 text-green-800 border-green-200">In Stock</Badge>;
+};
 
 export default function ProductInteraction({ product }: ProductInteractionProps) {
   const [quantity, setQuantity] = useState(1);
@@ -37,7 +49,10 @@ export default function ProductInteraction({ product }: ProductInteractionProps)
   };
 
   const handleQuantityChange = (amount: number) => {
-    setQuantity(prev => Math.max(1, prev + amount));
+    const newQuantity = quantity + amount;
+    if (newQuantity > 0 && newQuantity <= product.stock) {
+      setQuantity(newQuantity);
+    }
   };
 
   return (
@@ -79,7 +94,11 @@ export default function ProductInteraction({ product }: ProductInteractionProps)
         <div className="space-y-4">
           <p className="text-sm text-muted-foreground">{product.category}</p>
           <h1 className="font-headline text-3xl md:text-4xl font-bold">{product.name}</h1>
-          <p className="text-3xl font-semibold text-primary">£{product.price.toFixed(2)}</p>
+          
+          <div className="flex items-center gap-4">
+            <p className="text-3xl font-semibold text-primary">£{product.price.toFixed(2)}</p>
+            <StockBadge stock={product.stock} />
+          </div>
 
           <div className="flex items-center space-x-2">
             <div className="flex items-center space-x-2 border rounded-md p-1">
@@ -87,12 +106,13 @@ export default function ProductInteraction({ product }: ProductInteractionProps)
                 <Minus className="h-4 w-4" />
               </Button>
               <span className="w-8 text-center font-bold">{quantity}</span>
-              <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => handleQuantityChange(1)}>
+              <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => handleQuantityChange(1)} disabled={quantity >= product.stock || product.stock === 0}>
                 <Plus className="h-4 w-4" />
               </Button>
             </div>
-            <Button size="lg" className="w-full font-bold" onClick={handleAddToCart}>
-              <ShoppingCart className="mr-2 h-5 w-5" /> Add to Cart
+            <Button size="lg" className="w-full font-bold" onClick={handleAddToCart} disabled={product.stock === 0}>
+              <ShoppingCart className="mr-2 h-5 w-5" />
+              {product.stock > 0 ? 'Add to Cart' : 'Out of Stock'}
             </Button>
           </div>
         </div>

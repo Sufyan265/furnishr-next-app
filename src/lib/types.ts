@@ -19,6 +19,7 @@ export interface Product {
   };
   style: string;
   material: string;
+  stock: number;
 }
 
 export interface Review {
