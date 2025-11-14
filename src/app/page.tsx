@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Award, Truck, Undo } from 'lucide-react';
+import { ArrowRight, Award, Truck, Undo, Sparkles, Feather, ShieldCheck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {
@@ -12,9 +12,10 @@ import {
 } from '@/components/ui/carousel';
 import { categories, featuredProducts } from '@/lib/data';
 import ProductCard from '@/components/product-card';
-import { heroImages } from '@/lib/placeholder-images';
+import { heroImages, getImage } from '@/lib/placeholder-images';
 
 export default function Home() {
+  const chooseUsImage = getImage('category-living-room');
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <section className="w-full pt-0">
@@ -54,29 +55,59 @@ export default function Home() {
         </Carousel>
       </section>
 
-      <section className="bg-secondary/50">
+      <section>
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="flex flex-col items-center">
-              <Truck className="h-10 w-10 text-primary" />
-              <h3 className="mt-4 font-headline text-xl font-semibold">Free UK Delivery</h3>
-              <p className="mt-2 text-muted-foreground">On all orders over £250. No fuss.</p>
+          <div className="text-center">
+            <h2 className="font-headline text-3xl md:text-4xl font-bold">Why Choose Furnishr?</h2>
+            <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
+              We're more than just a furniture store. We're your partner in creating a home you love.
+            </p>
+          </div>
+          <div className="mt-16 grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
+            <div className="grid grid-cols-2 gap-8">
+                <Card className="bg-secondary/50">
+                  <CardContent className="p-6 text-center flex flex-col items-center gap-3">
+                    <Award className="h-10 w-10 text-primary" />
+                    <h3 className="font-headline text-xl font-semibold">Timeless Design</h3>
+                    <p className="text-muted-foreground text-sm">Contemporary and enduring pieces that transcend trends.</p>
+                  </CardContent>
+                </Card>
+                <Card className="bg-secondary/50">
+                  <CardContent className="p-6 text-center flex flex-col items-center gap-3">
+                    <ShieldCheck className="h-10 w-10 text-primary" />
+                    <h3 className="font-headline text-xl font-semibold">Unmatched Quality</h3>
+                    <p className="text-muted-foreground text-sm">Built to last with the finest materials and craftsmanship.</p>
+                  </CardContent>
+                </Card>
+                <Card className="bg-secondary/50">
+                  <CardContent className="p-6 text-center flex flex-col items-center gap-3">
+                    <Feather className="h-10 w-10 text-primary" />
+                    <h3 className="font-headline text-xl font-semibold">Sustainable Choice</h3>
+                    <p className="text-muted-foreground text-sm">Responsibly sourced materials for a healthier planet.</p>
+                  </CardContent>
+                </Card>
+                <Card className="bg-secondary/50">
+                  <CardContent className="p-6 text-center flex flex-col items-center gap-3">
+                    <Truck className="h-10 w-10 text-primary" />
+                    <h3 className="font-headline text-xl font-semibold">Exceptional Service</h3>
+                    <p className="text-muted-foreground text-sm">Free delivery & hassle-free returns for your peace of mind.</p>
+                  </CardContent>
+                </Card>
             </div>
-            <div className="flex flex-col items-center">
-              <Award className="h-10 w-10 text-primary" />
-              <h3 className="mt-4 font-headline text-xl font-semibold">Quality Craftsmanship</h3>
-              <p className="mt-2 text-muted-foreground">Built to last with the finest materials.</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <Undo className="h-10 w-10 text-primary" />
-              <h3 className="mt-4 font-headline text-xl font-semibold">Hassle-Free Returns</h3>
-              <p className="mt-2 text-muted-foreground">30-day return policy for peace of mind.</p>
+            <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
+              <Image
+                src={chooseUsImage.imageUrl}
+                alt={chooseUsImage.description}
+                data-ai-hint={chooseUsImage.imageHint}
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      <section>
+      <section className="bg-secondary/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-headline text-3xl md:text-4xl font-bold">Featured Products</h2>
@@ -95,7 +126,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-secondary/50">
+      <section>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-headline text-3xl md:text-4xl font-bold">Shop by Category</h2>
