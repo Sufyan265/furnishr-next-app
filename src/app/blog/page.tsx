@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { blogPosts } from '@/lib/data';
-import { Card } from '@/components/ui/card';
-import { ArrowRight } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+import { ArrowRight, Calendar, User } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -11,6 +11,8 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
+  const [featuredPost, ...otherPosts] = blogPosts;
+  
   return (
     <div className="bg-background">
       <section className="container mx-auto px-4">
@@ -21,11 +23,49 @@ export default function BlogPage() {
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-          {blogPosts.map((post, index) => (
-            <Link key={post.id} href={`/blog/${post.slug}`} className={`group block ${index === 0 ? 'md:col-span-2' : ''}`}>
-              <Card className={`h-full flex ${index === 0 ? 'md:flex-row flex-col' : 'flex-col'} overflow-hidden transition-shadow duration-300 hover:shadow-xl`}>
-                <div className={`relative w-full ${index === 0 ? 'md:w-1/2' : ''} ${index > 0 ? 'aspect-[16/10]' : 'aspect-video md:aspect-auto'}`}>
+        {/* Featured Post */}
+        <div className="mt-16 mb-24">
+          <Link href={`/blog/${featuredPost.slug}`} className="group block">
+            <Card className="grid md:grid-cols-2 overflow-hidden transition-shadow duration-300 hover:shadow-xl">
+              <div className="relative aspect-video md:aspect-auto">
+                <Image
+                  src={featuredPost.imageUrl}
+                  alt={featuredPost.title}
+                  data-ai-hint={featuredPost.imageHint}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  priority
+                />
+              </div>
+              <div className="p-8 lg:p-12 flex flex-col justify-center">
+                <p className="text-sm text-primary font-semibold mb-2">Featured Article</p>
+                <h2 className="font-headline text-3xl lg:text-4xl mb-4 leading-snug">{featuredPost.title}</h2>
+                <p className="text-muted-foreground text-base mb-6 line-clamp-3 flex-grow">{featuredPost.excerpt}</p>
+                <div className="flex items-center text-sm text-muted-foreground mb-6">
+                  <div className="flex items-center">
+                    <Calendar className="mr-2 h-4 w-4" />
+                    <span>{featuredPost.date}</span>
+                  </div>
+                  <span className="mx-2">|</span>
+                  <div className="flex items-center">
+                    <User className="mr-2 h-4 w-4" />
+                    <span>{featuredPost.author}</span>
+                  </div>
+                </div>
+                <div className="flex items-center text-primary font-semibold text-sm mt-auto">
+                  Read Article <ArrowRight className="ml-2 h-4 w-4" />
+                </div>
+              </div>
+            </Card>
+          </Link>
+        </div>
+
+        {/* Other Posts */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {otherPosts.map((post) => (
+            <Link key={post.id} href={`/blog/${post.slug}`} className="group block">
+              <Card className="h-full flex flex-col overflow-hidden transition-shadow duration-300 hover:shadow-xl">
+                <div className="relative w-full aspect-[16/10]">
                   <Image
                     src={post.imageUrl}
                     alt={post.title}
@@ -34,14 +74,13 @@ export default function BlogPage() {
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
-                <div className={`p-6 lg:p-8 flex flex-col flex-grow ${index === 0 ? 'md:w-1/2 justify-center' : ''}`}>
+                <CardContent className="p-6 flex flex-col flex-grow">
                   <p className="text-sm text-muted-foreground mb-2">{post.date}</p>
-                  <h3 className="font-headline text-2xl lg:text-3xl mb-3 leading-snug">{post.title}</h3>
-                  <p className="text-muted-foreground text-sm mb-4 line-clamp-3 flex-grow">{post.excerpt}</p>
+                  <h3 className="font-headline text-xl mb-3 leading-snug flex-grow">{post.title}</h3>
                   <div className="flex items-center text-primary font-semibold text-sm mt-auto">
-                    Read Article <ArrowRight className="ml-2 h-4 w-4" />
+                    Read More <ArrowRight className="ml-2 h-4 w-4" />
                   </div>
-                </div>
+                </CardContent>
               </Card>
             </Link>
           ))}

@@ -103,6 +103,12 @@
       "imageHint": "small apartment"
     },
     {
+      "id": "blog-3",
+      "description": "A living room showcasing the use of natural materials like wood and plants.",
+      "imageUrl": "https://images.unsplash.com/photo-1616046229478-9901c5536a45?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxpbnRlcmlvciUyMGRlc2lnbnxlbnwwfHx8fDE3NjMwNzE2Mzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "biophilic design"
+    },
+    {
       "id": "about-us",
       "description": "A team of furniture designers collaborating in a workshop.",
       "imageUrl": "https://images.unsplash.com/photo-1576595579783-1f2ae5674685?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkZXNpZ24lMjB3b3Jrc2hvcHxlbnwwfHx8fDE3NjMwNTczMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",

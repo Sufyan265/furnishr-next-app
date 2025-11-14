@@ -55,6 +55,7 @@ export const categoryImages = {
 export const blogImages = {
     'blog-1': getImage('blog-1'),
     'blog-2': getImage('blog-2'),
+    'blog-3': getImage('blog-3'),
 }
 
 export const aboutImage = getImage('about-us');

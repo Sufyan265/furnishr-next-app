@@ -195,6 +195,18 @@ export const blogPosts: BlogPost[] = [
     content: '<h2>Embrace Multifunctionality</h2><p>In a small space, every piece of furniture should work hard. Think coffee tables with hidden storage, ottomans that double as seating, or sofas that convert into beds. This reduces clutter and maximizes utility.</p><h3>2. Go Vertical</h3><p>Utilize wall space with tall, narrow bookshelves and floating shelves to draw the eye upward and free up floor space. This creates an illusion of height and provides valuable storage and display areas without bulk.</p><h3>3. Use Light and Mirrors</h3><p>Mirrors are a small space\'s best friend. They reflect light and create a sense of depth, making the room feel larger. Position a large mirror opposite a window to maximize natural light. Choose a light color palette for walls and large furniture pieces to keep the space feeling airy and open.</p>',
     imageUrl: blogImagesMap['blog-2'].imageUrl,
     imageHint: blogImagesMap['blog-2'].imageHint
+  },
+  {
+    id: '3',
+    slug: 'biophilic-design-bringing-the-outdoors-in',
+    title: 'Biophilic Design: Bringing the Outdoors In',
+    author: 'The Furnishr Team',
+    date: 'November 12, 2023',
+    imageId: 'blog-3',
+    excerpt: 'Discover how to incorporate natural elements into your home to create a calming, healthier, and more beautiful living environment. It\'s easier than you think...',
+    content: '<h2>What is Biophilic Design?</h2><p>Biophilic design is an architectural and interior design approach that seeks to connect building occupants more closely to nature. Incorporating natural lighting, ventilation, plant life, and natural materials like wood and stone can reduce stress and improve well-being.</p><h3>1. Start with Plants</h3><p>The easiest way to begin is by adding houseplants. They purify the air and add a splash of color and life. Choose a variety of sizes and types, from large floor plants like a Fiddle Leaf Fig to small succulents on a windowsill.</p><h3>2. Natural Materials</h3><p>Incorporate materials that come from the earth. Think wooden furniture, stone countertops, linen curtains, and wool rugs. These textures add warmth and a sense of grounding to your space. Our Nordic Oak Dining Table is a perfect example!</p>',
+    imageUrl: blogImagesMap['blog-3'].imageUrl,
+    imageHint: blogImagesMap['blog-3'].imageHint
   }
 ];
 
