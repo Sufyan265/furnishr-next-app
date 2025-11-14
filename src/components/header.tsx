@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { Search, ShoppingCart, User, Wand2, Menu, X } from "lucide-react";
+import { Search, ShoppingCart, User, Wand2, Menu, X, Heart } from "lucide-react";
 import { Button } from "./ui/button";
 import { useCart } from "@/context/cart-context";
+import { useWishlist } from "@/context/wishlist-context";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import {
@@ -24,10 +25,12 @@ const navLinks = [
 
 export default function Header() {
   const { cart } = useCart();
+  const { wishlist } = useWishlist();
   const pathname = usePathname();
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+  const wishlistCount = wishlist.length;
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -90,6 +93,18 @@ export default function Header() {
           </Button>
           <Button variant="ghost" size="icon" disabled>
             <Search className="h-5 w-5" />
+          </Button>
+          <Button variant="ghost" size="icon" asChild>
+            <Link href="/wishlist" aria-label="Wishlist">
+              <div className="relative">
+                <Heart className="h-5 w-5" />
+                {wishlistCount > 0 && (
+                  <span className="absolute -top-2 -right-2 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">
+                    {wishlistCount}
+                  </span>
+                )}
+              </div>
+            </Link>
           </Button>
           <Button variant="ghost" size="icon" disabled>
             <User className="h-5 w-5" />

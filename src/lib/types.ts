@@ -56,3 +56,5 @@ export interface BlogPost {
 export interface CartItem extends Product {
   quantity: number;
 }
+
+export type WishlistItem = Product;

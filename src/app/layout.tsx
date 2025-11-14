@@ -5,6 +5,7 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { Toaster } from '@/components/ui/toaster';
 import { CartProvider } from '@/context/cart-context';
+import { WishlistProvider } from '@/context/wishlist-context';
 
 export const metadata: Metadata = {
   title: 'Furnishr - Modern Furniture for Your Home',
@@ -24,13 +25,15 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
       </head>
       <body className={cn("font-body antialiased bg-background min-h-screen flex flex-col")}>
-        <CartProvider>
-          <Header />
-          <main className="flex-grow">
-            {children}
-          </main>
-          <Footer />
-        </CartProvider>
+        <WishlistProvider>
+          <CartProvider>
+            <Header />
+            <main className="flex-grow">
+              {children}
+            </main>
+            <Footer />
+          </CartProvider>
+        </WishlistProvider>
         <Toaster />
       </body>
     </html>

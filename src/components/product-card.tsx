@@ -1,3 +1,5 @@
+"use client"
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from './ui/card';
@@ -5,6 +7,8 @@ import type { Product } from '@/lib/types';
 import { Button } from './ui/button';
 import { Heart } from 'lucide-react';
 import { getImage } from '@/lib/placeholder-images';
+import { useWishlist } from '@/context/wishlist-context';
+import { cn } from '@/lib/utils';
 
 interface ProductCardProps {
   product: Product;
@@ -12,6 +16,18 @@ interface ProductCardProps {
 
 export default function ProductCard({ product }: ProductCardProps) {
   const primaryImage = getImage(product.imageIds[0]);
+  const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
+  
+  const inWishlist = isInWishlist(product.id);
+
+  const handleWishlistClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (inWishlist) {
+      removeFromWishlist(product.id);
+    } else {
+      addToWishlist(product);
+    }
+  };
   
   return (
     <Card className="flex flex-col h-full overflow-hidden transition-shadow duration-300 hover:shadow-lg">
@@ -26,8 +42,14 @@ export default function ProductCard({ product }: ProductCardProps) {
             className="w-full h-64 object-cover"
           />
         </Link>
-        <Button variant="ghost" size="icon" className="absolute top-2 right-2 bg-background/70 hover:bg-background rounded-full">
-          <Heart className="h-5 w-5 text-muted-foreground" />
+        <Button 
+            variant="ghost" 
+            size="icon" 
+            className="absolute top-2 right-2 bg-background/70 hover:bg-background rounded-full"
+            onClick={handleWishlistClick}
+            aria-label={inWishlist ? 'Remove from wishlist' : 'Add to wishlist'}
+        >
+          <Heart className={cn("h-5 w-5 text-muted-foreground", inWishlist && "fill-destructive text-destructive")} />
         </Button>
       </CardHeader>
       <CardContent className="p-4 flex-grow">
