@@ -18,6 +18,7 @@ import { getImages } from '@/lib/placeholder-images';
 import { Badge } from './ui/badge';
 import { cn } from '@/lib/utils';
 import CountdownTimer from './countdown-timer';
+import { siteWideSale } from '@/lib/data';
 
 interface ProductInteractionProps {
   product: Product;
@@ -41,8 +42,22 @@ export default function ProductInteraction({ product }: ProductInteractionProps)
 
   const productImages = getImages(product.imageIds);
 
-  const isDealActive = product.deal && new Date(product.deal.expiresAt) > new Date();
-  const discountedPrice = isDealActive ? product.price * (1 - product.deal.discountPercentage / 100) : product.price;
+  const isSiteWideSaleActive = siteWideSale.isActive;
+  const individualDeal = product.deal && new Date(product.deal.expiresAt) > new Date();
+
+  let discountedPrice = product.price;
+  let discountPercentage = 0;
+  let isDealActive = false;
+
+  if (isSiteWideSaleActive) {
+    discountedPrice = product.price * (1 - siteWideSale.discountPercentage / 100);
+    discountPercentage = siteWideSale.discountPercentage;
+    isDealActive = true;
+  } else if (individualDeal) {
+    discountedPrice = product.price * (1 - product.deal.discountPercentage / 100);
+    discountPercentage = product.deal.discountPercentage;
+    isDealActive = true;
+  }
 
   const handleAddToCart = () => {
     addToCart({ ...product, price: discountedPrice }, quantity);
@@ -76,7 +91,7 @@ export default function ProductInteraction({ product }: ProductInteractionProps)
                   />
                   {isDealActive && (
                     <Badge className="absolute top-4 left-4 text-lg bg-destructive hover:bg-destructive">
-                      <Percent className="mr-2 h-5 w-5" /> {product.deal.discountPercentage}% OFF
+                      <Percent className="mr-2 h-5 w-5" /> {discountPercentage}% OFF
                     </Badge>
                   )}
                 </div>
@@ -121,10 +136,10 @@ export default function ProductInteraction({ product }: ProductInteractionProps)
             <StockBadge stock={product.stock} />
           </div>
 
-          {isDealActive && (
+          {individualDeal && !isSiteWideSaleActive && (
             <div className="space-y-2">
                 <p className="text-sm font-semibold text-destructive">Limited Time Offer! Ends in:</p>
-                <CountdownTimer targetDate={product.deal.expiresAt} />
+                <CountdownTimer targetDate={product.deal!.expiresAt} />
             </div>
           )}
 

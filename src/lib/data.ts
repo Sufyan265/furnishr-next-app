@@ -3,6 +3,12 @@ import { categoryImages, productImages as productImagesMap, blogImages as blogIm
 
 const futureDate = (days: number) => new Date(new Date().getTime() + days * 24 * 60 * 60 * 1000).toISOString();
 
+export const siteWideSale = {
+  name: "Happy Christmas Sale",
+  discountPercentage: 30,
+  isActive: true,
+};
+
 export const categories: Category[] = [
   { id: '1', slug: 'living-room', name: 'Living Room', imageId: 'category-living-room', imageUrl: categoryImages['living-room'].imageUrl, imageHint: categoryImages['living-room'].imageHint },
   { id: '2', slug: 'bedroom', name: 'Bedroom', imageId: 'category-bedroom', imageUrl: categoryImages['bedroom'].imageUrl, imageHint: categoryImages['bedroom'].imageHint },

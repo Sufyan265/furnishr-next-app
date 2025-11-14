@@ -9,13 +9,23 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { Separator } from '@/components/ui/separator';
 import { Minus, Plus, Trash2, ArrowLeft, Lock, CreditCard, ShoppingBag } from 'lucide-react';
 import { getImage } from '@/lib/placeholder-images';
+import { siteWideSale } from '@/lib/data';
 
 export default function CartPage() {
   const { cart, removeFromCart, updateQuantity } = useCart();
 
-  const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-  const shipping = subtotal > 250 || subtotal === 0 ? 0 : 49.99;
-  const total = subtotal + shipping;
+  const originalSubtotal = cart.reduce((sum, item) => {
+    // Find the original price before any discounts were applied
+    // This is a simplification; a real app would fetch original price from a DB
+    const itemOriginalPrice = item.price / (1 - (siteWideSale.isActive ? siteWideSale.discountPercentage / 100 : 0));
+    return sum + itemOriginalPrice * item.quantity;
+  }, 0);
+
+  const discountedSubtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+  const shipping = discountedSubtotal > 250 || discountedSubtotal === 0 ? 0 : 49.99;
+  const total = discountedSubtotal + shipping;
+  const totalSavings = originalSubtotal - discountedSubtotal;
 
   if (cart.length === 0) {
     return (
@@ -59,7 +69,10 @@ export default function CartPage() {
                             <Link href={`/products/${item.slug}`}>{item.name}</Link>
                           </h3>
                           <p className="text-muted-foreground text-sm">{item.category}</p>
-                          <p className="text-lg font-bold text-primary mt-2">£{item.price.toFixed(2)}</p>
+                          <div className="mt-2">
+                             <p className="text-lg font-bold text-destructive">£{item.price.toFixed(2)}</p>
+                             {siteWideSale.isActive && <p className="text-sm text-muted-foreground line-through">£{(item.price / (1 - siteWideSale.discountPercentage / 100)).toFixed(2)}</p>}
+                          </div>
                         </div>
                         <div className="flex items-center justify-between sm:justify-self-end sm:flex-col sm:items-end sm:gap-2">
                           <div className="flex items-center border rounded-md">
@@ -91,8 +104,20 @@ export default function CartPage() {
               <CardContent className="space-y-4">
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Subtotal</span>
-                  <span className="font-semibold">£{subtotal.toFixed(2)}</span>
+                  <span className="font-semibold">£{discountedSubtotal.toFixed(2)}</span>
                 </div>
+                 {siteWideSale.isActive && (
+                  <>
+                    <div className="flex justify-between text-destructive">
+                      <span className="font-semibold">{siteWideSale.name} Discount</span>
+                      <span className="font-semibold">-£{totalSavings.toFixed(2)}</span>
+                    </div>
+                     <div className="flex justify-between text-xs text-muted-foreground">
+                      <span>Original price</span>
+                      <span className="line-through">£{originalSubtotal.toFixed(2)}</span>
+                    </div>
+                  </>
+                )}
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Shipping</span>
                   <span className="font-semibold">{shipping === 0 ? 'Free' : `£${shipping.toFixed(2)}`}</span>
