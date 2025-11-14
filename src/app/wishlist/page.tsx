@@ -5,14 +5,6 @@ import { useWishlist } from '@/context/wishlist-context';
 import ProductCard from '@/components/product-card';
 import { Button } from '@/components/ui/button';
 import { Heart, ArrowLeft } from 'lucide-react';
-import type { Metadata } from 'next';
-
-// This is a client component, so Metadata export is not used by Next.js
-// We can define it for reference or potential future use if this becomes a server component.
-export const metadata: Metadata = {
-  title: 'My Wishlist | Furnishr',
-  description: 'Your saved items. Keep track of the furniture you love.',
-};
 
 export default function WishlistPage() {
   const { wishlist } = useWishlist();
