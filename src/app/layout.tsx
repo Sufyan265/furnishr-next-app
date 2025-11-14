@@ -7,6 +7,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { CartProvider } from '@/context/cart-context';
 import { WishlistProvider } from '@/context/wishlist-context';
 import DeliveryBanner from '@/components/delivery-banner';
+import DevelopmentBanner from '@/components/development-banner';
 
 export const metadata: Metadata = {
   title: 'Furnishr - Modern Furniture for Your Home',
@@ -34,6 +35,7 @@ export default function RootLayout({
               {children}
             </main>
             <Footer />
+            <DevelopmentBanner />
           </CartProvider>
         </WishlistProvider>
         <Toaster />
