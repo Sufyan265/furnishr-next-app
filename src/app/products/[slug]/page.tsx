@@ -5,7 +5,7 @@ import ProductInteraction from '@/components/product-interaction';
 import StarRating from '@/components/star-rating';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { ShieldCheck, Truck, PackageCheck } from 'lucide-react';
+import { ShieldCheck, Truck, PackageCheck, Lock, ShieldAlert } from 'lucide-react';
 import type { Metadata } from 'next';
 
 type ProductPageProps = {
@@ -93,6 +93,22 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                           <div>
                               <h4 className="font-semibold">Quality Guarantee</h4>
                               <p className="text-sm text-muted-foreground">Built to last with quality materials.</p>
+                          </div>
+                      </div>
+                      <Separator/>
+                      <div className="flex items-center gap-4">
+                          <Lock className="h-8 w-8 text-primary" />
+                          <div>
+                              <h4 className="font-semibold">Secure Checkout</h4>
+                              <p className="text-sm text-muted-foreground">100% secure payments.</p>
+                          </div>
+                      </div>
+                      <Separator/>
+                      <div className="flex items-center gap-4">
+                          <ShieldAlert className="h-8 w-8 text-primary" />
+                          <div>
+                              <h4 className="font-semibold">Verified Reviews</h4>
+                              <p className="text-sm text-muted-foreground">Authentic feedback from our customers.</p>
                           </div>
                       </div>
                   </CardContent>
