@@ -60,5 +60,6 @@ export const blogImages = {
 
 export const aboutImage = getImage('about-us');
 export const contactImage = getImage('contact-us');
+export const worldMapImage = getImage('world-map');
 
 export { getImage, getImages };

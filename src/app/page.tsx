@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Award, Truck, Undo, Sparkles, Feather, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Award, Truck, Undo, Sparkles, Feather, ShieldCheck, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import {
@@ -12,7 +12,7 @@ import {
 } from '@/components/ui/carousel';
 import { categories, featuredProducts, reviews } from '@/lib/data';
 import ProductCard from '@/components/product-card';
-import { heroImages, getImage } from '@/lib/placeholder-images';
+import { heroImages, getImage, worldMapImage } from '@/lib/placeholder-images';
 import StarRating from '@/components/star-rating';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 
@@ -155,6 +155,32 @@ export default function Home() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-secondary/50">
+        <div className="container mx-auto px-4 text-center">
+          <Globe className="h-12 w-12 mx-auto text-primary" />
+          <h2 className="font-headline text-3xl md:text-4xl font-bold mt-4">Loved Worldwide</h2>
+          <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
+            From London to Los Angeles, our designs are cherished in homes across the globe.
+          </p>
+          <div className="relative max-w-5xl mx-auto mt-12">
+            <Image
+              src={worldMapImage.imageUrl}
+              alt={worldMapImage.description}
+              data-ai-hint={worldMapImage.imageHint}
+              width={1200}
+              height={600}
+              className="w-full h-auto object-contain"
+            />
+            {/* Example pulsing dots */}
+            <div className="pulsing-dot" style={{ top: '35%', left: '48%', animationDelay: '0s' }}></div>
+            <div className="pulsing-dot" style={{ top: '40%', left: '20%', animationDelay: '0.5s' }}></div>
+            <div className="pulsing-dot" style={{ top: '65%', left: '80%', animationDelay: '1s' }}></div>
+            <div className="pulsing-dot" style={{ top: '70%', left: '55%', animationDelay: '1.5s' }}></div>
+            <div className="pulsing-dot" style={{ top: '25%', left: '90%', animationDelay: '0.2s' }}></div>
           </div>
         </div>
       </section>
