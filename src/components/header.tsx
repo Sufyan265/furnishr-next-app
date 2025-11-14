@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Search, ShoppingCart, User, Wand2, Menu, X, Heart } from "lucide-react";
+import { Search, ShoppingCart, User, Wand2, Menu, X, Heart, Sparkles } from "lucide-react";
 import { Button } from "./ui/button";
 import { useCart } from "@/context/cart-context";
 import { useWishlist } from "@/context/wishlist-context";
@@ -89,6 +89,11 @@ export default function Header() {
           <Button variant="ghost" size="icon" asChild>
             <Link href="/style-matcher" aria-label="AI Style Matcher">
               <Wand2 className="h-5 w-5" />
+            </Link>
+          </Button>
+           <Button variant="ghost" size="icon" asChild>
+            <Link href="/ai-assistant" aria-label="AI Assistant">
+              <Sparkles className="h-5 w-5" />
             </Link>
           </Button>
           <Button variant="ghost" size="icon" disabled>
