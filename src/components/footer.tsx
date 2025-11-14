@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
@@ -27,7 +28,7 @@ export default function Footer() {
           <div>
             <h3 className="font-headline text-lg font-semibold">Help</h3>
             <ul className="mt-4 space-y-2">
-              <li><Link href="#" className="text-muted-foreground hover:text-primary">FAQs</Link></li>
+              <li><Link href="/faq" className="text-muted-foreground hover:text-primary">FAQs</Link></li>
               <li><Link href="#" className="text-muted-foreground hover:text-primary">Returns Policy</Link></li>
               <li><Link href="#" className="text-muted-foreground hover:text-primary">Terms of Service</Link></li>
               <li><Link href="#" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>

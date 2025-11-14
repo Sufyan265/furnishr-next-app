@@ -1,4 +1,5 @@
-import type { Product, Category, Review, BlogPost } from './types';
+
+import type { Product, Category, Review, BlogPost, Faq } from './types';
 import { categoryImages, productImages as productImagesMap, blogImages as blogImagesMap } from './placeholder-images';
 
 export const categories: Category[] = [
@@ -195,6 +196,51 @@ export const blogPosts: BlogPost[] = [
     imageUrl: blogImagesMap['blog-2'].imageUrl,
     imageHint: blogImagesMap['blog-2'].imageHint
   }
+];
+
+export const faqs: Faq[] = [
+    {
+      id: '1',
+      question: 'What payment methods do you accept?',
+      answer: 'We accept all major credit cards (Visa, Mastercard, American Express), as well as PayPal, Klarna, Apple Pay, and Google Pay for a secure and seamless checkout experience.',
+      category: 'Ordering',
+    },
+    {
+      id: '2',
+      question: 'How can I track my order?',
+      answer: 'Once your order has shipped, you will receive an email with a tracking number and a link to the courier\'s website. You can use this to monitor your delivery status.',
+      category: 'Shipping & Delivery',
+    },
+    {
+      id: '3',
+      question: 'What is your return policy?',
+      answer: 'We offer a 30-day hassle-free return policy. If you are not completely satisfied with your purchase, you can return it within 30 days for a full refund or exchange. Please ensure the item is in its original condition and packaging.',
+      category: 'Returns & Exchanges',
+    },
+    {
+      id: '4',
+      question: 'Do you offer free shipping?',
+      answer: 'Yes, we offer free standard UK delivery on all orders over £250. For orders under £250, a standard delivery fee applies.',
+      category: 'Shipping & Delivery',
+    },
+    {
+      id: '5',
+      question: 'Do your products come with a warranty?',
+      answer: 'Absolutely. All our furniture comes with a 1-year manufacturer\'s warranty covering any defects in materials or craftsmanship. We stand by the quality of our products.',
+      category: 'Product Information',
+    },
+    {
+      id: '6',
+      question: 'Can I cancel or change my order?',
+      answer: 'You can cancel or modify your order within 24 hours of placing it. Please contact our customer service team as soon as possible. After 24 hours, the order may have already been processed for shipping.',
+      category: 'Ordering',
+    },
+     {
+      id: '7',
+      question: 'How do I care for my new furniture?',
+      answer: 'Each product comes with specific care instructions. Generally, we recommend dusting regularly, avoiding direct sunlight, and cleaning spills immediately with a dry cloth. For specific materials like leather or velvet, please refer to the care guide included with your item.',
+      category: 'Product Information',
+    },
 ];
 
 export const featuredProducts = products.slice(0, 4);

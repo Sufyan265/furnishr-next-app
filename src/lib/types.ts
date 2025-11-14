@@ -1,3 +1,4 @@
+
 import type { ImagePlaceholder } from "./placeholder-images";
 
 export interface Product {
@@ -59,3 +60,10 @@ export interface CartItem extends Product {
 }
 
 export type WishlistItem = Product;
+
+export interface Faq {
+  id: string;
+  question: string;
+  answer: string;
+  category: 'Ordering' | 'Shipping & Delivery' | 'Returns & Exchanges' | 'Product Information';
+}
