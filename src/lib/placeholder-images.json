@@ -185,6 +185,12 @@
       "description": "A contemporary upholstered bed with a panelled headboard and bumper sides.",
       "imageUrl": "https://images.unsplash.com/photo-1595526051245-46e676d65c35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwYW5lbCUyMGJlZHxlbnwwfHx8fDE3NjU4NDIwNjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "upholstered bed"
+    },
+    {
+      "id": "product-bed-panel-line-1",
+      "description": "A modern panel line bed with vertical stitching.",
+      "imageUrl": "https://images.unsplash.com/photo-1595526051245-46e676d65c35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwYW5lbCUyMGJlZHxlbnwwfHx8fDE3NjU4NDIwNjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "panel bed"
     }
   ]
 }
