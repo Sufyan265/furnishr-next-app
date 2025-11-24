@@ -139,7 +139,7 @@ export default function Home() {
             <h2 className="font-headline text-3xl md:text-4xl font-bold mt-4">Sweet Dreams Collection</h2>
             <p className="mt-2 text-lg text-muted-foreground">Curated for your perfect sanctuary.</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
             {bedroomProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
@@ -159,7 +159,7 @@ export default function Home() {
             <h2 className="font-headline text-3xl md:text-4xl font-bold mt-4">Ultimate Comfort Sofas</h2>
             <p className="mt-2 text-lg text-muted-foreground">Discover the perfect centerpiece for your living room.</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
             {sofaProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
