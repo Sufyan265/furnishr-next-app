@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -11,8 +12,12 @@ import {
   Sheet,
   SheetContent,
   SheetTrigger,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
 } from "@/components/ui/sheet";
 import { useState } from "react";
+import { Separator } from "./ui/separator";
 
 const navLinks = [
   { href: "/products", label: "All Products" },
@@ -34,19 +39,18 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
-        <Link href="/" className="mr-4 flex items-center space-x-2 lg:mr-6">
+        <Link href="/" className="mr-6 flex items-center space-x-2">
           <span className="font-headline text-2xl font-bold">Furnishr</span>
         </Link>
         
-        <div className="flex flex-1 items-center justify-end">
-          <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-            {navLinks.slice(1,3).map((link) => ( // Show main categories on desktop
+        <nav className="hidden md:flex flex-1 items-center space-x-6 text-sm font-medium">
+            {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={cn(
                   "transition-colors hover:text-primary",
-                  pathname === link.href ? "text-primary" : "text-muted-foreground"
+                  pathname.startsWith(link.href) ? "text-primary" : "text-muted-foreground"
                 )}
               >
                 {link.label}
@@ -54,18 +58,18 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="flex items-center space-x-1 sm:space-x-2 ml-auto">
-            <Button variant="ghost" size="icon" asChild className="hidden md:inline-flex">
+        <div className="flex items-center space-x-1 sm:space-x-2 ml-auto">
+            <Button variant="ghost" size="icon" asChild>
               <Link href="/style-matcher" aria-label="AI Style Matcher">
                 <Wand2 className="h-5 w-5" />
               </Link>
             </Button>
-            <Button variant="ghost" size="icon" asChild className="hidden md:inline-flex">
+            <Button variant="ghost" size="icon" asChild>
               <Link href="/ai-assistant" aria-label="AI Assistant">
                 <Sparkles className="h-5 w-5" />
               </Link>
             </Button>
-            <Button variant="ghost" size="icon" disabled className="hidden md:inline-flex">
+            <Button variant="ghost" size="icon" disabled>
               <Search className="h-5 w-5" />
             </Button>
             <Button variant="ghost" size="icon" asChild>
@@ -80,7 +84,7 @@ export default function Header() {
                 </div>
               </Link>
             </Button>
-            <Button variant="ghost" size="icon" disabled className="hidden md:inline-flex">
+            <Button variant="ghost" size="icon" disabled>
               <User className="h-5 w-5" />
             </Button>
             <Button variant="ghost" size="icon" asChild>
@@ -104,12 +108,18 @@ export default function Header() {
                     <span className="sr-only">Toggle Menu</span>
                   </Button>
                 </SheetTrigger>
-                <SheetContent side="left" className="pr-0">
-                  <Link href="/" className="mr-6 flex items-center space-x-2" onClick={() => setMobileMenuOpen(false)}>
-                    <span className="font-headline text-2xl font-bold">Furnishr</span>
-                  </Link>
-                  <div className="my-8 h-full">
-                    <nav className="flex flex-col items-start space-y-6">
+                <SheetContent side="left" className="pr-0 flex flex-col">
+                  <SheetHeader className="text-left">
+                     <SheetTitle>
+                        <Link href="/" className="flex items-center space-x-2" onClick={() => setMobileMenuOpen(false)}>
+                            <span className="font-headline text-2xl font-bold">Furnishr</span>
+                        </Link>
+                     </SheetTitle>
+                  </SheetHeader>
+                  
+                  <div className="mt-8 flex-grow">
+                    <nav className="flex flex-col space-y-4 pr-6">
+                      <p className="text-sm font-semibold text-muted-foreground">Shop</p>
                       {navLinks.map((link) => (
                         <Link
                           key={link.href}
@@ -117,17 +127,32 @@ export default function Header() {
                           onClick={() => setMobileMenuOpen(false)}
                           className={cn(
                             "text-lg font-medium transition-colors hover:text-primary",
-                            pathname === link.href ? "text-primary" : "text-muted-foreground"
+                            pathname.startsWith(link.href) ? "text-primary" : "text-foreground"
                           )}
                         >
                           {link.label}
                         </Link>
                       ))}
-                       <div className="flex flex-col space-y-4 pt-6 border-t w-full pr-6">
-                           <Link href="/style-matcher" className="flex items-center text-lg font-medium text-muted-foreground" onClick={() => setMobileMenuOpen(false)}><Wand2 className="mr-3 h-5 w-5"/> AI Styler</Link>
-                           <Link href="/ai-assistant" className="flex items-center text-lg font-medium text-muted-foreground" onClick={() => setMobileMenuOpen(false)}><Sparkles className="mr-3 h-5 w-5"/> AI Assistant</Link>
-                           <Link href="/contact" className="flex items-center text-lg font-medium text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
-                        </div>
+                    </nav>
+                    <Separator className="my-6" />
+                    <nav className="flex flex-col space-y-4 pr-6">
+                        <p className="text-sm font-semibold text-muted-foreground">AI Tools</p>
+                        <Link href="/style-matcher" className="flex items-center text-lg font-medium text-foreground hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
+                            <Wand2 className="mr-3 h-5 w-5"/> AI Style Matcher
+                        </Link>
+                        <Link href="/ai-assistant" className="flex items-center text-lg font-medium text-foreground hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
+                            <Sparkles className="mr-3 h-5 w-5"/> AI Assistant
+                        </Link>
+                    </nav>
+                     <Separator className="my-6" />
+                    <nav className="flex flex-col space-y-4 pr-6">
+                        <p className="text-sm font-semibold text-muted-foreground">Company</p>
+                        <Link href="/contact" className="text-lg font-medium text-foreground hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
+                          Contact
+                        </Link>
+                         <Link href="/faq" className="text-lg font-medium text-foreground hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
+                          FAQs
+                        </Link>
                     </nav>
                   </div>
                 </SheetContent>
@@ -135,7 +160,6 @@ export default function Header() {
             </div>
           </div>
         </div>
-      </div>
     </header>
   );
 }
