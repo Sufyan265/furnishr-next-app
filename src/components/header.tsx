@@ -2,7 +2,7 @@
 "use client";
 
 import Link from "next/link";
-import { Search, ShoppingCart, User, Wand2, Menu, X, Heart, Sparkles } from "lucide-react";
+import { Search, ShoppingCart, User, Menu, X, Heart, Sparkles } from "lucide-react";
 import { Button } from "./ui/button";
 import { useCart } from "@/context/cart-context";
 import { useWishlist } from "@/context/wishlist-context";
@@ -59,11 +59,6 @@ export default function Header() {
           </nav>
 
         <div className="flex items-center space-x-1 sm:space-x-2 ml-auto">
-            <Button variant="ghost" size="icon" asChild>
-              <Link href="/style-matcher" aria-label="AI Style Matcher">
-                <Wand2 className="h-5 w-5" />
-              </Link>
-            </Button>
             <Button variant="ghost" size="icon" asChild>
               <Link href="/ai-assistant" aria-label="AI Assistant">
                 <Sparkles className="h-5 w-5" />
@@ -137,9 +132,6 @@ export default function Header() {
                     <Separator className="my-6" />
                     <nav className="flex flex-col space-y-4 pr-6">
                         <p className="text-sm font-semibold text-muted-foreground">AI Tools</p>
-                        <Link href="/style-matcher" className="flex items-center text-lg font-medium text-foreground hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
-                            <Wand2 className="mr-3 h-5 w-5"/> AI Style Matcher
-                        </Link>
                         <Link href="/ai-assistant" className="flex items-center text-lg font-medium text-foreground hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
                             <Sparkles className="mr-3 h-5 w-5"/> AI Assistant
                         </Link>
