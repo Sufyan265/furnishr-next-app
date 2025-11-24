@@ -167,6 +167,12 @@
       "description": "A practical and stylish divan ottoman bed with built-in storage.",
       "imageUrl": "https://images.unsplash.com/photo-1595526114035-0d45ed16433d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxvdHRvbWFuJTIwYmVkfGVufDB8fHx8MTc2NDczNzU1MXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "ottoman bed"
+    },
+    {
+      "id": "product-bed-mirror-1",
+      "description": "A stylish modern bed with a mirrored frame.",
+      "imageUrl": "https://images.unsplash.com/photo-1594467359934-ab5a4eda43c1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtaXJyb3IlMjBiZWR8ZW58MHx8fHwxNzY1ODQxOTU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mirror bed"
     }
   ]
 }
