@@ -46,6 +46,7 @@ export const productImages = {
     'panel-ambassador-bed': getImages(['product-bed-panel-ambassador-1']),
     'panel-bumper-bed': getImages(['product-bed-panel-bumper-1']),
     'panel-line-bed': getImages(['product-bed-panel-line-1']),
+    'panel-wing-back-bed': getImages(['product-bed-panel-wing-back-1']),
 };
 
 export const categoryImages = {
