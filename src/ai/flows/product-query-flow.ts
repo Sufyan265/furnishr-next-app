@@ -63,7 +63,7 @@ const productQueryPrompt = ai.definePrompt({
   name: 'productQueryPrompt',
   input: { schema: ProductQueryInputSchema },
   output: { schema: ProductQueryOutputSchema },
-  prompt: `You are a friendly and helpful customer service assistant for an online furniture store called Furnishr. Your goal is to answer user questions about the products.
+  prompt: `You are a friendly and helpful customer service assistant for an online furniture store called Furnishr that exclusively sells sofas and beds. Your goal is to answer user questions about the products.
 
 You have access to the store's product catalog. Use this information to answer the user's question accurately. Be concise and friendly in your response. If you don't know the answer, say that you can't find that information right now.
 
