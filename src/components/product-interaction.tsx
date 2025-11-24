@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -48,7 +49,7 @@ export default function ProductInteraction({ product }: ProductInteractionProps)
 
   const price = selectedVariant?.price || product.price;
 
-  const isSiteWideSaleActive = siteWideSale.isActive;
+  const isSiteWideSaleActive = siteWideSale.isActive && product.slug !== 'ambassador-park-lane-bed';
   const individualDeal = product.deal && new Date(product.deal.expiresAt) > new Date();
 
   let discountedPrice = price;

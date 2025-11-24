@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from 'next/image';
@@ -15,9 +16,9 @@ export default function CartPage() {
   const { cart, removeFromCart, updateQuantity } = useCart();
 
   const originalSubtotal = cart.reduce((sum, item) => {
-    // Find the original price before any discounts were applied
     // This is a simplification; a real app would fetch original price from a DB
-    const itemOriginalPrice = item.variant ? item.variant.price : item.price / (1 - (siteWideSale.isActive ? siteWideSale.discountPercentage / 100 : 0));
+    const isSaleApplicable = siteWideSale.isActive && item.slug !== 'ambassador-park-lane-bed';
+    const itemOriginalPrice = item.variant ? item.variant.price : item.price / (1 - (isSaleApplicable ? siteWideSale.discountPercentage / 100 : 0));
     return sum + itemOriginalPrice * item.quantity;
   }, 0);
 
@@ -52,7 +53,11 @@ export default function CartPage() {
             <Card>
               <CardContent className="p-0">
                 <div className="divide-y">
-                  {cart.map(item => (
+                  {cart.map(item => {
+                    const isSaleApplicable = siteWideSale.isActive && item.slug !== 'ambassador-park-lane-bed';
+                    const itemOriginalPrice = item.variant ? item.variant.price : item.price / (1 - (isSaleApplicable ? siteWideSale.discountPercentage / 100 : 0));
+
+                    return (
                     <div key={item.id + (item.variant?.size || '')} className="flex items-center p-4 sm:p-6">
                       <div className="relative h-24 w-24 sm:h-32 sm:w-32 rounded-md overflow-hidden flex-shrink-0">
                         <Image
@@ -72,7 +77,7 @@ export default function CartPage() {
                           <p className="text-muted-foreground text-sm">{item.category}</p>
                           <div className="mt-2">
                              <p className="text-lg font-bold text-destructive">£{(item.variant?.price || item.price).toFixed(2)}</p>
-                             {siteWideSale.isActive && <p className="text-sm text-muted-foreground line-through">£{((item.variant?.price || item.price) / (1 - siteWideSale.discountPercentage / 100)).toFixed(2)}</p>}
+                             {isSaleApplicable && <p className="text-sm text-muted-foreground line-through">£{itemOriginalPrice.toFixed(2)}</p>}
                           </div>
                         </div>
                         <div className="flex items-center justify-between sm:justify-self-end sm:flex-col sm:items-end sm:gap-2">
@@ -91,7 +96,7 @@ export default function CartPage() {
                         </div>
                       </div>
                     </div>
-                  ))}
+                  )})}
                 </div>
               </CardContent>
             </Card>
@@ -107,10 +112,10 @@ export default function CartPage() {
                   <span className="text-muted-foreground">Subtotal</span>
                   <span className="font-semibold">£{discountedSubtotal.toFixed(2)}</span>
                 </div>
-                 {siteWideSale.isActive && (
+                 {totalSavings > 0 && (
                   <>
                     <div className="flex justify-between text-destructive">
-                      <span className="font-semibold">{siteWideSale.name} Discount</span>
+                      <span className="font-semibold">Sale Discount</span>
                       <span className="font-semibold">-£{totalSavings.toFixed(2)}</span>
                     </div>
                      <div className="flex justify-between text-xs text-muted-foreground">

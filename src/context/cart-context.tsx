@@ -1,7 +1,9 @@
+
 "use client";
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import type { CartItem, Product, ProductVariant } from '@/lib/types';
+import { siteWideSale } from '@/lib/data';
 
 interface CartContextType {
   cart: CartItem[];
@@ -45,11 +47,18 @@ export function CartProvider({ children }: { children: ReactNode }) {
         );
       }
       
-      const cartItem: CartItem = { ...product, quantity, variant };
-      // Use price from variant if it exists
+      let price = product.price;
       if (variant) {
-        cartItem.price = variant.price;
+        price = variant.price;
       }
+
+      const isSaleApplicable = siteWideSale.isActive && product.slug !== 'ambassador-park-lane-bed';
+
+      if (isSaleApplicable) {
+        price = price * (1 - siteWideSale.discountPercentage / 100);
+      }
+
+      const cartItem: CartItem = { ...product, quantity, price, variant };
       
       return [...prevCart, cartItem];
     });
