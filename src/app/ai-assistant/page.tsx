@@ -24,7 +24,8 @@ export default function AiAssistantPage() {
   const [isLoading, setIsLoading] = useState(false);
   const { register, handleSubmit, reset } = useForm<FormValues>();
 
-  const onSubmit: SubmitHandler<FormValues> = async (data) => {
+  const onSubmit: SubmitHandler<FormValues> = async (data, event) => {
+    event?.preventDefault();
     if (!data.prompt) return;
 
     const userMessage: Message = { role: 'user', content: data.prompt };
