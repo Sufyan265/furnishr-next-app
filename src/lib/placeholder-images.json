@@ -21,7 +21,7 @@
     {
       "id": "product-sofa-1",
       "description": "Front view of the 'Urban Elegance' sectional sofa.",
-      "imageUrl": "https://images.unsplash.com/photo-1540574163024-5884d2563add?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bW9kZXJuJTIwc29mYXxlbnwwfHx8fDE3NjM5NjI2MTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
       "imageHint": "modern sofa"
     },
     {
@@ -33,19 +33,19 @@
     {
       "id": "product-sofa-3",
       "description": "Close-up of the 'Urban Elegance' sofa fabric.",
-      "imageUrl": "https://images.unsplash.com/photo-1596701042331-3144186c0c27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYWJyaWMlMjB0ZXh0dXJlfGVufDB8fHx8MTc2NDc2ODk4MXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1596701042331-3144186c0c27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYWJyaWMlMjB0ZXh0dXJlfGVufDB8fHx8MTc2NDc2ODk4MXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "fabric texture"
     },
     {
       "id": "product-table-1",
       "description": "Top view of the 'Nordic Oak' dining table.",
-      "imageUrl": "https://images.unsplash.com/photo-1557784415-3bdc60b1c02b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxvYWslMjB0YWJsZXxlbnwwfHx8fDE3NjMxMjk4MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1557784415-3bdc60b1c02b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxvYWslMjB0YWJsZXxlbnwwfHx8fDE3NjMxMjk4MTZ8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "oak table"
     },
     {
       "id": "product-desk-1",
       "description": "The 'Executive' wooden desk.",
-      "imageUrl": "https://images.unsplash.com/photo-1639730992634-d048fe1dfdaf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d29vZGVuJTIwZGVza3xlbnwwfHx8fDE3NjMxMzQzODd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1639730992634-d048fe1dfdaf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d29vZGVuJTIwZGVza3xlbnwwfHx8fDE3NjMxMzQzODd8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "wooden desk"
     },
     {
@@ -129,61 +129,61 @@
     {
       "id": "product-bed-ambassador-1",
       "description": "A luxurious Ambassador bed with a tall, buttoned headboard.",
-      "imageUrl": "https://images.unsplash.com/photo-1560185127-6ed189bf02a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhbWJhc3NhZG9yJTIwYmVkfGVufDB8fHx8MTc2NTg0NDU3MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1560185127-6ed189bf02a4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
       "imageHint": "luxury bed"
     },
     {
       "id": "product-bed-ambassador-2",
       "description": "Side view of a luxurious Ambassador bed.",
-      "imageUrl": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxhbWJhc3NhZG9yJTIwYmVkfGVufDB8fHx8MTc2NTg0NDU3MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
       "imageHint": "luxury bedroom"
     },
     {
       "id": "product-bed-ambassador-3",
       "description": "Close up on the deep buttoned headboard of the Ambassador bed.",
-      "imageUrl": "https://images.unsplash.com/photo-1571576404938-1a052d921387?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxhbWJhc3NhZG9yJTIwYmVkfGVufDB8fHx8MTc2NTg0NDU3MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1571576404938-1a052d921387?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
       "imageHint": "buttoned headboard"
     },
     {
       "id": "product-bed-ambassador-4",
       "description": "Ambassador bed in a master bedroom setting.",
-      "imageUrl": "https://images.unsplash.com/photo-1582285843339-2033d59e3a7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYXN0ZXIlMjBiZWRyb29tfGVufDB8fHx8MTc2NTg0NDU3MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1582285843339-2033d59e3a7c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
       "imageHint": "master bedroom"
     },
     {
       "id": "product-bed-ambassador-5",
       "description": "Detail of the footboard on the Ambassador bed.",
-      "imageUrl": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhbWJhc3NhZG9yJTIwYmVkfGVufDB8fHx8MTc2NTg0NDU3MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
       "imageHint": "bed footboard"
     },
     {
       "id": "product-bed-ambassador-6",
       "description": "The Ambassador bed with premium mattress.",
-      "imageUrl": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYXN0ZXIlMjBiZWRyb29tfGVufDB8fHx8MTc2NTg0NDU3MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
       "imageHint": "bed mattress"
     },
     {
       "id": "product-bed-ambassador-7",
       "description": "Fabric texture of the Ambassador bed upholstery.",
-      "imageUrl": "https://images.unsplash.com/photo-1618220179428-22790b461013?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhbWJhc3NhZG9yJTIwYmVkfGVufDB8fHx8MTc2NTg0NDU3MHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
       "imageHint": "velvet texture"
     },
     {
       "id": "product-bed-ambassador-8",
       "description": "Ambassador bed shown with matching bedside tables.",
-      "imageUrl": "https://images.unsplash.com/photo-1595526114035-0d45ed16433d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxiZWRyb29tJTIwZnVybml0dXJlfGVufDB8fHx8MTc2NTg0NDU3MHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1595526114035-0d45ed16433d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
       "imageHint": "bedroom furniture"
     },
     {
       "id": "product-bed-ambassador-9",
       "description": "Overhead view of the Ambassador bed.",
-      "imageUrl": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxiZWRyb29tJTIwZnVybml0dXJlfGVufDB8fHx8MTc2NTg0NDU3MHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
       "imageHint": "bed top"
     },
     {
       "id": "product-bed-ambassador-10",
       "description": "A lifestyle shot of the Ambassador bed in a decorated room.",
-      "imageUrl": "https://images.unsplash.com/photo-1615875995438-d6b535875f28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxiZWRyb29tJTIwZnVybml0dXJlfGVufDB8fHx8MTc2NTg0NDU3MHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1615875995438-d6b535875f28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
       "imageHint": "luxury bedroom"
     },
     {
@@ -201,7 +201,7 @@
     {
       "id": "product-bed-sleigh-3",
       "description": "Close-up of the Astral Sleigh Bed headboard.",
-      "imageUrl": "https://images.unsplash.com/photo-1560185128-e173042f79dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxiZWQlMjBoZWFkYm9hcmR8ZW58MHx8fHwxNzYzOTEwNDA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1560185128-e173042f79dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxiZWQlMjBoZWFkYm9hcmR8ZW58MHx8fHwxNzYzOTEwNDA4fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "bed headboard"
     },
     {
@@ -339,25 +339,25 @@
     {
       "id": "product-bed-mirror-4",
       "description": "Detail of the mirrored footboard.",
-      "imageUrl": "https://images.unsplash.com/photo-1629264829176-812e25228ecc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtaXJyb3JlZCUyMGZvb3Rib2FyZHxlbnwwfHx8fDE3NjQwMDU5MTd8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1629264829176-812e25228ecc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtaXJyb3JlZCUyMGZvb3Rib2FyZHxlbnwwfHx8fDE3NjQwMDU5MTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "mirrored footboard"
     },
     {
       "id": "product-bed-mirror-5",
       "description": "Velvet fabric texture of the Florida Mirror Bed.",
-      "imageUrl": "https://images.unsplash.com/photo-1599568723850-14196ee0f991?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dmVsdmV0JTIwdGV4dHVyZXxlbnwwfHx8fDE3NjQwMDQxNTN8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1599568723850-14196ee0f991?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dmVsdmV0JTIwdGV4dHVyZXxlbnwwfHx8fDE3NjQwMDQxNTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "velvet texture"
     },
     {
       "id": "product-bed-mirror-6",
       "description": "Florida Mirror Bed in a master bedroom setting.",
-      "imageUrl": "https://images.unsplash.com/photo-1762195021888-d025550b5121?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxnbGFtb3JvdXMlMjBiZWRyb29tfGVufDB8fHx8MTc2NDAwNTkxN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1762195021888-d025550b5121?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxnbGFtb3JvdXMlMjBiZWRyb29tfGVufDB8fHx8MTc2NDAwNTkxN3ww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "glamorous bedroom"
     },
     {
       "id": "product-bed-mirror-7",
       "description": "Florida Mirror Bed from an angle.",
-      "imageUrl": "https://images.unsplash.com/photo-1760464021773-57d7cbcc874c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtaXJyb3IlMjBiZWR8ZW58MHx8fHwxNzY0MDA1OTE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1760464021773-57d7cbcc874c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtaXJyb3IlMjBiZWR8ZW58MHx8fHwxNzY0MDA1OTE3fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "mirror bed"
     },
     {
@@ -409,12 +409,6 @@
       "imageHint": "fabric texture"
     },
     {
-      "id": "product-bed-panel-ambassador-5",
-      "description": "Panel Ambassador Bed in a modern bedroom setting.",
-      "imageUrl": "https://images.unsplash.com/photo-1640109478916-f445f8f19b11?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtb2Rlcm4lMjBiZWRyb29tfGVufDB8fHx8MTc2NDAwNjEwOHww&ixlib-rb-4.1.0&q=80&w=1080",
-      "imageHint": "modern bedroom"
-    },
-    {
       "id": "product-bed-panel-bumper-1",
       "description": "A contemporary upholstered bed with a panelled headboard and bumper sides.",
       "imageUrl": "https://images.unsplash.com/photo-1760574209767-22fc76ed928b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx1cGhvbHN0ZXJlZCUyMGJlZHxlbnwwfHx8fDE3NjQwMDU5MTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
@@ -441,61 +435,61 @@
     {
       "id": "product-bed-panel-line-1",
       "description": "A modern panel line bed with vertical stitching.",
-      "imageUrl": "https://images.unsplash.com/photo-1758915372267-bda14e7925d1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGFuZWwlMjBiZWR8ZW58MHx8fHwxNzY0MDA1OTE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1758915372267-bda14e7925d1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGFuZWwlMjBiZWR8ZW58MHx8fHwxNzY0MDA1OTE3fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "panel bed"
     },
     {
       "id": "product-bed-panel-line-2",
       "description": "Side view of the Panel Line Bed.",
-      "imageUrl": "https://images.unsplash.com/photo-1689626698503-47934d011285?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwYW5lbCUyMGJlZHxlbnwwfHx8fDE3NjQwMDU5MTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1689626698503-47934d011285?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwYW5lbCUyMGJlZHxlbnwwfHx8fDE3NjQwMDU5MTd8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "panel bed"
     },
     {
       "id": "product-bed-panel-line-3",
       "description": "Headboard detail of the Panel Line Bed.",
-      "imageUrl": "https://images.unsplash.com/photo-1673973092053-9a9a35f660c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YmVkJTIwaGVhZGJvYXJkfGVufDB8fHx8MTc2MzkxMDQwOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1673973092053-9a9a35f660c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YmVkJTIwaGVhZGJvYXJkfGVufDB8fHx8MTc2MzkxMDQwOHww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "bed headboard"
     },
     {
       "id": "product-bed-panel-line-4",
       "description": "Fabric texture of the Panel Line Bed.",
-      "imageUrl": "https://images.unsplash.com/photo-1528459105426-b9548367069b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmYWJyaWMlMjB0ZXh0dXJlfGVufDB8fHx8MTc2Mzk2MjYxNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1528459105426-b9548367069b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmYWJyaWMlMjB0ZXh0dXJlfGVufDB8fHx8MTc2Mzk2MjYxNXww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "fabric texture"
     },
     {
       "id": "product-bed-panel-line-5",
       "description": "Panel Line Bed in a contemporary bedroom.",
-      "imageUrl": "https://images.unsplash.com/photo-1612301988752-5a5b19021f45?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y29udGVtcG9yYXJ5JTIwYmVkcm9vbXxlbnwwfHx8fDE3NjQwMDY0OTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1612301988752-5a5b19021f45?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y29udGVtcG9yYXJ5JTIwYmVkcm9vbXxlbnwwfHx8fDE3NjQwMDY0OTB8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "contemporary bedroom"
     },
     {
       "id": "product-bed-panel-line-6",
       "description": "Panel Line Bed from an angle.",
-      "imageUrl": "https://images.unsplash.com/photo-1633505899118-4ca6bd143043?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwYW5lbCUyMGJlZHxlbnwwfHx8fDE3NjQwMDU5MTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1633505899118-4ca6bd143043?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwYW5lbCUyMGJlZHxlbnwwfHx8fDE3NjQwMDU5MTd8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "panel bed"
     },
     {
       "id": "product-bed-panel-line-7",
       "description": "Panel Line Bed with nightstands.",
-      "imageUrl": "https://images.unsplash.com/photo-1617098900591-3f90928e8c54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxiZWRyb29tJTIwZnVybml0dXJlfGVufDB8fHx8MTc2NDAwNDE1M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1617098900591-3f90928e8c54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxiZWRyb29tJTIwZnVybml0dXJlfGVufDB8fHx8MTc2NDAwNDE1M3ww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "bedroom furniture"
     },
     {
       "id": "product-bed-panel-line-8",
       "description": "Overhead view of the Panel Line Bed.",
-      "imageUrl": "https://images.unsplash.com/photo-1583002435371-8ddc1d106f39?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxiZWQlMjB0b3B8ZW58MHx8fHwxNzY0MDA0MTUzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1583002435371-8ddc1d106f39?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxiZWQlMjB0b3B8ZW58MHx8fHwxNzY0MDA0MTUzfDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "bed top"
     },
     {
       "id": "product-bed-panel-line-9",
       "description": "Close up on the vertical lines of the headboard.",
-      "imageUrl": "https://images.unsplash.com/photo-1763478958775-ebb6733dd058?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxoZWFkYm9hcmQlMjBkZXRhaWx8ZW58MHx8fHwxNzYzOTEyNTUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1763478958775-ebb6733dd058?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxoZWFkYm9hcmQlMjBkZXRhaWx8ZW58MHx8fHwxNzYzOTEyNTUwfDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "headboard detail"
     },
     {
       "id": "product-bed-panel-line-10",
       "description": "Lifestyle shot of the Panel Line Bed.",
-      "imageUrl": "https://images.unsplash.com/photo-1612365416820-33b8d140f476?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxiZWRyb29tJTIwbGlmZXN0eWxlfGVufDB8fHx8MTc2NDAwNTU0OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1612365416820-33b8d140f476?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxiZWRyb29tJTIwbGlmZXN0eWxlfGVufDB8fHx8MTc2NDAwNTU0OXww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "bedroom lifestyle"
     },
     {
@@ -503,6 +497,72 @@
       "description": "An elegant wing back bed with a tall, imposing headboard.",
       "imageUrl": "https://images.unsplash.com/photo-1608039667083-dba9d92e33e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3aW5nYmFjayUyMGJlZHxlbnwwfHx8fDE3NjM5MTI1NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "wingback bed"
+    },
+    {
+      "id": "product-bed-panel-wing-back-2",
+      "description": "Side view of the Panel Wing Back Bed.",
+      "imageUrl": "https://images.unsplash.com/photo-1590428398616-6caecd7af273?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d2luZ2JhY2slMjBiZWR8ZW58MHx8fHwxNzYzOTEyNTUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wingback bed"
+    },
+    {
+      "id": "product-bed-panel-wing-back-3",
+      "description": "Close-up of the Panel Wing Back Bed headboard.",
+      "imageUrl": "https://images.unsplash.com/photo-1599682802483-c31c10e577a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxiZWQlMjBoZWFkYm9hcmR8ZW58MHx8fHwxNzYzOTEwNDA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "bed headboard"
+    },
+    {
+      "id": "product-bed-panel-wing-back-4",
+      "description": "Footboard detail of the Panel Wing Back Bed.",
+      "imageUrl": "https://images.unsplash.com/photo-1590428398616-6caecd7af273?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxiZWQlMjBmb290Ym9hcmR8ZW58MHx8fHwxNzY0MDA0MTUzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "bed footboard"
+    },
+    {
+      "id": "product-bed-panel-wing-back-5",
+      "description": "Fabric texture of the Panel Wing Back Bed.",
+      "imageUrl": "https://images.unsplash.com/photo-1528459105426-b9548367069b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmYWJyaWMlMjB0ZXh0dXJlfGVufDB8fHx8MTc2Mzk2MjYxNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fabric texture"
+    },
+    {
+      "id": "product-bed-panel-wing-back-6",
+      "description": "Panel Wing Back Bed in a master bedroom setting.",
+      "imageUrl": "https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtYXN0ZXIlMjBiZWRyb29tfGVufDB8fHx8MTc2NDAwNDE1M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "master bedroom"
+    },
+    {
+      "id": "product-bed-panel-wing-back-7",
+      "description": "Panel Wing Back Bed from an angle.",
+      "imageUrl": "https://images.unsplash.com/photo-1689626698503-47934d011285?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3aW5nYmFjayUyMGJlZHxlbnwwfHx8fDE3NjM5MTI1NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wingback bed"
+    },
+    {
+      "id": "product-bed-panel-wing-back-8",
+      "description": "Panel Wing Back Bed with pillows.",
+      "imageUrl": "https://images.unsplash.com/photo-1630823296420-a28147fa9bde?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxiZWQlMjBwaWxsb3dzfGVufDB8fHx8MTc2NDAwNTU0OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "bed pillows"
+    },
+    {
+      "id": "product-bed-panel-wing-back-9",
+      "description": "Top view of the Panel Wing Back Bed.",
+      "imageUrl": "https://images.unsplash.com/photo-1583002435371-8ddc1d106f39?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxiZWQlMjB0b3B8ZW58MHx8fHwxNzY0MDA0MTUzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "bed top"
+    },
+    {
+      "id": "product-bed-panel-wing-back-10",
+      "description": "Leg detail of the Panel Wing Back Bed.",
+      "imageUrl": "https://images.unsplash.com/photo-1758977403865-f79e156415b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmdXJuaXR1cmUlMjBsZWd8ZW58MHx8fHwxNzY0MDA1NTQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "furniture leg"
+    },
+    {
+      "id": "product-bed-panel-wing-back-11",
+      "description": "Lifestyle shot of the Panel Wing Back Bed.",
+      "imageUrl": "https://images.unsplash.com/photo-1649843263763-c7a9e29d5ea2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxiZWRyb29tJTIwbGlmZXN0eWxlfGVufDB8fHx8MTc2NDAwNTU0OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "bedroom lifestyle"
+    },
+    {
+      "id": "product-bed-panel-wing-back-12",
+      "description": "Detail of the wing on the headboard.",
+      "imageUrl": "https://images.unsplash.com/photo-1759264244746-140bbbc54e1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxoZWFkYm9hcmQlMjBkZXRhaWx8ZW58MHx8fHwxNzYzOTEyNTUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "headboard detail"
     }
   ]
 }

@@ -40,10 +40,10 @@ export const productImages = {
     'sleigh-bed': getImages(['product-bed-sleigh-1', 'product-bed-sleigh-2', 'product-bed-sleigh-3', 'product-bed-sleigh-4', 'product-bed-sleigh-5', 'product-bed-sleigh-6', 'product-bed-sleigh-7', 'product-bed-sleigh-8', 'product-bed-sleigh-9', 'product-bed-sleigh-10', 'product-bed-sleigh-11']),
     'divan-ottoman-bed': getImages(['product-bed-divan-1', 'product-bed-divan-2', 'product-bed-divan-3', 'product-bed-divan-4', 'product-bed-divan-5', 'product-bed-divan-6', 'product-bed-divan-7', 'product-bed-divan-8', 'product-bed-divan-9', 'product-bed-divan-10', 'product-bed-divan-11']),
     'mirror-bed': getImages(['product-bed-mirror-1', 'product-bed-mirror-2', 'product-bed-mirror-3', 'product-bed-mirror-4', 'product-bed-mirror-5', 'product-bed-mirror-6', 'product-bed-mirror-7', 'product-bed-mirror-8', 'product-bed-mirror-9', 'product-bed-mirror-10', 'product-bed-mirror-11']),
-    'panel-ambassador-bed': getImages(['product-bed-panel-ambassador-1', 'product-bed-panel-ambassador-2', 'product-bed-panel-ambassador-3', 'product-bed-panel-ambassador-4', 'product-bed-panel-ambassador-5']),
+    'panel-ambassador-bed': getImages(['product-bed-panel-ambassador-1', 'product-bed-panel-ambassador-2', 'product-bed-panel-ambassador-3', 'product-bed-panel-ambassador-4']),
     'panel-bumper-bed': getImages(['product-bed-panel-bumper-1', 'product-bed-panel-bumper-2', 'product-bed-panel-bumper-3', 'product-bed-panel-bumper-4']),
     'panel-line-bed': getImages(['product-bed-panel-line-1', 'product-bed-panel-line-2', 'product-bed-panel-line-3', 'product-bed-panel-line-4', 'product-bed-panel-line-5', 'product-bed-panel-line-6', 'product-bed-panel-line-7', 'product-bed-panel-line-8', 'product-bed-panel-line-9', 'product-bed-panel-line-10']),
-    'panel-wing-back-bed': getImages(['product-bed-panel-wing-back-1']),
+    'panel-wing-back-bed': getImages(['product-bed-panel-wing-back-1', 'product-bed-panel-wing-back-2', 'product-bed-panel-wing-back-3', 'product-bed-panel-wing-back-4', 'product-bed-panel-wing-back-5', 'product-bed-panel-wing-back-6', 'product-bed-panel-wing-back-7', 'product-bed-panel-wing-back-8', 'product-bed-panel-wing-back-9', 'product-bed-panel-wing-back-10', 'product-bed-panel-wing-back-11', 'product-bed-panel-wing-back-12']),
 };
 
 export const categoryImages = {
