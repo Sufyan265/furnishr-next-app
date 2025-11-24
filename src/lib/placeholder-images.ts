@@ -43,6 +43,7 @@ export const productImages = {
     'sleigh-bed': getImages(['product-bed-sleigh-1']),
     'divan-ottoman-bed': getImages(['product-bed-divan-1']),
     'mirror-bed': getImages(['product-bed-mirror-1']),
+    'panel-ambassador-bed': getImages(['product-bed-panel-ambassador-1']),
 };
 
 export const categoryImages = {

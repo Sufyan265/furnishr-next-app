@@ -173,6 +173,12 @@
       "description": "A stylish modern bed with a mirrored frame.",
       "imageUrl": "https://images.unsplash.com/photo-1594467359934-ab5a4eda43c1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtaXJyb3IlMjBiZWR8ZW58MHx8fHwxNzY1ODQxOTU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "mirror bed"
+    },
+    {
+      "id": "product-bed-panel-ambassador-1",
+      "description": "An elegant panel ambassador bed with a clean, modern design.",
+      "imageUrl": "https://images.unsplash.com/photo-1595526051245-46e676d65c35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwYW5lbCUyMGJlZHxlbnwwfHx8fDE3NjU4NDIwNjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "panel bed"
     }
   ]
 }
