@@ -282,3 +282,5 @@ export const featuredProducts: Product[] = [];
 export const getProductBySlug = (slug: string) => products.find(p => p.slug === slug);
 export const getReviewsForProduct = (productId: string) => reviews.filter(r => r.productId === productId);
 export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === slug);
+
+    
