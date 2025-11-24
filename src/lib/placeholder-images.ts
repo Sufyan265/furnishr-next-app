@@ -42,7 +42,7 @@ export const productImages = {
     'mirror-bed': getImages(['product-bed-mirror-1', 'product-bed-mirror-2', 'product-bed-mirror-3', 'product-bed-mirror-4', 'product-bed-mirror-5', 'product-bed-mirror-6', 'product-bed-mirror-7', 'product-bed-mirror-8', 'product-bed-mirror-9', 'product-bed-mirror-10', 'product-bed-mirror-11']),
     'panel-ambassador-bed': getImages(['product-bed-panel-ambassador-1', 'product-bed-panel-ambassador-2', 'product-bed-panel-ambassador-3', 'product-bed-panel-ambassador-4', 'product-bed-panel-ambassador-5']),
     'panel-bumper-bed': getImages(['product-bed-panel-bumper-1', 'product-bed-panel-bumper-2', 'product-bed-panel-bumper-3', 'product-bed-panel-bumper-4']),
-    'panel-line-bed': getImages(['product-bed-panel-line-1']),
+    'panel-line-bed': getImages(['product-bed-panel-line-1', 'product-bed-panel-line-2', 'product-bed-panel-line-3', 'product-bed-panel-line-4', 'product-bed-panel-line-5', 'product-bed-panel-line-6', 'product-bed-panel-line-7', 'product-bed-panel-line-8', 'product-bed-panel-line-9', 'product-bed-panel-line-10']),
     'panel-wing-back-bed': getImages(['product-bed-panel-wing-back-1']),
 };
 
