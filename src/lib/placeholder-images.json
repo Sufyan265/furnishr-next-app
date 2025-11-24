@@ -149,6 +149,12 @@
       "description": "A minimalist white bed with under-bed storage drawers.",
       "imageUrl": "https://images.unsplash.com/photo-1615875638739-12a835b03511?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzdG9yYWdlJTIwYmVkfGVufDB8fHx8MTc2MzI5MDI3MXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "storage bed"
+    },
+    {
+      "id": "product-bed-ambassador-1",
+      "description": "A luxurious Ambassador bed with a tall, buttoned headboard.",
+      "imageUrl": "https://images.unsplash.com/photo-1619968399992-f611e03c5132?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbWJhc3NhZG9yJTIwYmVkfGVufDB8fHx8MTc2NDYwOTQ0NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ambassador bed"
     }
   ]
 }
