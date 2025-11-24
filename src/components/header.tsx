@@ -16,10 +16,8 @@ import { useState } from "react";
 
 const navLinks = [
   { href: "/products", label: "All Products" },
-  { href: "/products?category=living-room", label: "Living Room" },
-  { href: "/products?category=bedroom", label: "Bedroom" },
-  { href: "/products?category=dining", label: "Dining" },
-  { href: "/products?category=office", label: "Office" },
+  { href: "/products?category=sofas", label: "Sofas" },
+  { href: "/products?category=beds", label: "Beds" },
   { href: "/blog", label: "Blog" },
   { href: "/about", label: "About Us" },
 ];
@@ -42,7 +40,7 @@ export default function Header() {
         
         <div className="flex flex-1 items-center justify-end">
           <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-            {navLinks.slice(1,5).map((link) => ( // Show main categories on desktop
+            {navLinks.slice(1,3).map((link) => ( // Show main categories on desktop
               <Link
                 key={link.href}
                 href={link.href}

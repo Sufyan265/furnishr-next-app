@@ -36,13 +36,7 @@ export const heroImages = [
 
 export const productImages = {
     'urban-elegance-sofa': getImages(['product-sofa-1', 'product-sofa-2', 'product-sofa-3']),
-    'nordic-oak-table': getImages(['product-table-1']),
     'cloud-nine-bed': getImages(['product-bed-1']),
-    'artisans-touch-chair': getImages(['product-chair-1']),
-    'executive-desk': getImages(['product-desk-1']),
-    'ladder-bookshelf': getImages(['product-bookshelf-1']),
-    'arc-floor-lamp': getImages(['product-lamp-1']),
-    'geo-pattern-rug': getImages(['product-rug-1']),
     'rustic-charm-bed': getImages(['product-bed-rustic-1']),
     'minimalist-storage-bed': getImages(['product-bed-storage-1']),
 };

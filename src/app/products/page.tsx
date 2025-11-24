@@ -32,7 +32,7 @@ export default function ProductsPage({
         <h1 className="font-headline text-4xl md:text-5xl font-bold">
           {selectedCategory
             ? categories.find(c => c.slug === selectedCategory)?.name
-            : 'All Products'}
+            : 'All Sofas & Beds'}
         </h1>
         <p className="mt-2 text-lg text-muted-foreground">
           Discover our curated collection of fine furniture.
