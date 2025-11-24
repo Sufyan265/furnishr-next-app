@@ -40,9 +40,9 @@ export const products: Product[] = [
     categorySlug: 'beds',
     price: 340.00,
     variants: [
-      { size: 'Double', price: 340.00 },
-      { size: 'King', price: 400.00 },
-      { size: 'Super King', price: 450.00 },
+      { size: 'Double', price: 340.00, mattressPrice: 440.00 },
+      { size: 'King', price: 400.00, mattressPrice: 490.00 },
+      { size: 'Super King', price: 450.00, mattressPrice: 550.00 },
     ],
     rating: 5,
     reviewCount: 45,

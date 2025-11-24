@@ -3,6 +3,7 @@ import type { ImagePlaceholder } from "./placeholder-images";
 export interface ProductVariant {
   size: string;
   price: number;
+  mattressPrice?: number;
 }
 
 export interface Product {
@@ -67,6 +68,7 @@ export interface BlogPost {
 export interface CartItem extends Product {
   quantity: number;
   variant?: ProductVariant;
+  withMattress?: boolean;
 }
 
 export type WishlistItem = Product;

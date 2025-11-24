@@ -7,7 +7,7 @@ import { siteWideSale } from '@/lib/data';
 
 interface CartContextType {
   cart: CartItem[];
-  addToCart: (product: Product, quantity: number, variant?: ProductVariant) => void;
+  addToCart: (product: Product, quantity: number, variant?: ProductVariant, withMattress?: boolean) => void;
   removeFromCart: (productId: string, variantSize?: string) => void;
   updateQuantity: (productId: string, quantity: number, variantSize?: string) => void;
   clearCart: () => void;
@@ -33,32 +33,25 @@ export function CartProvider({ children }: { children: ReactNode }) {
     localStorage.setItem('furnishr_cart', JSON.stringify(cart));
   }, [cart]);
 
-  const addToCart = (product: Product, quantity: number, variant?: ProductVariant) => {
+  const addToCart = (product: Product, quantity: number, variant?: ProductVariant, withMattress?: boolean) => {
     setCart(prevCart => {
       const existingItem = prevCart.find(item => 
-        item.id === product.id && item.variant?.size === variant?.size
+        item.id === product.id && 
+        item.variant?.size === variant?.size &&
+        item.withMattress === withMattress
       );
       
       if (existingItem) {
         return prevCart.map(item =>
-          item.id === product.id && item.variant?.size === variant?.size
+          item.id === product.id && item.variant?.size === variant?.size && item.withMattress === withMattress
             ? { ...item, quantity: item.quantity + quantity }
             : item
         );
       }
       
       let price = product.price;
-      if (variant) {
-        price = variant.price;
-      }
 
-      const isSaleApplicable = siteWideSale.isActive && product.slug !== 'ambassador-park-lane-bed';
-
-      if (isSaleApplicable) {
-        price = price * (1 - siteWideSale.discountPercentage / 100);
-      }
-
-      const cartItem: CartItem = { ...product, quantity, price, variant };
+      const cartItem: CartItem = { ...product, quantity, price, variant, withMattress };
       
       return [...prevCart, cartItem];
     });

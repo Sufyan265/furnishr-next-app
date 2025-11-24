@@ -16,13 +16,29 @@ export default function CartPage() {
   const { cart, removeFromCart, updateQuantity } = useCart();
 
   const originalSubtotal = cart.reduce((sum, item) => {
-    // This is a simplification; a real app would fetch original price from a DB
     const isSaleApplicable = siteWideSale.isActive && item.slug !== 'ambassador-park-lane-bed';
-    const itemOriginalPrice = item.variant ? item.variant.price : item.price / (1 - (isSaleApplicable ? siteWideSale.discountPercentage / 100 : 0));
+    let itemOriginalPrice = item.variant ? item.variant.price : item.price;
+    if (item.withMattress && item.variant?.mattressPrice) {
+        itemOriginalPrice = item.variant.mattressPrice;
+    }
+
+    if (isSaleApplicable) {
+        itemOriginalPrice = itemOriginalPrice / (1 - siteWideSale.discountPercentage / 100);
+    }
+    
     return sum + itemOriginalPrice * item.quantity;
   }, 0);
 
-  const discountedSubtotal = cart.reduce((sum, item) => sum + (item.variant ? item.variant.price : item.price) * item.quantity, 0);
+  const discountedSubtotal = cart.reduce((sum, item) => {
+      let itemPrice = item.price;
+      if (item.slug === 'ambassador-park-lane-bed' && item.variant) {
+        itemPrice = item.variant.price;
+        if(item.withMattress && item.variant.mattressPrice) {
+            itemPrice = item.variant.mattressPrice;
+        }
+      }
+      return sum + itemPrice * item.quantity;
+  }, 0);
 
   const shipping = discountedSubtotal > 250 || discountedSubtotal === 0 ? 0 : 49.99;
   const total = discountedSubtotal + shipping;
@@ -55,10 +71,26 @@ export default function CartPage() {
                 <div className="divide-y">
                   {cart.map(item => {
                     const isSaleApplicable = siteWideSale.isActive && item.slug !== 'ambassador-park-lane-bed';
-                    const itemOriginalPrice = item.variant ? item.variant.price : item.price / (1 - (isSaleApplicable ? siteWideSale.discountPercentage / 100 : 0));
+                    
+                    let itemPrice = item.price;
+                    if (item.slug === 'ambassador-park-lane-bed' && item.variant) {
+                        itemPrice = item.variant.price;
+                        if(item.withMattress && item.variant.mattressPrice) {
+                            itemPrice = item.variant.mattressPrice;
+                        }
+                    }
+
+                    let itemOriginalPrice = item.variant ? item.variant.price : item.price;
+                    if (item.withMattress && item.variant?.mattressPrice) {
+                        itemOriginalPrice = item.variant.mattressPrice;
+                    }
+                    if (isSaleApplicable) {
+                        itemOriginalPrice = itemOriginalPrice / (1 - (siteWideSale.discountPercentage / 100));
+                    }
+
 
                     return (
-                    <div key={item.id + (item.variant?.size || '')} className="flex items-center p-4 sm:p-6">
+                    <div key={item.id + (item.variant?.size || '') + (item.withMattress ? '-mattress' : '')} className="flex items-center p-4 sm:p-6">
                       <div className="relative h-24 w-24 sm:h-32 sm:w-32 rounded-md overflow-hidden flex-shrink-0">
                         <Image
                           src={getImage(item.imageIds[0]).imageUrl}
@@ -74,9 +106,10 @@ export default function CartPage() {
                             <Link href={`/products/${item.slug}`}>{item.name}</Link>
                           </h3>
                           {item.variant && <p className="text-muted-foreground text-sm">{item.variant.size}</p>}
+                          {item.withMattress && <p className="text-sm text-primary font-medium">+ Mattress</p>}
                           <p className="text-muted-foreground text-sm">{item.category}</p>
                           <div className="mt-2">
-                             <p className="text-lg font-bold text-destructive">£{(item.variant?.price || item.price).toFixed(2)}</p>
+                             <p className="text-lg font-bold text-destructive">£{itemPrice.toFixed(2)}</p>
                              {isSaleApplicable && <p className="text-sm text-muted-foreground line-through">£{itemOriginalPrice.toFixed(2)}</p>}
                           </div>
                         </div>

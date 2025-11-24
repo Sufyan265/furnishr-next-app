@@ -13,7 +13,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { useCart } from '@/context/cart-context';
 import { useToast } from '@/hooks/use-toast';
-import { Minus, Plus, ShoppingCart, Info, Percent } from 'lucide-react';
+import { Minus, Plus, ShoppingCart, Percent, Bed } from 'lucide-react';
 import type { Product, ProductVariant } from '@/lib/types';
 import { getImages } from '@/lib/placeholder-images';
 import { Badge } from './ui/badge';
@@ -22,6 +22,8 @@ import CountdownTimer from './countdown-timer';
 import { siteWideSale } from '@/lib/data';
 import { RadioGroup, RadioGroupItem } from './ui/radio-group';
 import { Label } from './ui/label';
+import { Switch } from './ui/switch';
+import { Separator } from './ui/separator';
 
 interface ProductInteractionProps {
   product: Product;
@@ -41,36 +43,51 @@ export default function ProductInteraction({ product }: ProductInteractionProps)
   const [quantity, setQuantity] = useState(1);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [selectedVariant, setSelectedVariant] = useState<ProductVariant | undefined>(product.variants?.[0]);
+  const [withMattress, setWithMattress] = useState(false);
 
   const { addToCart } = useCart();
   const { toast } = useToast();
 
   const productImages = getImages(product.imageIds);
 
-  const price = selectedVariant?.price || product.price;
-
+  const basePrice = selectedVariant?.price || product.price;
+  const mattressPrice = withMattress ? (selectedVariant?.mattressPrice || 0) : 0;
+  const finalPrice = basePrice + mattressPrice;
+  
   const isSiteWideSaleActive = siteWideSale.isActive && product.slug !== 'ambassador-park-lane-bed';
   const individualDeal = product.deal && new Date(product.deal.expiresAt) > new Date();
 
-  let discountedPrice = price;
+  let displayPrice = finalPrice;
+  let originalPrice = finalPrice;
   let discountPercentage = 0;
   let isDealActive = false;
 
   if (isSiteWideSaleActive) {
-    discountedPrice = price * (1 - siteWideSale.discountPercentage / 100);
+    displayPrice = finalPrice * (1 - siteWideSale.discountPercentage / 100);
     discountPercentage = siteWideSale.discountPercentage;
     isDealActive = true;
   } else if (individualDeal) {
-    discountedPrice = price * (1 - product.deal.discountPercentage / 100);
+    displayPrice = finalPrice * (1 - product.deal.discountPercentage / 100);
     discountPercentage = product.deal.discountPercentage;
     isDealActive = true;
+  } else {
+    originalPrice = finalPrice;
   }
 
   const handleAddToCart = () => {
-    addToCart({ ...product, price: discountedPrice }, quantity, selectedVariant);
+    addToCart({ ...product, price: displayPrice }, quantity, selectedVariant, withMattress);
+    let description = `${quantity} x ${product.name}`;
+    if (selectedVariant) {
+        description += ` (${selectedVariant.size})`;
+    }
+    if (withMattress) {
+        description += ' with Mattress';
+    }
+    description += ' has been added to your cart.';
+
     toast({
       title: "Added to Cart",
-      description: `${quantity} x ${product.name}${selectedVariant ? ` (${selectedVariant.size})` : ''} has been added to your cart.`,
+      description: description,
     });
   };
 
@@ -85,6 +102,9 @@ export default function ProductInteraction({ product }: ProductInteractionProps)
     const variant = product.variants?.find(v => v.size === variantSize);
     setSelectedVariant(variant);
   }
+  
+  const hasMattressOption = product.variants?.some(v => v.mattressPrice && v.mattressPrice > 0);
+
 
   return (
     <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
@@ -137,11 +157,11 @@ export default function ProductInteraction({ product }: ProductInteractionProps)
                 "text-3xl font-semibold text-primary",
                 isDealActive && "text-destructive"
               )}>
-                £{discountedPrice.toFixed(2)}
+                £{displayPrice.toFixed(2)}
               </p>
               {isDealActive && (
                 <p className="text-xl font-medium text-muted-foreground line-through">
-                  £{price.toFixed(2)}
+                  £{originalPrice.toFixed(2)}
                 </p>
               )}
             </div>
@@ -164,6 +184,30 @@ export default function ProductInteraction({ product }: ProductInteractionProps)
                 ))}
               </RadioGroup>
             </div>
+          )}
+
+          {hasMattressOption && (
+            <>
+            <Separator />
+            <div className="flex items-center justify-between rounded-lg border p-4">
+                <div className="space-y-0.5">
+                    <div className="flex items-center gap-2">
+                        <Bed className="h-5 w-5 text-primary"/>
+                        <Label htmlFor="mattress-switch" className="text-base font-semibold">
+                            Add a Mattress
+                        </Label>
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                        Complete your purchase with a premium mattress.
+                    </p>
+                </div>
+                <Switch 
+                    id="mattress-switch"
+                    checked={withMattress}
+                    onCheckedChange={setWithMattress}
+                />
+            </div>
+            </>
           )}
 
 
