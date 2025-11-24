@@ -1,13 +1,13 @@
 "use client";
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import type { CartItem, Product } from '@/lib/types';
+import type { CartItem, Product, ProductVariant } from '@/lib/types';
 
 interface CartContextType {
   cart: CartItem[];
-  addToCart: (product: Product, quantity: number) => void;
-  removeFromCart: (productId: string) => void;
-  updateQuantity: (productId: string, quantity: number) => void;
+  addToCart: (product: Product, quantity: number, variant?: ProductVariant) => void;
+  removeFromCart: (productId: string, variantSize?: string) => void;
+  updateQuantity: (productId: string, quantity: number, variantSize?: string) => void;
   clearCart: () => void;
 }
 
@@ -31,32 +31,45 @@ export function CartProvider({ children }: { children: ReactNode }) {
     localStorage.setItem('furnishr_cart', JSON.stringify(cart));
   }, [cart]);
 
-  const addToCart = (product: Product, quantity: number) => {
+  const addToCart = (product: Product, quantity: number, variant?: ProductVariant) => {
     setCart(prevCart => {
-      const existingItem = prevCart.find(item => item.id === product.id);
+      const existingItem = prevCart.find(item => 
+        item.id === product.id && item.variant?.size === variant?.size
+      );
+      
       if (existingItem) {
         return prevCart.map(item =>
-          item.id === product.id
+          item.id === product.id && item.variant?.size === variant?.size
             ? { ...item, quantity: item.quantity + quantity }
             : item
         );
       }
-      return [...prevCart, { ...product, quantity }];
+      
+      const cartItem: CartItem = { ...product, quantity, variant };
+      // Use price from variant if it exists
+      if (variant) {
+        cartItem.price = variant.price;
+      }
+      
+      return [...prevCart, cartItem];
     });
   };
 
-  const removeFromCart = (productId: string) => {
-    setCart(prevCart => prevCart.filter(item => item.id !== productId));
+  const removeFromCart = (productId: string, variantSize?: string) => {
+    setCart(prevCart => prevCart.filter(item => 
+      !(item.id === productId && item.variant?.size === variantSize)
+    ));
   };
 
-  const updateQuantity = (productId: string, quantity: number) => {
+  const updateQuantity = (productId: string, quantity: number, variantSize?: string) => {
     if (quantity <= 0) {
-      removeFromCart(productId);
+      removeFromCart(productId, variantSize);
       return;
     }
     setCart(prevCart =>
       prevCart.map(item =>
-        item.id === productId ? { ...item, quantity } : item
+        item.id === productId && item.variant?.size === variantSize
+         ? { ...item, quantity } : item
       )
     );
   };

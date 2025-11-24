@@ -38,7 +38,12 @@ export const products: Product[] = [
     name: 'Ambassador Park Lane Bed',
     category: 'Beds',
     categorySlug: 'beds',
-    price: 1450.00,
+    price: 340.00,
+    variants: [
+      { size: 'Double', price: 340.00 },
+      { size: 'King', price: 400.00 },
+      { size: 'Super King', price: 450.00 },
+    ],
     rating: 5,
     reviewCount: 45,
     imageIds: productImagesMap['ambassador-bed'].map(i => i.id),
@@ -190,7 +195,7 @@ export const reviews: Review[] = [
   { id: '17', productId: '7', author: 'Grace P.', rating: 4, title: 'Love it, but tricky to position', comment: 'A beautiful lamp. The arc is quite large, so make sure you have enough space for it. It took a few tries to get it in the perfect spot.', date: '2023-10-05' },
   { id: '18', productId: '8', author: 'Ethan K.', rating: 5, title: 'So soft and beautiful', comment: 'The rug feels amazing underfoot. The pattern is subtle but adds so much character to the room. It unrolled flat almost immediately.', date: '2023-09-18' },
   { id: '19', productId: '8', author: 'Mia V.', rating: 5, title: 'Completes the room!', comment: 'This rug was the final piece my living room needed. The quality is excellent and the colors are true to the photos online.', date: '2023-10-25' },
-  { id_ts: '20', productId: '4', author: 'Noah F.', rating: 5, title: 'My new favorite spot', comment: 'I find myself sitting in this chair all the time. It looks great and is surprisingly comfortable for long periods. A fantastic purchase.', date: '2023-10-28' }
+  { id: '20', productId: '4', author: 'Noah F.', rating: 5, title: 'My new favorite spot', comment: 'I find myself sitting in this chair all the time. It looks great and is surprisingly comfortable for long periods. A fantastic purchase.', date: '2023-10-28' }
 ];
 
 export const blogPosts: BlogPost[] = [

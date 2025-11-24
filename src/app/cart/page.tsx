@@ -17,11 +17,11 @@ export default function CartPage() {
   const originalSubtotal = cart.reduce((sum, item) => {
     // Find the original price before any discounts were applied
     // This is a simplification; a real app would fetch original price from a DB
-    const itemOriginalPrice = item.price / (1 - (siteWideSale.isActive ? siteWideSale.discountPercentage / 100 : 0));
+    const itemOriginalPrice = item.variant ? item.variant.price : item.price / (1 - (siteWideSale.isActive ? siteWideSale.discountPercentage / 100 : 0));
     return sum + itemOriginalPrice * item.quantity;
   }, 0);
 
-  const discountedSubtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const discountedSubtotal = cart.reduce((sum, item) => sum + (item.variant ? item.variant.price : item.price) * item.quantity, 0);
 
   const shipping = discountedSubtotal > 250 || discountedSubtotal === 0 ? 0 : 49.99;
   const total = discountedSubtotal + shipping;
@@ -53,7 +53,7 @@ export default function CartPage() {
               <CardContent className="p-0">
                 <div className="divide-y">
                   {cart.map(item => (
-                    <div key={item.id} className="flex items-center p-4 sm:p-6">
+                    <div key={item.id + (item.variant?.size || '')} className="flex items-center p-4 sm:p-6">
                       <div className="relative h-24 w-24 sm:h-32 sm:w-32 rounded-md overflow-hidden flex-shrink-0">
                         <Image
                           src={getImage(item.imageIds[0]).imageUrl}
@@ -68,23 +68,24 @@ export default function CartPage() {
                           <h3 className="font-headline text-lg sm:text-xl font-semibold">
                             <Link href={`/products/${item.slug}`}>{item.name}</Link>
                           </h3>
+                          {item.variant && <p className="text-muted-foreground text-sm">{item.variant.size}</p>}
                           <p className="text-muted-foreground text-sm">{item.category}</p>
                           <div className="mt-2">
-                             <p className="text-lg font-bold text-destructive">£{item.price.toFixed(2)}</p>
-                             {siteWideSale.isActive && <p className="text-sm text-muted-foreground line-through">£{(item.price / (1 - siteWideSale.discountPercentage / 100)).toFixed(2)}</p>}
+                             <p className="text-lg font-bold text-destructive">£{(item.variant?.price || item.price).toFixed(2)}</p>
+                             {siteWideSale.isActive && <p className="text-sm text-muted-foreground line-through">£{((item.variant?.price || item.price) / (1 - siteWideSale.discountPercentage / 100)).toFixed(2)}</p>}
                           </div>
                         </div>
                         <div className="flex items-center justify-between sm:justify-self-end sm:flex-col sm:items-end sm:gap-2">
                           <div className="flex items-center border rounded-md">
-                            <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => updateQuantity(item.id, item.quantity - 1)} disabled={item.quantity === 1}>
+                            <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => updateQuantity(item.id, item.quantity - 1, item.variant?.size)} disabled={item.quantity === 1}>
                               <Minus className="h-4 w-4" />
                             </Button>
                             <span className="w-8 text-center text-sm font-bold">{item.quantity}</span>
-                            <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => updateQuantity(item.id, item.quantity + 1)}>
+                            <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => updateQuantity(item.id, item.quantity + 1, item.variant?.size)}>
                               <Plus className="h-4 w-4" />
                             </Button>
                           </div>
-                          <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-destructive" onClick={() => removeFromCart(item.id)}>
+                          <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-destructive" onClick={() => removeFromCart(item.id, item.variant?.size)}>
                             <Trash2 className="h-4 w-4" />
                           </Button>
                         </div>

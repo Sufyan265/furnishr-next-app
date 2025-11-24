@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import {
   Carousel,
@@ -13,12 +13,14 @@ import { Button } from '@/components/ui/button';
 import { useCart } from '@/context/cart-context';
 import { useToast } from '@/hooks/use-toast';
 import { Minus, Plus, ShoppingCart, Info, Percent } from 'lucide-react';
-import type { Product } from '@/lib/types';
+import type { Product, ProductVariant } from '@/lib/types';
 import { getImages } from '@/lib/placeholder-images';
 import { Badge } from './ui/badge';
 import { cn } from '@/lib/utils';
 import CountdownTimer from './countdown-timer';
 import { siteWideSale } from '@/lib/data';
+import { RadioGroup, RadioGroupItem } from './ui/radio-group';
+import { Label } from './ui/label';
 
 interface ProductInteractionProps {
   product: Product;
@@ -37,33 +39,37 @@ const StockBadge = ({ stock }: { stock: number }) => {
 export default function ProductInteraction({ product }: ProductInteractionProps) {
   const [quantity, setQuantity] = useState(1);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [selectedVariant, setSelectedVariant] = useState<ProductVariant | undefined>(product.variants?.[0]);
+
   const { addToCart } = useCart();
   const { toast } = useToast();
 
   const productImages = getImages(product.imageIds);
 
+  const price = selectedVariant?.price || product.price;
+
   const isSiteWideSaleActive = siteWideSale.isActive;
   const individualDeal = product.deal && new Date(product.deal.expiresAt) > new Date();
 
-  let discountedPrice = product.price;
+  let discountedPrice = price;
   let discountPercentage = 0;
   let isDealActive = false;
 
   if (isSiteWideSaleActive) {
-    discountedPrice = product.price * (1 - siteWideSale.discountPercentage / 100);
+    discountedPrice = price * (1 - siteWideSale.discountPercentage / 100);
     discountPercentage = siteWideSale.discountPercentage;
     isDealActive = true;
   } else if (individualDeal) {
-    discountedPrice = product.price * (1 - product.deal.discountPercentage / 100);
+    discountedPrice = price * (1 - product.deal.discountPercentage / 100);
     discountPercentage = product.deal.discountPercentage;
     isDealActive = true;
   }
 
   const handleAddToCart = () => {
-    addToCart({ ...product, price: discountedPrice }, quantity);
+    addToCart({ ...product, price: discountedPrice }, quantity, selectedVariant);
     toast({
       title: "Added to Cart",
-      description: `${quantity} x ${product.name} has been added to your cart.`,
+      description: `${quantity} x ${product.name}${selectedVariant ? ` (${selectedVariant.size})` : ''} has been added to your cart.`,
     });
   };
 
@@ -73,6 +79,11 @@ export default function ProductInteraction({ product }: ProductInteractionProps)
       setQuantity(newQuantity);
     }
   };
+
+  const handleVariantChange = (variantSize: string) => {
+    const variant = product.variants?.find(v => v.size === variantSize);
+    setSelectedVariant(variant);
+  }
 
   return (
     <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
@@ -129,12 +140,31 @@ export default function ProductInteraction({ product }: ProductInteractionProps)
               </p>
               {isDealActive && (
                 <p className="text-xl font-medium text-muted-foreground line-through">
-                  £{product.price.toFixed(2)}
+                  £{price.toFixed(2)}
                 </p>
               )}
             </div>
             <StockBadge stock={product.stock} />
           </div>
+
+          {product.variants && (
+            <div className="space-y-2">
+              <Label className="font-semibold">Size</Label>
+              <RadioGroup
+                defaultValue={selectedVariant?.size}
+                onValueChange={handleVariantChange}
+                className="flex items-center gap-4"
+              >
+                {product.variants.map(variant => (
+                  <div key={variant.size} className="flex items-center">
+                    <RadioGroupItem value={variant.size} id={`size-${variant.size}`} />
+                    <Label htmlFor={`size-${variant.size}`} className="ml-2 cursor-pointer">{variant.size}</Label>
+                  </div>
+                ))}
+              </RadioGroup>
+            </div>
+          )}
+
 
           {individualDeal && !isSiteWideSaleActive && (
             <div className="space-y-2">

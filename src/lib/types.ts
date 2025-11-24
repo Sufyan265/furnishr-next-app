@@ -1,5 +1,10 @@
 import type { ImagePlaceholder } from "./placeholder-images";
 
+export interface ProductVariant {
+  size: string;
+  price: number;
+}
+
 export interface Product {
   id: string;
   slug: string;
@@ -7,6 +12,7 @@ export interface Product {
   category: string;
   categorySlug: string;
   price: number;
+  variants?: ProductVariant[];
   rating: number;
   reviewCount: number;
   imageIds: string[];
@@ -60,6 +66,7 @@ export interface BlogPost {
 
 export interface CartItem extends Product {
   quantity: number;
+  variant?: ProductVariant;
 }
 
 export type WishlistItem = Product;
