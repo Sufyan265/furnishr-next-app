@@ -41,7 +41,7 @@ export const productImages = {
     'divan-ottoman-bed': getImages(['product-bed-divan-1', 'product-bed-divan-2', 'product-bed-divan-3', 'product-bed-divan-4', 'product-bed-divan-5', 'product-bed-divan-6', 'product-bed-divan-7', 'product-bed-divan-8', 'product-bed-divan-9', 'product-bed-divan-10', 'product-bed-divan-11']),
     'mirror-bed': getImages(['product-bed-mirror-1', 'product-bed-mirror-2', 'product-bed-mirror-3', 'product-bed-mirror-4', 'product-bed-mirror-5', 'product-bed-mirror-6', 'product-bed-mirror-7', 'product-bed-mirror-8', 'product-bed-mirror-9', 'product-bed-mirror-10', 'product-bed-mirror-11']),
     'panel-ambassador-bed': getImages(['product-bed-panel-ambassador-1', 'product-bed-panel-ambassador-2', 'product-bed-panel-ambassador-3', 'product-bed-panel-ambassador-4', 'product-bed-panel-ambassador-5']),
-    'panel-bumper-bed': getImages(['product-bed-panel-bumper-1']),
+    'panel-bumper-bed': getImages(['product-bed-panel-bumper-1', 'product-bed-panel-bumper-2', 'product-bed-panel-bumper-3', 'product-bed-panel-bumper-4']),
     'panel-line-bed': getImages(['product-bed-panel-line-1']),
     'panel-wing-back-bed': getImages(['product-bed-panel-wing-back-1']),
 };
@@ -66,6 +66,8 @@ export const worldMapImage = getImage('world-map');
 export { getImage, getImages };
 
     
+    
+
     
 
     
