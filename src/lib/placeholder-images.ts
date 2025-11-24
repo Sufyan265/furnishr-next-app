@@ -43,6 +43,8 @@ export const productImages = {
     'ladder-bookshelf': getImages(['product-bookshelf-1']),
     'arc-floor-lamp': getImages(['product-lamp-1']),
     'geo-pattern-rug': getImages(['product-rug-1']),
+    'rustic-charm-bed': getImages(['product-bed-rustic-1']),
+    'minimalist-storage-bed': getImages(['product-bed-storage-1']),
 };
 
 export const categoryImages = {

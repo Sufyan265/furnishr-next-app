@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Award, Truck, Undo, Sparkles, Feather, ShieldCheck, Globe } from 'lucide-react';
+import { ArrowRight, Award, Truck, Undo, Sparkles, Feather, ShieldCheck, Globe, Bed } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import {
@@ -10,7 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
-import { categories, featuredProducts, reviews } from '@/lib/data';
+import { categories, featuredProducts, reviews, products } from '@/lib/data';
 import ProductCard from '@/components/product-card';
 import { heroImages, getImage, worldMapImage } from '@/lib/placeholder-images';
 import StarRating from '@/components/star-rating';
@@ -19,6 +19,7 @@ import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 export default function Home() {
   const chooseUsImage = getImage('category-living-room');
   const featuredReviews = reviews.filter(r => r.rating >= 4.5).slice(0, 3);
+  const bedroomProducts = products.filter(p => p.categorySlug === 'bedroom').slice(0, 4);
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
@@ -129,8 +130,28 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
+      <section>
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <Bed className="h-12 w-12 mx-auto text-primary" />
+            <h2 className="font-headline text-3xl md:text-4xl font-bold mt-4">Sweet Dreams Collection</h2>
+            <p className="mt-2 text-lg text-muted-foreground">Curated for your perfect sanctuary.</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+            {bedroomProducts.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <Button asChild>
+              <Link href="/products?category=bedroom">Shop All Bedroom <ArrowRight className="ml-2 h-4 w-4" /></Link>
+            </Button>
+          </div>
+        </div>
+      </section>
 
-       <section>
+       <section className="bg-secondary/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-headline text-3xl md:text-4xl font-bold">What Our Customers Say</h2>
@@ -159,7 +180,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-secondary/50">
+      <section>
         <div className="container mx-auto px-4 text-center">
           <Globe className="h-12 w-12 mx-auto text-primary" />
           <h2 className="font-headline text-3xl md:text-4xl font-bold mt-4">Loved Worldwide</h2>
@@ -185,7 +206,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+      <section className="bg-secondary/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-headline text-3xl md:text-4xl font-bold">Shop by Category</h2>
