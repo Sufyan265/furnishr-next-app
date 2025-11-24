@@ -99,13 +99,13 @@
     {
       "id": "blog-2",
       "description": "Small apartment living room with clever furniture arrangement.",
-      "imageUrl": "https://images.unsplash.com/photo-1502672023488-70e25813eb80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzbWFsbCUyMGFwYXJ0bWVudHxlbnwwfHx8fDE3NjMxMzY3OTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1502672023488-70e25813eb80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzbWFsbCUyMGFwYXJ0bWVudHxlbnwwfHx8fDE3NjMxMzY3OTJ8MA&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "small apartment"
     },
     {
       "id": "blog-3",
       "description": "A living room showcasing the use of natural materials like wood and plants.",
-      "imageUrl": "https://images.unsplash.com/photo-1616046229478-9901c5536a45?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxpbnRlcmlvciUyMGRlc2lnbnxlbnwwfHx8fDE3NjMwNzE2Mzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1616046229478-9901c5536a45?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxpbnRlcmlvciUyMGRlc2lnbnxlbnwwfHx8fDE3NjMwNzE2Mzl8MA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "biophilic design"
     },
     {
@@ -155,6 +155,18 @@
       "description": "A luxurious Ambassador bed with a tall, buttoned headboard.",
       "imageUrl": "https://images.unsplash.com/photo-1619968399992-f611e03c5132?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbWJhc3NhZG9yJTIwYmVkfGVufDB8fHx8MTc2NDYwOTQ0NHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "ambassador bed"
+    },
+    {
+      "id": "product-bed-ambassador-2",
+      "description": "Side view of a luxurious Ambassador bed.",
+      "imageUrl": "https://images.unsplash.com/photo-1595526114035-0d45ed16433d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBiZWR8ZW58MHx8fHwxNzY1ODQyMDY1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "luxury bed"
+    },
+    {
+      "id": "product-bed-ambassador-3",
+      "description": "Close up on the deep buttoned headboard of the Ambassador bed.",
+      "imageUrl": "https://images.unsplash.com/photo-1560184826-e051d8b6711d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXR0b25lZCUyMGhlYWRib2FyZHxlbnwwfHx8fDE3NjU4NDIwNjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "buttoned headboard"
     },
     {
       "id": "product-bed-sleigh-1",
