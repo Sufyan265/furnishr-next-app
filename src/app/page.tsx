@@ -124,11 +124,6 @@ export default function Home() {
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
-          <div className="text-center mt-12">
-            <Button asChild variant="outline">
-              <Link href="/products">View All Products <ArrowRight className="ml-2 h-4 w-4" /></Link>
-            </Button>
-          </div>
         </div>
       </section>
       
