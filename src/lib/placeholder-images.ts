@@ -36,8 +36,7 @@ export const heroImages = [
 
 export const productImages = {
     'urban-elegance-sofa': getImages(['product-sofa-1', 'product-sofa-2', 'product-sofa-3']),
-    'rustic-charm-bed': getImages(['product-bed-rustic-1']),
-    'ambassador-bed': getImages(['product-bed-ambassador-1', 'product-bed-ambassador-2', 'product-bed-ambassador-3']),
+    'ambassador-bed': getImages(['product-bed-ambassador-1', 'product-bed-ambassador-2', 'product-bed-ambassador-3', 'product-bed-ambassador-4', 'product-bed-ambassador-5', 'product-bed-ambassador-6', 'product-bed-ambassador-7', 'product-bed-ambassador-8', 'product-bed-ambassador-9', 'product-bed-ambassador-10']),
     'sleigh-bed': getImages(['product-bed-sleigh-1']),
     'divan-ottoman-bed': getImages(['product-bed-divan-1']),
     'mirror-bed': getImages(['product-bed-mirror-1']),
@@ -65,3 +64,5 @@ export const contactImage = getImage('contact-us');
 export const worldMapImage = getImage('world-map');
 
 export { getImage, getImages };
+
+    

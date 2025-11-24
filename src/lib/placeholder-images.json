@@ -21,38 +21,26 @@
     {
       "id": "product-sofa-1",
       "description": "Front view of the 'Urban Elegance' sectional sofa.",
-      "imageUrl": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBzb2ZhfGVufDB8fHx8MTc2MzA3NjUzM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBzb2ZhfGVufDB8fHx8MTc2MzA3NjUzM3ww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "modern sofa"
     },
     {
       "id": "product-sofa-2",
       "description": "Side view of the 'Urban Elegance' sectional sofa.",
-      "imageUrl": "https://images.unsplash.com/photo-1759722665610-e13e59aa117b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzZWN0aW9uYWwlMjBzb2ZhfGVufDB8fHx8MTc2MzEzNjc5MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1759722665610-e13e59aa117b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzZWN0aW9uYWwlMjBzb2ZhfGVufDB8fHx8MTc2MzEzNjc5MXww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "sectional sofa"
     },
     {
       "id": "product-sofa-3",
       "description": "Close-up of the 'Urban Elegance' sofa fabric.",
-      "imageUrl": "https://images.unsplash.com/photo-1695131022208-78bd3133871f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmYWJyaWMlMjB0ZXh0dXJlfGVufDB8fHx8MTc2MzA4MjUyOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1695131022208-78bd3133871f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmYWJyaWMlMjB0ZXh0dXJlfGVufDB8fHx8MTc2MzA4MjUyOHww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "fabric texture"
     },
     {
       "id": "product-table-1",
       "description": "Top view of the 'Nordic Oak' dining table.",
-      "imageUrl": "https://images.unsplash.com/photo-1557784415-3bdc60b1c02b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxvYWslMjB0YWJsZXxlbnwwfHx8fDE3NjMxMjk4MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1557784415-3bdc60b1c02b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxvYWslMjB0YWJsZXxlbnwwfHx8fDE3NjMxMjk4MTZ8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "oak table"
-    },
-    {
-      "id": "product-bed-1",
-      "description": "The 'Cloud Nine' platform bed in a bedroom setting.",
-      "imageUrl": "https://images.unsplash.com/photo-1756888218644-aeb9c044e1df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwbGF0Zm9ybSUyMGJlZHxlbnwwfHx8fDE3NjMwMjU5MjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "platform bed"
-    },
-    {
-      "id": "product-chair-1",
-      "description": "The 'Artisan's Touch' armchair.",
-      "imageUrl": "https://images.unsplash.com/photo-1745240333859-f0128bcb1e5e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxhY2NlbnQlMjBjaGFpcnxlbnwwfHx8fDE3NjMwNjE3NDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "accent chair"
     },
     {
       "id": "product-desk-1",
@@ -139,28 +127,64 @@
       "imageHint": "world map"
     },
     {
-      "id": "product-bed-rustic-1",
-      "description": "A rustic bed frame made from reclaimed wood.",
-      "imageUrl": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxyXVzdGljJTIwYmVkfGVufDB8fHx8MTc2MzI5MDI3MXww&ixlib-rb-4.1.0&q=80&w=1080",
-      "imageHint": "rustic bed"
-    },
-    {
       "id": "product-bed-ambassador-1",
       "description": "A luxurious Ambassador bed with a tall, buttoned headboard.",
-      "imageUrl": "https://images.unsplash.com/photo-1619968399992-f611e03c5132?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbWJhc3NhZG9yJTIwYmVkfGVufDB8fHx8MTc2NDYwOTQ0NHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1585801295748-9297b9b587b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhbWJhc3NhZG9yJTIwYmVkfGVufDB8fHx8MTc2MzkxMDQwOHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "ambassador bed"
     },
     {
       "id": "product-bed-ambassador-2",
       "description": "Side view of a luxurious Ambassador bed.",
-      "imageUrl": "https://images.unsplash.com/photo-1595526114035-0d45ed16433d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBiZWR8ZW58MHx8fHwxNzY1ODQyMDY1fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1656789280583-e06c4f88f8eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxsdXh1cnklMjBiZWR8ZW58MHx8fHwxNzY0MDA0MTUzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "luxury bed"
     },
     {
       "id": "product-bed-ambassador-3",
       "description": "Close up on the deep buttoned headboard of the Ambassador bed.",
-      "imageUrl": "https://images.unsplash.com/photo-1560184826-e051d8b6711d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXR0b25lZCUyMGhlYWRib2FyZHxlbnwwfHx8fDE3NjU4NDIwNjV8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1666037747152-0ba470abaa17?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxidXR0b25lZCUyMGhlYWRib2FyZHxlbnwwfHx8fDE3NjQwMDQxNTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "buttoned headboard"
+    },
+    {
+      "id": "product-bed-ambassador-4",
+      "description": "Ambassador bed in a master bedroom setting.",
+      "imageUrl": "https://images.unsplash.com/photo-1598928334118-f86743750cd8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYXN0ZXIlMjBiZWRyb29tfGVufDB8fHx8MTc2NDAwNDE1M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "master bedroom"
+    },
+    {
+      "id": "product-bed-ambassador-5",
+      "description": "Detail of the footboard on the Ambassador bed.",
+      "imageUrl": "https://images.unsplash.com/photo-1740446568302-0eca27e820b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxiZWQlMjBmb290Ym9hcmR8ZW58MHx8fHwxNzY0MDA0MTUzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "bed footboard"
+    },
+    {
+      "id": "product-bed-ambassador-6",
+      "description": "The Ambassador bed with premium mattress.",
+      "imageUrl": "https://images.unsplash.com/photo-1759176170553-7c078c66c514?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxiZWQlMjBtYXR0cmVzc3xlbnwwfHx8fDE3NjQwMDQxNTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "bed mattress"
+    },
+    {
+      "id": "product-bed-ambassador-7",
+      "description": "Fabric texture of the Ambassador bed upholstery.",
+      "imageUrl": "https://images.unsplash.com/photo-1629197519111-8fa7a9b62df0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx2ZWx2ZXQlMjB0ZXh0dXJlfGVufDB8fHx8MTc2NDAwNDE1M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "velvet texture"
+    },
+    {
+      "id": "product-bed-ambassador-8",
+      "description": "Ambassador bed shown with matching bedside tables.",
+      "imageUrl": "https://images.unsplash.com/photo-1616137507072-f7276b168614?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxiZWRyb29tJTIwZnVybml0dXJlfGVufDB8fHx8MTc2NDAwNDE1M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "bedroom furniture"
+    },
+    {
+      "id": "product-bed-ambassador-9",
+      "description": "Overhead view of the Ambassador bed.",
+      "imageUrl": "https://images.unsplash.com/photo-1758525865814-49b8d7566f47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxiZWQlMjB0b3B8ZW58MHx8fHwxNzY0MDA0MTUzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "bed top"
+    },
+    {
+      "id": "product-bed-ambassador-10",
+      "description": "A lifestyle shot of the Ambassador bed in a decorated room.",
+      "imageUrl": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxsdXh1cnklMjBiZWRyb29tfGVufDB8fHx8MTc2MzkxNTIzMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "luxury bedroom"
     },
     {
       "id": "product-bed-sleigh-1",
