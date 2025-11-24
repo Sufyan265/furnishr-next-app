@@ -63,7 +63,7 @@
     {
       "id": "product-bookshelf-1",
       "description": "The 'Ladder' bookshelf against a wall.",
-      "imageUrl": "https://images.unsplash.com/photo-1543248939-4296e1fea89b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxib29rc2hlbGZ8ZW58MHx8fHwxNzYzMDMxNjQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1543248939-4296e1fea89b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxpYm9va3NoZWxmfGVufDB8fHx8MTc2MzA5OTc0NXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "bookshelf"
     },
     {
@@ -155,6 +155,12 @@
       "description": "A luxurious Ambassador bed with a tall, buttoned headboard.",
       "imageUrl": "https://images.unsplash.com/photo-1619968399992-f611e03c5132?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbWJhc3NhZG9yJTIwYmVkfGVufDB8fHx8MTc2NDYwOTQ0NHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "ambassador bed"
+    },
+    {
+      "id": "product-bed-sleigh-1",
+      "description": "An elegant sleigh bed with a curved headboard in a bright bedroom.",
+      "imageUrl": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzbGVpZ2glMjBiZWR8ZW58MHx8fHwxNzY0NzA0MDY1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sleigh bed"
     }
   ]
 }
