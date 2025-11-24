@@ -168,23 +168,6 @@ export const products: Product[] = [
     material: 'Bouclé',
     stock: 10,
   },
-  {
-    id: '10',
-    slug: 'minimalist-storage-bed',
-    name: 'Minimalist Storage Bed',
-    category: 'Beds',
-    categorySlug: 'beds',
-    price: 1100.00,
-    rating: 4.9,
-    reviewCount: 95,
-    imageIds: productImagesMap['minimalist-storage-bed'].map(i => i.id),
-    description: 'Maximize your space with this clever minimalist bed, featuring four large under-bed storage drawers. Its clean lines and white finish suit any modern decor.',
-    details: ['Four large soft-close storage drawers', 'Durable engineered wood with a matte white finish', 'No box spring needed', 'Perfect for compact living spaces'],
-    dimensions: { width: '150cm', height: '100cm', depth: '200cm' },
-    style: 'Minimalist',
-    material: 'Wood',
-    stock: 10,
-  },
 ];
 
 export const reviews: Review[] = [

@@ -37,7 +37,6 @@ export const heroImages = [
 export const productImages = {
     'urban-elegance-sofa': getImages(['product-sofa-1', 'product-sofa-2', 'product-sofa-3']),
     'rustic-charm-bed': getImages(['product-bed-rustic-1']),
-    'minimalist-storage-bed': getImages(['product-bed-storage-1']),
     'ambassador-bed': getImages(['product-bed-ambassador-1', 'product-bed-ambassador-2', 'product-bed-ambassador-3']),
     'sleigh-bed': getImages(['product-bed-sleigh-1']),
     'divan-ottoman-bed': getImages(['product-bed-divan-1']),
