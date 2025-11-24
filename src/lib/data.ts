@@ -192,7 +192,7 @@ export const faqs: Faq[] = [
     },
 ];
 
-export const featuredProducts = products.slice(0, 4);
+export const featuredProducts: Product[] = [];
 
 export const getProductBySlug = (slug: string) => products.find(p => p.slug === slug);
 export const getReviewsForProduct = (productId: string) => reviews.filter(r => r.productId === productId);
