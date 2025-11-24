@@ -113,20 +113,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-secondary/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="font-headline text-3xl md:text-4xl font-bold">Featured Products</h2>
-            <p className="mt-2 text-lg text-muted-foreground">Handpicked for you, loved by many.</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
-            {featuredProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-        </div>
-      </section>
-      
       <section>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
