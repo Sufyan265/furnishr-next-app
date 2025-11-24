@@ -41,6 +41,7 @@ export const productImages = {
     'minimalist-storage-bed': getImages(['product-bed-storage-1']),
     'ambassador-bed': getImages(['product-bed-ambassador-1']),
     'sleigh-bed': getImages(['product-bed-sleigh-1']),
+    'divan-ottoman-bed': getImages(['product-bed-divan-1']),
 };
 
 export const categoryImages = {

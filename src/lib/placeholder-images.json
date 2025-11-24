@@ -161,6 +161,12 @@
       "description": "An elegant sleigh bed with a curved headboard in a bright bedroom.",
       "imageUrl": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzbGVpZ2glMjBiZWR8ZW58MHx8fHwxNzY0NzA0MDY1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "sleigh bed"
+    },
+    {
+      "id": "product-bed-divan-1",
+      "description": "A practical and stylish divan ottoman bed with built-in storage.",
+      "imageUrl": "https://images.unsplash.com/photo-1595526114035-0d45ed16433d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxvdHRvbWFuJTIwYmVkfGVufDB8fHx8MTc2NDczNzU1MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ottoman bed"
     }
   ]
 }
