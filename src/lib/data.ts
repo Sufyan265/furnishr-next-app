@@ -1,3 +1,4 @@
+
 import type { Product, Category, Review, BlogPost, Faq } from './types';
 import { categoryImages, productImages as productImagesMap, blogImages as blogImagesMap } from './placeholder-images';
 
@@ -195,7 +196,10 @@ export const reviews: Review[] = [
   { id: '17', productId: '7', author: 'Grace P.', rating: 4, title: 'Love it, but tricky to position', comment: 'A beautiful lamp. The arc is quite large, so make sure you have enough space for it. It took a few tries to get it in the perfect spot.', date: '2023-10-05' },
   { id: '18', productId: '8', author: 'Ethan K.', rating: 5, title: 'So soft and beautiful', comment: 'The rug feels amazing underfoot. The pattern is subtle but adds so much character to the room. It unrolled flat almost immediately.', date: '2023-09-18' },
   { id: '19', productId: '8', author: 'Mia V.', rating: 5, title: 'Completes the room!', comment: 'This rug was the final piece my living room needed. The quality is excellent and the colors are true to the photos online.', date: '2023-10-25' },
-  { id: '20', productId: '4', author: 'Noah F.', rating: 5, title: 'My new favorite spot', comment: 'I find myself sitting in this chair all the time. It looks great and is surprisingly comfortable for long periods. A fantastic purchase.', date: '2023-10-28' }
+  { id: '20', productId: '4', author: 'Noah F.', rating: 5, title: 'My new favorite spot', comment: 'I find myself sitting in this chair all the time. It looks great and is surprisingly comfortable for long periods. A fantastic purchase.', date: '2023-10-28' },
+  { id: '21', productId: '11', author: 'Olivia M.', rating: 5, title: 'Absolutely Regal!', comment: 'This bed is a statement piece. The headboard is massive and so luxurious. It feels like sleeping in a 5-star hotel every night. Worth every penny!', date: '2023-10-15' },
+  { id: '22', productId: '11', author: 'Liam B.', rating: 5, title: 'Incredible build quality', comment: 'You can feel how sturdy this bed is. The crushed velvet is incredibly soft and the colour is beautiful. The delivery team was also very professional.', date: '2023-10-20' },
+  { id: '23', productId: '11', author: 'Sophia T.', rating: 4, title: 'Stunning but HUGE!', comment: 'I am in love with this bed, it is absolutely stunning. Just a word of warning - make sure you measure your space! The headboard is very tall but it looks amazing.', date: '2023-10-28' }
 ];
 
 export const blogPosts: BlogPost[] = [
