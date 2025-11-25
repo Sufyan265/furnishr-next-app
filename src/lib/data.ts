@@ -86,10 +86,10 @@ export const products: Product[] = [
     categorySlug: 'beds',
     price: 260.00,
     variants: [
-      { size: 'Single', price: 260.00, mattressPrice: 360.00 },
-      { size: 'Double', price: 320.00, mattressPrice: 440.00 },
-      { size: 'King', price: 330.00, mattressPrice: 480.00 },
-      { size: 'Super King', price: 370.00, mattressPrice: 530.00 },
+      { size: 'Single', price: 260.00, mattressPrice: 320.00 },
+      { size: 'Double', price: 320.00, mattressPrice: 400.00 },
+      { size: 'King', price: 330.00, mattressPrice: 420.00 },
+      { size: 'Super King', price: 370.00, mattressPrice: 460.00 },
     ],
     rating: 4.9,
     reviewCount: 78,
@@ -352,4 +352,5 @@ export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === sl
 
 
     
+
 
