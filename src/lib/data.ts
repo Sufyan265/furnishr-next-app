@@ -154,10 +154,13 @@ export const products: Product[] = [
     name: 'Electric Recliner Sofa',
     category: 'Sofas',
     categorySlug: 'sofas',
-    price: 1899.99,
+    price: 360,
     variants: [
-      { size: '2 Seater', price: 1899.99 },
-      { size: '3 Seater', price: 2199.99 },
+      { size: '1 Seater', price: 299 },
+      { size: '2 Seater', price: 360 },
+      { size: '3 Seater', price: 399 },
+      { size: '3+2 Seater', price: 670 },
+      { size: '5 Seater Corner', price: 690 },
     ],
     rating: 4.9,
     reviewCount: 65,
@@ -703,6 +706,7 @@ export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === sl
 
 
     
+
 
 
 
