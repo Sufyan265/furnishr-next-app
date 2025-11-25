@@ -108,10 +108,12 @@ export const products: Product[] = [
     name: 'Dino Sofa',
     category: 'Sofas',
     categorySlug: 'sofas',
-    price: 999.99,
+    price: 320,
     variants: [
-      { size: '2 Seater', price: 999.99 },
-      { size: '3 Seater', price: 1199.99 },
+      { size: '1 Seater', price: 280 },
+      { size: '2 Seater', price: 320 },
+      { size: '3 Seater', price: 350 },
+      { size: '5 Seater', price: 490 },
     ],
     rating: 4.7,
     reviewCount: 42,
@@ -699,6 +701,7 @@ export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === sl
 
 
     
+
 
 
 
