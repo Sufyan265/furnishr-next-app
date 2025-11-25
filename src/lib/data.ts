@@ -102,6 +102,28 @@ export const products: Product[] = [
     stock: 10,
   },
   {
+    id: '22',
+    slug: 'dino-sofa',
+    name: 'Dino Sofa',
+    category: 'Sofas',
+    categorySlug: 'sofas',
+    price: 999.99,
+    variants: [
+      { size: '2 Seater', price: 999.99 },
+      { size: '3 Seater', price: 1199.99 },
+      { size: 'Corner', price: 1599.99 },
+    ],
+    rating: 4.7,
+    reviewCount: 42,
+    imageIds: productImagesMap['dino-sofa'].map(i => i.id),
+    description: 'The Dino Sofa is the epitome of comfort. With its deep seats, plush cushions, and soft-to-the-touch fabric, it\'s the perfect sofa for family movie nights or relaxing with a good book.',
+    details: ['Extra-deep seats for ultimate comfort', 'High-resilience foam cushions wrapped in fiber', 'Durable yet soft woven fabric', 'Modern, low-profile design'],
+    dimensions: { width: '240cm', height: '85cm', depth: '105cm' },
+    style: 'Contemporary',
+    material: 'Fabric',
+    stock: 15,
+  },
+  {
     id: '11',
     slug: 'ambassador-park-lane-bed',
     name: 'Ambassador Park Lane Bed',
@@ -427,10 +449,4 @@ export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === sl
 
     
 
-
-
-
-
-
-
-
+    
