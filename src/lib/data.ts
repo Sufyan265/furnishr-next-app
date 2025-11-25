@@ -81,6 +81,27 @@ export const products: Product[] = [
     stock: 22,
   },
   {
+    id: '21',
+    slug: 'chesterfield-sofa',
+    name: 'Chesterfield Sofa',
+    category: 'Sofas',
+    categorySlug: 'sofas',
+    price: 1499.99,
+    variants: [
+        { size: '2 Seater', price: 1499.99 },
+        { size: '3 Seater', price: 1699.99 },
+    ],
+    rating: 4.9,
+    reviewCount: 88,
+    imageIds: productImagesMap['chesterfield-sofa'].map(i => i.id),
+    description: 'An icon of timeless British design, the Chesterfield sofa features deep button tufting, rolled arms, and a low back. Upholstered in premium leather, this sofa is a statement piece that exudes luxury and sophistication.',
+    details: ['Classic deep button tufting', 'Elegant scrolled arms', 'Upholstered in 100% genuine top-grain leather', 'Solid hardwood frame and bun feet'],
+    dimensions: { width: '225cm', height: '76cm', depth: '95cm' },
+    style: 'Classic',
+    material: 'Leather',
+    stock: 10,
+  },
+  {
     id: '11',
     slug: 'ambassador-park-lane-bed',
     name: 'Ambassador Park Lane Bed',
@@ -405,6 +426,7 @@ export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === sl
 
 
     
+
 
 
 

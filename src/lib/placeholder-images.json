@@ -73,6 +73,24 @@
       "imageHint": "sofa fabric"
     },
     {
+      "id": "product-chesterfield-sofa-1",
+      "description": "A classic green Chesterfield sofa in a stylish room.",
+      "imageUrl": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaGVzdGVyZmllbGQlMjBzb2ZhfGVufDB8fHx8MTc2NTI0NjYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chesterfield sofa"
+    },
+    {
+      "id": "product-chesterfield-sofa-2",
+      "description": "An angled view of a leather Chesterfield sofa.",
+      "imageUrl": "https://images.unsplash.com/photo-1549187774-b4e6b054244e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjaGVzdGVyZmllbGQlMjBzb2ZhfGVufDB8fHx8MTc2NTI0NjYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "leather sofa"
+    },
+    {
+      "id": "product-chesterfield-sofa-3",
+      "description": "A close-up of the button tufting on a Chesterfield sofa.",
+      "imageUrl": "https://images.unsplash.com/photo-1621293299295-a4e6b81804e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzb2ZhJTIwdHVmdGluZ3xlbnwwfHx8fDE3NjUyNDY2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sofa tufting"
+    },
+    {
       "id": "product-table-1",
       "description": "Top view of the 'Nordic Oak' dining table.",
       "imageUrl": "https://images.unsplash.com/photo-1557784415-3bdc60b1c02b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxvYWslMjB0YWJsZXxlbnwwfHx8fDE3NjMxMjk4MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
@@ -81,13 +99,13 @@
     {
       "id": "product-desk-1",
       "description": "The 'Executive' wooden desk.",
-      "imageUrl": "https://images.unsplash.com/photo-1639730992634-d048fe1dfdaf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d29vZGVuJTIwZGVza3xlbnwwfHx8fDE3NjMxMzQzODd8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1639730992634-d048fe1dfdaf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d29vZGVuJTIwZGVza3xlbnwwfHx8fDE3NjMxMzQzODd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "wooden desk"
     },
     {
       "id": "product-bookshelf-1",
       "description": "The 'Ladder' bookshelf against a wall.",
-      "imageUrl": "https://images.unsplash.com/photo-1543248939-4296e1fea89b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxpYm9va3NoZWxmfGVufDB8fHx8MTc2MzA5OTc0NXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1543248939-4296e1fea89b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxpYm9va3NoZWxmfGVufDB8fHx8MTc2MzA5OTc0NXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "bookshelf"
     },
     {
@@ -249,7 +267,7 @@
     {
       "id": "product-bed-sleigh-5",
       "description": "Fabric texture of the Astral Sleigh Bed.",
-      "imageUrl": "https://images.unsplash.com/photo-1675784332655-675d1a1ddcf6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmYWJyaWMlMjB0ZXh0dXJlfGVufDB8fHx8MTc2Mzk2MjYxNXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1675784332655-675d1a1ddcf6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmYWJyaWMlMjB0ZXh0dXJlfGVufDB8fHx8MTc2Mzk2MjYxNXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "fabric texture"
     },
     {
