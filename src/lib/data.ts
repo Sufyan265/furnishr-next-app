@@ -315,6 +315,27 @@ export const products: Product[] = [
     stock: 15,
   },
   {
+    id: '32',
+    slug: 'verona-u-shape-sofa',
+    name: 'Verona U-Shape Sofa',
+    category: 'Sofas',
+    categorySlug: 'sofas',
+    price: 2299.99,
+    variants: [
+        { size: '6 Seater', price: 2299.99 },
+        { size: '7 Seater', price: 2599.99 },
+    ],
+    rating: 4.8,
+    reviewCount: 55,
+    imageIds: productImagesMap['verona-u-shape-sofa'].map(i => i.id),
+    description: 'The Verona U-Shape Sofa is the ultimate centerpiece for large living spaces and entertaining guests. Its expansive design provides ample seating for the whole family, while its plush cushions and soft fabric ensure maximum comfort.',
+    details: ['Generously sized U-shape design for maximum seating', 'Deep, comfortable cushions with foam and fiber filling', 'Upholstered in a premium, durable woven fabric', 'Modular design for flexible arrangement and easy transport'],
+    dimensions: { width: '330cm', height: '90cm', depth: '200cm' },
+    style: 'Contemporary',
+    material: 'Fabric',
+    stock: 9,
+  },
+  {
     id: '11',
     slug: 'ambassador-park-lane-bed',
     name: 'Ambassador Park Lane Bed',
@@ -641,6 +662,8 @@ export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === sl
     
 
     
+
+
 
 
 

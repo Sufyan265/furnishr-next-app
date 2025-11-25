@@ -87,7 +87,7 @@
     {
       "id": "product-chesterfield-sofa-3",
       "description": "A close-up of the button tufting on a Chesterfield sofa.",
-      "imageUrl": "https://images.unsplash.com/photo-1621293299295-a4e6b81804e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzb2ZhJTIwdHVmdGluZ3xlbnwwfHx8fDE3NjUyNDY2MTR8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1621293299295-a4e6b81804e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzb2ZhJTIwdHVmdGluZ3xlbnwwfHx8fDE3NjUyNDY2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "sofa tufting"
     },
     {
@@ -99,7 +99,7 @@
     {
       "id": "product-dino-sofa-2",
       "description": "Angled view of the Dino sofa showcasing its depth and comfort.",
-      "imageUrl": "https://images.unsplash.com/photo-1567016432779-1fee8422c589?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb21mb3J0YWJsZSUyMHNvZmF8ZW58MHx8fHwxNzY1MjQ3MjY0fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1567016432779-1fee8422c589?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb21mb3J0YWJsZSUyMHNvZmF8ZW58MHx8fHwxNzY1MjQ3MjY0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "deep sofa"
     },
     {
@@ -177,7 +177,7 @@
     {
       "id": "product-ikea-berlin-sofa-3",
       "description": "Close-up of the grey fabric on the 'Ikea Berlin Sofa Bed'.",
-      "imageUrl": "https://images.unsplash.com/photo-1596701042331-3144186c0c27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMXx8Z3JleSUyMHNvZmElMjBmYWJyaWN8ZW58MHx8fHwxNzY1NDIwMjM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1596701042331-3144186c0c27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMXx8Z3JleSUyMHNvZmElMjBmYWJyaWN8ZW58MHx8fHwxNzY1NDIwMjM4fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "grey fabric"
     },
     {
@@ -195,7 +195,7 @@
     {
       "id": "product-lilly-sofa-3",
       "description": "Close-up of the 'Lilly' sofa's soft fabric.",
-      "imageUrl": "https://images.unsplash.com/photo-1596701042331-3144186c0c27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMXx8Z3JleSUyMHNvZmElMjBmYWJyaWN8ZW58MHx8fHwxNzY1NDIwMjM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1596701042331-3144186c0c27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMXx8Z3JleSUyMHNvZmElMjBmYWJyaWN8ZW58MHx8fHwxNzY1NDIwMjM4fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "soft fabric"
     },
     {
@@ -271,6 +271,24 @@
       "imageHint": "chenille fabric"
     },
     {
+      "id": "product-verona-u-shape-sofa-1",
+      "description": "A large, modern Verona u-shape sofa in a spacious living room.",
+      "imageUrl": "https://images.unsplash.com/photo-1633216823527-7a87974d6b62?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx1LXNoYXBlJTIwc29mYXxlbnwwfHx8fDE3NjU0MjI4NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "large sofa"
+    },
+    {
+      "id": "product-verona-u-shape-sofa-2",
+      "description": "Top-down view of the Verona u-shape sofa showing its expansive seating.",
+      "imageUrl": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx1LXNoYXBlJTIwc29mYXxlbnwwfHx8fDE3NjU0MjI4NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sofa layout"
+    },
+    {
+      "id": "product-verona-u-shape-sofa-3",
+      "description": "Detail of the soft, textured upholstery of the Verona u-shape sofa.",
+      "imageUrl": "https://images.unsplash.com/photo-1608304223637-2565c82a5142?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzb2ZhJTIwdGV4dHVyZXxlbnwwfHx8fDE3NjU0MjI4NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sofa texture"
+    },
+    {
       "id": "product-table-1",
       "description": "Top view of the 'Nordic Oak' dining table.",
       "imageUrl": "https://images.unsplash.com/photo-1557784415-3bdc60b1c02b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxvYWslMjB0YWJsZXxlbnwwfHx8fDE3NjMxMjk4MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
@@ -291,7 +309,7 @@
     {
       "id": "category-living-room",
       "description": "A well-lit living room with modern furniture.",
-      "imageUrl": "https://images.unsplash.com/photo-1639663742190-1b3dba2eebcf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bW9kZXJuJTIwbGl2aW5ncm9vbXxlbnwwfHx8fDE3NjMwNTU2Njd8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1639663742190-1b3dba2eebcf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bW9kZXJuJTIwbGl2aW5ncm9vbXxlbnwwfHx8fDE3NjMwNTU2Njd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "modern livingroom"
     },
     {
@@ -315,7 +333,7 @@
     {
       "id": "blog-1",
       "description": "A collage of different interior design styles.",
-      "imageUrl": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxpbnRlcmlvciUyMGRlc2lnbnxlbnwwfHx8fDE3NjMwNzE2Mzl8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxpbnRlcmlvciUyMGRlc2lnbnxlbnwwfHx8fDE3NjMwNzE2Mzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "interior design"
     },
     {
@@ -465,7 +483,7 @@
     {
       "id": "product-bed-sleigh-8",
       "description": "Astral Sleigh Bed with pillows.",
-      "imageUrl": "https://images.unsplash.com/photo-1554745006-8b25b7aeb7cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxiZWQlMjBwaWxsb3dzfGVufDB8fHx8MTc2NDAwNTU0OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1554745006-8b25b7aeb7cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxiZWQlMjBwaWxsb3dzfGVufDB8fHx8MTc2NDAwNTU0OXww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "bed pillows"
     },
     {
@@ -561,7 +579,7 @@
     {
       "id": "product-bed-mirror-2",
       "description": "Side view of the Florida Mirror Bed.",
-      "imageUrl": "https://images.unsplash.com/photo-1626868824739-50f7c73e9761?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtaXJyb3IlMjBiZWR8ZW58MHx8fHwxNzY0MDA1OTE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1626868824739-50f7c73e9761?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtaXJyb3IlMjBiZWR8ZW58MHx8fHwxNzY0MDA1OTE3fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "mirror bed"
     },
     {
@@ -621,7 +639,7 @@
     {
       "id": "product-bed-panel-ambassador-1",
       "description": "An elegant panel ambassador bed with a clean, modern design.",
-      "imageUrl": "https://images.unsplash.com/photo-1550926807-a6d0500b6502?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwYW5lbCUyMGJlZHxlbnwwfHx8fDE3NjQwMDU5MTd8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1550926807-a6d0500b6502?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwYW5lbCUyMGJlZHxlbnwwfHx8fDE3NjQwMDU5MTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "panel bed"
     },
     {
