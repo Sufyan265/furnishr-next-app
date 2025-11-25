@@ -47,8 +47,10 @@ export const products: Product[] = [
     categorySlug: 'sofas',
     price: 899.99,
     variants: [
+        { size: '1 Seater', price: 699.99 },
         { size: '2 Seater', price: 899.99 },
         { size: '3 Seater', price: 1099.99 },
+        { size: '5 Seater', price: 1499.99 },
     ],
     rating: 4.7,
     reviewCount: 35,
@@ -699,3 +701,4 @@ export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === sl
 
 
     
+
