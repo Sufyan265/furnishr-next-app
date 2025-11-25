@@ -85,24 +85,6 @@
       "imageHint": "sofa bed"
     },
     {
-      "id": "product-artic-sofa-3",
-      "description": "Detail of the 'Artic' sofa bed's wooden legs.",
-      "imageUrl": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzb2ZhJTIwbGVnc3xlbnwwfHx8fDE3NjQ3NzI2NzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "sofa legs"
-    },
-    {
-      "id": "product-artic-sofa-4",
-      "description": "Lifestyle shot of the Artic Sofa Bed in a cozy room setting.",
-      "imageUrl": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzb2ZhJTIwYmVkJTIwbGl2aW5nJTIwcm9vbXxlbnwwfHx8fDE3NjU0MjY5NDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "sofa bed"
-    },
-    {
-      "id": "product-artic-sofa-5",
-      "description": "Close-up on the fabric and texture of the Artic Sofa Bed.",
-      "imageUrl": "https://images.unsplash.com/photo-1560032999-a761e0892a40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxncmV5JTIwc29mYSUyMHRleHR1cmV8ZW58MHx8fHwxNzY1NDI2OTQxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "grey fabric"
-    },
-    {
       "id": "product-ashwin-sofa-1",
       "description": "Front view of the 'Ashwin' sofa bed in a modern living room.",
       "imageUrl": "https://images.unsplash.com/photo-1550581190-2c6b5b546399?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzb2ZhJTIwYmVkfGVufDB8fHx8MTc2NDg1NjgwNnww&ixlib=rb-4.1.0&q=80&w=1080",
@@ -119,6 +101,36 @@
       "description": "Close-up of the 'Ashwin' sofa bed fabric.",
       "imageUrl": "https://images.unsplash.com/photo-1629838029988-56788a892b1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzb2ZhJTIwZmFicmljfGVufDB8fHx8MTc2NDg1Njg5NHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "sofa fabric"
+    },
+    {
+      "id": "product-ashwin-sofa-4",
+      "description": "Lifestyle shot of the Ashwin Sofa Bed in a room.",
+      "imageUrl": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzb2ZhYmVkJTIwbGl2aW5nJTIwcm9vbXxlbnwwfHx8fDE3NjU0MjY5NDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sofa bed"
+    },
+    {
+      "id": "product-ashwin-sofa-5",
+      "description": "Close-up of the textured fabric on the Ashwin Sofa Bed.",
+      "imageUrl": "https://images.unsplash.com/photo-1560032999-a761e0892a40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxncmV5JTIwc29mYSUyMHRleHR1cmV8ZW58MHx8fHwxNzY1NDI2OTQxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "grey fabric"
+    },
+    {
+      "id": "product-ashwin-sofa-6",
+      "description": "Angled view of the Ashwin Sofa Bed.",
+      "imageUrl": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzb2ZhJTIwbGVnc3xlbnwwfHx8fDE3NjQ3NzI2NzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sofa angle"
+    },
+    {
+      "id": "product-ashwin-sofa-7",
+      "description": "Detail of the pull-out mechanism for the Ashwin Sofa Bed.",
+      "imageUrl": "https://images.unsplash.com/photo-1615875617253-15b5b5f0782a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzb2ZhJTIwYmVkfGVufDB8fHx8MTc2NDg1NjgwNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sofabed mechanism"
+    },
+    {
+      "id": "product-ashwin-sofa-8",
+      "description": "The Ashwin Sofa Bed in its bed form, ready for sleeping.",
+      "imageUrl": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzb2ZhJTIwYmVkfGVufDB8fHx8MTc2NDc3MjY3NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sofa bed"
     },
     {
       "id": "product-chesterfield-sofa-1",
@@ -225,7 +237,7 @@
     {
       "id": "product-ikea-berlin-sofa-3",
       "description": "Close-up of the grey fabric on the 'Ikea Berlin Sofa Bed'.",
-      "imageUrl": "https://images.unsplash.com/photo-1596701042331-3144186c0c27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMXx8Z3JleSUyMHNvZmElMjBmYWJyaWN8ZW58MHx8fHwxNzY1NDIwMjM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1596701042331-3144186c0c27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMXx8Z3JleSUyMHNvZmElMjBmYWJyaWN8ZW58MHx8fHwxNzY1NDIwMjM4fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "grey fabric"
     },
     {
@@ -243,7 +255,7 @@
     {
       "id": "product-lilly-sofa-3",
       "description": "Close-up of the 'Lilly' sofa's soft fabric.",
-      "imageUrl": "https://images.unsplash.com/photo-1596701042331-3144186c0c27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMXx8Z3JleSUyMHNvZmElMjBmYWJyaWN8ZW58MHx8fHwxNzY1NDIwMjM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1596701042331-3144186c0c27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMXx8Z3JleSUyMHNvZmElMjBmYWJyaWN8ZW58MHx8fHwxNzY1NDIwMjM4fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "soft fabric"
     },
     {
@@ -375,31 +387,31 @@
     {
       "id": "category-living-room",
       "description": "A well-lit living room with modern furniture.",
-      "imageUrl": "https://images.unsplash.com/photo-1639663742190-1b3dba2eebcf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bW9kZXJuJTIwbGl2aW5ncm9vbXxlbnwwfHx8fDE3NjMwNTU2Njd8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1639663742190-1b3dba2eebcf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bW9kZXJuJTIwbGl2aW5ncm9vbXxlbnwwfHx8fDE3NjMwNTU2Njd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "modern livingroom"
     },
     {
       "id": "category-bedroom",
       "description": "A serene and tidy bedroom.",
-      "imageUrl": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtaW5pbWFsaXN0JTIwYmVkcm9vbXxlbnwwfHx8fDE3NjMxMDcxNjV8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtaW5pbWFsaXN0JTIwYmVkcm9vbXxlbnwwfHx8fDE3NjMxMDcxNjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "minimalist bedroom"
     },
     {
       "id": "category-dining",
       "description": "A dining area set for a meal.",
-      "imageUrl": "https://images.unsplash.com/photo-1740759546813-6b58d44f5dce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkaW5pbmclMjBhcmVhfGVufDB8fHx8MTc2MzEyMDk1OXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1740759546813-6b58d44f5dce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkaW5pbmclMjBhcmVhfGVufDB8fHx8MTc2MzEyMDk1OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "dining area"
     },
     {
       "id": "category-office",
       "description": "A modern and organized home office.",
-      "imageUrl": "https://images.unsplash.com/photo-1591382696684-38c427c7547a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxob21lJTIwb2ZmaWNlfGVufDB8fHx8MTc2MzA2MDgyOXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1591382696684-38c427c7547a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxob21lJTIwb2ZmaWNlfGVufDB8fHx8MTc2MzA2MDgyOXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "home office"
     },
     {
       "id": "blog-1",
       "description": "A collage of different interior design styles.",
-      "imageUrl": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxpbnRlcmlvciUyMGRlc2lnbnxlbnwwfHx8fDE3NjMwNzE2Mzl8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxpbnRlcmlvciUyMGRlc2lnbnxlbnwwfHx8fDE3NjMwNzE2Mzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "interior design"
     },
     {
@@ -423,7 +435,7 @@
     {
       "id": "contact-us",
       "description": "A friendly customer service representative on the phone.",
-      "imageUrl": "https://images.unsplash.com/photo-1560264418-c4445382edbc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y3VzdG9tZXIlMjBzZXJ2aWNlfGVufDB8fHx8MTc2MzExNzkyN3ww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1560264418-c4445382edbc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y3VzdG9tZXIlMjBzZXJ2aWNlfGVufDB8fHx8MTc2MzExNzkyN3ww&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "customer service"
     },
     {
@@ -525,7 +537,7 @@
     {
       "id": "product-bed-sleigh-4",
       "description": "Footboard detail of the Astral Sleigh Bed.",
-      "imageUrl": "https://images.unsplash.com/photo-1506720186575-11354d325017?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxiZWQlMjBmb290Ym9hcmR8ZW58MHx8fHwxNzY0MDA0MTUzfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1506720186575-11354d325017?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxiZWQlMjBmb290Ym9hcmR8ZW58MHx8fHwxNzY0MDA0MTUzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "bed footboard"
     },
     {
@@ -537,55 +549,55 @@
     {
       "id": "product-bed-sleigh-6",
       "description": "Astral Sleigh Bed in a master bedroom setting.",
-      "imageUrl": "https://images.unsplash.com/photo-1562438668-bcf0ca6578f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYXN0ZXIlMjBiZWRyb29tfGVufDB8fHx8MTc2NDAwNDE1M3ww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1562438668-bcf0ca6578f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYXN0ZXIlMjBiZWRyb29tfGVufDB8fHx8MTc2NDAwNDE1M3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "master bedroom"
     },
     {
       "id": "product-bed-sleigh-7",
       "description": "Astral Sleigh Bed from an angle.",
-      "imageUrl": "https://images.unsplash.com/photo-1654175849714-9e1b0d351003?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzbGVpZ2glMjBiZWR8ZW58MHx8fHwxNzY0MDA1NTQ5fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1654175849714-9e1b0d351003?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzbGVpZ2glMjBiZWR8ZW58MHx8fHwxNzY0MDA1NTQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "sleigh bed"
     },
     {
       "id": "product-bed-sleigh-8",
       "description": "Astral Sleigh Bed with pillows.",
-      "imageUrl": "https://images.unsplash.com/photo-1554745006-8b25b7aeb7cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxiZWQlMjBwaWxsb3dzfGVufDB8fHx8MTc2NDAwNTU0OXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1554745006-8b25b7aeb7cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxiZWQlMjBwaWxsb3dzfGVufDB8fHx8MTc2NDAwNTU0OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "bed pillows"
     },
     {
       "id": "product-bed-sleigh-9",
       "description": "Top view of the Astral Sleigh Bed.",
-      "imageUrl": "https://images.unsplash.com/photo-1758525866268-252facc4434c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxiZWQlMjB0b3B8ZW58MHx8fHwxNzY0MDA0MTUzfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1758525866268-252facc4434c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxiZWQlMjB0b3B8ZW58MHx8fHwxNzY0MDA0MTUzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "bed top"
     },
     {
       "id": "product-bed-sleigh-10",
       "description": "Leg detail of the Astral Sleigh Bed.",
-      "imageUrl": "https://images.unsplash.com/photo-1759803557159-f48be1dcb43d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmdXJuaXR1cmUlMjBsZWd8ZW58MHx8fHwxNzY0MDA1NTQ5fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1759803557159-f48be1dcb43d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmdXJuaXR1cmUlMjBsZWd8ZW58MHx8fHwxNzY0MDA1NTQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "furniture leg"
     },
     {
       "id": "product-bed-sleigh-11",
       "description": "Lifestyle shot of the Astral Sleigh Bed.",
-      "imageUrl": "https://images.unsplash.com/photo-1600210491305-7396500b5b31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxiZWRyb29tJTIwbGlmZXN0eWxlfGVufDB8fHx8MTc2NDAwNTU0OXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1600210491305-7396500b5b31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxiZWRyb29tJTIwbGlmZXN0eWxlfGVufDB8fHx8MTc2NDAwNTU0OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "bedroom lifestyle"
     },
     {
       "id": "product-bed-divan-1",
       "description": "A practical and stylish divan ottoman bed with built-in storage.",
-      "imageUrl": "https://images.unsplash.com/photo-1689626698503-47934d011285?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxvdHRvbWFuJTIwYmVkfGVufDB8fHx8MTc2NDAwNTczMXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1689626698503-47934d011285?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxvdHRvbWFuJTIwYmVkfGVufDB8fHx8MTc2NDAwNTczMXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "ottoman bed"
     },
     {
       "id": "product-bed-divan-2",
       "description": "Side view of the Divan Ottoman Bed.",
-      "imageUrl": "https://images.unsplash.com/photo-1689626698503-47934d011285?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxvdHRvbWFuJTIwYmVkfGVufDB8fHx8MTc2NDAwNTczMXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1689626698503-47934d011285?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxvdHRvbWFuJTIwYmVkfGVufDB8fHx8MTc2NDAwNTczMXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "ottoman bed"
     },
     {
       "id": "product-bed-divan-3",
       "description": "Close-up of the Divan Ottoman Bed headboard.",
-      "imageUrl": "https://images.unsplash.com/photo-1596959393217-b7a338118278?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxiZWQlMjBoZWFkYm9hcmR8ZW58MHx8fHwxNzYzOTEwNDA4fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1596959393217-b7a338118278?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxiZWQlMjBoZWFkYm9hcmR8ZW58MHx8fHwxNzYzOTEwNDA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "bed headboard"
     },
     {
@@ -603,19 +615,19 @@
     {
       "id": "product-bed-divan-6",
       "description": "Divan Ottoman Bed in a master bedroom setting.",
-      "imageUrl": "https://images.unsplash.com/photo-1598928334118-f86743750cd8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYXN0ZXIlMjBiZWRyb29tfGVufDB8fHx8MTc2NDAwNDE1M3ww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1598928334118-f86743750cd8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYXN0ZXIlMjBiZWRyb29tfGVufDB8fHx8MTc2NDAwNDE1M3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "master bedroom"
     },
     {
       "id": "product-bed-divan-7",
       "description": "Divan Ottoman Bed from an angle.",
-      "imageUrl": "https://images.unsplash.com/photo-1648401443998-7c49da9481db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxvdHRvbWFuJTIwYmVkfGVufDB8fHx8MTc2NDAwNTczMXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1648401443998-7c49da9481db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxvdHRvbWFuJTIwYmVkfGVufDB8fHx8MTc2NDAwNTczMXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "ottoman bed"
     },
     {
       "id": "product-bed-divan-8",
       "description": "Divan Ottoman Bed with pillows.",
-      "imageUrl": "https://images.unsplash.com/photo-1741669933192-01dda690f5d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxiZWQlMjBwaWxsb3dzfGVufDB8fHx8MTc2NDAwNTU0OXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1741669933192-01dda690f5d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxiZWQlMjBwaWxsb3dzfGVufDB8fHx8MTc2NDAwNTU0OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "bed pillows"
     },
     {
@@ -675,13 +687,13 @@
     {
       "id": "product-bed-mirror-7",
       "description": "Florida Mirror Bed from an angle.",
-      "imageUrl": "https://images.unsplash.com/photo-1760464021773-57d7cbcc874c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtaXJyb3IlMjBiZWR8ZW58MHx8fHwxNzY0MDA1OTE3fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1760464021773-57d7cbcc874c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtaXJyb3IlMjBiZWR8ZW58MHx8fHwxNzY0MDA1OTE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "mirror bed"
     },
     {
       "id": "product-bed-mirror-8",
       "description": "Florida Mirror Bed with decorative pillows.",
-      "imageUrl": "https://images.unsplash.com/photo-1554745006-8b25b7aeb7cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxiZWQlMjBwaWxsb3dzfGVufDB8fHx8MTc2NDAwNTU0OXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1554745006-8b25b7aeb7cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxiZWQlMjBwaWxsb3dzfGVufDB8fHx8MTc2NDAwNTU0OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "bed pillows"
     },
     {
