@@ -39,7 +39,7 @@ export const productImages = {
     'aokland-sofa': getImages(['product-sofa-1', 'product-sofa-2', 'product-sofa-3', 'product-sofa-4', 'product-sofa-5', 'product-sofa-6', 'product-sofa-7', 'product-sofa-8', 'product-sofa-9']),
     'artic-sofa-bed': getImages(['product-artic-sofa-1', 'product-artic-sofa-2']),
     'ashwin-sofa-bed': getImages(['product-ashwin-sofa-1', 'product-ashwin-sofa-2', 'product-ashwin-sofa-3', 'product-ashwin-sofa-4', 'product-ashwin-sofa-5', 'product-ashwin-sofa-6', 'product-ashwin-sofa-7', 'product-ashwin-sofa-8']),
-    'chesterfield-sofa': getImages(['product-chesterfield-sofa-1', 'product-chesterfield-sofa-2', 'product-chesterfield-sofa-3']),
+    'chesterfield-sofa': getImages(['product-chesterfield-sofa-1', 'product-chesterfield-sofa-2', 'product-chesterfield-sofa-3', 'product-chesterfield-sofa-4', 'product-chesterfield-sofa-5', 'product-chesterfield-sofa-6', 'product-chesterfield-sofa-7']),
     'dino-sofa': getImages(['product-dino-sofa-1', 'product-dino-sofa-2', 'product-dino-sofa-3']),
     'dylan-sofa': getImages(['product-dylan-sofa-1', 'product-dylan-sofa-2', 'product-dylan-sofa-3']),
     'electric-recliner-sofa': getImages(['product-electric-recliner-1', 'product-electric-recliner-2', 'product-electric-recliner-3']),
@@ -81,5 +81,6 @@ export const worldMapImage = getImage('world-map');
 
 export { getImage, getImages };
 
+    
     
     
