@@ -22,7 +22,12 @@ export const products: Product[] = [
     name: 'Aokland Sofa',
     category: 'Sofas',
     categorySlug: 'sofas',
-    price: 1299.99,
+    price: 1199.99,
+    variants: [
+        { size: '2 Seater', price: 1199.99 },
+        { size: '3 Seater', price: 1399.99 },
+        { size: 'Corner', price: 1799.99 },
+    ],
     rating: 4.5,
     reviewCount: 120,
     imageIds: productImagesMap['aokland-sofa'].map(i => i.id),
@@ -32,6 +37,27 @@ export const products: Product[] = [
     style: 'Modern',
     material: 'Linen',
     stock: 15,
+  },
+  {
+    id: '19',
+    slug: 'artic-sofa-bed',
+    name: 'Artic Sofa Bed',
+    category: 'Sofas',
+    categorySlug: 'sofas',
+    price: 899.99,
+    variants: [
+        { size: '2 Seater', price: 899.99 },
+        { size: '3 Seater', price: 1099.99 },
+    ],
+    rating: 4.7,
+    reviewCount: 35,
+    imageIds: productImagesMap['artic-sofa-bed'].map(i => i.id),
+    description: 'The perfect blend of style and functionality. The Artic Sofa Bed transitions effortlessly from a chic sofa to a comfortable bed, making it ideal for small spaces or guest rooms.',
+    details: ['Easy-to-use click-clack mechanism', 'Comfortable foam mattress', 'Durable and soft fabric upholstery', 'Solid wood legs'],
+    dimensions: { width: '210cm', height: '88cm', depth: '90cm' },
+    style: 'Scandinavian',
+    material: 'Fabric',
+    stock: 18,
   },
   {
     id: '11',
@@ -248,6 +274,9 @@ export const reviews: Review[] = [
   { id: '27', productId: '12', author: 'Noah F.', rating: 5, title: 'Fantastic Sleigh Bed', comment: 'I love the classic design of this bed. It was delivered quickly and was easy to assemble. The quality is great for the price.', date: '2023-11-08' },
   { id: '28', productId: '12', author: 'Emma G.', rating: 4.5, title: 'So cozy!', comment: 'This bed makes my room feel so cozy and romantic. The headboard is perfect for reading in bed. Highly recommended.', date: '2023-11-10' },
   { id: '29', productId: '12', author: 'Oliver T.', rating: 5, title: 'Great purchase!', comment: 'Really happy with this bed. It feels sturdy and looks fantastic. The delivery process was smooth and the communication was great.', date: '2023-11-12' },
+  { id: '30', productId: '12', author: 'Isabella C.', rating: 5, title: 'A dream come true!', comment: 'I have always wanted a sleigh bed and this one is perfect. The quality is amazing and it looks so grand in my room. Five stars!', date: '2023-11-15' },
+  { id: '31', productId: '12', author: 'George K.', rating: 4, title: 'Lovely bed', comment: 'A lovely bed, very well made. It was a bit tricky to get up the stairs as the headboard is large, so keep that in mind. But once assembled, it\'s fantastic.', date: '2023-11-18' },
+  { id: '32', productId: '12', author: 'Hannah L.', rating: 5, title: 'So luxurious', comment: 'The fabric is so soft and the bed feels incredibly luxurious. I\'m so happy with my purchase. It has completely changed the feel of my bedroom.', date: '2023-11-20' },
 ];
 
 export const blogPosts: BlogPost[] = [
@@ -352,6 +381,7 @@ export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === sl
 
 
     
+
 
 
 

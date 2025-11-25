@@ -113,6 +113,7 @@ export default function ProductInteraction({ product }: ProductInteractionProps)
   
   const hasMattressOption = (product.variants?.some(v => v.mattressPrice && v.mattressPrice > 0) || (product.mattressPrice && product.mattressPrice > 0));
 
+  const variantLabel = product.categorySlug === 'beds' ? 'Size' : 'Seater';
 
   return (
     <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
@@ -178,7 +179,7 @@ export default function ProductInteraction({ product }: ProductInteractionProps)
 
           {product.variants && (
             <div className="space-y-2">
-              <Label className="font-semibold">Size</Label>
+              <Label className="font-semibold">{variantLabel}</Label>
               <RadioGroup
                 defaultValue={selectedVariant?.size}
                 onValueChange={handleVariantChange}
