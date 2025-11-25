@@ -22,11 +22,12 @@ export const products: Product[] = [
     name: 'Aokland Sofa',
     category: 'Sofas',
     categorySlug: 'sofas',
-    price: 1199.99,
+    price: 280.00,
     variants: [
-        { size: '2 Seater', price: 1199.99 },
-        { size: '3 Seater', price: 1399.99 },
-        { size: '4 Seater', price: 1599.99 },
+        { size: '1 Seater', price: 250.00 },
+        { size: '2 Seater', price: 280.00 },
+        { size: '3 Seater', price: 320.00 },
+        { size: '4 Seater', price: 380.00 },
         { size: 'Corner', price: 1799.99 },
     ],
     rating: 4.5,
@@ -696,6 +697,9 @@ export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === sl
 
 
 
+
+
+    
 
 
     
