@@ -62,7 +62,7 @@ export default function ProductInteraction({ product }: ProductInteractionProps)
 
   const finalPrice = withMattress ? mattressPrice : basePrice;
   
-  const isSiteWideSaleActive = siteWideSale.isActive && product.slug !== 'ambassador-park-lane-bed';
+  const isSiteWideSaleActive = siteWideSale.isActive && !['ambassador-park-lane-bed', 'astral-sleigh-bed'].includes(product.slug);
   const individualDeal = product.deal && new Date(product.deal.expiresAt) > new Date();
 
   let displayPrice = finalPrice;
