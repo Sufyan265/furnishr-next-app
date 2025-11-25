@@ -91,6 +91,18 @@
       "imageHint": "sofa legs"
     },
     {
+      "id": "product-artic-sofa-4",
+      "description": "Lifestyle shot of the Artic Sofa Bed in a cozy room setting.",
+      "imageUrl": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzb2ZhJTIwYmVkJTIwbGl2aW5nJTIwcm9vbXxlbnwwfHx8fDE3NjU0MjY5NDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sofa bed"
+    },
+    {
+      "id": "product-artic-sofa-5",
+      "description": "Close-up on the fabric and texture of the Artic Sofa Bed.",
+      "imageUrl": "https://images.unsplash.com/photo-1560032999-a761e0892a40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxncmV5JTIwc29mYSUyMHRleHR1cmV8ZW58MHx8fHwxNzY1NDI2OTQxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "grey fabric"
+    },
+    {
       "id": "product-ashwin-sofa-1",
       "description": "Front view of the 'Ashwin' sofa bed in a modern living room.",
       "imageUrl": "https://images.unsplash.com/photo-1550581190-2c6b5b546399?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzb2ZhJTIwYmVkfGVufDB8fHx8MTc2NDg1NjgwNnww&ixlib=rb-4.1.0&q=80&w=1080",
@@ -213,7 +225,7 @@
     {
       "id": "product-ikea-berlin-sofa-3",
       "description": "Close-up of the grey fabric on the 'Ikea Berlin Sofa Bed'.",
-      "imageUrl": "https://images.unsplash.com/photo-1596701042331-3144186c0c27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMXx8Z3JleSUyMHNvZmElMjBmYWJyaWN8ZW58MHx8fHwxNzY1NDIwMjM4fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1596701042331-3144186c0c27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMXx8Z3JleSUyMHNvZmElMjBmYWJyaWN8ZW58MHx8fHwxNzY1NDIwMjM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "grey fabric"
     },
     {
@@ -231,7 +243,7 @@
     {
       "id": "product-lilly-sofa-3",
       "description": "Close-up of the 'Lilly' sofa's soft fabric.",
-      "imageUrl": "https://images.unsplash.com/photo-1596701042331-3144186c0c27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMXx8Z3JleSUyMHNvZmElMjBmYWJyaWN8ZW58MHx8fHwxNzY1NDIwMjM4fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1596701042331-3144186c0c27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMXx8Z3JleSUyMHNvZmElMjBmYWJyaWN8ZW58MHx8fHwxNzY1NDIwMjM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "soft fabric"
     },
     {
@@ -243,7 +255,7 @@
     {
       "id": "product-mini-u-shape-sofa-2",
       "description": "Top-down view of the mini u-shape sofa showcasing its form.",
-      "imageUrl": "https://images.unsplash.com/photo-1633505899118-4ca6bd140f43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx1LXNoYXBlJTIwc29mYXxlbnwwfHx8fDE3NjU0MjI4NTB8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1633505899118-4ca6bd140f43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx1LXNoYXBlJTIwc29mYXxlbnwwfHx8fDE3NjU0MjI4NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "sofa layout"
     },
     {
@@ -279,31 +291,31 @@
     {
       "id": "product-shannon-sofa-2",
       "description": "Angled view of the 'Shannon' sofa, showing its clean lines.",
-      "imageUrl": "https://images.unsplash.com/photo-1604014237800-1c9102c219da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBmYWJyaWMlMjBzb2ZhfGVufDB8fHx8MTc2NTQyNTAwMHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1604014237800-1c9102c219da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBmYWJyaWMlMjBzb2ZhfGVufDB8fHx8MTc2NTQyNTAwMHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "fabric sofa"
     },
     {
       "id": "product-shannon-sofa-3",
       "description": "Close-up of the 'Shannon' sofa's fabric.",
-      "imageUrl": "https://images.unsplash.com/photo-1567016421869-1e37492a54e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtb2Rlcm4lMjBmYWJyaWMlMjBzb2ZhfGVufDB8fHx8MTc2NTQyNTAwMHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1567016421869-1e37492a54e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtb2Rlcm4lMjBmYWJyaWMlMjBzb2ZhfGVufDB8fHx8MTc2NTQyNTAwMHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "sofa fabric"
     },
     {
       "id": "product-sorrento-recliner-1",
       "description": "Front view of a plush Sorrento fabric recliner sofa in grey.",
-      "imageUrl": "https://images.unsplash.com/photo-1604014237800-1c9102c219da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxncmV5JTIwZmFicmljJTIwc29mYXxlbnwwfHx8fDE3NjU0MjUwMDB8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1604014237800-1c9102c219da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxncmV5JTIwZmFicmljJTIwc29mYXxlbnwwfHx8fDE3NjU0MjUwMDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "fabric recliner"
     },
     {
       "id": "product-sorrento-recliner-2",
       "description": "The Sorrento fabric recliner in a partially reclined position.",
-      "imageUrl": "https://images.unsplash.com/photo-1567016421869-1e37492a54e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb250ZW1wb3JhcnklMjBzb2ZhfGVufDB8fHx8MTc2NTI1MTAzNnww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1567016421869-1e37492a54e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb250ZW1wb3JhcnklMjBzb2ZhfGVufDB8fHx8MTc2NTI1MTAzNnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "reclining sofa"
     },
     {
       "id": "product-sorrento-recliner-3",
       "description": "Close-up of the soft chenille fabric on the Sorrento recliner.",
-      "imageUrl": "https://images.unsplash.com/photo-1596701042331-3144186c0c27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYWJyaWMlMjB0ZXh0dXJlfGVufDB8fHx8MTc2NDc2ODk4MXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1596701042331-3144186c0c27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYWJyaWMlMjB0ZXh0dXJlfGVufDB8fHx8MTc2NDc2ODk4MXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "chenille fabric"
     },
     {
@@ -315,31 +327,31 @@
     {
       "id": "product-verona-u-shape-sofa-2",
       "description": "Top-down view of the Verona u-shape sofa showing its expansive seating.",
-      "imageUrl": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx1LXNoYXBlJTIwc29mYXxlbnwwfHx8fDE3NjU0MjI4NTB8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx1LXNoYXBlJTIwc29mYXxlbnwwfHx8fDE3NjU0MjI4NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "sofa layout"
     },
     {
       "id": "product-verona-u-shape-sofa-3",
       "description": "Detail of the soft, textured upholstery of the Verona u-shape sofa.",
-      "imageUrl": "https://images.unsplash.com/photo-1608304223637-2565c82a5142?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzb2ZhJTIwdGV4dHVyZXxlbnwwfHx8fDE3NjU0MjI4NTB8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1608304223637-2565c82a5142?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzb2ZhJTIwdGV4dHVyZXxlbnwwfHx8fDE3NjU0MjI4NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "sofa texture"
     },
     {
       "id": "product-verona-sofa-1",
       "description": "Front view of the 'Verona' sofa in a stylish living room.",
-      "imageUrl": "https://images.unsplash.com/photo-1540574163024-5884d2563add?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBmYWJyaWMlMjBzb2ZhfGVufDB8fHx8MTc2NTQyNTAwMHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1540574163024-5884d2563add?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBmYWJyaWMlMjBzb2ZhfGVufDB8fHx8MTc2NTQyNTAwMHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "modern sofa"
     },
     {
       "id": "product-verona-sofa-2",
       "description": "Angled view of the 'Verona' sofa showing its elegant design.",
-      "imageUrl": "https://images.unsplash.com/photo-1604014237800-1c9102c219da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBmYWJyaWMlMjBzb2ZhfGVufDB8fHx8MTc2NTQyNTAwMHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1604014237800-1c9102c219da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBmYWJyaWMlMjBzb2ZhfGVufDB8fHx8MTc2NTQyNTAwMHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "fabric sofa"
     },
     {
       "id": "product-verona-sofa-3",
       "description": "Close-up of the 'Verona' sofa fabric.",
-      "imageUrl": "https://images.unsplash.com/photo-1567016421869-1e37492a54e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtb2Rlcm4lMjBmYWJyaWMlMjBzb2ZhfGVufDB8fHx8MTc2NTQyNTAwMHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1567016421869-1e37492a54e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtb2Rlcm4lMjBmYWJyaWMlMjBzb2ZhfGVufDB8fHx8MTc2NTQyNTAwMHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "sofa fabric"
     },
     {
@@ -357,7 +369,7 @@
     {
       "id": "product-bookshelf-1",
       "description": "The 'Ladder' bookshelf against a wall.",
-      "imageUrl": "https://images.unsplash.com/photo-1543248939-4296e1fea89b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxpYm9va3NoZWxmfGVufDB8fHx8MTc2MzA5OTc0NXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1543248939-4296e1fea89b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxpYm9va3NoZWxmfGVufDB8fHx8MTc2MzA5OTc0NXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "bookshelf"
     },
     {
@@ -507,7 +519,7 @@
     {
       "id": "product-bed-sleigh-3",
       "description": "Close-up of the Astral Sleigh Bed headboard.",
-      "imageUrl": "https://images.unsplash.com/photo-1560185128-e173042f79dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxiZWQlMjBoZWFkYm9hcmR8ZW58MHx8fHwxNzYzOTEwNDA4fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1560185128-e173042f79dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxiZWQlMjBoZWFkYm9hcmR8ZW58MHx8fHwxNzYzOTEwNDA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "bed headboard"
     },
     {
@@ -519,7 +531,7 @@
     {
       "id": "product-bed-sleigh-5",
       "description": "Fabric texture of the Astral Sleigh Bed.",
-      "imageUrl": "https://images.unsplash.com/photo-1675784332655-675d1a1ddcf6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmYWJyaWMlMjB0ZXh0dXJlfGVufDB8fHx8MTc2Mzk2MjYxNXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1675784332655-675d1a1ddcf6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmYWJyaWMlMjB0ZXh0dXJlfGVufDB8fHx8MTc2Mzk2MjYxNXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "fabric texture"
     },
     {
