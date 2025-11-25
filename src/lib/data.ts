@@ -85,6 +85,12 @@ export const products: Product[] = [
     category: 'Beds',
     categorySlug: 'beds',
     price: 1150.00,
+    variants: [
+      { size: 'Single', price: 1150.00, mattressPrice: 1380.00 },
+      { size: 'Double', price: 1200.00, mattressPrice: 1460.00 },
+      { size: 'King', price: 1250.00, mattressPrice: 1540.00 },
+      { size: 'Super King', price: 1300.00, mattressPrice: 1650.00 },
+    ],
     rating: 4.9,
     reviewCount: 78,
     imageIds: productImagesMap['divan-ottoman-bed'].map(i => i.id),
@@ -102,6 +108,11 @@ export const products: Product[] = [
     category: 'Beds',
     categorySlug: 'beds',
     price: 1550.00,
+    variants: [
+        { size: 'Double', price: 1550.00, mattressPrice: 1810.00 },
+        { size: 'King', price: 1600.00, mattressPrice: 1890.00 },
+        { size: 'Super King', price: 1650.00, mattressPrice: 2000.00 },
+    ],
     rating: 4.9,
     reviewCount: 55,
     imageIds: productImagesMap['mirror-bed'].map(i => i.id),
@@ -119,6 +130,11 @@ export const products: Product[] = [
     category: 'Beds',
     categorySlug: 'beds',
     price: 1400.00,
+    variants: [
+        { size: 'Double', price: 1400.00, mattressPrice: 1660.00 },
+        { size: 'King', price: 1450.00, mattressPrice: 1740.00 },
+        { size: 'Super King', price: 1500.00, mattressPrice: 1850.00 },
+    ],
     rating: 4.8,
     reviewCount: 40,
     imageIds: productImagesMap['panel-ambassador-bed'].map(i => i.id),
@@ -136,6 +152,11 @@ export const products: Product[] = [
     category: 'Beds',
     categorySlug: 'beds',
     price: 1380.00,
+    variants: [
+        { size: 'Double', price: 1380.00, mattressPrice: 1640.00 },
+        { size: 'King', price: 1430.00, mattressPrice: 1720.00 },
+        { size: 'Super King', price: 1480.00, mattressPrice: 1830.00 },
+    ],
     rating: 4.9,
     reviewCount: 35,
     imageIds: productImagesMap['panel-bumper-bed'].map(i => i.id),
@@ -153,6 +174,11 @@ export const products: Product[] = [
     category: 'Beds',
     categorySlug: 'beds',
     price: 1390.00,
+    variants: [
+        { size: 'Double', price: 1390.00, mattressPrice: 1650.00 },
+        { size: 'King', price: 1440.00, mattressPrice: 1730.00 },
+        { size: 'Super King', price: 1490.00, mattressPrice: 1840.00 },
+    ],
     rating: 4.8,
     reviewCount: 38,
     imageIds: productImagesMap['panel-line-bed'].map(i => i.id),
@@ -170,6 +196,11 @@ export const products: Product[] = [
     category: 'Beds',
     categorySlug: 'beds',
     price: 1420.00,
+    variants: [
+        { size: 'Double', price: 1420.00, mattressPrice: 1680.00 },
+        { size: 'King', price: 1470.00, mattressPrice: 1760.00 },
+        { size: 'Super King', price: 1520.00, mattressPrice: 1870.00 },
+    ],
     rating: 4.9,
     reviewCount: 42,
     imageIds: productImagesMap['panel-wing-back-bed'].map(i => i.id),
@@ -310,3 +341,6 @@ export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === sl
 
 
 
+
+
+    
