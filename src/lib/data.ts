@@ -50,7 +50,7 @@ export const products: Product[] = [
     imageIds: productImagesMap['ambassador-bed'].map(i => i.id),
     description: 'Experience regal comfort with the Ambassador Park Lane bed. Its towering, deep-buttoned headboard makes a grand statement, while the plush velvet upholstery offers a soft and luxurious feel.',
     details: ['Statement 70-inch floor-standing headboard', 'Deep-buttoned chesterfield design', 'Luxurious crushed velvet finish', 'Solid and sturdy frame construction'],
-    dimensions: { width: '147cm (4ft 8")', height: '180cm', depth: '210cm (6ft 10")' },
+    dimensions: { width: '147cm (4ft 10")', height: '180cm', depth: '210cm (6ft 11")' },
     style: 'Luxury',
     material: 'Velvet',
     stock: 12,
@@ -73,7 +73,7 @@ export const products: Product[] = [
     imageIds: productImagesMap['sleigh-bed'].map(i => i.id),
     description: 'The Astral Sleigh Bed features a classic, gracefully curved headboard and footboard, upholstered in a sumptuous grey fabric. Its timeless silhouette brings an air of romance and sophistication to any bedroom.',
     details: ['Classic sleigh bed design with rolled headboard and footboard', 'Upholstered in premium, soft-touch fabric', 'Deep button tufting for a luxurious look', 'Solid wood feet for stability'],
-    dimensions: { width: '145cm (4ft 9")', height: '135cm', depth: '225cm (7ft 4")' },
+    dimensions: { width: '145cm (4ft 9")', height: '135cm', depth: '225cm (7ft 5")' },
     style: 'Classic',
     material: 'Fabric',
     stock: 8,
@@ -299,3 +299,4 @@ export const getReviewsForProduct = (productId: string) => reviews.filter(r => r
 export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === slug);
 
     
+
