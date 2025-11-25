@@ -66,7 +66,7 @@ export const products: Product[] = [
       { size: 'Single', price: 200.00, mattressPrice: 430.00 },
       { size: 'Double', price: 230.00, mattressPrice: 490.00 },
       { size: 'King', price: 240.00, mattressPrice: 530.00 },
-      { size: 'Super King', price: 260.00, mattressPrice: 360.00 },
+      { size: 'Super King', price: 260.00, mattressPrice: 510.00 },
     ],
     rating: 4.8,
     reviewCount: 60,
@@ -299,6 +299,7 @@ export const getReviewsForProduct = (productId: string) => reviews.filter(r => r
 export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === slug);
 
     
+
 
 
 
