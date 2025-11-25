@@ -272,6 +272,28 @@ export const products: Product[] = [
     stock: 7,
   },
   {
+    id: '30',
+    slug: 'shannon-sofa',
+    name: 'Shannon Sofa',
+    category: 'Sofas',
+    categorySlug: 'sofas',
+    price: 1099.99,
+    variants: [
+      { size: '2 Seater', price: 1099.99 },
+      { size: '3 Seater', price: 1299.99 },
+      { size: 'Corner', price: 1799.99 },
+    ],
+    rating: 4.7,
+    reviewCount: 68,
+    imageIds: productImagesMap['shannon-sofa'].map(i => i.id),
+    description: 'The Shannon Sofa is a stunning combination of textures and tones. With a mix of faux leather and soft fabric, along with its elegant curved arms, this sofa brings a touch of glamour to any living room.',
+    details: ['Mix of faux leather and soft chenille fabric', 'Stylish curved armrests', 'Comfortable foam-filled seat cushions', 'Comes with matching scatter cushions'],
+    dimensions: { width: '235cm', height: '90cm', depth: '90cm' },
+    style: 'Contemporary',
+    material: 'Fabric',
+    stock: 20,
+  },
+  {
     id: '11',
     slug: 'ambassador-park-lane-bed',
     name: 'Ambassador Park Lane Bed',
@@ -598,6 +620,7 @@ export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === sl
     
 
     
+
 
 
 
