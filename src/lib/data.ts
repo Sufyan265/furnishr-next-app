@@ -45,13 +45,7 @@ export const products: Product[] = [
     name: 'Artic Sofa Bed',
     category: 'Sofas',
     categorySlug: 'sofas',
-    price: 899.99,
-    variants: [
-        { size: '1 Seater', price: 699.99 },
-        { size: '2 Seater', price: 899.99 },
-        { size: '3 Seater', price: 1099.99 },
-        { size: '5 Seater', price: 1499.99 },
-    ],
+    price: 590.00,
     rating: 4.7,
     reviewCount: 35,
     imageIds: productImagesMap['artic-sofa-bed'].map(i => i.id),
@@ -701,4 +695,5 @@ export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === sl
 
 
     
+
 
