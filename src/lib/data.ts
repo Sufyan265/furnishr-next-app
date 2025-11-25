@@ -336,6 +336,27 @@ export const products: Product[] = [
     stock: 9,
   },
   {
+    id: '33',
+    slug: 'verona-sofa',
+    name: 'Verona Sofa',
+    category: 'Sofas',
+    categorySlug: 'sofas',
+    price: 1199.99,
+    variants: [
+      { size: '2 Seater', price: 1199.99 },
+      { size: '3 Seater', price: 1399.99 },
+    ],
+    rating: 4.7,
+    reviewCount: 62,
+    imageIds: productImagesMap['verona-sofa'].map(i => i.id),
+    description: 'The Verona Sofa is a testament to modern elegance. It features clean lines, plush cushions, and a durable fabric upholstery that is both comfortable and stylish. Its timeless design makes it a perfect fit for any contemporary living space.',
+    details: ['Clean, contemporary design', 'High-resilience foam cushions for comfort and durability', 'Upholstered in a premium, soft-touch woven fabric', 'Solid wood frame for lasting stability'],
+    dimensions: { width: '220cm', height: '88cm', depth: '95cm' },
+    style: 'Contemporary',
+    material: 'Fabric',
+    stock: 18,
+  },
+  {
     id: '11',
     slug: 'ambassador-park-lane-bed',
     name: 'Ambassador Park Lane Bed',
@@ -674,3 +695,6 @@ export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === sl
 
 
 
+
+
+    
