@@ -181,6 +181,24 @@
       "imageHint": "grey fabric"
     },
     {
+      "id": "product-lilly-sofa-1",
+      "description": "A chic and modern 'Lilly' sofa in a light, airy living room.",
+      "imageUrl": "https://images.unsplash.com/photo-1540574163024-5884d2563add?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzb2ZhJTIwYmVkfGVufDB8fHx8MTc2NDc3MjY3NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chic sofa"
+    },
+    {
+      "id": "product-lilly-sofa-2",
+      "description": "Side view of the 'Lilly' sofa showing its elegant silhouette.",
+      "imageUrl": "https://images.unsplash.com/photo-1618220179428-22790b461013?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBzb2ZhfGVufDB8fHx8MTc2NTQyMDIzOHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern sofa"
+    },
+    {
+      "id": "product-lilly-sofa-3",
+      "description": "Close-up of the 'Lilly' sofa's soft fabric.",
+      "imageUrl": "https://images.unsplash.com/photo-1596701042331-3144186c0c27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMXx8Z3JleSUyMHNvZmElMjBmYWJyaWN8ZW58MHx8fHwxNzY1NDIwMjM4fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "soft fabric"
+    },
+    {
       "id": "product-table-1",
       "description": "Top view of the 'Nordic Oak' dining table.",
       "imageUrl": "https://images.unsplash.com/photo-1557784415-3bdc60b1c02b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxvYWslMjB0YWJsZXxlbnwwfHx8fDE3NjMxMjk4MTZ8MA&ixlib-rb-4.1.0&q=80&w=1080",
@@ -339,13 +357,13 @@
     {
       "id": "product-bed-sleigh-2",
       "description": "Side view of the Astral Sleigh Bed.",
-      "imageUrl": "https://images.unsplash.com/photo-1638277054972-b6533f24ea15?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzbGVpZ2glMjBiZWR8ZW58MHx8fHwxNzY0MDA1NTQ5fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1638277054972-b6533f24ea15?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzbGVpZ2glMjBiZWR8ZW58MHx8fHwxNzY0MDA1NTQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "sleigh bed"
     },
     {
       "id": "product-bed-sleigh-3",
       "description": "Close-up of the Astral Sleigh Bed headboard.",
-      "imageUrl": "https://images.unsplash.com/photo-1560185128-e173042f79dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxiZWQlMjBoZWFkYm9hcmR8ZW58MHx8fHwxNzYzOTEwNDA4fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1560185128-e173042f79dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxiZWQlMjBoZWFkYm9hcmR8ZW58MHx8fHwxNzYzOTEwNDA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "bed headboard"
     },
     {

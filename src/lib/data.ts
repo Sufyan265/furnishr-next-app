@@ -209,6 +209,27 @@ export const products: Product[] = [
     stock: 25,
   },
   {
+    id: '27',
+    slug: 'lilly-sofa',
+    name: 'Lilly Sofa',
+    category: 'Sofas',
+    categorySlug: 'sofas',
+    price: 1199.99,
+    variants: [
+      { size: '2 Seater', price: 1199.99 },
+      { size: '3 Seater', price: 1399.99 },
+    ],
+    rating: 4.6,
+    reviewCount: 38,
+    imageIds: productImagesMap['lilly-sofa'].map(i => i.id),
+    description: 'The Lilly Sofa offers a chic, feminine touch to any living space. With its gracefully curved arms and soft, textured upholstery, it provides both comfort and a sophisticated aesthetic. Perfect for creating a welcoming and stylish atmosphere.',
+    details: ['Elegant curved armrests', 'Upholstered in a soft, durable bouclé fabric', 'High-density foam cushions for plush comfort', 'Tapered solid wood legs for a mid-century modern feel'],
+    dimensions: { width: '200cm', height: '85cm', depth: '90cm' },
+    style: 'Modern',
+    material: 'Bouclé',
+    stock: 18,
+  },
+  {
     id: '11',
     slug: 'ambassador-park-lane-bed',
     name: 'Ambassador Park Lane Bed',
@@ -535,6 +556,7 @@ export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === sl
     
 
     
+
 
 
 
