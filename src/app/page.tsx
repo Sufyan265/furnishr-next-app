@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, Award, Truck, Undo, Sparkles, Feather, ShieldCheck, Globe, Bed, Sofa } from 'lucide-react';
@@ -35,7 +36,7 @@ export default function Home() {
                     alt={image.description}
                     data-ai-hint={image.imageHint}
                     fill
-                    className="object-cover w-full h-full ken-burns"
+                    className="object-cover ken-burns"
                     priority={index === 0}
                   />
                   <div className="absolute inset-0 bg-black/40" />
