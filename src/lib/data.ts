@@ -62,12 +62,12 @@ export const products: Product[] = [
     name: 'Ashwin Sofa Bed',
     category: 'Sofas',
     categorySlug: 'sofas',
-    price: 949.99,
+    price: 290.00,
     variants: [
-        { size: '1 Seater', price: 749.99 },
-        { size: '2 Seater', price: 949.99 },
-        { size: '3 Seater', price: 1149.99 },
-        { size: '5 Seater', price: 1549.99 },
+        { size: '1 Seater', price: 270.00 },
+        { size: '2 Seater', price: 290.00 },
+        { size: '3 Seater', price: 350.00 },
+        { size: '5 Seater', price: 490.00 },
     ],
     rating: 4.6,
     reviewCount: 28,
@@ -697,6 +697,7 @@ export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === sl
 
 
     
+
 
 
 
