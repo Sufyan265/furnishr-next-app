@@ -251,6 +251,27 @@ export const products: Product[] = [
     stock: 12,
   },
   {
+    id: '29',
+    slug: 'roma-leather-recliner-sofa',
+    name: 'Roma Leather Recliner Sofa',
+    category: 'Sofas',
+    categorySlug: 'sofas',
+    price: 2099.99,
+    variants: [
+      { size: '2 Seater', price: 2099.99 },
+      { size: '3 Seater', price: 2399.99 },
+    ],
+    rating: 4.9,
+    reviewCount: 75,
+    imageIds: productImagesMap['roma-leather-recliner-sofa'].map(i => i.id),
+    description: 'Indulge in luxurious comfort with the Roma Leather Recliner Sofa. Upholstered in premium Italian leather, this sofa features a smooth power reclining mechanism, allowing you to find your perfect position for relaxation at the touch of a button.',
+    details: ['Upholstered in 100% top-grain Italian leather', 'Whisper-quiet power reclining mechanism', 'High-density foam core with a plush fiber wrap', 'Sturdy frame with a combination of solid wood and steel'],
+    dimensions: { width: '215cm', height: '100cm', depth: '95cm' },
+    style: 'Modern',
+    material: 'Leather',
+    stock: 7,
+  },
+  {
     id: '11',
     slug: 'ambassador-park-lane-bed',
     name: 'Ambassador Park Lane Bed',
@@ -577,6 +598,7 @@ export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === sl
     
 
     
+
 
 
 
