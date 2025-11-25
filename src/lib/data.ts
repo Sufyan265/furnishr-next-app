@@ -293,6 +293,27 @@ export const products: Product[] = [
     material: 'Fabric',
     stock: 20,
   },
+   {
+    id: '31',
+    slug: 'sorrento-fabric-recliner',
+    name: 'Sorrento Fabric Recliner',
+    category: 'Sofas',
+    categorySlug: 'sofas',
+    price: 1799.99,
+    variants: [
+      { size: '2 Seater', price: 1799.99 },
+      { size: '3 Seater', price: 2099.99 },
+    ],
+    rating: 4.8,
+    reviewCount: 58,
+    imageIds: productImagesMap['sorrento-fabric-recliner'].map(i => i.id),
+    description: 'Unwind in style with the Sorrento Fabric Recliner. Upholstered in a plush, durable fabric, this sofa offers deep cushioning and an effortless reclining motion for ultimate comfort. Perfect for movie nights or afternoon naps.',
+    details: ['Smooth manual reclining mechanism', 'Upholstered in a soft and durable chenille fabric', 'Overstuffed cushions for a sink-in feel', 'Solid hardwood frame for long-lasting durability'],
+    dimensions: { width: '205cm', height: '100cm', depth: '98cm' },
+    style: 'Contemporary',
+    material: 'Fabric',
+    stock: 15,
+  },
   {
     id: '11',
     slug: 'ambassador-park-lane-bed',
@@ -620,6 +641,7 @@ export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === sl
     
 
     
+
 
 
 
