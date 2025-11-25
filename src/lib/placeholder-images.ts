@@ -1,3 +1,4 @@
+
 import data from './placeholder-images.json';
 
 export type ImagePlaceholder = {
@@ -40,6 +41,7 @@ export const productImages = {
     'ashwin-sofa-bed': getImages(['product-ashwin-sofa-1', 'product-ashwin-sofa-2', 'product-ashwin-sofa-3']),
     'chesterfield-sofa': getImages(['product-chesterfield-sofa-1', 'product-chesterfield-sofa-2', 'product-chesterfield-sofa-3']),
     'dino-sofa': getImages(['product-dino-sofa-1', 'product-dino-sofa-2', 'product-dino-sofa-3']),
+    'dylan-sofa': getImages(['product-dylan-sofa-1', 'product-dylan-sofa-2', 'product-dylan-sofa-3']),
     'ambassador-bed': getImages(['product-bed-ambassador-1', 'product-bed-ambassador-2', 'product-bed-ambassador-3', 'product-bed-ambassador-4', 'product-bed-ambassador-5', 'product-bed-ambassador-6', 'product-bed-ambassador-7', 'product-bed-ambassador-8', 'product-bed-ambassador-9', 'product-bed-ambassador-10']),
     'sleigh-bed': getImages(['product-bed-sleigh-1', 'product-bed-sleigh-2', 'product-bed-sleigh-3', 'product-bed-sleigh-4', 'product-bed-sleigh-5', 'product-bed-sleigh-6', 'product-bed-sleigh-7', 'product-bed-sleigh-8', 'product-bed-sleigh-9', 'product-bed-sleigh-10', 'product-bed-sleigh-11']),
     'divan-ottoman-bed': getImages(['product-bed-divan-1', 'product-bed-divan-2', 'product-bed-divan-3', 'product-bed-divan-4', 'product-bed-divan-5', 'product-bed-divan-6', 'product-bed-divan-7', 'product-bed-divan-8', 'product-bed-divan-9', 'product-bed-divan-10', 'product-bed-divan-11']),
