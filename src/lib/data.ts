@@ -230,6 +230,27 @@ export const products: Product[] = [
     stock: 18,
   },
   {
+    id: '28',
+    slug: 'mini-u-shape-sofa',
+    name: 'Mini U-Shape Sofa',
+    category: 'Sofas',
+    categorySlug: 'sofas',
+    price: 1399.99,
+    variants: [
+      { size: '5 Seater', price: 1399.99 },
+      { size: '6 Seater', price: 1599.99 },
+    ],
+    rating: 4.7,
+    reviewCount: 45,
+    imageIds: productImagesMap['mini-u-shape-sofa'].map(i => i.id),
+    description: 'Maximise your seating in a compact space with the Mini U-Shape Sofa. This clever design offers the sociable layout of a U-shape sofa without overwhelming the room. Perfect for apartments or smaller living areas.',
+    details: ['Space-efficient U-shape design', 'Plush, comfortable cushions', 'Upholstered in a durable, family-friendly fabric', 'Modular pieces for easy delivery and setup'],
+    dimensions: { width: '280cm', height: '88cm', depth: '150cm' },
+    style: 'Contemporary',
+    material: 'Fabric',
+    stock: 12,
+  },
+  {
     id: '11',
     slug: 'ambassador-park-lane-bed',
     name: 'Ambassador Park Lane Bed',
@@ -556,6 +577,8 @@ export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === sl
     
 
     
+
+
 
 
 

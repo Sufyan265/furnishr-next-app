@@ -46,6 +46,7 @@ export const productImages = {
     'harrison-sofa': getImages(['product-harrison-sofa-1', 'product-harrison-sofa-2', 'product-harrison-sofa-3']),
     'ikea-berlin-sofa-bed': getImages(['product-ikea-berlin-sofa-1', 'product-ikea-berlin-sofa-2', 'product-ikea-berlin-sofa-3']),
     'lilly-sofa': getImages(['product-lilly-sofa-1', 'product-lilly-sofa-2', 'product-lilly-sofa-3']),
+    'mini-u-shape-sofa': getImages(['product-mini-u-shape-sofa-1', 'product-mini-u-shape-sofa-2', 'product-mini-u-shape-sofa-3']),
     'ambassador-bed': getImages(['product-bed-ambassador-1', 'product-bed-ambassador-2', 'product-bed-ambassador-3', 'product-bed-ambassador-4', 'product-bed-ambassador-5', 'product-bed-ambassador-6', 'product-bed-ambassador-7', 'product-bed-ambassador-8', 'product-bed-ambassador-9', 'product-bed-ambassador-10']),
     'sleigh-bed': getImages(['product-bed-sleigh-1', 'product-bed-sleigh-2', 'product-bed-sleigh-3', 'product-bed-sleigh-4', 'product-bed-sleigh-5', 'product-bed-sleigh-6', 'product-bed-sleigh-7', 'product-bed-sleigh-8', 'product-bed-sleigh-9', 'product-bed-sleigh-10', 'product-bed-sleigh-11']),
     'divan-ottoman-bed': getImages(['product-bed-divan-1', 'product-bed-divan-2', 'product-bed-divan-3', 'product-bed-divan-4', 'product-bed-divan-5', 'product-bed-divan-6', 'product-bed-divan-7', 'product-bed-divan-8', 'product-bed-divan-9', 'product-bed-divan-10', 'product-bed-divan-11']),
@@ -76,6 +77,8 @@ export const worldMapImage = getImage('world-map');
 export { getImage, getImages };
 
     
+
+
 
 
 
