@@ -60,6 +60,27 @@ export const products: Product[] = [
     stock: 18,
   },
   {
+    id: '20',
+    slug: 'ashwin-sofa-bed',
+    name: 'Ashwin Sofa Bed',
+    category: 'Sofas',
+    categorySlug: 'sofas',
+    price: 949.99,
+    variants: [
+        { size: '2 Seater', price: 949.99 },
+        { size: '3 Seater', price: 1149.99 },
+    ],
+    rating: 4.6,
+    reviewCount: 28,
+    imageIds: productImagesMap['ashwin-sofa-bed'].map(i => i.id),
+    description: 'The Ashwin Sofa Bed is a versatile and stylish addition to any home. With its plush cushions and easy-to-convert mechanism, it offers a comfortable seating solution by day and a cozy bed by night.',
+    details: ['Smooth pull-out bed mechanism', 'High-density foam for comfort and support', 'Upholstered in a durable, textured fabric', 'Modern design with clean lines'],
+    dimensions: { width: '220cm', height: '90cm', depth: '95cm' },
+    style: 'Modern',
+    material: 'Fabric',
+    stock: 22,
+  },
+  {
     id: '11',
     slug: 'ambassador-park-lane-bed',
     name: 'Ambassador Park Lane Bed',
@@ -95,7 +116,7 @@ export const products: Product[] = [
       { size: 'Super King', price: 260.00, mattressPrice: 610.00 },
     ],
     rating: 4.8,
-    reviewCount: 60,
+    reviewCount: 68,
     imageIds: productImagesMap['sleigh-bed'].map(i => i.id),
     description: 'The Astral Sleigh Bed features a classic, gracefully curved headboard and footboard, upholstered in a sumptuous grey fabric. Its timeless silhouette brings an air of romance and sophistication to any bedroom.',
     details: ['Classic sleigh bed design with rolled headboard and footboard', 'Upholstered in premium, soft-touch fabric', 'Deep button tufting for a luxurious look', 'Solid wood feet for stability'],
@@ -277,6 +298,9 @@ export const reviews: Review[] = [
   { id: '30', productId: '12', author: 'Isabella C.', rating: 5, title: 'A dream come true!', comment: 'I have always wanted a sleigh bed and this one is perfect. The quality is amazing and it looks so grand in my room. Five stars!', date: '2023-11-15' },
   { id: '31', productId: '12', author: 'George K.', rating: 4, title: 'Lovely bed', comment: 'A lovely bed, very well made. It was a bit tricky to get up the stairs as the headboard is large, so keep that in mind. But once assembled, it\'s fantastic.', date: '2023-11-18' },
   { id: '32', productId: '12', author: 'Hannah L.', rating: 5, title: 'So luxurious', comment: 'The fabric is so soft and the bed feels incredibly luxurious. I\'m so happy with my purchase. It has completely changed the feel of my bedroom.', date: '2023-11-20' },
+  { id: '33', productId: '12', author: 'Ava J.', rating: 5, title: 'Simply Stunning', comment: 'I am so impressed with this bed. The quality is exceptional and it looks so grand in our master bedroom. It has exceeded all my expectations. The delivery was also quick and the setup was easy. Highly recommend it to anyone looking for a statement piece.', date: '2023-11-21' },
+  { id: '34', productId: '12', author: 'William D.', rating: 4, title: 'Great Bed, Great Price', comment: 'For the price, you cannot beat the quality of this bed. It feels very solid and the upholstery is well done. It was a bit of a challenge to assemble on my own, but I managed it. Overall, a fantastic buy.', date: '2023-11-22' },
+  { id: '35', productId: '12', author: 'Mia L.', rating: 5, title: 'Elegant and Timeless', comment: 'This sleigh bed is a timeless piece. It brings a touch of elegance to my bedroom without being overly ornate. The fabric is a beautiful neutral grey that goes with everything. I\'m thrilled with this purchase.', date: '2023-11-24' },
 ];
 
 export const blogPosts: BlogPost[] = [
@@ -381,6 +405,7 @@ export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === sl
 
 
     
+
 
 
 
