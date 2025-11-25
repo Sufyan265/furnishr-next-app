@@ -26,6 +26,7 @@ export const products: Product[] = [
     variants: [
         { size: '2 Seater', price: 1199.99 },
         { size: '3 Seater', price: 1399.99 },
+        { size: '4 Seater', price: 1599.99 },
         { size: 'Corner', price: 1799.99 },
     ],
     rating: 4.5,
