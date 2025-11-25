@@ -71,14 +71,17 @@ export default function ProductInteraction({ product }: ProductInteractionProps)
   let isDealActive = false;
 
   if (isSiteWideSaleActive) {
-    displayPrice = finalPrice * (1 - siteWideSale.discountPercentage / 100);
+    displayPrice = finalPrice; // The price from data is the discounted price
+    originalPrice = finalPrice / (1 - siteWideSale.discountPercentage / 100); // Calculate original price
     discountPercentage = siteWideSale.discountPercentage;
     isDealActive = true;
   } else if (individualDeal) {
-    displayPrice = finalPrice * (1 - product.deal.discountPercentage / 100);
+    displayPrice = finalPrice; // The price from data is the discounted price
+    originalPrice = finalPrice / (1 - product.deal.discountPercentage / 100); // Calculate original price
     discountPercentage = product.deal.discountPercentage;
     isDealActive = true;
   } else {
+    displayPrice = finalPrice;
     originalPrice = finalPrice;
   }
 

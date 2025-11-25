@@ -15,29 +15,15 @@ import { siteWideSale } from '@/lib/data';
 export default function CartPage() {
   const { cart, removeFromCart, updateQuantity } = useCart();
 
+  const discountedSubtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
   const originalSubtotal = cart.reduce((sum, item) => {
     const isSaleApplicable = siteWideSale.isActive && !['ambassador-park-lane-bed', 'astral-sleigh-bed', 'divan-ottoman-bed'].includes(item.slug);
-    let itemOriginalPrice = item.variant ? item.variant.price : item.price;
-    if (item.withMattress && item.variant?.mattressPrice) {
-        itemOriginalPrice = item.variant.mattressPrice;
-    }
-
+    let itemPrice = item.price;
     if (isSaleApplicable) {
-        itemOriginalPrice = itemOriginalPrice / (1 - siteWideSale.discountPercentage / 100);
+      itemPrice = item.price / (1 - siteWideSale.discountPercentage / 100);
     }
-    
-    return sum + itemOriginalPrice * item.quantity;
-  }, 0);
-
-  const discountedSubtotal = cart.reduce((sum, item) => {
-      let itemPrice = item.price;
-      if (['ambassador-park-lane-bed', 'astral-sleigh-bed', 'divan-ottoman-bed'].includes(item.slug) && item.variant) {
-        itemPrice = item.variant.price;
-        if(item.withMattress && item.variant.mattressPrice) {
-            itemPrice = item.variant.mattressPrice;
-        }
-      }
-      return sum + itemPrice * item.quantity;
+    return sum + itemPrice * item.quantity;
   }, 0);
 
   const shipping = discountedSubtotal > 250 || discountedSubtotal === 0 ? 0 : 49.99;
@@ -72,22 +58,12 @@ export default function CartPage() {
                   {cart.map(item => {
                     const isSaleApplicable = siteWideSale.isActive && !['ambassador-park-lane-bed', 'astral-sleigh-bed', 'divan-ottoman-bed'].includes(item.slug);
                     
-                    let itemPrice = item.price;
-                    if (['ambassador-park-lane-bed', 'astral-sleigh-bed', 'divan-ottoman-bed'].includes(item.slug) && item.variant) {
-                        itemPrice = item.variant.price;
-                        if(item.withMattress && item.variant.mattressPrice) {
-                            itemPrice = item.variant.mattressPrice;
-                        }
-                    }
+                    const itemPrice = item.price;
+                    let itemOriginalPrice = item.price;
 
-                    let itemOriginalPrice = item.variant ? item.variant.price : item.price;
-                    if (item.withMattress && item.variant?.mattressPrice) {
-                        itemOriginalPrice = item.variant.mattressPrice;
-                    }
                     if (isSaleApplicable) {
-                        itemOriginalPrice = itemOriginalPrice / (1 - (siteWideSale.discountPercentage / 100));
+                        itemOriginalPrice = item.price / (1 - (siteWideSale.discountPercentage / 100));
                     }
-
 
                     return (
                     <div key={item.id + (item.variant?.size || '') + (item.withMattress ? '-mattress' : '')} className="flex items-center p-4 sm:p-6">
@@ -145,7 +121,7 @@ export default function CartPage() {
                   <span className="text-muted-foreground">Subtotal</span>
                   <span className="font-semibold">£{discountedSubtotal.toFixed(2)}</span>
                 </div>
-                 {totalSavings > 0 && (
+                 {totalSavings > 0.01 && (
                   <>
                     <div className="flex justify-between text-destructive">
                       <span className="font-semibold">Sale Discount</span>
