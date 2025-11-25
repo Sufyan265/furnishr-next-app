@@ -36,7 +36,7 @@ export const heroImages = [
 ];
 
 export const productImages = {
-    'aokland-sofa': getImages(['product-sofa-1', 'product-sofa-2', 'product-sofa-3']),
+    'aokland-sofa': getImages(['product-sofa-1', 'product-sofa-2', 'product-sofa-3', 'product-sofa-4', 'product-sofa-5', 'product-sofa-6', 'product-sofa-7', 'product-sofa-8', 'product-sofa-9']),
     'artic-sofa-bed': getImages(['product-artic-sofa-1', 'product-artic-sofa-2', 'product-artic-sofa-3']),
     'ashwin-sofa-bed': getImages(['product-ashwin-sofa-1', 'product-ashwin-sofa-2', 'product-ashwin-sofa-3']),
     'chesterfield-sofa': getImages(['product-chesterfield-sofa-1', 'product-chesterfield-sofa-2', 'product-chesterfield-sofa-3']),
@@ -95,5 +95,7 @@ export { getImage, getImages };
 
 
 
+
+    
 
     
