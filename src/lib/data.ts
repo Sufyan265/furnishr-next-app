@@ -166,6 +166,28 @@ export const products: Product[] = [
     stock: 8,
   },
   {
+    id: '25',
+    slug: 'harrison-sofa',
+    name: 'Harrison Sofa',
+    category: 'Sofas',
+    categorySlug: 'sofas',
+    price: 1299.99,
+    variants: [
+      { size: '2 Seater', price: 1299.99 },
+      { size: '3 Seater', price: 1499.99 },
+      { size: 'Corner', price: 1999.99 },
+    ],
+    rating: 4.8,
+    reviewCount: 72,
+    imageIds: productImagesMap['harrison-sofa'].map(i => i.id),
+    description: 'The Harrison Sofa brings a touch of contemporary elegance to any living room. With its clean lines, comfortable cushions, and stylish metal legs, it is the perfect blend of form and function.',
+    details: ['Upholstered in a durable and soft woven fabric', 'High-resilience foam cushions for lasting comfort', 'Sleek metal legs for a modern look', 'Sturdy solid wood frame'],
+    dimensions: { width: '230cm', height: '86cm', depth: '94cm' },
+    style: 'Contemporary',
+    material: 'Fabric',
+    stock: 16,
+  },
+  {
     id: '11',
     slug: 'ambassador-park-lane-bed',
     name: 'Ambassador Park Lane Bed',
@@ -492,4 +514,5 @@ export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === sl
     
 
     
+
 
