@@ -145,6 +145,27 @@ export const products: Product[] = [
     stock: 14,
   },
   {
+    id: '24',
+    slug: 'electric-recliner-sofa',
+    name: 'Electric Recliner Sofa',
+    category: 'Sofas',
+    categorySlug: 'sofas',
+    price: 1899.99,
+    variants: [
+      { size: '2 Seater', price: 1899.99 },
+      { size: '3 Seater', price: 2199.99 },
+    ],
+    rating: 4.9,
+    reviewCount: 65,
+    imageIds: productImagesMap['electric-recliner-sofa'].map(i => i.id),
+    description: 'Experience ultimate relaxation with the Electric Recliner Sofa. At the touch of a button, recline into your perfect position of comfort. Upholstered in premium, durable leather with USB charging ports for convenience.',
+    details: ['Smooth and quiet electric reclining mechanism', 'Integrated USB charging ports', 'Premium top-grain leather upholstery', 'Plush headrests and lumbar support'],
+    dimensions: { width: '210cm', height: '102cm', depth: '98cm' },
+    style: 'Contemporary',
+    material: 'Leather',
+    stock: 8,
+  },
+  {
     id: '11',
     slug: 'ambassador-park-lane-bed',
     name: 'Ambassador Park Lane Bed',
@@ -471,3 +492,4 @@ export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === sl
     
 
     
+
