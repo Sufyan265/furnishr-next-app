@@ -84,12 +84,12 @@ export const products: Product[] = [
     name: 'Divan Ottoman Bed',
     category: 'Beds',
     categorySlug: 'beds',
-    price: 250.00,
+    price: 260.00,
     variants: [
-      { size: 'Single', price: 250.00, mattressPrice: 350.00 },
-      { size: 'Double', price: 300.00, mattressPrice: 420.00 },
-      { size: 'King', price: 350.00, mattressPrice: 490.00 },
-      { size: 'Super King', price: 400.00, mattressPrice: 560.00 },
+      { size: 'Single', price: 260.00, mattressPrice: 360.00 },
+      { size: 'Double', price: 320.00, mattressPrice: 440.00 },
+      { size: 'King', price: 330.00, mattressPrice: 480.00 },
+      { size: 'Super King', price: 370.00, mattressPrice: 530.00 },
     ],
     rating: 4.9,
     reviewCount: 78,
@@ -352,3 +352,4 @@ export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === sl
 
 
     
+

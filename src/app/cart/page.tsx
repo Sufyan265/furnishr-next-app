@@ -16,7 +16,7 @@ export default function CartPage() {
   const { cart, removeFromCart, updateQuantity } = useCart();
 
   const originalSubtotal = cart.reduce((sum, item) => {
-    const isSaleApplicable = siteWideSale.isActive && !['ambassador-park-lane-bed', 'astral-sleigh-bed'].includes(item.slug);
+    const isSaleApplicable = siteWideSale.isActive && !['ambassador-park-lane-bed', 'astral-sleigh-bed', 'divan-ottoman-bed'].includes(item.slug);
     let itemOriginalPrice = item.variant ? item.variant.price : item.price;
     if (item.withMattress && item.variant?.mattressPrice) {
         itemOriginalPrice = item.variant.mattressPrice;
@@ -31,7 +31,7 @@ export default function CartPage() {
 
   const discountedSubtotal = cart.reduce((sum, item) => {
       let itemPrice = item.price;
-      if (['ambassador-park-lane-bed', 'astral-sleigh-bed'].includes(item.slug) && item.variant) {
+      if (['ambassador-park-lane-bed', 'astral-sleigh-bed', 'divan-ottoman-bed'].includes(item.slug) && item.variant) {
         itemPrice = item.variant.price;
         if(item.withMattress && item.variant.mattressPrice) {
             itemPrice = item.variant.mattressPrice;
@@ -70,10 +70,10 @@ export default function CartPage() {
               <CardContent className="p-0">
                 <div className="divide-y">
                   {cart.map(item => {
-                    const isSaleApplicable = siteWideSale.isActive && !['ambassador-park-lane-bed', 'astral-sleigh-bed'].includes(item.slug);
+                    const isSaleApplicable = siteWideSale.isActive && !['ambassador-park-lane-bed', 'astral-sleigh-bed', 'divan-ottoman-bed'].includes(item.slug);
                     
                     let itemPrice = item.price;
-                    if (['ambassador-park-lane-bed', 'astral-sleigh-bed'].includes(item.slug) && item.variant) {
+                    if (['ambassador-park-lane-bed', 'astral-sleigh-bed', 'divan-ottoman-bed'].includes(item.slug) && item.variant) {
                         itemPrice = item.variant.price;
                         if(item.withMattress && item.variant.mattressPrice) {
                             itemPrice = item.variant.mattressPrice;
