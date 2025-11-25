@@ -41,7 +41,7 @@ export const productImages = {
     'ashwin-sofa-bed': getImages(['product-ashwin-sofa-1', 'product-ashwin-sofa-2', 'product-ashwin-sofa-3', 'product-ashwin-sofa-4', 'product-ashwin-sofa-5', 'product-ashwin-sofa-6', 'product-ashwin-sofa-7', 'product-ashwin-sofa-8']),
     'chesterfield-sofa': getImages(['product-chesterfield-sofa-1', 'product-chesterfield-sofa-2', 'product-chesterfield-sofa-3', 'product-chesterfield-sofa-4', 'product-chesterfield-sofa-5', 'product-chesterfield-sofa-6', 'product-chesterfield-sofa-7']),
     'dino-sofa': getImages(['product-dino-sofa-1', 'product-dino-sofa-2', 'product-dino-sofa-3', 'product-dino-sofa-4', 'product-dino-sofa-5', 'product-dino-sofa-6', 'product-dino-sofa-7', 'product-dino-sofa-8', 'product-dino-sofa-9', 'product-dino-sofa-10']),
-    'dylan-sofa': getImages(['product-dylan-sofa-1', 'product-dylan-sofa-2', 'product-dylan-sofa-3']),
+    'dylan-sofa': getImages(['product-dylan-sofa-1', 'product-dylan-sofa-2', 'product-dylan-sofa-3', 'product-dylan-sofa-4', 'product-dylan-sofa-5', 'product-dylan-sofa-6', 'product-dylan-sofa-7', 'product-dylan-sofa-8', 'product-dylan-sofa-9', 'product-dylan-sofa-10']),
     'electric-recliner-sofa': getImages(['product-electric-recliner-1', 'product-electric-recliner-2', 'product-electric-recliner-3']),
     'harrison-sofa': getImages(['product-harrison-sofa-1', 'product-harrison-sofa-2', 'product-harrison-sofa-3']),
     'ikea-berlin-sofa-bed': getImages(['product-ikea-berlin-sofa-1', 'product-ikea-berlin-sofa-2', 'product-ikea-berlin-sofa-3']),
@@ -84,3 +84,4 @@ export { getImage, getImages };
     
     
     
+

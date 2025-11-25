@@ -131,10 +131,12 @@ export const products: Product[] = [
     name: 'Dylan Sofa',
     category: 'Sofas',
     categorySlug: 'sofas',
-    price: 1399.99,
+    price: 280.00,
     variants: [
-      { size: '2 Seater', price: 1399.99 },
-      { size: '3 Seater', price: 1599.99 },
+      { size: '1 Seater', price: 250.00 },
+      { size: '2 Seater', price: 280.00 },
+      { size: '3 Seater', price: 320.00 },
+      { size: '5 Seater', price: 380.00 },
     ],
     rating: 4.8,
     reviewCount: 52,
@@ -701,6 +703,7 @@ export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === sl
 
 
     
+
 
 
 
