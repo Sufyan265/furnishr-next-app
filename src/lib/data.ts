@@ -85,10 +85,12 @@ export const products: Product[] = [
     name: 'Chesterfield Sofa',
     category: 'Sofas',
     categorySlug: 'sofas',
-    price: 1499.99,
+    price: 440.00,
     variants: [
-        { size: '2 Seater', price: 1499.99 },
-        { size: '3 Seater', price: 1699.99 },
+      { size: '1 Seater', price: 380.00 },
+      { size: '2 Seater', price: 440.00 },
+      { size: '3 Seater', price: 480.00 },
+      { size: '5 Seater', price: 760.00 },
     ],
     rating: 4.9,
     reviewCount: 88,
@@ -697,6 +699,7 @@ export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === sl
 
 
     
+
 
 
 
