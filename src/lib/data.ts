@@ -188,6 +188,27 @@ export const products: Product[] = [
     stock: 16,
   },
   {
+    id: '26',
+    slug: 'ikea-berlin-sofa-bed',
+    name: 'Ikea Berlin Sofa Bed',
+    category: 'Sofas',
+    categorySlug: 'sofas',
+    price: 799.99,
+    variants: [
+      { size: '2 Seater', price: 799.99 },
+      { size: '3 Seater', price: 949.99 },
+    ],
+    rating: 4.5,
+    reviewCount: 30,
+    imageIds: productImagesMap['ikea-berlin-sofa-bed'].map(i => i.id),
+    description: 'The Ikea Berlin Sofa Bed is the epitome of Scandinavian functionality. Its minimalist design, clever hidden storage, and effortless transformation from sofa to bed make it a must-have for modern, compact living.',
+    details: ['Simple and intuitive pull-out mechanism', 'Spacious under-seat storage compartment', 'Upholstered in a durable, easy-to-clean grey fabric', 'Classic Scandinavian design with light wood legs'],
+    dimensions: { width: '225cm', height: '86cm', depth: '105cm' },
+    style: 'Scandinavian',
+    material: 'Fabric',
+    stock: 25,
+  },
+  {
     id: '11',
     slug: 'ambassador-park-lane-bed',
     name: 'Ambassador Park Lane Bed',
@@ -310,7 +331,7 @@ export const products: Product[] = [
     price: 270.00,
     variants: [
         { size: 'Single', price: 270.00, mattressPrice: 370.00 },
-        { size: 'Double', price: 320.00, mattressPrice: 440.00 },
+        { size: 'Double', price: 320.00, mattressPrice: 580.00 },
         { size: 'King', price: 370.00, mattressPrice: 510.00 },
         { size: 'Super King', price: 420.00, mattressPrice: 580.00 },
     ],
@@ -514,5 +535,7 @@ export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === sl
     
 
     
+
+
 
 
