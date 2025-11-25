@@ -51,8 +51,16 @@ export default function ProductInteraction({ product }: ProductInteractionProps)
   const productImages = getImages(product.imageIds);
 
   const basePrice = selectedVariant?.price || product.price;
-  const mattressPrice = withMattress ? (selectedVariant?.mattressPrice || 0) : 0;
-  const finalPrice = basePrice + mattressPrice;
+  let mattressPrice = 0;
+  if(withMattress) {
+    if(selectedVariant) {
+        mattressPrice = selectedVariant.mattressPrice || 0;
+    } else {
+        mattressPrice = product.mattressPrice || 0;
+    }
+  }
+
+  const finalPrice = withMattress ? mattressPrice : basePrice;
   
   const isSiteWideSaleActive = siteWideSale.isActive && product.slug !== 'ambassador-park-lane-bed';
   const individualDeal = product.deal && new Date(product.deal.expiresAt) > new Date();
@@ -103,7 +111,7 @@ export default function ProductInteraction({ product }: ProductInteractionProps)
     setSelectedVariant(variant);
   }
   
-  const hasMattressOption = product.variants?.some(v => v.mattressPrice && v.mattressPrice > 0);
+  const hasMattressOption = (product.variants?.some(v => v.mattressPrice && v.mattressPrice > 0) || (product.mattressPrice && product.mattressPrice > 0));
 
 
   return (

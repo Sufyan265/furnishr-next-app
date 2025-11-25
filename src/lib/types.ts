@@ -14,6 +14,7 @@ export interface Product {
   categorySlug: string;
   price: number;
   variants?: ProductVariant[];
+  mattressPrice?: number;
   rating: number;
   reviewCount: number;
   imageIds: string[];
