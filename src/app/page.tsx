@@ -29,13 +29,13 @@ export default function Home() {
           <CarouselContent>
             {heroImages.map((image, index) => (
               <CarouselItem key={index}>
-                <div className="relative h-[60vh] md:h-[80vh] w-full overflow-hidden">
+                <div className="relative h-[60vh] md:h-[80vh] w-full">
                   <Image
                     src={image.imageUrl}
                     alt={image.description}
                     data-ai-hint={image.imageHint}
                     fill
-                    className="object-cover ken-burns"
+                    className="object-cover w-full h-full ken-burns"
                     priority={index === 0}
                   />
                   <div className="absolute inset-0 bg-black/40" />
