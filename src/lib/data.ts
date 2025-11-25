@@ -18,14 +18,14 @@ export const categories: Category[] = [
 export const products: Product[] = [
   {
     id: '1',
-    slug: 'urban-elegance-sofa',
-    name: 'Urban Elegance Sectional Sofa',
+    slug: 'aokland-sofa',
+    name: 'Aokland Sofa',
     category: 'Sofas',
     categorySlug: 'sofas',
     price: 1299.99,
     rating: 4.5,
     reviewCount: 120,
-    imageIds: productImagesMap['urban-elegance-sofa'].map(i => i.id),
+    imageIds: productImagesMap['aokland-sofa'].map(i => i.id),
     description: 'A masterpiece of modern design, this sectional sofa offers unparalleled comfort and style. Its modular design allows for versatile arrangements to fit any living space.',
     details: ['Plush, high-density foam cushions', 'Durable linen-blend upholstery', 'Solid wood frame', 'Includes two matching throw pillows'],
     dimensions: { width: '280cm', height: '85cm', depth: '160cm' },
@@ -352,6 +352,7 @@ export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === sl
 
 
     
+
 
 
 
