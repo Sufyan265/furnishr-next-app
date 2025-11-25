@@ -28,7 +28,6 @@ export const products: Product[] = [
         { size: '2 Seater', price: 280.00 },
         { size: '3 Seater', price: 320.00 },
         { size: '4 Seater', price: 380.00 },
-        { size: 'Corner', price: 1799.99 },
     ],
     rating: 4.5,
     reviewCount: 120,
@@ -113,7 +112,6 @@ export const products: Product[] = [
     variants: [
       { size: '2 Seater', price: 999.99 },
       { size: '3 Seater', price: 1199.99 },
-      { size: 'Corner', price: 1599.99 },
     ],
     rating: 4.7,
     reviewCount: 42,
@@ -177,7 +175,6 @@ export const products: Product[] = [
     variants: [
       { size: '2 Seater', price: 1299.99 },
       { size: '3 Seater', price: 1499.99 },
-      { size: 'Corner', price: 1999.99 },
     ],
     rating: 4.8,
     reviewCount: 72,
@@ -283,7 +280,6 @@ export const products: Product[] = [
     variants: [
       { size: '2 Seater', price: 1099.99 },
       { size: '3 Seater', price: 1299.99 },
-      { size: 'Corner', price: 1799.99 },
     ],
     rating: 4.7,
     reviewCount: 68,
