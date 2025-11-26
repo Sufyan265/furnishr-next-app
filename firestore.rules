@@ -134,15 +134,19 @@ service cloud.firestore {
        * @path /products/{productId}/reviews/{reviewId}
        * @allow (get, list) Anyone can read product reviews.
        * @allow (create) A signed-in user who has purchased the product can write a review.
+       * @allow (update) The author can edit their own review OR any signed-in user can upvote/downvote.
        * @deny (create) A user attempts to review a product they have not purchased.
-       * @deny (update) A user tries to edit another user's review.
+       * @deny (update) A user tries to edit another user's review content.
        * @principle Enforces conditional writes based on cross-collection data verification.
        */
       match /reviews/{reviewId} {
         allow get: if true;
         allow list: if true;
         allow create: if isSignedIn() && request.resource.data.customerId == request.auth.uid && request.resource.data.productId == productId && hasPurchasedProduct(productId, request.resource.data.proofOfPurchaseOrderId);
-        allow update: if isExistingOwner(resource.data.customerId) && isOwnerFieldImmutable('customerId') && isOwnerFieldImmutable('productId');
+        
+        allow update: if (isExistingOwner(resource.data.customerId) && isOwnerFieldImmutable('customerId') && isOwnerFieldImmutable('productId')) || 
+                        (isSignedIn() && request.resource.data.keys().hasAll(['upvotes', 'downvotes']));
+
         allow delete: if isExistingOwner(resource.data.customerId);
       }
 

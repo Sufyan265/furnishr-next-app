@@ -44,6 +44,8 @@ export interface Review {
   comment: string;
   date: string;
   tags?: string[];
+  upvotes?: number;
+  downvotes?: number;
 }
 
 export interface Answer {

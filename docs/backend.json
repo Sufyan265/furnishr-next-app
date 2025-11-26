@@ -122,6 +122,14 @@
           "items": {
             "type": "string"
           }
+        },
+        "upvotes": {
+            "type": "number",
+            "description": "Number of upvotes the review has received."
+        },
+        "downvotes": {
+            "type": "number",
+            "description": "Number of downvotes the review has received."
         }
       },
       "required": [

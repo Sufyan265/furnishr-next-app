@@ -7,13 +7,15 @@ import { getProductBySlug, getReviewsForProduct } from '@/lib/data';
 import { Separator } from '@/components/ui/separator';
 import ProductInteraction from '@/components/product-interaction';
 import StarRating from '@/components/star-rating';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardActions } from '@/components/ui/card';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
-import { ShieldCheck, Truck, PackageCheck, Lock, ShieldAlert } from 'lucide-react';
+import { ShieldCheck, Truck, PackageCheck, Lock, ShieldAlert, ThumbsUp, ThumbsDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import type { Metadata } from 'next';
 import ProductQandA from '@/components/product-q-and-a';
+import { doc, updateDoc, increment } from 'firebase/firestore';
+import { useFirestore } from '@/firebase';
 
 // Since we are converting to a client component, we can no longer export metadata directly.
 // This would typically be handled in a parent server component or layout, but for this standalone page,
@@ -27,6 +29,7 @@ const reviewTags = ['comfort', 'assembly', 'delivery', 'quality'];
 
 export default function ProductDetailPage({ params }: ProductPageProps) {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const firestore = useFirestore();
   
   const product = getProductBySlug(params.slug);
 
@@ -55,6 +58,14 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
       prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag]
     );
   };
+
+  const handleVote = (reviewId: string, voteType: 'upvotes' | 'downvotes') => {
+    if (!firestore) return;
+    const reviewRef = doc(firestore, 'products', product.id, 'reviews', reviewId);
+    updateDoc(reviewRef, {
+        [voteType]: increment(1)
+    }).catch(err => console.error("Failed to vote:", err));
+  }
 
   return (
     <div className="bg-secondary/30">
@@ -108,7 +119,7 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
               {filteredReviews.length > 0 ? (
                 <div className="grid sm:grid-cols-2 gap-6">
                   {filteredReviews.map(review => (
-                    <Card key={review.id}>
+                    <Card key={review.id} className="flex flex-col">
                       <CardHeader>
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-3">
@@ -123,10 +134,22 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                           <StarRating rating={review.rating} />
                         </div>
                       </CardHeader>
-                      <CardContent>
+                      <CardContent className="flex-grow">
                         <h3 className="font-semibold mb-2">{review.title}</h3>
                         <p className="text-muted-foreground text-sm leading-relaxed">"{review.comment}"</p>
                       </CardContent>
+                      <CardFooter className="flex justify-between items-center bg-secondary/30 p-3">
+                        <p className="text-xs text-muted-foreground">Was this review helpful?</p>
+                        <div className="flex items-center gap-2">
+                            <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => handleVote(review.id, 'upvotes')}>
+                                <ThumbsUp className="h-4 w-4" />
+                            </Button>
+                            <span className="text-sm font-semibold">{review.upvotes || 0}</span>
+                            <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => handleVote(review.id, 'downvotes')}>
+                                <ThumbsDown className="h-4 w-4" />
+                            </Button>
+                        </div>
+                      </CardFooter>
                     </Card>
                   ))}
                 </div>
