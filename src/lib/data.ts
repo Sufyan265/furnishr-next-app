@@ -256,10 +256,13 @@ export const products: Product[] = [
     name: 'Roma Leather Recliner Sofa',
     category: 'Sofas',
     categorySlug: 'sofas',
-    price: 2099.99,
+    price: 360.00,
     variants: [
-      { size: '2 Seater', price: 2099.99 },
-      { size: '3 Seater', price: 2399.99 },
+      { size: '1 Seater', price: 299.00 },
+      { size: '2 Seater', price: 360.00 },
+      { size: '3 Seater', price: 399.00 },
+      { size: '3+2 Seater', price: 670.00 },
+      { size: '5 Seater Corner', price: 690.00 },
     ],
     rating: 4.9,
     reviewCount: 75,
@@ -713,3 +716,6 @@ export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === sl
 
 
 
+
+
+    
