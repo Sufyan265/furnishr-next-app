@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -87,7 +88,7 @@ body {
   }
   
   section {
-    @apply w-full py-12 md:py-24 lg:py-32;
+    @apply w-full py-16 md:py-24;
   }
 
   .blog-content h2 {

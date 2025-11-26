@@ -28,8 +28,8 @@ export default function Footer() {
   return (
     <footer className="bg-secondary/50 border-t">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="md:col-span-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="md:col-span-2 lg:col-span-2">
             <h3 className="font-headline text-lg font-semibold">Stay in the Loop</h3>
             <p className="mt-2 text-muted-foreground">Sign up for our newsletter to get the latest on new arrivals, special offers, and design inspiration.</p>
             <form className="mt-4 flex w-full max-w-sm items-center space-x-2">
@@ -55,12 +55,12 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-8 pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="mt-8 pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-muted-foreground text-sm text-center md:text-left">
             <p>&copy; {new Date().getFullYear()} Furnishr. All rights reserved.</p>
             <p>Designed With Love By Arslan Maverick</p>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 flex-wrap justify-center">
               <VisaIcon />
               <MastercardIcon />
               <AmexIcon />
@@ -77,4 +77,3 @@ export default function Footer() {
     </footer>
   );
 }
-

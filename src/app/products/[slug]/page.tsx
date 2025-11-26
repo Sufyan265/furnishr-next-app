@@ -1,3 +1,4 @@
+
 import { notFound } from 'next/navigation';
 import { getProductBySlug, getReviewsForProduct } from '@/lib/data';
 import { Separator } from '@/components/ui/separator';
@@ -38,10 +39,10 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
 
   return (
     <div className="bg-secondary/30">
-      <section className="container mx-auto px-4">
+      <section className="container mx-auto px-4 py-8 md:py-16">
         <ProductInteraction product={product} />
 
-        <div className="grid md:grid-cols-3 gap-12 mt-12 md:mt-16">
+        <div className="grid md:grid-cols-3 gap-12 mt-12">
           <div className="md:col-span-2 space-y-12">
             <Card>
               <CardHeader>
@@ -72,7 +73,7 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
             <div>
               <h2 className="font-headline text-3xl font-bold mb-8 text-center">Customer Reviews</h2>
               {reviews.length > 0 ? (
-                <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
+                <div className="grid sm:grid-cols-2 gap-6">
                   {reviews.map(review => (
                     <Card key={review.id}>
                       <CardHeader>

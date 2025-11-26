@@ -26,7 +26,6 @@ export default function CheckoutStepper({ steps, currentStep }: CheckoutStepperP
                   className="relative flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground"
                 >
                   <Check className="h-5 w-5" aria-hidden="true" />
-                  <span className="sr-only">{step.name}</span>
                 </div>
               </>
             ) : stepIdx === currentStepIndex ? (
@@ -39,7 +38,6 @@ export default function CheckoutStepper({ steps, currentStep }: CheckoutStepperP
                   aria-current="step"
                 >
                   <span className="h-2.5 w-2.5 rounded-full bg-primary" aria-hidden="true" />
-                  <span className="sr-only">{step.name}</span>
                 </div>
               </>
             ) : (
@@ -51,11 +49,10 @@ export default function CheckoutStepper({ steps, currentStep }: CheckoutStepperP
                   className="group relative flex h-8 w-8 items-center justify-center rounded-full border-2 border-border bg-background"
                 >
                    <span className="h-2.5 w-2.5 rounded-full bg-transparent" aria-hidden="true" />
-                  <span className="sr-only">{step.name}</span>
                 </div>
               </>
             )}
-             <p className="absolute -bottom-7 w-max -left-2 sm:left-1/2 sm:-translate-x-1/2 text-center text-sm font-medium text-muted-foreground">{step.name}</p>
+             <p className="absolute mt-2 w-max max-w-[60px] sm:max-w-none text-center text-xs sm:text-sm font-medium text-muted-foreground -left-1/2 translate-x-1/4 sm:left-1/2 sm:-translate-x-1/2">{step.name}</p>
           </li>
         ))}
       </ol>

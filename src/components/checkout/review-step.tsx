@@ -116,15 +116,15 @@ export default function ReviewStep({ shippingData, paymentData, onPlaceOrder, on
             <span>£{total.toFixed(2)}</span>
           </div>
         </CardContent>
-        <CardFooter className="flex-col gap-4">
-            <div className="flex justify-between items-center w-full">
-                <Button type="button" variant="outline" onClick={onBack}>
-                    <ArrowLeft className="mr-2 h-5 w-5" />
-                    Back to Payment
-                </Button>
-                <Button size="lg" className="font-bold" onClick={onPlaceOrder}>
+        <CardFooter>
+            <div className="flex flex-col-reverse sm:flex-row-reverse gap-4 w-full">
+                <Button size="lg" className="font-bold w-full sm:w-auto" onClick={onPlaceOrder}>
                     <CheckCircle className="mr-2 h-5 w-5" />
                     Place Order
+                </Button>
+                <Button type="button" variant="outline" onClick={onBack} className="w-full sm:w-auto">
+                    <ArrowLeft className="mr-2 h-5 w-5" />
+                    Back to Payment
                 </Button>
             </div>
         </CardFooter>

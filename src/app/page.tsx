@@ -42,7 +42,7 @@ export default function Home() {
                   <div className="absolute inset-0 bg-black/40" />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="container mx-auto px-4 text-center text-white">
-                      <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight drop-shadow-lg">
+                      <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight drop-shadow-lg">
                         Design Your Dream Space
                       </h1>
                       <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl">
@@ -70,7 +70,7 @@ export default function Home() {
               We're more than just a furniture store. We're your partner in creating a home you love.
             </p>
           </div>
-          <div className="mt-16 grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
+          <div className="mt-12 md:mt-16 grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <Card className="bg-secondary/50">
                   <CardContent className="p-6 text-center flex flex-col items-center gap-3">

@@ -68,7 +68,7 @@ export default function PaymentForm({ onSubmit, onBack }: PaymentFormProps) {
                 </FormItem>
               )}
             />
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-4">
               <FormField
                 control={form.control}
                 name="expiryDate"
@@ -99,14 +99,14 @@ export default function PaymentForm({ onSubmit, onBack }: PaymentFormProps) {
                 )}
               />
             </div>
-            <div className="flex justify-between items-center">
-              <Button type="button" variant="outline" onClick={onBack}>
-                <ArrowLeft className="mr-2 h-5 w-5" />
-                Back to Shipping
-              </Button>
-              <Button type="submit" size="lg">
+            <div className="flex flex-col sm:flex-row-reverse gap-4">
+              <Button type="submit" size="lg" className="w-full sm:w-auto">
                 Continue to Review
                 <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              <Button type="button" variant="outline" onClick={onBack} className="w-full sm:w-auto">
+                <ArrowLeft className="mr-2 h-5 w-5" />
+                Back to Shipping
               </Button>
             </div>
           </form>

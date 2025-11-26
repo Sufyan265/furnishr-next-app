@@ -59,7 +59,7 @@ export default function CheckoutPage() {
 
   if (cart.length === 0 && currentStep !== 'review') {
     return (
-      <div className="container mx-auto px-4 py-24 text-center">
+      <div className="container mx-auto px-4 py-16 md:py-24 text-center">
         <ShoppingBag className="mx-auto h-24 w-24 text-muted-foreground" />
         <h1 className="mt-8 font-headline text-4xl font-bold">Your Cart is Empty</h1>
         <p className="mt-4 text-lg text-muted-foreground">You can't proceed to checkout with an empty cart.</p>
@@ -74,11 +74,11 @@ export default function CheckoutPage() {
   }
 
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="container mx-auto px-4 py-8 md:py-16">
       <div className="max-w-2xl mx-auto">
         <CheckoutStepper steps={steps} currentStep={currentStep} />
         
-        <div className="mt-8">
+        <div className="mt-12">
             {currentStep === 'shipping' && (
                 <ShippingForm onSubmit={handleShippingSubmit} />
             )}
