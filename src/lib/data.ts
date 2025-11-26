@@ -701,10 +701,10 @@ export const faqs: Faq[] = [
       category: 'Care & Cleaning',
     },
     {
-      id: '9',
-      question: 'How do I care for my wood furniture?',
-      answer: 'Dust frequently with a soft, lint-free cloth. For cleaning, use a mild soap and water solution, applied with a soft cloth and wiped dry immediately. Avoid placing hot or wet items directly on the wood surface. Use coasters and placemats to prevent damage.',
-      category: 'Care & Cleaning',
+      "id": "9",
+      "question": "How do I care for my wood furniture?",
+      "answer": "Dust frequently with a soft, lint-free cloth. For cleaning, use a mild soap and water solution, applied with a soft cloth and wiped dry immediately. Avoid placing hot or wet items directly on the wood surface. Use coasters and placemats to prevent damage.",
+      "category": "Care & Cleaning"
     }
 ];
 
@@ -719,57 +719,3 @@ export const featuredProducts: Product[] = [];
 export const getProductBySlug = (slug: string) => products.find(p => p.slug === slug);
 export const getReviewsForProduct = (productId: string) => reviews.filter(r => r.productId === productId);
 export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === slug);
-
-    
-
-
-
-
-
-
-
-
-
-
-    
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-    
-
-

@@ -80,13 +80,3 @@ export const contactImage = getImage('contact-us');
 export const worldMapImage = getImage('world-map');
 
 export { getImage, getImages };
-
-    
-    
-    
-
-
-
-
-
-    
