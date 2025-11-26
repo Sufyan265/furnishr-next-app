@@ -25,6 +25,7 @@ export default function ProductsPage({
   searchParams: { [key: string]: string | string[] | undefined };
 }) {
   const [view, setView] = useState('grid');
+  const [sortBy, setSortBy] = useState('featured');
   const [filters, setFilters] = useState<FilterState>({
     priceRange: [0, 2000],
     rating: 0,
@@ -39,32 +40,48 @@ export default function ProductsPage({
       ? products.filter(p => p.categorySlug === selectedCategory)
       : products;
     
-    return tempProducts.filter(product => {
+    // Filtering logic
+    tempProducts = tempProducts.filter(product => {
         const { priceRange, rating, materials, colors } = filters;
 
-        // Price filter
         if (product.price < priceRange[0] || product.price > priceRange[1]) {
             return false;
         }
-
-        // Rating filter
         if (rating > 0 && product.rating < rating) {
             return false;
         }
-
-        // Material filter
         if (materials.length > 0 && (!product.material || !materials.includes(product.material))) {
             return false;
         }
-
-        // Color filter
         if (colors.length > 0 && (!product.color || !colors.includes(product.color))) {
             return false;
         }
-
         return true;
     });
-  }, [selectedCategory, filters]);
+
+    // Sorting logic
+    switch (sortBy) {
+        case 'price-asc':
+            tempProducts.sort((a, b) => a.price - b.price);
+            break;
+        case 'price-desc':
+            tempProducts.sort((a, b) => b.price - a.price);
+            break;
+        case 'rating-desc':
+            tempProducts.sort((a, b) => b.rating - a.rating);
+            break;
+        case 'newest':
+            // Assuming higher ID is newer
+            tempProducts.sort((a, b) => parseInt(b.id) - parseInt(a.id));
+            break;
+        case 'featured': // Best Sellers
+        default:
+            tempProducts.sort((a, b) => b.reviewCount - a.reviewCount);
+            break;
+    }
+
+    return tempProducts;
+  }, [selectedCategory, filters, sortBy]);
   
   const handleClearFilters = () => {
     setFilters({
@@ -100,15 +117,16 @@ export default function ProductsPage({
           <div className="flex flex-col sm:flex-row justify-between items-center mb-4 gap-4">
             <p className="text-muted-foreground text-sm">{filteredProducts.length} products</p>
             <div className="flex items-center gap-2">
-               <Select>
+               <Select value={sortBy} onValueChange={setSortBy}>
                 <SelectTrigger className="w-full sm:w-[180px]">
                   <SelectValue placeholder="Sort by" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="featured">Featured</SelectItem>
+                  <SelectItem value="featured">Best Sellers</SelectItem>
+                  <SelectItem value="newest">Newest Arrivals</SelectItem>
                   <SelectItem value="price-asc">Price: Low to High</SelectItem>
                   <SelectItem value="price-desc">Price: High to Low</SelectItem>
-                  <SelectItem value="newest">Newest</SelectItem>
+                  <SelectItem value="rating-desc">Highest Rated</SelectItem>
                 </SelectContent>
               </Select>
               <div className="flex items-center gap-1 border p-1 rounded-md">
