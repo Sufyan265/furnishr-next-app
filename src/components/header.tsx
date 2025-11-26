@@ -19,6 +19,7 @@ import { useState } from "react";
 import { Separator } from "./ui/separator";
 import SearchDialog from "./search-dialog";
 import AuthButton from "./auth-button";
+import { ThemeToggle } from "./theme-toggle";
 
 const navLinks = [
   { href: "/products", label: "All Products" },
@@ -65,6 +66,7 @@ export default function Header() {
 
         <div className="flex items-center space-x-1 sm:space-x-2 ml-auto">
             <SearchDialog />
+            <ThemeToggle />
             <AuthButton />
             <Button variant="ghost" size="icon" asChild>
               <Link href="/wishlist" aria-label="Wishlist">

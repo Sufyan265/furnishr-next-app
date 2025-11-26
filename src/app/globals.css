@@ -88,7 +88,7 @@ body {
   }
   
   section {
-    @apply w-full py-16 md:py-24;
+    @apply w-full py-12 md:py-20;
   }
 
   .blog-content h2 {
