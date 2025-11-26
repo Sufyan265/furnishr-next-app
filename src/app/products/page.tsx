@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { products, categories } from '@/lib/data';
 import ProductCard from '@/components/product-card';
 import {
@@ -13,10 +13,11 @@ import {
 } from "@/components/ui/select"
 import { Button } from '@/components/ui/button';
 import { LayoutGrid, List } from 'lucide-react';
-import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getImage } from '@/lib/placeholder-images';
+import ProductFilters from '@/components/product-filters';
+import type { FilterState } from '@/components/product-filters';
 
 export default function ProductsPage({
   searchParams,
@@ -24,11 +25,55 @@ export default function ProductsPage({
   searchParams: { [key: string]: string | string[] | undefined };
 }) {
   const [view, setView] = useState('grid');
+  const [filters, setFilters] = useState<FilterState>({
+    priceRange: [0, 2000],
+    rating: 0,
+    materials: [],
+    colors: [],
+  });
+
   const selectedCategory = searchParams.category as string | undefined;
 
-  const filteredProducts = selectedCategory
-    ? products.filter(p => p.categorySlug === selectedCategory)
-    : products;
+  const filteredProducts = useMemo(() => {
+    let tempProducts = selectedCategory
+      ? products.filter(p => p.categorySlug === selectedCategory)
+      : products;
+    
+    return tempProducts.filter(product => {
+        const { priceRange, rating, materials, colors } = filters;
+
+        // Price filter
+        if (product.price < priceRange[0] || product.price > priceRange[1]) {
+            return false;
+        }
+
+        // Rating filter
+        if (rating > 0 && product.rating < rating) {
+            return false;
+        }
+
+        // Material filter
+        if (materials.length > 0 && (!product.material || !materials.includes(product.material))) {
+            return false;
+        }
+
+        // Color filter
+        if (colors.length > 0 && (!product.color || !colors.includes(product.color))) {
+            return false;
+        }
+
+        return true;
+    });
+  }, [selectedCategory, filters]);
+  
+  const handleClearFilters = () => {
+    setFilters({
+        priceRange: [0, 2000],
+        rating: 0,
+        materials: [],
+        colors: [],
+    });
+  };
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -44,6 +89,13 @@ export default function ProductsPage({
       </div>
 
       <div className="flex flex-col md:flex-row gap-8 lg:gap-12">
+        <aside className="w-full md:w-64 lg:w-72">
+           <ProductFilters 
+                filters={filters} 
+                onFiltersChange={setFilters} 
+                onClearFilters={handleClearFilters}
+            />
+        </aside>
         <main className="w-full">
           <div className="flex flex-col sm:flex-row justify-between items-center mb-4 gap-4">
             <p className="text-muted-foreground text-sm">{filteredProducts.length} products</p>
@@ -70,8 +122,13 @@ export default function ProductsPage({
             </div>
           </div>
           
-          {view === 'grid' ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8">
+          {filteredProducts.length === 0 ? (
+             <div className="text-center py-16">
+                <p className="text-xl text-muted-foreground">No products match your current filters.</p>
+                <Button onClick={handleClearFilters} className="mt-4">Clear Filters</Button>
+             </div>
+          ) : view === 'grid' ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-8">
               {filteredProducts.map((product) => (
                 <ProductCard key={product.id} product={product} />
               ))}

@@ -25,6 +25,7 @@ export const products: Product[] = [
     category: 'Sofas',
     categorySlug: 'sofas',
     price: 280.00,
+    color: 'Beige',
     variants: [
         { size: '1 Seater', price: 250.00 },
         { size: '2 Seater', price: 280.00 },
@@ -48,6 +49,7 @@ export const products: Product[] = [
     category: 'Sofas',
     categorySlug: 'sofas',
     price: 590.00,
+    color: 'Grey',
     rating: 4.7,
     reviewCount: 35,
     imageIds: productImagesMap['artic-sofa-bed'].map(i => i.id),
@@ -65,6 +67,7 @@ export const products: Product[] = [
     category: 'Sofas',
     categorySlug: 'sofas',
     price: 290.00,
+    color: 'Grey',
     variants: [
       { size: '1 Seater', price: 270.00 },
       { size: '2 Seater', price: 290.00 },
@@ -88,6 +91,7 @@ export const products: Product[] = [
     category: 'Sofas',
     categorySlug: 'sofas',
     price: 440.00,
+    color: 'Green',
     variants: [
         { size: '1 Seater', price: 380.00 },
         { size: '2 Seater', price: 440.00 },
@@ -111,6 +115,7 @@ export const products: Product[] = [
     category: 'Sofas',
     categorySlug: 'sofas',
     price: 320.00,
+    color: 'Grey',
     variants: [
         { size: '1 Seater', price: 280.00 },
         { size: '2 Seater', price: 320.00 },
@@ -134,6 +139,7 @@ export const products: Product[] = [
     category: 'Sofas',
     categorySlug: 'sofas',
     price: 280.00,
+    color: 'Blue',
     variants: [
       { size: '1 Seater', price: 250.00 },
       { size: '2 Seater', price: 280.00 },
@@ -157,6 +163,7 @@ export const products: Product[] = [
     category: 'Sofas',
     categorySlug: 'sofas',
     price: 360.00,
+    color: 'Black',
     variants: [
         { size: '1 Seater', price: 299.00 },
         { size: '2 Seater', price: 360.00 },
@@ -181,6 +188,7 @@ export const products: Product[] = [
     category: 'Sofas',
     categorySlug: 'sofas',
     price: 290.00,
+    color: 'Grey',
     variants: [
       { size: '1 Seater', price: 270.00 },
       { size: '2 Seater', price: 290.00 },
@@ -204,6 +212,7 @@ export const products: Product[] = [
     category: 'Sofas',
     categorySlug: 'sofas',
     price: 399.00,
+    color: 'Grey',
     rating: 4.5,
     reviewCount: 30,
     imageIds: productImagesMap['ikea-berlin-sofa-bed'].map(i => i.id),
@@ -221,6 +230,7 @@ export const products: Product[] = [
     category: 'Sofas',
     categorySlug: 'sofas',
     price: 1199.99,
+    color: 'Cream',
     variants: [
       { size: '2 Seater', price: 1199.99 },
       { size: '3 Seater', price: 1399.99 },
@@ -242,6 +252,7 @@ export const products: Product[] = [
     category: 'Sofas',
     categorySlug: 'sofas',
     price: 540.00,
+    color: 'Grey',
     rating: 4.7,
     reviewCount: 45,
     imageIds: productImagesMap['mini-u-shape-sofa'].map(i => i.id),
@@ -259,6 +270,7 @@ export const products: Product[] = [
     category: 'Sofas',
     categorySlug: 'sofas',
     price: 360.00,
+    color: 'Brown',
     variants: [
       { size: '1 Seater', price: 299.00 },
       { size: '2 Seater', price: 360.00 },
@@ -283,6 +295,7 @@ export const products: Product[] = [
     category: 'Sofas',
     categorySlug: 'sofas',
     price: 320.00,
+    color: 'Grey',
     variants: [
       { size: '1 Seater', price: 280.00 },
       { size: '2 Seater', price: 320.00 },
@@ -297,7 +310,7 @@ export const products: Product[] = [
     details: ['Mix of faux leather and soft chenille fabric', 'Stylish curved armrests', 'Comfortable foam-filled seat cushions', 'Comes with matching scatter cushions'],
     dimensions: { width: '235cm', height: '90cm', depth: '90cm' },
     style: 'Contemporary',
-    material: 'Fabric',
+    material: 'Faux Leather',
     stock: 20,
   },
    {
@@ -307,6 +320,7 @@ export const products: Product[] = [
     category: 'Sofas',
     categorySlug: 'sofas',
     price: 360.00,
+    color: 'Grey',
     variants: [
       { size: '1 Seater', price: 299.00 },
       { size: '2 Seater', price: 360.00 },
@@ -321,7 +335,7 @@ export const products: Product[] = [
     details: ['Smooth manual reclining mechanism', 'Upholstered in a soft and durable chenille fabric', 'Overstuffed cushions for a sink-in feel', 'Solid hardwood frame for long-lasting durability'],
     dimensions: { width: '205cm', height: '100cm', depth: '98cm' },
     style: 'Contemporary',
-    material: 'Fabric',
+    material: 'Chenille',
     stock: 15,
   },
   {
@@ -331,6 +345,7 @@ export const products: Product[] = [
     category: 'Sofas',
     categorySlug: 'sofas',
     price: 570.00,
+    color: 'Grey',
     rating: 4.8,
     reviewCount: 55,
     imageIds: productImagesMap['verona-u-shape-sofa'].map(i => i.id),
@@ -348,6 +363,7 @@ export const products: Product[] = [
     category: 'Sofas',
     categorySlug: 'sofas',
     price: 290.00,
+    color: 'Cream',
     variants: [
       { size: '1 Seater', price: 270.00 },
       { size: '2 Seater', price: 290.00 },
@@ -372,6 +388,7 @@ export const products: Product[] = [
     category: 'Beds',
     categorySlug: 'beds',
     price: 340.00,
+    color: 'Silver',
     variants: [
       { size: 'Double', price: 340.00, mattressPrice: 440.00 },
       { size: 'King', price: 400.00, mattressPrice: 490.00 },
@@ -393,7 +410,8 @@ export const products: Product[] = [
     name: 'Astral Sleigh Bed',
     category: 'Beds',
     categorySlug: 'beds',
-    price: 200.00,
+    price: 230.00,
+    color: 'Grey',
     variants: [
       { size: 'Single', price: 200.00, mattressPrice: 430.00 },
       { size: 'Double', price: 230.00, mattressPrice: 490.00 },
@@ -416,7 +434,8 @@ export const products: Product[] = [
     name: 'Divan Ottoman Bed',
     category: 'Beds',
     categorySlug: 'beds',
-    price: 260.00,
+    price: 320.00,
+    color: 'Beige',
     variants: [
       { size: 'Single', price: 260.00, mattressPrice: 580.00 },
       { size: 'Double', price: 320.00, mattressPrice: 400.00 },
@@ -439,7 +458,8 @@ export const products: Product[] = [
     name: 'Florida Mirror Bed',
     category: 'Beds',
     categorySlug: 'beds',
-    price: 300.00,
+    price: 350.00,
+    color: 'Silver',
     variants: [
         { size: 'Single', price: 300.00, mattressPrice: 400.00 },
         { size: 'Double', price: 350.00, mattressPrice: 470.00 },
@@ -462,7 +482,8 @@ export const products: Product[] = [
     name: 'Panel Ambassador Bed',
     category: 'Beds',
     categorySlug: 'beds',
-    price: 280.00,
+    price: 330.00,
+    color: 'Grey',
     variants: [
         { size: 'Single', price: 280.00, mattressPrice: 380.00 },
         { size: 'Double', price: 330.00, mattressPrice: 450.00 },
@@ -485,7 +506,8 @@ export const products: Product[] = [
     name: 'Panel Bumper Bed',
     category: 'Beds',
     categorySlug: 'beds',
-    price: 270.00,
+    price: 320.00,
+    color: 'Grey',
     variants: [
         { size: 'Single', price: 270.00, mattressPrice: 370.00 },
         { size: 'Double', price: 320.00, mattressPrice: 580.00 },
@@ -508,7 +530,8 @@ export const products: Product[] = [
     name: 'Panel Line Bed',
     category: 'Beds',
     categorySlug: 'beds',
-    price: 260.00,
+    price: 320.00,
+    color: 'Blue',
     variants: [
         { size: 'Single', price: 260.00, mattressPrice: 360.00 },
         { size: 'Double', price: 320.00, mattressPrice: 440.00 },
@@ -531,7 +554,8 @@ export const products: Product[] = [
     name: 'Panel Wing Back Bed',
     category: 'Beds',
     categorySlug: 'beds',
-    price: 290.00,
+    price: 340.00,
+    color: 'Cream',
     variants: [
         { size: 'Single', price: 290.00, mattressPrice: 390.00 },
         { size: 'Double', price: 340.00, mattressPrice: 460.00 },

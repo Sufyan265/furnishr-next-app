@@ -27,6 +27,7 @@ export interface Product {
   };
   style: string;
   material: string;
+  color?: string;
   stock: number;
   deal?: {
     discountPercentage: number;
