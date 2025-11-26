@@ -18,6 +18,8 @@ import Image from 'next/image';
 import { getImage } from '@/lib/placeholder-images';
 import ProductFilters from '@/components/product-filters';
 import type { FilterState } from '@/components/product-filters';
+import QuickViewDialog from '@/components/quick-view';
+import { Product } from '@/lib/types';
 
 export default function ProductsPage({
   searchParams,
@@ -32,6 +34,8 @@ export default function ProductsPage({
     materials: [],
     colors: [],
   });
+
+  const [quickViewProduct, setQuickViewProduct] = useState<Product | null>(null);
 
   const selectedCategory = searchParams.category as string | undefined;
 
@@ -93,6 +97,7 @@ export default function ProductsPage({
   };
 
   return (
+    <>
     <div className="container mx-auto px-4 py-8">
       <div className="text-center mb-8">
         <h1 className="font-headline text-4xl md:text-5xl font-bold">
@@ -148,7 +153,7 @@ export default function ProductsPage({
           ) : view === 'grid' ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-8">
               {filteredProducts.map((product) => (
-                <ProductCard key={product.id} product={product} />
+                <ProductCard key={product.id} product={product} onQuickView={() => setQuickViewProduct(product)} />
               ))}
             </div>
           ) : (
@@ -176,9 +181,12 @@ export default function ProductsPage({
                         </p>
                         <div className="flex justify-between items-center mt-4">
                             <p className="text-xl font-semibold">£{product.price.toFixed(2)}</p>
-                            <Button asChild>
-                                <Link href={`/products/${product.slug}`}>View Details</Link>
-                            </Button>
+                            <div className="flex gap-2">
+                                <Button variant="outline" onClick={() => setQuickViewProduct(product)}>Quick View</Button>
+                                <Button asChild>
+                                    <Link href={`/products/${product.slug}`}>View Details</Link>
+                                </Button>
+                            </div>
                         </div>
                     </div>
                   </div>
@@ -189,5 +197,15 @@ export default function ProductsPage({
         </main>
       </div>
     </div>
+    <QuickViewDialog
+        product={quickViewProduct}
+        isOpen={!!quickViewProduct}
+        onOpenChange={(isOpen) => {
+            if (!isOpen) {
+                setQuickViewProduct(null);
+            }
+        }}
+    />
+    </>
   );
 }

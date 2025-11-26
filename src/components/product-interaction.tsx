@@ -13,7 +13,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { useCart } from '@/context/cart-context';
 import { useToast } from '@/hooks/use-toast';
-import { Minus, Plus, ShoppingCart, Percent, Bed } from 'lucide-react';
+import { Minus, Plus, ShoppingCart, Percent, Bed, Truck, PackageCheck, ShieldCheck, Lock, ShieldAlert } from 'lucide-react';
 import type { Product, ProductVariant } from '@/lib/types';
 import { getImages } from '@/lib/placeholder-images';
 import { Badge } from './ui/badge';
@@ -27,6 +27,7 @@ import { Separator } from './ui/separator';
 
 interface ProductInteractionProps {
   product: Product;
+  isQuickView?: boolean;
 }
 
 const StockBadge = ({ stock }: { stock: number }) => {
@@ -39,7 +40,7 @@ const StockBadge = ({ stock }: { stock: number }) => {
   return <Badge variant="secondary" className="bg-green-100 text-green-800 border-green-200">In Stock</Badge>;
 };
 
-export default function ProductInteraction({ product }: ProductInteractionProps) {
+export default function ProductInteraction({ product, isQuickView = false }: ProductInteractionProps) {
   const [quantity, setQuantity] = useState(1);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [selectedVariant, setSelectedVariant] = useState<ProductVariant | undefined>(product.variants?.[0]);
@@ -118,9 +119,98 @@ export default function ProductInteraction({ product }: ProductInteractionProps)
 
   const variantLabel = product.categorySlug === 'beds' ? 'Size' : 'Seater';
 
-  return (
-    <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-      <div>
+  const ProductInfo = () => (
+     <div className="space-y-4">
+        <p className="text-sm text-muted-foreground">{product.category}</p>
+        <h1 className="font-headline text-3xl md:text-4xl font-bold">{product.name}</h1>
+        
+        <div className="flex items-center gap-4 flex-wrap">
+          <div className="flex items-baseline gap-3">
+            <p className={cn(
+              "text-3xl font-semibold text-primary",
+              isDealActive && "text-destructive"
+            )}>
+              £{displayPrice.toFixed(2)}
+            </p>
+            {isDealActive && (
+              <p className="text-xl font-medium text-muted-foreground line-through">
+                £{originalPrice.toFixed(2)}
+              </p>
+            )}
+          </div>
+          <StockBadge stock={product.stock} />
+        </div>
+
+        {product.variants && (
+          <div className="space-y-2">
+            <Label className="font-semibold">{variantLabel}</Label>
+            <RadioGroup
+              defaultValue={selectedVariant?.size}
+              onValueChange={handleVariantChange}
+              className="flex items-center gap-4"
+            >
+              {product.variants.map(variant => (
+                <div key={variant.size} className="flex items-center">
+                  <RadioGroupItem value={variant.size} id={`size-${variant.size}`} />
+                  <Label htmlFor={`size-${variant.size}`} className="ml-2 cursor-pointer">{variant.size}</Label>
+                </div>
+              ))}
+            </RadioGroup>
+          </div>
+        )}
+
+        {hasMattressOption && (
+          <>
+          <Separator />
+          <div className="flex items-center justify-between rounded-lg border p-4">
+              <div className="space-y-0.5">
+                  <div className="flex items-center gap-2">
+                      <Bed className="h-5 w-5 text-primary"/>
+                      <Label htmlFor="mattress-switch" className="text-base font-semibold">
+                          Add a Mattress
+                      </Label>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                      Complete your purchase with a premium mattress.
+                  </p>
+              </div>
+              <Switch 
+                  id="mattress-switch"
+                  checked={withMattress}
+                  onCheckedChange={setWithMattress}
+              />
+          </div>
+          </>
+        )}
+
+
+        {individualDeal && !isSiteWideSaleActive && (
+          <div className="space-y-2">
+              <p className="text-sm font-semibold text-destructive">Limited Time Offer! Ends in:</p>
+              <CountdownTimer targetDate={product.deal!.expiresAt} />
+          </div>
+        )}
+
+        <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 border rounded-md p-1">
+            <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => handleQuantityChange(-1)} disabled={quantity === 1}>
+              <Minus className="h-4 w-4" />
+            </Button>
+            <span className="w-8 text-center font-bold">{quantity}</span>
+            <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => handleQuantityChange(1)} disabled={quantity >= product.stock || product.stock === 0}>
+              <Plus className="h-4 w-4" />
+            </Button>
+          </div>
+          <Button size="lg" className="w-full font-bold" onClick={handleAddToCart} disabled={product.stock === 0}>
+            <ShoppingCart className="mr-2 h-5 w-5" />
+            {product.stock > 0 ? 'Add to Cart' : 'Out of Stock'}
+          </Button>
+        </div>
+      </div>
+  );
+
+  const ProductImages = () => (
+    <div>
         <Carousel className="w-full" setApi={(api) => api?.on("select", () => setSelectedImageIndex(api.selectedScrollSnap()))}>
           <CarouselContent>
             {productImages.map((image, index) => (
@@ -157,95 +247,24 @@ export default function ProductInteraction({ product }: ProductInteractionProps)
             ))}
         </div>
       </div>
+  );
 
+  if (isQuickView) {
+      return (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <ProductImages />
+              <div className="flex flex-col justify-center">
+                  <ProductInfo />
+              </div>
+          </div>
+      )
+  }
+
+  return (
+    <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+      <ProductImages />
       <div className="flex flex-col justify-center">
-        <div className="space-y-4">
-          <p className="text-sm text-muted-foreground">{product.category}</p>
-          <h1 className="font-headline text-3xl md:text-4xl font-bold">{product.name}</h1>
-          
-          <div className="flex items-center gap-4 flex-wrap">
-            <div className="flex items-baseline gap-3">
-              <p className={cn(
-                "text-3xl font-semibold text-primary",
-                isDealActive && "text-destructive"
-              )}>
-                £{displayPrice.toFixed(2)}
-              </p>
-              {isDealActive && (
-                <p className="text-xl font-medium text-muted-foreground line-through">
-                  £{originalPrice.toFixed(2)}
-                </p>
-              )}
-            </div>
-            <StockBadge stock={product.stock} />
-          </div>
-
-          {product.variants && (
-            <div className="space-y-2">
-              <Label className="font-semibold">{variantLabel}</Label>
-              <RadioGroup
-                defaultValue={selectedVariant?.size}
-                onValueChange={handleVariantChange}
-                className="flex items-center gap-4"
-              >
-                {product.variants.map(variant => (
-                  <div key={variant.size} className="flex items-center">
-                    <RadioGroupItem value={variant.size} id={`size-${variant.size}`} />
-                    <Label htmlFor={`size-${variant.size}`} className="ml-2 cursor-pointer">{variant.size}</Label>
-                  </div>
-                ))}
-              </RadioGroup>
-            </div>
-          )}
-
-          {hasMattressOption && (
-            <>
-            <Separator />
-            <div className="flex items-center justify-between rounded-lg border p-4">
-                <div className="space-y-0.5">
-                    <div className="flex items-center gap-2">
-                        <Bed className="h-5 w-5 text-primary"/>
-                        <Label htmlFor="mattress-switch" className="text-base font-semibold">
-                            Add a Mattress
-                        </Label>
-                    </div>
-                    <p className="text-sm text-muted-foreground">
-                        Complete your purchase with a premium mattress.
-                    </p>
-                </div>
-                <Switch 
-                    id="mattress-switch"
-                    checked={withMattress}
-                    onCheckedChange={setWithMattress}
-                />
-            </div>
-            </>
-          )}
-
-
-          {individualDeal && !isSiteWideSaleActive && (
-            <div className="space-y-2">
-                <p className="text-sm font-semibold text-destructive">Limited Time Offer! Ends in:</p>
-                <CountdownTimer targetDate={product.deal!.expiresAt} />
-            </div>
-          )}
-
-          <div className="flex items-center space-x-2">
-            <div className="flex items-center space-x-2 border rounded-md p-1">
-              <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => handleQuantityChange(-1)} disabled={quantity === 1}>
-                <Minus className="h-4 w-4" />
-              </Button>
-              <span className="w-8 text-center font-bold">{quantity}</span>
-              <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => handleQuantityChange(1)} disabled={quantity >= product.stock || product.stock === 0}>
-                <Plus className="h-4 w-4" />
-              </Button>
-            </div>
-            <Button size="lg" className="w-full font-bold" onClick={handleAddToCart} disabled={product.stock === 0}>
-              <ShoppingCart className="mr-2 h-5 w-5" />
-              {product.stock > 0 ? 'Add to Cart' : 'Out of Stock'}
-            </Button>
-          </div>
-        </div>
+        <ProductInfo />
       </div>
     </div>
   );
