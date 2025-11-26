@@ -47,9 +47,9 @@ export const productImages = {
     'ikea-berlin-sofa-bed': getImages(['product-ikea-berlin-sofa-1', 'product-ikea-berlin-sofa-2', 'product-ikea-berlin-sofa-3', 'product-ikea-berlin-sofa-4', 'product-ikea-berlin-sofa-5', 'product-ikea-berlin-sofa-6']),
     'lilly-sofa': getImages(['product-lilly-sofa-1', 'product-lilly-sofa-2', 'product-lilly-sofa-3']),
     'mini-u-shape-sofa': getImages(['product-mini-u-shape-sofa-1', 'product-mini-u-shape-sofa-2', 'product-mini-u-shape-sofa-3', 'product-mini-u-shape-sofa-4', 'product-mini-u-shape-sofa-5', 'product-mini-u-shape-sofa-6', 'product-mini-u-shape-sofa-7']),
-    'roma-leather-recliner-sofa': getImages(['product-roma-recliner-1', 'product-roma-recliner-2', 'product-roma-recliner-3', 'product-roma-recliner-4', 'product-roma-recliner-5', 'product-roma-recliner-6', 'product-roma-recliner-7', 'product-roma-recliner-8', 'product-roma-recliner-9', 'product-roma-recliner-10', 'product-roma-recliner-11']),
+    'roma-leather-recliner-sofa': getImages(['product-roma-recliner-1', 'product-roma-recliner-2', 'product-roma-recliner-3', 'product-roma-recliner-4', 'product-roma-recliner-5', 'product-roma-recliner-6', 'product-roma-recliner-7', 'product-roma-recliner-8']),
     'shannon-sofa': getImages(['product-shannon-sofa-1', 'product-shannon-sofa-2', 'product-shannon-sofa-3', 'product-shannon-sofa-4', 'product-shannon-sofa-5', 'product-shannon-sofa-6']),
-    'sorrento-fabric-recliner': getImages(['product-sorrento-recliner-1', 'product-sorrento-recliner-2', 'product-sorrento-recliner-3']),
+    'sorrento-fabric-recliner': getImages(['product-sorrento-recliner-1', 'product-sorrento-recliner-2', 'product-sorrento-recliner-3', 'product-sorrento-recliner-4', 'product-sorrento-recliner-5']),
     'verona-u-shape-sofa': getImages(['product-verona-u-shape-sofa-1', 'product-verona-u-shape-sofa-2', 'product-verona-u-shape-sofa-3']),
     'verona-sofa': getImages(['product-verona-sofa-1', 'product-verona-sofa-2', 'product-verona-sofa-3']),
     'ambassador-bed': getImages(['product-bed-ambassador-1', 'product-bed-ambassador-2', 'product-bed-ambassador-3', 'product-bed-ambassador-4', 'product-bed-ambassador-5', 'product-bed-ambassador-6', 'product-bed-ambassador-7', 'product-bed-ambassador-8', 'product-bed-ambassador-9', 'product-bed-ambassador-10']),
@@ -90,3 +90,4 @@ export { getImage, getImages };
 
 
     
+
