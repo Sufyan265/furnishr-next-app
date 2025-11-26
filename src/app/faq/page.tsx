@@ -2,7 +2,7 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { faqs } from '@/lib/data';
 import type { Metadata } from 'next';
-import { Truck, RotateCw, ShoppingBag, Box } from 'lucide-react';
+import { Truck, RotateCw, ShoppingBag, Box, Sparkles } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions | Furnishr',
@@ -14,6 +14,7 @@ const iconMap: { [key: string]: React.ReactNode } = {
   'Shipping & Delivery': <Truck className="h-6 w-6 mr-4" />,
   'Returns & Exchanges': <RotateCw className="h-6 w-6 mr-4" />,
   'Product Information': <Box className="h-6 w-6 mr-4" />,
+  'Care & Cleaning': <Sparkles className="h-6 w-6 mr-4" />,
 };
 
 export default function FaqPage() {

@@ -602,7 +602,7 @@ export const reviews: Review[] = [
   { id: '25', productId: '12', author: 'Charlotte H.', rating: 4, title: 'Great value and looks expensive', comment: 'I\'m so pleased with this purchase. It looks much more expensive than it was. The fabric is soft and the button tufting is well done. A fantastic bed for the price.', date: '2023-10-25' },
   { id: '26', productId: '12', author: 'Amelia W.', rating: 5, title: 'Beautiful and elegant', comment: 'The bed is beautiful, and the curved headboard adds a really elegant touch to my bedroom. I opted for the mattress bundle and it\'s very comfortable.', date: '2023-11-05', tags: ['comfort'] },
   { id: '27', productId: '12', author: 'Noah F.', rating: 5, title: 'Fantastic Sleigh Bed', comment: 'I love the classic design of this bed. It was delivered quickly and was easy to assemble. The quality is great for the price.', date: '2023-11-08', tags: ['delivery', 'assembly', 'quality'] },
-  { id: '28', productId: '12', author: 'Emma G.', rating: 4.5, title: 'So cozy!', comment: 'This bed makes my room feel so cozy and romantic. The headboard is perfect for reading in bed. Highly recommended.', date: '2023-11-10', tags: ['comfort'] },
+  { id: '28', productId: '12', author: 'Ava J.', rating: 4.5, title: 'So cozy!', comment: 'This bed makes my room feel so cozy and romantic. The headboard is perfect for reading in bed. Highly recommended.', date: '2023-11-10', tags: ['comfort'] },
   { id: '29', productId: '12', author: 'Oliver T.', rating: 5, title: 'Great purchase!', comment: 'Really happy with this bed. It feels sturdy and looks fantastic. The delivery process was smooth and the communication was great.', date: '2023-11-12', tags: ['delivery', 'quality'] },
   { id: '30', productId: '12', author: 'Isabella C.', rating: 5, title: 'A dream come true!', comment: 'I have always wanted a sleigh bed and this one is perfect. The quality is amazing and it looks so grand in my room. Five stars!', date: '2023-11-15', tags: ['quality'] },
   { id: '31', productId: '12', author: 'George K.', rating: 4, title: 'Lovely bed', comment: 'A lovely bed, very well made. It was a bit tricky to get up the stairs as the headboard is large, so keep that in mind. But once assembled, it\'s fantastic.', date: '2023-11-18', tags: ['assembly'] },
@@ -690,10 +690,22 @@ export const faqs: Faq[] = [
     },
      {
       id: '7',
-      question: 'How do I care for my new furniture?',
-      answer: 'Each product comes with specific care instructions. Generally, we recommend dusting regularly, avoiding direct sunlight, and cleaning spills immediately with a dry cloth. For specific materials like leather or velvet, please refer to the care guide included with your item.',
-      category: 'Product Information',
+      question: 'How do I care for my fabric sofa?',
+      answer: 'For general cleaning, vacuum your sofa regularly with an upholstery attachment. For spills, blot immediately with a clean, dry cloth. Do not rub. For tougher stains, use a water-based upholstery cleaner and follow the product instructions. We recommend testing any cleaner on an inconspicuous area first.',
+      category: 'Care & Cleaning',
     },
+    {
+      id: '8',
+      question: 'How do I care for my leather furniture?',
+      answer: 'Dust regularly with a soft, dry cloth. For minor spills, wipe immediately with a slightly damp cloth and let it air dry. For deeper cleaning, use a leather cleaner and conditioner specifically designed for furniture. Avoid using household cleaners or solvents.',
+      category: 'Care & Cleaning',
+    },
+    {
+      id: '9',
+      question: 'How do I care for my wood furniture?',
+      answer: 'Dust frequently with a soft, lint-free cloth. For cleaning, use a mild soap and water solution, applied with a soft cloth and wiped dry immediately. Avoid placing hot or wet items directly on the wood surface. Use coasters and placemats to prevent damage.',
+      category: 'Care & Cleaning',
+    }
 ];
 
 export const featuredProducts: Product[] = [];
@@ -753,3 +765,4 @@ export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === sl
 
 
     
+

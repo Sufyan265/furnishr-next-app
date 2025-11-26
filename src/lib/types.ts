@@ -1,3 +1,4 @@
+
 import type { ImagePlaceholder } from "./placeholder-images";
 
 export interface ProductVariant {
@@ -101,5 +102,5 @@ export interface Faq {
   id: string;
   question: string;
   answer: string;
-  category: 'Ordering' | 'Shipping & Delivery' | 'Returns & Exchanges' | 'Product Information';
+  category: 'Ordering' | 'Shipping & Delivery' | 'Returns & Exchanges' | 'Product Information' | 'Care & Cleaning';
 }
