@@ -8,6 +8,7 @@ import { CartProvider } from '@/context/cart-context';
 import { WishlistProvider } from '@/context/wishlist-context';
 import DeliveryBanner from '@/components/delivery-banner';
 import { FirebaseClientProvider } from '@/firebase';
+import SocialProofPopup from '@/components/social-proof-popup';
 
 export const metadata: Metadata = {
   title: 'Furnishr - Modern Furniture for Your Home',
@@ -40,6 +41,7 @@ export default function RootLayout({
           </WishlistProvider>
         </FirebaseClientProvider>
         <Toaster />
+        <SocialProofPopup />
       </body>
     </html>
   );
