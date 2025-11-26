@@ -13,12 +13,12 @@ import {
 } from '@/components/ui/carousel';
 import { categories, featuredProducts, reviews, products } from '@/lib/data';
 import ProductCard from '@/components/product-card';
-import { heroImages, getImage, worldMapImage } from '@/lib/placeholder-images';
+import { heroImages, getImage, worldMapImage, categoryImages } from '@/lib/placeholder-images';
 import StarRating from '@/components/star-rating';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 
 export default function Home() {
-  const chooseUsImage = getImage('category-living-room');
+  const chooseUsImage = categoryImages['living-room'];
   
   const sofaProductIds = products.filter(p => p.categorySlug === 'sofas').map(p => p.id);
   const sofaReviews = reviews.filter(r => sofaProductIds.includes(r.productId)).sort((a,b) => b.rating - a.rating).slice(0, 5);
