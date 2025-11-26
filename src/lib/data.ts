@@ -64,10 +64,10 @@ export const products: Product[] = [
     categorySlug: 'sofas',
     price: 290.00,
     variants: [
-        { size: '1 Seater', price: 270.00 },
-        { size: '2 Seater', price: 290.00 },
-        { size: '3 Seater', price: 350.00 },
-        { size: '5 Seater', price: 490.00 },
+      { size: '1 Seater', price: 270.00 },
+      { size: '2 Seater', price: 290.00 },
+      { size: '3 Seater', price: 350.00 },
+      { size: '5 Seater', price: 490.00 },
     ],
     rating: 4.6,
     reviewCount: 28,
@@ -201,9 +201,9 @@ export const products: Product[] = [
     name: 'Ikea Berlin Sofa Bed',
     category: 'Sofas',
     categorySlug: 'sofas',
-    price: 799.99,
+    price: 399.00,
     variants: [
-      { size: '2 Seater', price: 799.99 },
+      { size: '2 Seater', price: 399.00 },
       { size: '3 Seater', price: 949.99 },
     ],
     rating: 4.5,
@@ -708,6 +708,7 @@ export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === sl
 
 
     
+
 
 
 
