@@ -178,10 +178,12 @@ export const products: Product[] = [
     name: 'Harrison Sofa',
     category: 'Sofas',
     categorySlug: 'sofas',
-    price: 1299.99,
+    price: 290,
     variants: [
-      { size: '2 Seater', price: 1299.99 },
-      { size: '3 Seater', price: 1499.99 },
+      { size: '1 Seater', price: 70 },
+      { size: '2 Seater', price: 290 },
+      { size: '3 Seater', price: 350 },
+      { size: '3+2 Seater', price: 490 },
     ],
     rating: 4.8,
     reviewCount: 72,
@@ -706,6 +708,7 @@ export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === sl
 
 
     
+
 
 
 
