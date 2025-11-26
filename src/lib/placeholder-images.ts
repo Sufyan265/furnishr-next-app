@@ -50,7 +50,7 @@ export const productImages = {
     'roma-leather-recliner-sofa': getImages(['product-roma-recliner-1', 'product-roma-recliner-2', 'product-roma-recliner-3', 'product-roma-recliner-4', 'product-roma-recliner-5', 'product-roma-recliner-6', 'product-roma-recliner-7', 'product-roma-recliner-8']),
     'shannon-sofa': getImages(['product-shannon-sofa-1', 'product-shannon-sofa-2', 'product-shannon-sofa-3', 'product-shannon-sofa-4', 'product-shannon-sofa-5', 'product-shannon-sofa-6']),
     'sorrento-fabric-recliner': getImages(['product-sorrento-recliner-1', 'product-sorrento-recliner-2', 'product-sorrento-recliner-3', 'product-sorrento-recliner-4', 'product-sorrento-recliner-5']),
-    'verona-u-shape-sofa': getImages(['product-verona-u-shape-sofa-1', 'product-verona-u-shape-sofa-2', 'product-verona-u-shape-sofa-3']),
+    'verona-u-shape-sofa': getImages(['product-verona-u-shape-sofa-1', 'product-verona-u-shape-sofa-2', 'product-verona-u-shape-sofa-3', 'product-verona-u-shape-sofa-4', 'product-verona-u-shape-sofa-5', 'product-verona-u-shape-sofa-6']),
     'verona-sofa': getImages(['product-verona-sofa-1', 'product-verona-sofa-2', 'product-verona-sofa-3']),
     'ambassador-bed': getImages(['product-bed-ambassador-1', 'product-bed-ambassador-2', 'product-bed-ambassador-3', 'product-bed-ambassador-4', 'product-bed-ambassador-5', 'product-bed-ambassador-6', 'product-bed-ambassador-7', 'product-bed-ambassador-8', 'product-bed-ambassador-9', 'product-bed-ambassador-10']),
     'sleigh-bed': getImages(['product-bed-sleigh-1', 'product-bed-sleigh-2', 'product-bed-sleigh-3', 'product-bed-sleigh-4', 'product-bed-sleigh-5', 'product-bed-sleigh-6', 'product-bed-sleigh-7', 'product-bed-sleigh-8', 'product-bed-sleigh-9', 'product-bed-sleigh-10', 'product-bed-sleigh-11']),
@@ -90,4 +90,5 @@ export { getImage, getImages };
 
 
     
+
 

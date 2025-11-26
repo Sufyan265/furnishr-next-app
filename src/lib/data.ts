@@ -328,11 +328,7 @@ export const products: Product[] = [
     name: 'Verona U-Shape Sofa',
     category: 'Sofas',
     categorySlug: 'sofas',
-    price: 2299.99,
-    variants: [
-        { size: '6 Seater', price: 2299.99 },
-        { size: '7 Seater', price: 2599.99 },
-    ],
+    price: 570.00,
     rating: 4.8,
     reviewCount: 55,
     imageIds: productImagesMap['verona-u-shape-sofa'].map(i => i.id),
