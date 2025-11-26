@@ -19,7 +19,13 @@ import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 
 export default function Home() {
   const chooseUsImage = getImage('category-living-room');
-  const featuredReviews = reviews.filter(r => r.rating >= 4.5).slice(0, 3);
+  
+  const sofaProductIds = products.filter(p => p.categorySlug === 'sofas').map(p => p.id);
+  const sofaReviews = reviews.filter(r => sofaProductIds.includes(r.productId)).sort((a,b) => b.rating - a.rating).slice(0, 5);
+
+  const bedProductIds = products.filter(p => p.categorySlug === 'beds').map(p => p.id);
+  const bedReviews = reviews.filter(r => bedProductIds.includes(r.productId)).sort((a,b) => b.rating - a.rating).slice(0, 5);
+
   const bedroomProducts = products.filter(p => p.categorySlug === 'beds').slice(0, 4);
   const sofaProducts = products.filter(p => p.categorySlug === 'sofas').slice(0, 4);
 
@@ -126,6 +132,37 @@ export default function Home() {
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
+          {bedReviews.length > 0 && (
+             <div className="mt-16">
+                <h3 className="font-headline text-2xl font-bold text-center mb-8">Hear from our Happy Sleepers</h3>
+                <Carousel opts={{ align: "start", loop: true }} className="w-full max-w-4xl mx-auto">
+                    <CarouselContent>
+                        {bedReviews.map((review) => (
+                            <CarouselItem key={review.id} className="md:basis-1/2 lg:basis-1/3">
+                                <Card className="h-full flex flex-col justify-between">
+                                    <CardHeader>
+                                        <div className="flex items-center gap-4">
+                                            <Avatar>
+                                                <AvatarFallback>{review.author.charAt(0)}</AvatarFallback>
+                                            </Avatar>
+                                            <div>
+                                                <p className="font-semibold">{review.author}</p>
+                                                <StarRating rating={review.rating} />
+                                            </div>
+                                        </div>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <blockquote className="text-muted-foreground italic line-clamp-4">"{review.comment}"</blockquote>
+                                    </CardContent>
+                                </Card>
+                            </CarouselItem>
+                        ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="-left-4" />
+                    <CarouselNext className="-right-4" />
+                </Carousel>
+            </div>
+          )}
           <div className="text-center mt-12">
             <Button asChild>
               <Link href="/products?category=beds">Shop All Beds <ArrowRight className="ml-2 h-4 w-4" /></Link>
@@ -146,39 +183,41 @@ export default function Home() {
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
+          {sofaReviews.length > 0 && (
+             <div className="mt-16">
+                <h3 className="font-headline text-2xl font-bold text-center mb-8">What Our Customers are Saying</h3>
+                <Carousel opts={{ align: "start", loop: true }} className="w-full max-w-4xl mx-auto">
+                    <CarouselContent>
+                        {sofaReviews.map((review) => (
+                            <CarouselItem key={review.id} className="md:basis-1/2 lg:basis-1/3">
+                                <Card className="h-full flex flex-col justify-between">
+                                    <CardHeader>
+                                        <div className="flex items-center gap-4">
+                                            <Avatar>
+                                                <AvatarFallback>{review.author.charAt(0)}</AvatarFallback>
+                                            </Avatar>
+                                            <div>
+                                                <p className="font-semibold">{review.author}</p>
+                                                <StarRating rating={review.rating} />
+                                            </div>
+                                        </div>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <blockquote className="text-muted-foreground italic line-clamp-4">"{review.comment}"</blockquote>
+                                    </CardContent>
+                                </Card>
+                            </CarouselItem>
+                        ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="-left-4" />
+                    <CarouselNext className="-right-4" />
+                </Carousel>
+            </div>
+          )}
           <div className="text-center mt-12">
             <Button asChild>
               <Link href="/products?category=sofas">Shop All Sofas <ArrowRight className="ml-2 h-4 w-4" /></Link>
             </Button>
-          </div>
-        </div>
-      </section>
-
-       <section>
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="font-headline text-3xl md:text-4xl font-bold">What Our Customers Say</h2>
-            <p className="mt-2 text-lg text-muted-foreground">Real stories from happy homeowners.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {featuredReviews.map((review) => (
-              <Card key={review.id} className="flex flex-col justify-between">
-                <CardHeader>
-                  <div className="flex items-center gap-4">
-                    <Avatar>
-                        <AvatarFallback>{review.author.charAt(0)}</AvatarFallback>
-                    </Avatar>
-                    <div>
-                        <p className="font-semibold">{review.author}</p>
-                        <StarRating rating={review.rating} />
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <blockquote className="text-muted-foreground italic">"{review.comment}"</blockquote>
-                </CardContent>
-              </Card>
-            ))}
           </div>
         </div>
       </section>
