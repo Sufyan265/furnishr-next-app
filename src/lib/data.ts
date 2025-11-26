@@ -108,12 +108,12 @@ export const products: Product[] = [
     name: 'Dino Sofa',
     category: 'Sofas',
     categorySlug: 'sofas',
-    price: 320,
+    price: 320.00,
     variants: [
-      { size: '1 Seater', price: 280 },
-      { size: '2 Seater', price: 320 },
-      { size: '3 Seater', price: 350 },
-      { size: '5 Seater', price: 490 },
+      { size: '1 Seater', price: 280.00 },
+      { size: '2 Seater', price: 320.00 },
+      { size: '3 Seater', price: 350.00 },
+      { size: '5 Seater', price: 490.00 },
     ],
     rating: 4.7,
     reviewCount: 42,
@@ -154,13 +154,13 @@ export const products: Product[] = [
     name: 'Electric Recliner Sofa',
     category: 'Sofas',
     categorySlug: 'sofas',
-    price: 360,
+    price: 360.00,
     variants: [
-      { size: '1 Seater', price: 299 },
-      { size: '2 Seater', price: 360 },
-      { size: '3 Seater', price: 399 },
-      { size: '3+2 Seater', price: 670 },
-      { size: '5 Seater Corner', price: 690 },
+      { size: '1 Seater', price: 299.00 },
+      { size: '2 Seater', price: 360.00 },
+      { size: '3 Seater', price: 399.00 },
+      { size: '3+2 Seater', price: 670.00 },
+      { size: '5 Seater Corner', price: 690.00 },
     ],
     rating: 4.9,
     reviewCount: 65,
@@ -178,12 +178,12 @@ export const products: Product[] = [
     name: 'Harrison Sofa',
     category: 'Sofas',
     categorySlug: 'sofas',
-    price: 290,
+    price: 290.00,
     variants: [
-      { size: '1 Seater', price: 270 },
-      { size: '2 Seater', price: 290 },
-      { size: '3 Seater', price: 350 },
-      { size: '3+2 Seater', price: 490 },
+      { size: '1 Seater', price: 270.00 },
+      { size: '2 Seater', price: 290.00 },
+      { size: '3 Seater', price: 350.00 },
+      { size: '3+2 Seater', price: 490.00 },
     ],
     rating: 4.8,
     reviewCount: 72,
@@ -202,10 +202,6 @@ export const products: Product[] = [
     category: 'Sofas',
     categorySlug: 'sofas',
     price: 399.00,
-    variants: [
-      { size: '2 Seater', price: 399.00 },
-      { size: '3 Seater', price: 949.99 },
-    ],
     rating: 4.5,
     reviewCount: 30,
     imageIds: productImagesMap['ikea-berlin-sofa-bed'].map(i => i.id),
@@ -708,6 +704,7 @@ export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === sl
 
 
     
+
 
 
 
