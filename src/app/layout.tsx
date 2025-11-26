@@ -7,6 +7,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { CartProvider } from '@/context/cart-context';
 import { WishlistProvider } from '@/context/wishlist-context';
 import DeliveryBanner from '@/components/delivery-banner';
+import { FirebaseClientProvider } from '@/firebase';
 
 export const metadata: Metadata = {
   title: 'Furnishr - Modern Furniture for Your Home',
@@ -26,16 +27,18 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
       </head>
       <body className={cn("font-body antialiased bg-background min-h-screen flex flex-col")}>
-        <WishlistProvider>
-          <CartProvider>
-            <DeliveryBanner />
-            <Header />
-            <main className="flex-grow">
-              {children}
-            </main>
-            <Footer />
-          </CartProvider>
-        </WishlistProvider>
+        <FirebaseClientProvider>
+          <WishlistProvider>
+            <CartProvider>
+              <DeliveryBanner />
+              <Header />
+              <main className="flex-grow">
+                {children}
+              </main>
+              <Footer />
+            </CartProvider>
+          </WishlistProvider>
+        </FirebaseClientProvider>
         <Toaster />
       </body>
     </html>

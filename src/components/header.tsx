@@ -2,7 +2,7 @@
 "use client";
 
 import Link from "next/link";
-import { ShoppingCart, User, Menu, Heart } from "lucide-react";
+import { ShoppingCart, Menu, Heart } from "lucide-react";
 import { Button } from "./ui/button";
 import { useCart } from "@/context/cart-context";
 import { useWishlist } from "@/context/wishlist-context";
@@ -18,6 +18,7 @@ import {
 import { useState } from "react";
 import { Separator } from "./ui/separator";
 import SearchDialog from "./search-dialog";
+import AuthButton from "./auth-button";
 
 const navLinks = [
   { href: "/products", label: "All Products" },
@@ -64,6 +65,7 @@ export default function Header() {
 
         <div className="flex items-center space-x-1 sm:space-x-2 ml-auto">
             <SearchDialog />
+            <AuthButton />
             <Button variant="ghost" size="icon" asChild>
               <Link href="/wishlist" aria-label="Wishlist">
                 <div className="relative">
@@ -75,9 +77,6 @@ export default function Header() {
                   )}
                 </div>
               </Link>
-            </Button>
-            <Button variant="ghost" size="icon" disabled>
-              <User className="h-5 w-5" />
             </Button>
             <Button variant="ghost" size="icon" asChild>
               <Link href="/cart" aria-label="Shopping Cart">
