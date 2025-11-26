@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -22,6 +23,8 @@ const navLinks = [
   { href: "/products", label: "All Products" },
   { href: "/products?category=sofas", label: "Sofas" },
   { href: "/products?category=beds", label: "Beds" },
+  { href: "/products?category=mattresses", label: "Mattresses" },
+  { href: "/clearance", label: "Clearance" },
   { href: "/blog", label: "Blog" },
   { href: "/about", label: "About Us" },
 ];
@@ -49,7 +52,9 @@ export default function Header() {
                 href={link.href}
                 className={cn(
                   "transition-colors hover:text-primary",
-                  pathname.startsWith(link.href) ? "text-primary" : "text-muted-foreground"
+                  (pathname === link.href || (link.href.includes('?') && pathname.startsWith(link.href.split('?')[0]) && new URLSearchParams(window.location.search).get('category') === new URLSearchParams(link.href.split('?')[1]).get('category')))
+                    ? "text-primary"
+                    : "text-muted-foreground"
                 )}
               >
                 {link.label}
@@ -109,7 +114,7 @@ export default function Header() {
                   <div className="mt-8 flex-grow">
                     <nav className="flex flex-col space-y-4 pr-6">
                       <p className="text-sm font-semibold text-muted-foreground">Shop</p>
-                      {navLinks.map((link) => (
+                      {navLinks.slice(0, 5).map((link) => (
                         <Link
                           key={link.href}
                           href={link.href}
@@ -126,6 +131,19 @@ export default function Header() {
                      <Separator className="my-6" />
                     <nav className="flex flex-col space-y-4 pr-6">
                         <p className="text-sm font-semibold text-muted-foreground">Company</p>
+                        {navLinks.slice(5).map((link) => (
+                           <Link
+                            key={link.href}
+                            href={link.href}
+                            onClick={() => setMobileMenuOpen(false)}
+                            className={cn(
+                                "text-lg font-medium transition-colors hover:text-primary",
+                                pathname.startsWith(link.href) ? "text-primary" : "text-foreground"
+                            )}
+                            >
+                            {link.label}
+                            </Link>
+                        ))}
                         <Link href="/contact" className="text-lg font-medium text-foreground hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
                           Contact
                         </Link>

@@ -1,6 +1,6 @@
 
 import type { Product, Category, Review, BlogPost, Faq } from './types';
-import { categoryImages, productImages as productImagesMap, blogImages as blogImagesMap } from './placeholder-images';
+import { categoryImages, productImages as productImagesMap, blogImages as blogImagesMap, heroImages } from './placeholder-images';
 
 const futureDate = (days: number) => new Date(new Date().getTime() + days * 24 * 60 * 60 * 1000).toISOString();
 
@@ -13,6 +13,8 @@ export const siteWideSale = {
 export const categories: Category[] = [
   { id: '1', slug: 'sofas', name: 'Sofas', imageId: 'category-living-room', imageUrl: categoryImages['living-room'].imageUrl, imageHint: categoryImages['living-room'].imageHint },
   { id: '2', slug: 'beds', name: 'Beds', imageId: 'category-bedroom', imageUrl: categoryImages['bedroom'].imageUrl, imageHint: categoryImages['bedroom'].imageHint },
+  { id: '3', slug: 'mattresses', name: 'Mattresses', imageId: 'category-bedroom', imageUrl: categoryImages['bedroom'].imageUrl, imageHint: 'mattress' },
+  { id: '4', slug: 'clearance', name: 'Clearance', imageId: 'hero-3', imageUrl: heroImages[2].imageUrl, imageHint: 'sale items' },
 ];
 
 export const products: Product[] = [
