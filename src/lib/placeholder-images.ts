@@ -46,7 +46,7 @@ export const productImages = {
     'harrison-sofa': getImages(['product-harrison-sofa-1', 'product-harrison-sofa-2', 'product-harrison-sofa-3', 'product-harrison-sofa-4', 'product-harrison-sofa-5', 'product-harrison-sofa-6', 'product-harrison-sofa-7']),
     'ikea-berlin-sofa-bed': getImages(['product-ikea-berlin-sofa-1', 'product-ikea-berlin-sofa-2', 'product-ikea-berlin-sofa-3', 'product-ikea-berlin-sofa-4', 'product-ikea-berlin-sofa-5', 'product-ikea-berlin-sofa-6']),
     'lilly-sofa': getImages(['product-lilly-sofa-1', 'product-lilly-sofa-2', 'product-lilly-sofa-3']),
-    'mini-u-shape-sofa': getImages(['product-mini-u-shape-sofa-1', 'product-mini-u-shape-sofa-2', 'product-mini-u-shape-sofa-3']),
+    'mini-u-shape-sofa': getImages(['product-mini-u-shape-sofa-1', 'product-mini-u-shape-sofa-2', 'product-mini-u-shape-sofa-3', 'product-mini-u-shape-sofa-4', 'product-mini-u-shape-sofa-5', 'product-mini-u-shape-sofa-6', 'product-mini-u-shape-sofa-7']),
     'roma-leather-recliner-sofa': getImages(['product-roma-recliner-1', 'product-roma-recliner-2', 'product-roma-recliner-3']),
     'shannon-sofa': getImages(['product-shannon-sofa-1', 'product-shannon-sofa-2', 'product-shannon-sofa-3']),
     'sorrento-fabric-recliner': getImages(['product-sorrento-recliner-1', 'product-sorrento-recliner-2', 'product-sorrento-recliner-3']),
@@ -84,5 +84,6 @@ export { getImage, getImages };
     
     
     
+
 
 

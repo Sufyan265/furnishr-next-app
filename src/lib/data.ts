@@ -239,11 +239,7 @@ export const products: Product[] = [
     name: 'Mini U-Shape Sofa',
     category: 'Sofas',
     categorySlug: 'sofas',
-    price: 1399.99,
-    variants: [
-      { size: '5 Seater', price: 1399.99 },
-      { size: '6 Seater', price: 1599.99 },
-    ],
+    price: 540.00,
     rating: 4.7,
     reviewCount: 45,
     imageIds: productImagesMap['mini-u-shape-sofa'].map(i => i.id),
@@ -704,6 +700,7 @@ export const getBlogBySlug = (slug: string) => blogPosts.find(p => p.slug === sl
 
 
     
+
 
 
 
