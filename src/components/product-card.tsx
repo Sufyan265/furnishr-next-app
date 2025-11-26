@@ -13,7 +13,7 @@ import { cn } from '@/lib/utils';
 
 interface ProductCardProps {
   product: Product;
-  onQuickView: () => void;
+  onQuickView?: () => void;
 }
 
 export default function ProductCard({ product, onQuickView }: ProductCardProps) {
@@ -35,7 +35,9 @@ export default function ProductCard({ product, onQuickView }: ProductCardProps) 
   const handleQuickViewClick = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    onQuickView();
+    if (onQuickView) {
+      onQuickView();
+    }
   };
   
   return (
@@ -61,6 +63,7 @@ export default function ProductCard({ product, onQuickView }: ProductCardProps) 
             >
             <Heart className={cn("h-4 w-4 text-muted-foreground", inWishlist && "fill-destructive text-destructive")} />
             </Button>
+            {onQuickView && (
              <Button 
                 variant="ghost" 
                 size="icon" 
@@ -70,6 +73,7 @@ export default function ProductCard({ product, onQuickView }: ProductCardProps) 
             >
               <Eye className="h-4 w-4 text-muted-foreground" />
             </Button>
+            )}
         </div>
 
       </CardHeader>
