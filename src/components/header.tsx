@@ -2,7 +2,7 @@
 "use client";
 
 import Link from "next/link";
-import { Search, ShoppingCart, User, Menu, X, Heart, Sparkles } from "lucide-react";
+import { ShoppingCart, User, Menu, Heart } from "lucide-react";
 import { Button } from "./ui/button";
 import { useCart } from "@/context/cart-context";
 import { useWishlist } from "@/context/wishlist-context";
@@ -12,12 +12,12 @@ import {
   Sheet,
   SheetContent,
   SheetTrigger,
-  SheetDescription,
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
 import { useState } from "react";
 import { Separator } from "./ui/separator";
+import SearchDialog from "./search-dialog";
 
 const navLinks = [
   { href: "/products", label: "All Products" },
@@ -52,7 +52,7 @@ export default function Header() {
                 href={link.href}
                 className={cn(
                   "transition-colors hover:text-primary",
-                  (pathname === link.href || (link.href.includes('?') && pathname.startsWith(link.href.split('?')[0]) && new URLSearchParams(window.location.search).get('category') === new URLSearchParams(link.href.split('?')[1]).get('category')))
+                  (pathname === link.href || (link.href.includes('?') && pathname.startsWith(link.href.split('?')[0]) && typeof window !== 'undefined' && new URLSearchParams(window.location.search).get('category') === new URLSearchParams(link.href.split('?')[1]).get('category')))
                     ? "text-primary"
                     : "text-muted-foreground"
                 )}
@@ -63,9 +63,7 @@ export default function Header() {
           </nav>
 
         <div className="flex items-center space-x-1 sm:space-x-2 ml-auto">
-            <Button variant="ghost" size="icon" disabled>
-              <Search className="h-5 w-5" />
-            </Button>
+            <SearchDialog />
             <Button variant="ghost" size="icon" asChild>
               <Link href="/wishlist" aria-label="Wishlist">
                 <div className="relative">
