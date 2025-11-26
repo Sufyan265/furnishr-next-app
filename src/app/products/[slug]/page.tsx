@@ -13,6 +13,7 @@ import { ShieldCheck, Truck, PackageCheck, Lock, ShieldAlert } from 'lucide-reac
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import type { Metadata } from 'next';
+import ProductQandA from '@/components/product-q-and-a';
 
 // Since we are converting to a client component, we can no longer export metadata directly.
 // This would typically be handled in a parent server component or layout, but for this standalone page,
@@ -136,6 +137,8 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
               )}
             </div>
 
+            <ProductQandA productId={product.id} />
+
           </div>
           <div className="space-y-6 md:sticky md:top-24 h-fit">
               <Card className="bg-card">
@@ -187,5 +190,3 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
     </div>
   );
 }
-
-    

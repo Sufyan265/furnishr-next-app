@@ -145,6 +145,36 @@ service cloud.firestore {
         allow update: if isExistingOwner(resource.data.customerId) && isOwnerFieldImmutable('customerId') && isOwnerFieldImmutable('productId');
         allow delete: if isExistingOwner(resource.data.customerId);
       }
+
+      /**
+        * @description Manages questions and answers for a product.
+        * @path /products/{productId}/questions/{questionId}
+        * @allow (read) Anyone can read questions and answers.
+        * @allow (create) Any authenticated user can ask a question.
+        * @allow (update) The author of a question can edit their own question.
+        */
+      match /questions/{questionId} {
+        allow get: if true;
+        allow list: if true;
+        allow create: if isSignedIn() && request.resource.data.customerId == request.auth.uid;
+        allow update: if isExistingOwner(resource.data.customerId) && isOwnerFieldImmutable('customerId');
+        allow delete: if isExistingOwner(resource.data.customerId);
+
+        /**
+          * @description Manages answers to a specific question.
+          * @path /products/{productId}/questions/{questionId}/answers/{answerId}
+          * @allow (read) Anyone can read answers.
+          * @allow (create) Any authenticated user can post an answer.
+          * @allow (update) The author of an answer can edit their own answer.
+          */
+        match /answers/{answerId} {
+          allow get: if true;
+          allow list: if true;
+          allow create: if isSignedIn() && request.resource.data.customerId == request.auth.uid;
+          allow update: if isExistingOwner(resource.data.customerId) && isOwnerFieldImmutable('customerId');
+          allow delete: if isExistingOwner(resource.data.customerId);
+        }
+      }
     }
 
     /**

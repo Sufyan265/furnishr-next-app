@@ -244,6 +244,92 @@
         "author",
         "publishDate"
       ]
+    },
+    "Question": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Question",
+      "type": "object",
+      "description": "Represents a customer question about a product.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the question."
+        },
+        "productId": {
+          "type": "string",
+          "description": "Reference to Product."
+        },
+        "customerId": {
+          "type": "string",
+          "description": "Reference to Customer."
+        },
+        "authorName": {
+          "type": "string",
+          "description": "Display name of the user asking the question."
+        },
+        "questionText": {
+          "type": "string",
+          "description": "The text of the question."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when the question was created."
+        }
+      },
+      "required": [
+        "id",
+        "productId",
+        "customerId",
+        "authorName",
+        "questionText",
+        "createdAt"
+      ]
+    },
+    "Answer": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Answer",
+      "type": "object",
+      "description": "Represents an answer to a customer's question.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the answer."
+        },
+        "questionId": {
+          "type": "string",
+          "description": "Reference to Question."
+        },
+        "customerId": {
+          "type": "string",
+          "description": "Reference to Customer."
+        },
+        "authorName": {
+          "type": "string",
+          "description": "Display name of the user providing the answer."
+        },
+        "answerText": {
+          "type": "string",
+          "description": "The text of the answer."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when the answer was created."
+        },
+        "isOfficial": {
+          "type": "boolean",
+          "description": "Indicates if the answer is from a store representative."
+        }
+      },
+      "required": [
+        "id",
+        "questionId",
+        "customerId",
+        "authorName",
+        "answerText",
+        "createdAt"
+      ]
     }
   },
   "auth": {
@@ -286,6 +372,50 @@
             {
               "name": "reviewId",
               "description": "Unique identifier for the review."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/products/{productId}/questions/{questionId}",
+        "definition": {
+          "entityName": "Question",
+          "schema": {
+            "$ref": "#/backend/entities/Question"
+          },
+          "description": "Stores questions for a specific product.",
+          "params": [
+            {
+              "name": "productId",
+              "description": "Unique identifier for the product."
+            },
+            {
+              "name": "questionId",
+              "description": "Unique identifier for the question."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/products/{productId}/questions/{questionId}/answers/{answerId}",
+        "definition": {
+          "entityName": "Answer",
+          "schema": {
+            "$ref": "#/backend/entities/Answer"
+          },
+          "description": "Stores answers for a specific question.",
+          "params": [
+            {
+              "name": "productId",
+              "description": "Unique identifier for the product."
+            },
+            {
+              "name": "questionId",
+              "description": "Unique identifier for the question."
+            },
+            {
+              "name": "answerId",
+              "description": "Unique identifier for the answer."
             }
           ]
         }
@@ -362,5 +492,3 @@
     "reasoning": "The Firestore structure prioritizes authorization independence and QAPs (Rules are not Filters). Reviews are stored as a subcollection of Products (`/products/{productId}/reviews/{reviewId}`). This ensures that reviews are directly associated with their respective products.  To enable only customers who have purchased a product to leave a review, we create an `/orders/{orderId}/orderItems/{orderItemId}` collection. In the `/products/{productId}/reviews/{reviewId}` collection, we denormalize the `customerId` to eliminate `get()` calls in security rules, guaranteeing authorization independence. \n\nThis design supports the QAP principle by ensuring that listing reviews for a product doesn't require filtering based on customer purchase history; the security rules enforce this constraint during data creation.  The structure uses path-based ownership for reviews, making security rules straightforward and efficient.  It also maintains data clarity and predictability through explicit naming conventions and schema definitions."
   }
 }
-
-    

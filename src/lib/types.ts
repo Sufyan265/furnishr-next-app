@@ -46,6 +46,25 @@ export interface Review {
   tags?: string[];
 }
 
+export interface Answer {
+  id: string;
+  authorName: string;
+  customerId: string;
+  answerText: string;
+  createdAt: string; 
+  isOfficial?: boolean;
+}
+
+export interface Question {
+  id: string;
+  authorName: string;
+  customerId: string;
+  questionText: string;
+  createdAt: string;
+  answers: Answer[];
+}
+
+
 export interface Category {
   id: string;
   slug: string;
@@ -82,5 +101,3 @@ export interface Faq {
   answer: string;
   category: 'Ordering' | 'Shipping & Delivery' | 'Returns & Exchanges' | 'Product Information';
 }
-
-    
