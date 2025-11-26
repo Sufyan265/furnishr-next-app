@@ -115,6 +115,13 @@
           "type": "string",
           "description": "Date when the review was submitted.",
           "format": "date-time"
+        },
+        "tags": {
+          "type": "array",
+          "description": "Tags associated with the review (e.g. comfort, assembly).",
+          "items": {
+            "type": "string"
+          }
         }
       },
       "required": [
@@ -355,3 +362,5 @@
     "reasoning": "The Firestore structure prioritizes authorization independence and QAPs (Rules are not Filters). Reviews are stored as a subcollection of Products (`/products/{productId}/reviews/{reviewId}`). This ensures that reviews are directly associated with their respective products.  To enable only customers who have purchased a product to leave a review, we create an `/orders/{orderId}/orderItems/{orderItemId}` collection. In the `/products/{productId}/reviews/{reviewId}` collection, we denormalize the `customerId` to eliminate `get()` calls in security rules, guaranteeing authorization independence. \n\nThis design supports the QAP principle by ensuring that listing reviews for a product doesn't require filtering based on customer purchase history; the security rules enforce this constraint during data creation.  The structure uses path-based ownership for reviews, making security rules straightforward and efficient.  It also maintains data clarity and predictability through explicit naming conventions and schema definitions."
   }
 }
+
+    

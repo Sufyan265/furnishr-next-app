@@ -43,6 +43,7 @@ export interface Review {
   title: string;
   comment: string;
   date: string;
+  tags?: string[];
 }
 
 export interface Category {
@@ -81,3 +82,5 @@ export interface Faq {
   answer: string;
   category: 'Ordering' | 'Shipping & Delivery' | 'Returns & Exchanges' | 'Product Information';
 }
+
+    

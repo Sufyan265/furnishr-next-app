@@ -1,41 +1,59 @@
 
+'use client';
+
+import { useState, useMemo } from 'react';
 import { notFound } from 'next/navigation';
 import { getProductBySlug, getReviewsForProduct } from '@/lib/data';
 import { Separator } from '@/components/ui/separator';
 import ProductInteraction from '@/components/product-interaction';
 import StarRating from '@/components/star-rating';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { ShieldCheck, Truck, PackageCheck, Lock, ShieldAlert } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 import type { Metadata } from 'next';
+
+// Since we are converting to a client component, we can no longer export metadata directly.
+// This would typically be handled in a parent server component or layout, but for this standalone page,
+// we will manage the title dynamically on the client.
 
 type ProductPageProps = {
   params: { slug: string };
 };
 
-export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
-  const product = getProductBySlug(params.slug);
-
-  if (!product) {
-    return {
-      title: 'Product Not Found',
-    };
-  }
-
-  return {
-    title: `${product.name} | Furnishr`,
-    description: product.description,
-  };
-}
+const reviewTags = ['comfort', 'assembly', 'delivery', 'quality'];
 
 export default function ProductDetailPage({ params }: ProductPageProps) {
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  
   const product = getProductBySlug(params.slug);
 
   if (!product) {
     notFound();
   }
+  
+  // Set document title on client
+  if (typeof window !== 'undefined') {
+    document.title = `${product.name} | Furnishr`;
+  }
 
   const reviews = getReviewsForProduct(product.id);
+
+  const filteredReviews = useMemo(() => {
+    if (selectedTags.length === 0) {
+      return reviews;
+    }
+    return reviews.filter(review => 
+      selectedTags.every(tag => review.tags?.includes(tag))
+    );
+  }, [reviews, selectedTags]);
+
+  const toggleTag = (tag: string) => {
+    setSelectedTags(prev => 
+      prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag]
+    );
+  };
 
   return (
     <div className="bg-secondary/30">
@@ -71,10 +89,24 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
             </Card>
 
             <div>
-              <h2 className="font-headline text-3xl font-bold mb-8 text-center">Customer Reviews</h2>
-              {reviews.length > 0 ? (
+              <div className="text-center mb-8">
+                <h2 className="font-headline text-3xl font-bold">Customer Reviews</h2>
+                <div className="mt-4 flex justify-center gap-2 flex-wrap">
+                  {reviewTags.map(tag => (
+                    <Button 
+                      key={tag}
+                      variant={selectedTags.includes(tag) ? 'default' : 'outline'}
+                      onClick={() => toggleTag(tag)}
+                      className="capitalize"
+                    >
+                      {tag}
+                    </Button>
+                  ))}
+                </div>
+              </div>
+              {filteredReviews.length > 0 ? (
                 <div className="grid sm:grid-cols-2 gap-6">
-                  {reviews.map(review => (
+                  {filteredReviews.map(review => (
                     <Card key={review.id}>
                       <CardHeader>
                         <div className="flex items-center justify-between">
@@ -98,7 +130,9 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                   ))}
                 </div>
               ) : (
-                <p className="text-center text-muted-foreground">This product doesn't have any reviews yet.</p>
+                <p className="text-center text-muted-foreground py-8">
+                  {reviews.length > 0 ? 'No reviews match the selected filters.' : "This product doesn't have any reviews yet."}
+                </p>
               )}
             </div>
 
@@ -153,3 +187,5 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
     </div>
   );
 }
+
+    
