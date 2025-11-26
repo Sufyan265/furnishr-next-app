@@ -144,7 +144,9 @@ export default function CartPage() {
                 </div>
               </CardContent>
               <CardFooter className="flex-col gap-4">
-                <Button size="lg" className="w-full font-bold">Proceed to Checkout</Button>
+                <Button size="lg" className="w-full font-bold" asChild>
+                  <Link href="/checkout">Proceed to Checkout</Link>
+                </Button>
                 <div className="flex items-center justify-center space-x-4 text-muted-foreground">
                   <Lock className="h-5 w-5" />
                   <CreditCard className="h-5 w-5" />
