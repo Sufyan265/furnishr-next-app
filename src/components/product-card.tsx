@@ -41,7 +41,7 @@ export default function ProductCard({ product, onQuickView }: ProductCardProps) 
   };
   
   return (
-    <Card className="flex flex-col h-full overflow-hidden transition-shadow duration-300 hover:shadow-lg group">
+    <Card className="flex flex-col h-full overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
       <CardHeader className="p-0 relative">
         <Link href={`/products/${product.slug}`} className="block">
           <Image
@@ -50,7 +50,7 @@ export default function ProductCard({ product, onQuickView }: ProductCardProps) 
             data-ai-hint={primaryImage.imageHint}
             width={500}
             height={500}
-            className="w-full h-64 object-cover"
+            className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
           />
         </Link>
         <div className="absolute top-2 right-2 flex flex-col gap-2">
