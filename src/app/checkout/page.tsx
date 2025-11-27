@@ -63,7 +63,7 @@ export default function CheckoutPage() {
     });
     message += `\n*Total: £${total.toFixed(2)}*`;
 
-    const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '1234567890';
+    const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '923191436401';
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     
     // Simulate API call
