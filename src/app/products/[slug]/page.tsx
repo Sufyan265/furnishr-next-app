@@ -7,7 +7,7 @@ import { getProductBySlug, getReviewsForProduct } from '@/lib/data';
 import { Separator } from '@/components/ui/separator';
 import ProductInteraction from '@/components/product-interaction';
 import StarRating from '@/components/star-rating';
-import { Card, CardContent, CardHeader, CardTitle, CardActions } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { ShieldCheck, Truck, PackageCheck, Lock, ShieldAlert, ThumbsUp, ThumbsDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
