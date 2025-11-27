@@ -6,19 +6,18 @@ import { useCart } from '@/context/cart-context';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { ArrowLeft, CheckCircle } from 'lucide-react';
-import type { ShippingFormData, PaymentFormData } from '@/app/checkout/page';
+import { ArrowLeft, CheckCircle, Wallet } from 'lucide-react';
+import type { ShippingFormData } from '@/app/checkout/page';
 import { siteWideSale } from '@/lib/data';
 import { getImage } from '@/lib/placeholder-images';
 
 interface ReviewStepProps {
   shippingData: ShippingFormData;
-  paymentData: PaymentFormData;
   onPlaceOrder: () => void;
   onBack: () => void;
 }
 
-export default function ReviewStep({ shippingData, paymentData, onPlaceOrder, onBack }: ReviewStepProps) {
+export default function ReviewStep({ shippingData, onPlaceOrder, onBack }: ReviewStepProps) {
   const { cart } = useCart();
   const discountedSubtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
   
@@ -57,9 +56,12 @@ export default function ReviewStep({ shippingData, paymentData, onPlaceOrder, on
           {/* Payment Details */}
           <div>
             <h3 className="font-semibold text-lg mb-2">Payment Method</h3>
-            <p className="text-muted-foreground text-sm">
-              Card ending in •••• {paymentData.cardNumber.slice(-4)}
-            </p>
+            <div className="flex items-center gap-2">
+                <Wallet className="h-5 w-5 text-muted-foreground" />
+                <p className="text-muted-foreground text-sm font-semibold">
+                Cash on Delivery
+                </p>
+            </div>
           </div>
           <Separator />
           {/* Order Summary */}
@@ -124,7 +126,7 @@ export default function ReviewStep({ shippingData, paymentData, onPlaceOrder, on
                 </Button>
                 <Button type="button" variant="outline" onClick={onBack} className="w-full sm:w-auto">
                     <ArrowLeft className="mr-2 h-5 w-5" />
-                    Back to Payment
+                    Back to Shipping
                 </Button>
             </div>
         </CardFooter>

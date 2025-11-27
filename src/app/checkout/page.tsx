@@ -9,16 +9,14 @@ import Link from 'next/link';
 import { z } from 'zod';
 import CheckoutStepper from '@/components/checkout/checkout-stepper';
 import ShippingForm, { shippingFormSchema } from '@/components/checkout/shipping-form';
-import PaymentForm, { paymentFormSchema } from '@/components/checkout/payment-form';
 import ReviewStep from '@/components/checkout/review-step';
 import { useToast } from '@/hooks/use-toast';
 import { useRouter } from 'next/navigation';
 import { siteWideSale } from '@/lib/data';
 
 export type ShippingFormData = z.infer<typeof shippingFormSchema>;
-export type PaymentFormData = z.infer<typeof paymentFormSchema>;
 
-type CheckoutStep = 'shipping' | 'payment' | 'review';
+type CheckoutStep = 'shipping' | 'review';
 
 export default function CheckoutPage() {
   const { cart, clearCart } = useCart();
@@ -26,21 +24,15 @@ export default function CheckoutPage() {
   const router = useRouter();
   const [currentStep, setCurrentStep] = useState<CheckoutStep>('shipping');
   const [shippingData, setShippingData] = useState<ShippingFormData | null>(null);
-  const [paymentData, setPaymentData] = useState<PaymentFormData | null>(null);
 
   const handleShippingSubmit = (data: ShippingFormData) => {
     setShippingData(data);
-    setCurrentStep('payment');
-  };
-
-  const handlePaymentSubmit = (data: PaymentFormData) => {
-    setPaymentData(data);
     setCurrentStep('review');
   };
 
   const handlePlaceOrder = () => {
     // In a real app, this is where you would process the payment and create the order
-    console.log("Placing order with:", { shippingData, paymentData, cart });
+    console.log("Placing order with:", { shippingData, cart });
 
     const discountedSubtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
   
@@ -57,6 +49,7 @@ export default function CheckoutPage() {
     const total = discountedSubtotal + shipping;
 
     let message = `New Order Received!\n\n`;
+    message += `*Payment Method*: Cash on Delivery\n\n`;
     message += `*Customer Details*:\n`;
     message += `Name: ${shippingData?.fullName}\n`;
     message += `Email: ${shippingData?.email}\n`;
@@ -76,7 +69,7 @@ export default function CheckoutPage() {
     // Simulate API call
     toast({
         title: "Order Placed!",
-        description: "Thank you for your purchase. A confirmation email has been sent.",
+        description: "Thank you for your purchase. We will contact you for confirmation.",
     });
 
     clearCart();
@@ -86,8 +79,7 @@ export default function CheckoutPage() {
 
   const steps: { id: CheckoutStep; name: string }[] = [
     { id: 'shipping', name: 'Shipping' },
-    { id: 'payment', name: 'Payment' },
-    { id: 'review', name: 'Review' },
+    { id: 'review', name: 'Review & Confirm' },
   ];
 
   if (cart.length === 0 && currentStep !== 'review') {
@@ -116,19 +108,11 @@ export default function CheckoutPage() {
                 <ShippingForm onSubmit={handleShippingSubmit} />
             )}
 
-            {currentStep === 'payment' && (
-                <PaymentForm
-                    onSubmit={handlePaymentSubmit}
-                    onBack={() => setCurrentStep('shipping')}
-                />
-            )}
-
-            {currentStep === 'review' && shippingData && paymentData && (
+            {currentStep === 'review' && shippingData && (
                 <ReviewStep
                     shippingData={shippingData}
-                    paymentData={paymentData}
                     onPlaceOrder={handlePlaceOrder}
-                    onBack={() => setCurrentStep('payment')}
+                    onBack={() => setCurrentStep('shipping')}
                 />
             )}
         </div>
