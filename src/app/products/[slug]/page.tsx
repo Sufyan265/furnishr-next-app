@@ -2,7 +2,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { notFound } from 'next/navigation';
+import { notFound, useParams } from 'next/navigation';
 import { getProductBySlug, getReviewsForProduct } from '@/lib/data';
 import { Separator } from '@/components/ui/separator';
 import ProductInteraction from '@/components/product-interaction';
@@ -12,26 +12,23 @@ import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { ShieldCheck, Truck, PackageCheck, Lock, ShieldAlert, ThumbsUp, ThumbsDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import type { Metadata } from 'next';
 import ProductQandA from '@/components/product-q-and-a';
 import { doc, updateDoc, increment } from 'firebase/firestore';
 import { useFirestore } from '@/firebase';
 
-// Since we are converting to a client component, we can no longer export metadata directly.
-// This would typically be handled in a parent server component or layout, but for this standalone page,
-// we will manage the title dynamically on the client.
-
-type ProductPageProps = {
-  params: { slug: string };
-};
+// Since this is a client component, we don't export metadata directly.
+// We handle the document title dynamically.
 
 const reviewTags = ['comfort', 'assembly', 'delivery', 'quality'];
 
-export default function ProductDetailPage({ params }: ProductPageProps) {
+export default function ProductDetailPage() {
+  const params = useParams();
+  const slug = Array.isArray(params.slug) ? params.slug[0] : params.slug;
+
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const firestore = useFirestore();
   
-  const product = getProductBySlug(params.slug);
+  const product = useMemo(() => getProductBySlug(slug), [slug]);
 
   if (!product) {
     notFound();
