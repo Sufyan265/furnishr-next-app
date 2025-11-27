@@ -31,7 +31,7 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const firestore = useFirestore();
   
-  const product = getProductBySlug(params.slug);
+  const product = useMemo(() => getProductBySlug(params.slug), [params.slug]);
 
   if (!product) {
     notFound();
