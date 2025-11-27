@@ -18,6 +18,8 @@ export type ShippingFormData = z.infer<typeof shippingFormSchema>;
 
 type CheckoutStep = 'shipping' | 'review';
 
+const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
+
 export default function CheckoutPage() {
   const { cart, clearCart } = useCart();
   const { toast } = useToast();
@@ -60,10 +62,22 @@ export default function CheckoutPage() {
         if (item.variant) {
             message += `  Size: ${item.variant.size}\n`;
         }
+        if (item.withMattress) {
+            message += '  + Mattress\n';
+        }
     });
     message += `\n*Total: £${total.toFixed(2)}*`;
 
-    const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '923191436401';
+    if (!whatsappNumber) {
+        console.error('WhatsApp number is not configured.');
+        toast({
+            variant: 'destructive',
+            title: "Configuration Error",
+            description: "Could not send order notification. Please contact support.",
+        });
+        return;
+    }
+    
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     
     // Simulate API call
