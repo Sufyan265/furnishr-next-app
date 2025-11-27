@@ -88,7 +88,7 @@ export default function CheckoutPage() {
 
     clearCart();
     
-    window.location.href = whatsappUrl;
+    window.open(whatsappUrl, '_blank');
   };
 
   const steps: { id: CheckoutStep; name: string }[] = [
