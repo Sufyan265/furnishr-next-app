@@ -10,7 +10,6 @@ import DeliveryBanner from '@/components/delivery-banner';
 import { FirebaseClientProvider } from '@/firebase';
 import SocialProofPopup from '@/components/social-proof-popup';
 import { ThemeProvider } from '@/components/theme-provider';
-import Chatbot from '@/components/chatbot';
 
 export const metadata: Metadata = {
   title: 'Furnishr - Modern Furniture for Your Home',
@@ -44,7 +43,6 @@ export default function RootLayout({
                   {children}
                 </main>
                 <Footer />
-                <Chatbot />
               </CartProvider>
             </WishlistProvider>
           </FirebaseClientProvider>

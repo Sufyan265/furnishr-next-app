@@ -17,7 +17,6 @@ import {
 } from "@/components/ui/sheet";
 import { useState } from "react";
 import { Separator } from "./ui/separator";
-import SearchDialog from "./search-dialog";
 import AuthButton from "./auth-button";
 import { ThemeToggle } from "./theme-toggle";
 
@@ -65,7 +64,6 @@ export default function Header() {
           </nav>
 
         <div className="flex items-center space-x-1 sm:space-x-2 ml-auto">
-            <SearchDialog />
             <ThemeToggle />
             <AuthButton />
             <Button variant="ghost" size="icon" asChild>
