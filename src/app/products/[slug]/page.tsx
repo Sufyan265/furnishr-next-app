@@ -28,11 +28,10 @@ type ProductPageProps = {
 const reviewTags = ['comfort', 'assembly', 'delivery', 'quality'];
 
 export default function ProductDetailPage({ params }: ProductPageProps) {
-  const { slug } = params;
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const firestore = useFirestore();
   
-  const product = useMemo(() => getProductBySlug(slug), [slug]);
+  const product = useMemo(() => getProductBySlug(params.slug), [params.slug]);
 
   if (!product) {
     notFound();
