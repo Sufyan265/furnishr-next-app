@@ -13,6 +13,7 @@ import PaymentForm, { paymentFormSchema } from '@/components/checkout/payment-fo
 import ReviewStep from '@/components/checkout/review-step';
 import { useToast } from '@/hooks/use-toast';
 import { useRouter } from 'next/navigation';
+import { siteWideSale } from '@/lib/data';
 
 export type ShippingFormData = z.infer<typeof shippingFormSchema>;
 export type PaymentFormData = z.infer<typeof paymentFormSchema>;
@@ -40,6 +41,37 @@ export default function CheckoutPage() {
   const handlePlaceOrder = () => {
     // In a real app, this is where you would process the payment and create the order
     console.log("Placing order with:", { shippingData, paymentData, cart });
+
+    const discountedSubtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  
+    const originalSubtotal = cart.reduce((sum, item) => {
+      const isSaleApplicable = siteWideSale.isActive && !['ambassador-park-lane-bed', 'astral-sleigh-bed', 'divan-ottoman-bed'].includes(item.slug);
+      let itemPrice = item.price;
+      if (isSaleApplicable) {
+        itemPrice = item.price / (1 - siteWideSale.discountPercentage / 100);
+      }
+      return sum + itemPrice * item.quantity;
+    }, 0);
+  
+    const shipping = discountedSubtotal > 250 ? 0 : 49.99;
+    const total = discountedSubtotal + shipping;
+
+    let message = `New Order Received!\n\n`;
+    message += `*Customer Details*:\n`;
+    message += `Name: ${shippingData?.fullName}\n`;
+    message += `Email: ${shippingData?.email}\n`;
+    message += `Address: ${shippingData?.address}, ${shippingData?.city}, ${shippingData?.postcode}, ${shippingData?.country}\n\n`;
+    message += `*Order Items*:\n`;
+    cart.forEach(item => {
+        message += `- ${item.name} (x${item.quantity}) - £${(item.price * item.quantity).toFixed(2)}\n`;
+        if (item.variant) {
+            message += `  Size: ${item.variant.size}\n`;
+        }
+    });
+    message += `\n*Total: £${total.toFixed(2)}*`;
+
+    const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '1234567890';
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     
     // Simulate API call
     toast({
@@ -48,7 +80,8 @@ export default function CheckoutPage() {
     });
 
     clearCart();
-    router.push('/');
+    
+    window.location.href = whatsappUrl;
   };
 
   const steps: { id: CheckoutStep; name: string }[] = [
