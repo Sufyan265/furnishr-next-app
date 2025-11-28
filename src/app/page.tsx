@@ -1,7 +1,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Award, Truck, Undo, Sparkles, Feather, ShieldCheck, Globe, Bed, Sofa } from 'lucide-react';
+import { ArrowRight, Award, Truck, ShieldCheck, Feather, Globe, Bed, Sofa } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import {
@@ -11,7 +11,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
-import { categories, featuredProducts, reviews, products } from '@/lib/data';
+import { categories, reviews, products } from '@/lib/data';
 import ProductCard from '@/components/product-card';
 import { heroImages, getImage, worldMapImage, categoryImages } from '@/lib/placeholder-images';
 import StarRating from '@/components/star-rating';
@@ -28,11 +28,22 @@ export default function Home() {
 
   const bedroomProducts = products.filter(p => p.categorySlug === 'beds').slice(0, 4);
   const sofaProducts = products.filter(p => p.categorySlug === 'sofas').slice(0, 4);
+  
+  const instagramPosts = [
+    { id: 1, imageId: "product-sofa-8" },
+    { id: 2, imageId: "product-bed-ambassador-1" },
+    { id: 3, imageId: "product-sofa-2" },
+    { id: 4, imageId: "product-bed-sleigh-1" },
+    { id: 5, imageId: "product-sofa-3" },
+    { id: 6, imageId: "product-bed-divan-1" },
+  ];
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <section className="w-full pt-0">
-        <Carousel className="w-full" opts={{ loop: true }}>
+        <Carousel className="w-full" opts={{ loop: true }} plugins={[
+          // Autoplay({ delay: 5000, stopOnInteraction: true })
+        ]}>
           <CarouselContent>
             {heroImages.map((image, index) => (
               <CarouselItem key={index}>
@@ -48,13 +59,13 @@ export default function Home() {
                   <div className="absolute inset-0 bg-black/40" />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="container mx-auto px-4 text-center text-white">
-                      <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight drop-shadow-lg">
+                      <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight drop-shadow-lg fade-in">
                         Design Your Dream Space
                       </h1>
-                      <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl">
+                      <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl fade-in" style={{ animationDelay: '0.5s' }}>
                         Discover curated furniture collections that blend style, comfort, and quality.
                       </p>
-                      <Button asChild size="lg" className="mt-8 font-bold">
+                      <Button asChild size="lg" className="mt-8 font-bold fade-in" style={{ animationDelay: '1s' }}>
                         <Link href="/products">Shop New Arrivals</Link>
                       </Button>
                     </div>
@@ -70,6 +81,36 @@ export default function Home() {
 
       <section>
         <div className="container mx-auto px-4">
+           <div className="text-center mb-12">
+            <h2 className="font-headline text-3xl md:text-4xl font-bold">Shop by Category</h2>
+            <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
+              Find the perfect pieces for every room in your home.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {categories.map((category) => (
+              <Link key={category.id} href={`/products?category=${category.slug}`} className="group block">
+                <div className="relative aspect-square rounded-lg overflow-hidden">
+                   <Image
+                    src={category.imageUrl}
+                    alt={category.name}
+                    data-ai-hint={category.imageHint}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <h3 className="font-headline text-2xl font-bold text-white drop-shadow-md">{category.name}</h3>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="container mx-auto px-4">
           <div className="text-center">
             <h2 className="font-headline text-3xl md:text-4xl font-bold">Why Choose Furnishr?</h2>
             <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -78,28 +119,28 @@ export default function Home() {
           </div>
           <div className="mt-12 md:mt-16 grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                <Card className="bg-secondary/50">
+                <Card className="bg-secondary/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                   <CardContent className="p-6 text-center flex flex-col items-center gap-3">
                     <Award className="h-10 w-10 text-primary" />
                     <h3 className="font-headline text-xl font-semibold">Timeless Design</h3>
                     <p className="text-muted-foreground text-sm">Contemporary and enduring pieces that transcend trends.</p>
                   </CardContent>
                 </Card>
-                <Card className="bg-secondary/50">
+                <Card className="bg-secondary/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                   <CardContent className="p-6 text-center flex flex-col items-center gap-3">
                     <ShieldCheck className="h-10 w-10 text-primary" />
                     <h3 className="font-headline text-xl font-semibold">Unmatched Quality</h3>
                     <p className="text-muted-foreground text-sm">Built to last with the finest materials and craftsmanship.</p>
                   </CardContent>
                 </Card>
-                <Card className="bg-secondary/50">
+                <Card className="bg-secondary/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                   <CardContent className="p-6 text-center flex flex-col items-center gap-3">
                     <Feather className="h-10 w-10 text-primary" />
                     <h3 className="font-headline text-xl font-semibold">Sustainable Choice</h3>
                     <p className="text-muted-foreground text-sm">Responsibly sourced materials for a healthier planet.</p>
                   </CardContent>
                 </Card>
-                <Card className="bg-secondary/50">
+                <Card className="bg-secondary/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                   <CardContent className="p-6 text-center flex flex-col items-center gap-3">
                     <Truck className="h-10 w-10 text-primary" />
                     <h3 className="font-headline text-xl font-semibold">Exceptional Service</h3>
@@ -107,7 +148,7 @@ export default function Home() {
                   </CardContent>
                 </Card>
             </div>
-            <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
+            <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-xl animate-float">
               <Image
                 src={chooseUsImage.imageUrl}
                 alt={chooseUsImage.description}
@@ -222,6 +263,52 @@ export default function Home() {
         </div>
       </section>
 
+      <section>
+        <div className="container mx-auto px-4">
+           <div className="text-center mb-12">
+             <h2 className="font-headline text-3xl md:text-4xl font-bold">#FurnishrAtHome</h2>
+             <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
+               Get inspired by our community. See how our furniture looks in real homes.
+             </p>
+           </div>
+           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              {instagramPosts.map(post => {
+                  const image = getImage(post.imageId);
+                  return (
+                      <div key={post.id} className="group relative aspect-square rounded-lg overflow-hidden">
+                          <Image 
+                              src={image.imageUrl}
+                              alt={image.description}
+                              data-ai-hint={image.imageHint}
+                              fill
+                              className="object-cover transition-transform duration-300 group-hover:scale-110"
+                          />
+                           <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+                              <p className="text-white font-bold opacity-0 group-hover:opacity-100 transition-opacity">@furnishr</p>
+                          </div>
+                      </div>
+                  )
+              })}
+           </div>
+           <div className="text-center mt-12">
+            <Button variant="outline">Follow us on Instagram</Button>
+           </div>
+        </div>
+      </section>
+      
+      <section className="bg-secondary/30">
+        <div className="container mx-auto px-4 py-16 text-center">
+          <h2 className="font-headline text-4xl font-bold">Ready to Find Your Perfect Piece?</h2>
+          <p className="mt-4 text-xl text-muted-foreground max-w-xl mx-auto">
+            Browse our curated collections and discover furniture that speaks to your style.
+          </p>
+          <Button asChild size="lg" className="mt-8">
+            <Link href="/products">Explore All Collections</Link>
+          </Button>
+        </div>
+      </section>
+
+
       <section className="bg-secondary/50">
         <div className="container mx-auto px-4 text-center">
           <Globe className="h-12 w-12 mx-auto text-primary" />
@@ -244,6 +331,9 @@ export default function Home() {
             <div className="pulsing-dot" style={{ top: '65%', left: '80%', animationDelay: '1s' }}></div>
             <div className="pulsing-dot" style={{ top: '70%', left: '55%', animationDelay: '1.5s' }}></div>
             <div className="pulsing-dot" style={{ top: '25%', left: '90%', animationDelay: '0.2s' }}></div>
+            <div className="pulsing-dot" style={{ top: '50%', left: '10%', animationDelay: '1.8s' }}></div>
+            <div className="pulsing-dot" style={{ top: '20%', left: '65%', animationDelay: '0.8s' }}></div>
+            <div className="pulsing-dot" style={{ top: '80%', left: '30%', animationDelay: '1.2s' }}></div>
           </div>
         </div>
       </section>
