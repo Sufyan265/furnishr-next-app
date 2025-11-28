@@ -32,7 +32,7 @@ export default function RootLayout({
       <body className={cn("font-body antialiased bg-background min-h-screen flex flex-col")}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
         >
           <FirebaseClientProvider>
