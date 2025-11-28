@@ -2,7 +2,7 @@
 "use client";
 
 import Link from "next/link";
-import { ShoppingCart, Menu, Heart, ChevronDown } from "lucide-react";
+import { ShoppingCart, Menu, Heart, ChevronDown, Sofa } from "lucide-react";
 import { Button } from "./ui/button";
 import { useCart } from "@/context/cart-context";
 import { useWishlist } from "@/context/wishlist-context";
@@ -60,7 +60,8 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
-          <span className="font-headline text-2xl font-bold">Furnishr</span>
+          <Sofa className="h-7 w-7 text-primary" />
+          <span className="font-headline text-2xl font-bold tracking-wide">Furnishr</span>
         </Link>
         
         <nav className="hidden md:flex flex-1 items-center space-x-6 text-sm font-medium">
@@ -144,7 +145,8 @@ export default function Header() {
                   <SheetHeader className="text-left">
                      <SheetTitle>
                         <Link href="/" className="flex items-center space-x-2" onClick={() => setMobileMenuOpen(false)}>
-                            <span className="font-headline text-2xl font-bold">Furnishr</span>
+                            <Sofa className="h-7 w-7 text-primary" />
+                            <span className="font-headline text-2xl font-bold tracking-wide">Furnishr</span>
                         </Link>
                      </SheetTitle>
                   </SheetHeader>
