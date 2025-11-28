@@ -1,5 +1,43 @@
 {
   "entities": {
+    "Address": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Address",
+      "type": "object",
+      "description": "Represents a shipping or billing address for a customer.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the address."
+        },
+        "type": {
+          "type": "string",
+          "description": "Type of address (e.g., Home, Work).",
+          "enum": ["Home", "Work", "Other"]
+        },
+        "street": {
+          "type": "string",
+          "description": "Street name and number."
+        },
+        "city": {
+          "type": "string",
+          "description": "City or town."
+        },
+        "postcode": {
+          "type": "string",
+          "description": "Postal code."
+        },
+        "country": {
+          "type": "string",
+          "description": "Country."
+        },
+        "isDefault": {
+          "type": "boolean",
+          "description": "Whether this is the default address for the customer."
+        }
+      },
+      "required": ["id", "type", "street", "city", "postcode", "country"]
+    },
     "Product": {
       "$schema": "http://json-schema.org/draft-07/schema#",
       "title": "Product",
@@ -71,18 +109,13 @@
           "type": "string",
           "description": "Email address of the customer.",
           "format": "email"
-        },
-        "address": {
-          "type": "string",
-          "description": "Mailing address of the customer."
         }
       },
       "required": [
         "id",
         "firstName",
         "lastName",
-        "email",
-        "address"
+        "email"
       ]
     },
     "Review": {
@@ -492,6 +525,26 @@
             {
               "name": "customerId",
               "description": "Unique identifier for the customer."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/customers/{customerId}/addresses/{addressId}",
+        "definition": {
+          "entityName": "Address",
+          "schema": {
+            "$ref": "#/backend/entities/Address"
+          },
+          "description": "Stores a customer's shipping addresses.",
+          "params": [
+            {
+              "name": "customerId",
+              "description": "Unique identifier for the customer."
+            },
+            {
+              "name": "addressId",
+              "description": "Unique identifier for the address."
             }
           ]
         }

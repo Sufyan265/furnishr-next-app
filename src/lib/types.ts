@@ -104,3 +104,13 @@ export interface Faq {
   answer: string;
   category: 'Ordering' | 'Shipping & Delivery' | 'Returns & Exchanges' | 'Product Information' | 'Care & Cleaning';
 }
+
+export interface Address {
+  id: string;
+  type: 'Home' | 'Work' | 'Other';
+  street: string;
+  city: string;
+  postcode: string;
+  country: string;
+  isDefault: boolean;
+}

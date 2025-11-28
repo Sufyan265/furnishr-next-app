@@ -113,6 +113,17 @@ service cloud.firestore {
       allow create: if isOwner(customerId) && request.resource.data.id == customerId;
       allow update: if isOwner(customerId) && isOwnerFieldImmutable('id');
       allow delete: if false;
+
+      /**
+       * @description Manages a customer's saved addresses.
+       * @path /customers/{customerId}/addresses/{addressId}
+       * @allow (read, write) A user can manage their own addresses.
+       * @deny A user cannot access another user's addresses.
+       * @principle Inherits ownership from the parent customer document.
+       */
+      match /addresses/{addressId} {
+        allow read, write: if isOwner(customerId);
+      }
     }
 
     /**
