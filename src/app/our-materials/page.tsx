@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Leaf, ShieldCheck, Zap } from 'lucide-react';
+import { Leaf, ShieldCheck, Zap, Recycle } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
