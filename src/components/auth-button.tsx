@@ -56,7 +56,9 @@ export default function AuthButton() {
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" className="relative h-8 w-8 rounded-full">
           <Avatar className="h-8 w-8">
-            <AvatarFallback>{user.email?.[0].toUpperCase()}</AvatarFallback>
+            <AvatarFallback>
+              <UserIcon className="h-5 w-5" />
+            </AvatarFallback>
           </Avatar>
         </Button>
       </DropdownMenuTrigger>

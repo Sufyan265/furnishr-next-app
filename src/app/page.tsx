@@ -3,7 +3,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Award, Truck, ShieldCheck, Feather, Globe, Bed, Sofa } from 'lucide-react';
+import { ArrowRight, Award, Truck, ShieldCheck, Feather, Globe, Bed, Sofa, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import {
@@ -212,7 +212,9 @@ export default function Home() {
                                     <CardHeader>
                                         <div className="flex items-center gap-4">
                                             <Avatar>
-                                                <AvatarFallback>{review.author.charAt(0)}</AvatarFallback>
+                                                <AvatarFallback>
+                                                    <User className="h-5 w-5" />
+                                                </AvatarFallback>
                                             </Avatar>
                                             <div>
                                                 <p className="font-semibold">{review.author}</p>
@@ -263,7 +265,9 @@ export default function Home() {
                                     <CardHeader>
                                         <div className="flex items-center gap-4">
                                             <Avatar>
-                                                <AvatarFallback>{review.author.charAt(0)}</AvatarFallback>
+                                                <AvatarFallback>
+                                                    <User className="h-5 w-5" />
+                                                </AvatarFallback>
                                             </Avatar>
                                             <div>
                                                 <p className="font-semibold">{review.author}</p>

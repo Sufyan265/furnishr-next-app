@@ -9,7 +9,7 @@ import ProductInteraction from '@/components/product-interaction';
 import StarRating from '@/components/star-rating';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
-import { ShieldCheck, Truck, PackageCheck, Lock, ShieldAlert, ThumbsUp, ThumbsDown } from 'lucide-react';
+import { ShieldCheck, Truck, PackageCheck, Lock, ShieldAlert, ThumbsUp, ThumbsDown, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import ProductQandA from '@/components/product-q-and-a';
@@ -121,7 +121,9 @@ export default function ProductDetailPage() {
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-3">
                             <Avatar>
-                              <AvatarFallback>{review.author.charAt(0)}</AvatarFallback>
+                              <AvatarFallback>
+                                <User className="h-5 w-5" />
+                              </AvatarFallback>
                             </Avatar>
                             <div>
                               <p className="font-semibold">{review.author}</p>

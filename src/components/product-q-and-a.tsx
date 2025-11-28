@@ -9,7 +9,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { useToast } from '@/hooks/use-toast';
-import { ThumbsUp, MessageCircle, Send } from 'lucide-react';
+import { ThumbsUp, MessageCircle, Send, User } from 'lucide-react';
 import type { Question } from '@/lib/types';
 import { errorEmitter, FirestorePermissionError } from '@/firebase';
 
@@ -69,7 +69,9 @@ const QuestionItem = ({ question, productId }: { question: Question, productId: 
     <div className="py-6 border-b">
       <div className="flex items-start gap-4">
         <Avatar>
-          <AvatarFallback>{question.authorName.charAt(0)}</AvatarFallback>
+          <AvatarFallback>
+            <User className="h-5 w-5" />
+          </AvatarFallback>
         </Avatar>
         <div className="flex-grow">
           <p className="font-semibold">{question.authorName} <span className="text-sm text-muted-foreground font-normal">asked a question</span></p>
@@ -107,7 +109,9 @@ const QuestionItem = ({ question, productId }: { question: Question, productId: 
         {answers && answers.map((answer: any) => (
           <div key={answer.id} className="flex items-start gap-4">
             <Avatar className="h-8 w-8">
-              <AvatarFallback className="text-xs">{answer.authorName.charAt(0)}</AvatarFallback>
+              <AvatarFallback className="text-xs">
+                <User className="h-4 w-4" />
+              </AvatarFallback>
             </Avatar>
             <div className="flex-grow bg-secondary/50 p-3 rounded-lg">
               <p className="font-semibold text-sm">{answer.authorName}</p>
