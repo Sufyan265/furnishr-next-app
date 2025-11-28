@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -10,11 +11,13 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
+  DropdownMenuGroup,
 } from '@/components/ui/dropdown-menu';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
-import { LogOut, User as UserIcon, Loader2 } from 'lucide-react';
+import { LogOut, User as UserIcon, Loader2, ListOrdered, MapPin } from 'lucide-react';
 import AuthDialog from './auth-dialog';
 import { signOut } from 'firebase/auth';
+import Link from 'next/link';
 
 export default function AuthButton() {
   const { user, isUserLoading } = useUser();
@@ -23,7 +26,9 @@ export default function AuthButton() {
 
   const handleSignOut = async () => {
     try {
-      await signOut(auth);
+      if (auth) {
+        await signOut(auth);
+      }
     } catch (error) {
       console.error('Error signing out: ', error);
     }
@@ -58,12 +63,33 @@ export default function AuthButton() {
       <DropdownMenuContent className="w-56" align="end" forceMount>
         <DropdownMenuLabel className="font-normal">
           <div className="flex flex-col space-y-1">
-            <p className="text-sm font-medium leading-none">My Account</p>
+            <p className="text-sm font-medium leading-none">Hello, {user.displayName || user.email?.split('@')[0]}</p>
             <p className="text-xs leading-none text-muted-foreground">
               {user.email}
             </p>
           </div>
         </DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuGroup>
+          <DropdownMenuItem asChild>
+            <Link href="/account/profile">
+              <UserIcon className="mr-2 h-4 w-4" />
+              <span>My Account</span>
+            </Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem asChild>
+             <Link href="/account/orders">
+                <ListOrdered className="mr-2 h-4 w-4" />
+                <span>Order History</span>
+            </Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem asChild>
+            <Link href="/account/addresses">
+                <MapPin className="mr-2 h-4 w-4" />
+                <span>Saved Addresses</span>
+            </Link>
+          </DropdownMenuItem>
+        </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuItem onClick={handleSignOut} className="cursor-pointer">
           <LogOut className="mr-2 h-4 w-4" />
