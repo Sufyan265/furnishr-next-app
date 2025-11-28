@@ -14,7 +14,7 @@ import {
   DropdownMenuGroup,
 } from '@/components/ui/dropdown-menu';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
-import { LogOut, User as UserIcon, Loader2, ListOrdered, MapPin } from 'lucide-react';
+import { LogOut, User as UserIcon, Loader2, MapPin } from 'lucide-react';
 import AuthDialog from './auth-dialog';
 import { signOut } from 'firebase/auth';
 import Link from 'next/link';
@@ -75,12 +75,6 @@ export default function AuthButton() {
             <Link href="/account/profile">
               <UserIcon className="mr-2 h-4 w-4" />
               <span>My Account</span>
-            </Link>
-          </DropdownMenuItem>
-          <DropdownMenuItem asChild>
-             <Link href="/account/orders">
-                <ListOrdered className="mr-2 h-4 w-4" />
-                <span>Order History</span>
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
