@@ -134,11 +134,8 @@ service cloud.firestore {
      * @principle Enforces public read access for data managed by a trusted backend.
      */
     match /products/{productId} {
-      allow get: if true;
-      allow list: if true;
-      allow create: if false;
-      allow update: if false;
-      allow delete: if false;
+      allow get, list: if true;
+      allow write: if false;
 
       /**
        * @description Manages product reviews. Reviews are public, but creating them requires
@@ -197,13 +194,14 @@ service cloud.firestore {
      * @description Manages orders placed by customers.
      * @path /orders/{orderId}
      * @allow (get, update, delete) A user can manage their own orders.
+     * @allow (list) An authenticated user can ONLY query for their own orders.
      * @deny (get) A user cannot read another user's order.
-     * @deny (list) Unauthenticated users cannot list orders. Authenticated users must query for their own.
-     * @principle Enforces document ownership for all operations.
+     * @deny (list) Unauthenticated users cannot list orders.
+     * @principle Enforces document ownership for all operations, especially queries.
      */
     match /orders/{orderId} {
       allow get: if isExistingOwner(resource.data.customerId);
-      allow list: if isSignedIn();
+      allow list: if isSignedIn() && request.query.where.customerId == request.auth.uid;
       allow create: if isSignedIn() && request.resource.data.customerId == request.auth.uid;
       allow update: if isExistingOwner(resource.data.customerId) && isOwnerFieldImmutable('customerId');
       allow delete: if isExistingOwner(resource.data.customerId);
@@ -216,11 +214,7 @@ service cloud.firestore {
        * @principle Enforces inherited access control from a parent document.
        */
       match /orderItems/{orderItemId} {
-        allow get: if isOrderOwner(orderId);
-        allow list: if isOrderOwner(orderId);
-        allow create: if isOrderOwner(orderId);
-        allow update: if isOrderOwner(orderId);
-        allow delete: if isOrderOwner(orderId);
+        allow read, write: if isOrderOwner(orderId);
       }
     }
 
@@ -234,9 +228,7 @@ service cloud.firestore {
     match /blogPosts/{blogPostId} {
       allow get: if true;
       allow list: if true;
-      allow create: if false;
-      allow update: if false;
-      allow delete: if false;
+      allow write: if false;
     }
   }
 }
