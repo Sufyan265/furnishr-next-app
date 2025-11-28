@@ -27,7 +27,7 @@ const steps = [
   {
     title: '4. Expert Upholstery',
     description: "Our skilled upholsterers meticulously cut, sew, and fit the chosen fabric or leather. Every seam is perfected, and patterns are carefully aligned. This final step is where the sofa bed's character and beauty truly come to life.",
-    imageId: "product-chesterfield-sofa-3"
+    imageId: "expert-upholstery"
   }
 ];
 
