@@ -1,3 +1,4 @@
+
 /**
  * Core Philosophy: This ruleset enforces a strict security model centered around
  * user actions and data ownership. Public data, such as products and blog posts, is
