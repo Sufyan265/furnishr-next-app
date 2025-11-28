@@ -648,6 +648,126 @@ export const blogPosts: BlogPost[] = [
     content: '<h2>What is Biophilic Design?</h2><p>Biophilic design is an architectural and interior design approach that seeks to connect building occupants more closely to nature. Incorporating natural lighting, ventilation, plant life, and natural materials like wood and stone can reduce stress and improve well-being.</p><h3>1. Start with Plants</h3><p>The easiest way to begin is by adding houseplants. They purify the air and add a splash of color and life. Choose a variety of sizes and types, from large floor plants like a Fiddle Leaf Fig to small succulents on a windowsill.</p><h3>2. Natural Materials</h3><p>Incorporate materials that come from the earth. Think wooden furniture, stone countertops, linen curtains, and wool rugs. These textures add warmth and a sense of grounding to your space. Our Nordic Oak Dining Table is a perfect example!</p>',
     imageUrl: blogImagesMap['blog-3'].imageUrl,
     imageHint: blogImagesMap['blog-3'].imageHint
+  },
+  {
+    id: '4',
+    slug: 'best-sofa-beds-for-small-rooms',
+    title: 'Best Sofa Beds for Small Rooms',
+    author: 'The Furnishr Team',
+    date: 'November 15, 2023',
+    imageId: 'blog-2',
+    excerpt: 'Living in a small space? A sofa bed is a must-have. We round up the best stylish and compact options that don\'t compromise on comfort or design.',
+    content: '<h2>Maximizing Style in Minimum Space</h2><p>Sofa beds are the ultimate space-saving solution. Look for models with sleek profiles, narrow arms, and hidden storage to make the most of your square footage. Our Artic and Ashwin sofa beds are perfect examples.</p>',
+    imageUrl: blogImagesMap['blog-2'].imageUrl,
+    imageHint: blogImagesMap['blog-2'].imageHint
+  },
+  {
+    id: '5',
+    slug: 'how-to-choose-the-right-sofa-bed',
+    title: 'How to Choose the Right Sofa Bed',
+    author: 'The Furnishr Team',
+    date: 'November 18, 2023',
+    imageId: 'blog-1',
+    excerpt: 'From mechanism types to mattress options, this guide will walk you through everything you need to know to select the perfect sofa bed for your needs.',
+    content: '<h2>Function Meets Form</h2><p>Consider how often you\'ll use the bed function. For everyday use, a pull-out mechanism with a dedicated mattress is ideal. For occasional guests, a "click-clack" model can be a simple and effective choice.</p>',
+    imageUrl: blogImagesMap['blog-1'].imageUrl,
+    imageHint: blogImagesMap['blog-1'].imageHint
+  },
+  {
+    id: '6',
+    slug: 'modern-living-room-ideas',
+    title: 'Modern Living Room Ideas',
+    author: 'The Furnishr Team',
+    date: 'November 21, 2023',
+    imageId: 'hero-1',
+    excerpt: 'Get inspired with these fresh and modern living room ideas. We explore color palettes, furniture layouts, and decor tips to create a contemporary oasis.',
+    content: '<h2>Clean Lines and Neutral Palettes</h2><p>Modern design emphasizes simplicity. Start with a neutral color base and add pops of color through accessories. Choose furniture with clean lines and without ornate details, like our Verona or Harrison sofas.</p>',
+    imageUrl: heroImages[0].imageUrl,
+    imageHint: heroImages[0].imageHint
+  },
+  {
+    id: '7',
+    slug: 'space-saving-furniture-tips',
+    title: 'Space-Saving Furniture Tips',
+    author: 'The Furnishr Team',
+    date: 'November 24, 2023',
+    imageId: 'blog-2',
+    excerpt: 'Make your home feel bigger with these clever furniture tips. Discover how multi-functional pieces and smart layouts can transform any room.',
+    content: '<h2>Think Multi-Functionally</h2><p>Every piece should serve a purpose, or two! An ottoman with storage, a sofa that turns into a bed, or a dining table that can extend are all fantastic investments for smaller homes.</p>',
+    imageUrl: blogImagesMap['blog-2'].imageUrl,
+    imageHint: blogImagesMap['blog-2'].imageHint
+  },
+  {
+    id: '8',
+    slug: 'top-10-sofa-beds-for-guests',
+    title: 'Top 10 Sofa Beds for Guests',
+    author: 'The Furnishr Team',
+    date: 'November 27, 2023',
+    imageId: 'product-artic-sofa-2',
+    excerpt: 'Ensure your guests have a comfortable stay with our top-rated sofa beds. We review the best options for comfort, ease of use, and style.',
+    content: '<h2>Guest Comfort is Key</h2><p>When choosing a sofa bed for guests, prioritize a comfortable mattress and an easy-to-operate mechanism. Our Artic Sofa Bed is a guest favorite for its style and comfort.</p>',
+    imageUrl: productImagesMap['product-artic-sofa-2'].imageUrl,
+    imageHint: productImagesMap['product-artic-sofa-2'].imageHint
+  },
+  {
+    id: '9',
+    slug: 'trending-colors-in-home-furniture',
+    title: 'Trending Colors in Home Furniture',
+    author: 'The Furnishr Team',
+    date: 'November 30, 2023',
+    imageId: 'blog-3',
+    excerpt: 'From earthy terracottas to deep ocean blues, we explore the color trends that are shaping interior design this year. Find your new favorite hue.',
+    content: '<h2>Warmth and Nature</h2><p>This year is all about bringing warm, natural colors into the home. Think rich browns, muted greens, and warm beige tones to create a comforting and inviting atmosphere. Our Chesterfield Sofa in Green is right on trend.</p>',
+    imageUrl: blogImagesMap['blog-3'].imageUrl,
+    imageHint: blogImagesMap['blog-3'].imageHint
+  },
+  {
+    id: '10',
+    slug: 'how-to-clean-a-sofa-bed',
+    title: 'How to Clean a Sofa Bed',
+    author: 'The Furnishr Team',
+    date: 'December 03, 2023',
+    imageId: 'blog-1',
+    excerpt: 'Keep your sofa bed looking fresh and new with our comprehensive cleaning guide. Learn how to tackle spills, stains, and general upkeep.',
+    content: '<h2>Regular Maintenance is Crucial</h2><p>Vacuum your sofa bed weekly to remove dust and debris. For the mattress part, use a mattress protector and wash it regularly. Always check the fabric care label before using any cleaning products.</p>',
+    imageUrl: blogImagesMap['blog-1'].imageUrl,
+    imageHint: blogImagesMap['blog-1'].imageHint
+  },
+  {
+    id: '11',
+    slug: 'why-convertible-furniture-is-the-future',
+    title: 'Why Convertible Furniture is the Future',
+    author: 'The Furnishr Team',
+    date: 'December 06, 2023',
+    imageId: 'product-ashwin-sofa-2',
+    excerpt: 'As our living spaces become more dynamic, so must our furniture. Discover why convertible pieces like sofa beds are more than just a trend—they\'re a lifestyle.',
+    content: '<h2>Adaptable Living</h2><p>Convertible furniture offers unparalleled flexibility. A home office can become a guest room in minutes. A living room can double as a bedroom. This adaptability is essential for modern living.</p>',
+    imageUrl: productImagesMap['product-ashwin-sofa-2'].imageUrl,
+    imageHint: productImagesMap['product-ashwin-sofa-2'].imageHint
+  },
+  {
+    id: '12',
+    slug: 'must-have-furniture-for-studio-apartments',
+    title: 'Must-Have Furniture for Studio Apartments',
+    author: 'The Furnishr Team',
+    date: 'December 09, 2023',
+    imageId: 'blog-2',
+    excerpt: 'Furnishing a studio? We list the essential, multi-functional pieces you need to create a stylish and livable space without feeling cramped.',
+    content: '<h2>Smart Choices for Small Spaces</h2><p>In a studio, a great sofa bed is non-negotiable. Pair it with a coffee table with storage and use vertical shelving to maximize your space. Our Mini U-Shape Sofa can also be a clever way to divide the space.</p>',
+    imageUrl: blogImagesMap['blog-2'].imageUrl,
+    imageHint: blogImagesMap['blog-2'].imageHint
+  },
+  {
+    id: '13',
+    slug: 'interior-design-tips-for-beginners',
+    title: 'Interior Design Tips for Beginners',
+    author: 'The Furnishr Team',
+    date: 'December 12, 2023',
+    imageId: 'hero-1',
+    excerpt: 'Feeling overwhelmed by interior design? These simple tips for beginners will help you create a home that feels cohesive, stylish, and uniquely you.',
+    content: '<h2>Start with a Focal Point</h2><p>Every room needs a focal point. This could be a statement piece of furniture like our Ambassador Bed, a fireplace, or a large piece of art. Arrange the rest of your furniture around this focal point to create a balanced layout.</p>',
+    imageUrl: heroImages[0].imageUrl,
+    imageHint: heroImages[0].imageHint
   }
 ];
 
@@ -709,7 +829,7 @@ export const faqs: Faq[] = [
 ];
 
 export const socialProofData = {
-  names: ["John", "Emily", "Michael", "Sarah", "David", "Jessica", "Chris", "Laura", "James", "Olivia", "Liam", "Emma", "Noah", "Ava", "William", "Sophia", "Oliver", "Isabella", "Elijah", "Mia", "Benjamin", "Charlotte", "Lucas", "Amelia", "Henry", "Harper", "Alexander", "Evelyn", "Sebastian", "Abigail", "Jack", "Emily", "Owen", "Elizabeth", "Daniel", "Sofia", "Matthew", "Avery", "Joseph", "Ella", "Samuel", "Scarlett", "David", "Grace", "Carter", "Victoria", "Wyatt", "Madison", "Jayden", "Luna", "Gabriel", "Chloe", "Julian", "Penelope", "Leo", "Layla", "Isaac", "Riley", "Ryan", "Zoey", "Nathan", "Nora", "Caleb", "Lily", "Christian", "Hannah", "Hunter", "Lillian", "Jonathan", "Addison", "Eli", "Eleanor", "Aaron", "Natalie", "Connor", "Stella", "Jeremiah", "Maya", "Thomas", "Leah", "Charles", "Paisley", "Elias", "Audrey", "Josiah", "Skylar", "Cameron", "Violet", "Adrian", "Claire", "Colton", "Bella", "Jordan", "Lucy", "Robert", "Anna", "Angel", "Samantha", "Hudson", "Caroline", "Theodore", "Genesis", "Austin", "Aaliyah", "Adam", "Kennedy", "Dominic", "Kinsley", "Xavier", "Allison", "Jose", "Sarah", "Jaxson", "Madeline", "Ian", "Ruby", "Enzo", "Eva", "Ezekiel", "Alice", "Declan", "Gabriella", "Jesus", "Clara", "Kai", "Naomi", "Micah", "Cora", "Ronan", "Jasmine", "Beau", "Lydia", "Jude", "Quinn", "Milo", "Julia", "Abel", "Willow", "Kingston", "Ariel", "Finn", "Melody", "Zion", "Aurora", "Ali", "Ivy", "Rhett", "Sadie", "Knox", "Isla", "Oscar", "Athena", "Thiago", "Josephine", "Amir", "Adeline", "Cole", "Reagan", "Gael", "Molly", "Hayes", "Sophie", "Kaden", "Valentina", "Louis", "Mary", "Remi", "Delilah", "Max", "Jordyn", "Zayn", "Esther", "Alex", "Rose", "Atlas", "Jade", "Brooks", "Maria", "Legend", "Annabelle", "Cody", "Valeria", "Kash", "Emilia", "Lane", "Sloane", "Peter", "Rylee", "Saint", "Genevieve", "Warren", "Eliza", "Leon", "Brielle", "Noel", "Payton", "Omar", "Teagan", "Titus", "Alexandra", "Crew", "Katherine", "Atticus", "Eliana", "Walter", "Alaina", "Neil", "Raelynn", "Hugo", "Emerson", "Abram", "Cecilia", "Hank", "Isabelle", "Major", "Laila", "Wayne", "Mckenzie", "Ace", "Adalynn", "Apollo", "Hope", "Bodhi", "Fiona", "Cohen", "Alana", "Denver", "Angelina", "Kason", "Leilani", "Paxton", "Alaia", "Pierce", "Daniela", "Royal", "Gracie", "Solomon", "Lila", "Watson", "Catalina", "Dante", "Summer", "Ford", "Melanie", "Zane", "Gianna", "Iker", "Athena", "Jensen", "Ayla", "Kian", "Oaklynn", "Luka", "Adalyn", "Ander", "Lyric", "Kylo", "Juniper", "Camilo", "Valerie", "Dalton", "Adaline", "Koda", "Jocelyn", "Larry", "Lainey", "Reid", "Rosalie", "Tyson", "Noelle", "Allen", "Ximena", "Forest", "Georgia", "Harry", "Amaya", "Winston", "Blake", "Zeke", "Dream", "Heath", "Remi", "Wilder", "Magnolia", "Armando", "Lilliana", "Emory", "Raegan", "Wells", "Londyn", "Baker", "Aniyah", "Emir", "Charlie", "Dane", "Selah", "Jedidiah", "Sutton", "Kole", "Fatima", "Ledger", "Alia", "Magnus", "Blakely", "Yusuf", "Sawyer", "Jaxx", "Ember", "Kohen", "Malaysia", "Miller", "Cataleya", "Nikolai", "Dallas", "Rome", "Oaklyn", "Finnegan", "Journee", "Makai", "Annalise", "Memphis", "Octavia", "Caspian", "Elora", "Wesson", "Maren", "Maximus", "Aspen", "Jamie", "Alani", "Cade", "Elise", "Khalid", "Ainsley", "Kaysen", "Lia", "Randy", "Anaya", "Colt", "Presley", "Gideon", "Charlee", "Jones", "Rebecca", "Kye", "Myla", "Noe", "Amora", "Tripp", "Ariana", "Ayan", "Freya", "Aziel", "Juliana", "Ahmad", "Finley", "Bishop", "Alayah", "Boston", "Journi", "Case", "Paris", "Corey", "Laura", "Jerry", "Amina", "Keaton", "Lennon", "Lachlan", "Amari", "Musa", "Catalina", "Adan", "Dream", "Harlan", "Giselle", "Kalel", "Justine", "Korbin", "Noa", "Seven", "Journei", "Stone", "Legacy", "Alaric", "Zola", "Avi", "Zara", "Bear", "Mabel", "Bode", "Princess", "Crosby", "Whitley", "Darwin", "Poppy", "Esteban", "Salem", "Idris", "Aitana", "Kabir", "Lexi", "Marcellus", "Eileen", "Zaid", "Remedy", "Cain", "Denise", "Kenji", "Royalty", "Rhys", "Vada", "Shepard", "Harmoni", "Ben", "Sevyn", "Casey", "Tiana", "Maverick", "India", "Santos", "Estrella", "Torin", "Colette", "Brodie", "Hattie", "Colter", "Stevie", "Marvin", "Rowan", "Fisher", "Mina", "Gilbert", "Paulina", "Jed", "Katalina", "Reuben", "Myra", "Jagger", "Celine", "Vincenzo", "Libby", "Zakai", "Hayden", "Arturo", "Zaria", "Azrael", "Emmie", "Bridger", "Laney", "Dario", "Mercy"],
+  names: ["John", "Emily", "Michael", "Sarah", "David", "Jessica", "Chris", "Laura", "James", "Olivia", "Liam", "Emma", "Noah", "Ava", "William", "Sophia", "Oliver", "Isabella", "Elijah", "Mia", "Benjamin", "Charlotte", "Lucas", "Amelia", "Henry", "Harper", "Alexander", "Evelyn", "Sebastian", "Abigail", "Jack", "Emily", "Owen", "Elizabeth", "Daniel", "Sofia", "Matthew", "Avery", "Joseph", "Ella", "Samuel", "Scarlett", "David", "Grace", "Carter", "Victoria", "Wyatt", "Madison", "Jayden", "Luna", "Gabriel", "Chloe", "Julian", "Penelope", "Leo", "Layla", "Isaac", "Riley", "Ryan", "Zoey", "Nathan", "Nora", "Caleb", "Lily", "Christian", "Hannah", "Hunter", "Lillian", "Jonathan", "Addison", "Eli", "Eleanor", "Aaron", "Natalie", "Connor", "Stella", "Jeremiah", "Maya", "Thomas", "Leah", "Charles", "Paisley", "Elias", "Audrey", "Josiah", "Skylar", "Cameron", "Violet", "Adrian", "Claire", "Colton", "Bella", "Jordan", "Lucy", "Robert", "Anna", "Angel", "Samantha", "Hudson", "Caroline", "Theodore", "Genesis", "Austin", "Aaliyah", "Adam", "Kennedy", "Dominic", "Kinsley", "Xavier", "Allison", "Jose", "Sarah", "Jaxson", "Madeline", "Ian", "Ruby", "Enzo", "Eva", "Ezekiel", "Alice", "Declan", "Gabriella", "Jesus", "Clara", "Kai", "Naomi", "Micah", "Cora", "Ronan", "Jasmine", "Beau", "Lydia", "Jude", "Quinn", "Milo", "Julia", "Abel", "Willow", "Kingston", "Ariel", "Finn", "Melody", "Zion", "Aurora", "Ali", "Ivy", "Rhett", "Sadie", "Knox", "Isla", "Oscar", "Athena", "Thiago", "Josephine", "Amir", "Adeline", "Cole", "Reagan", "Gael", "Molly", "Hayes", "Sophie", "Kaden", "Valentina", "Louis", "Mary", "Remi", "Delilah", "Max", "Jordyn", "Zayn", "Esther", "Alex", "Rose", "Atlas", "Jade", "Brooks", "Maria", "Legend", "Annabelle", "Cody", "Valeria", "Kash", "Emilia", "Lane", "Sloane", "Peter", "Rylee", "Saint", "Genevieve", "Warren", "Eliza", "Leon", "Brielle", "Noel", "Payton", "Omar", "Teagan", "Titus", "Alexandra", "Crew", "Katherine", "Atticus", "Eliana", "Walter", "Alaina", "Neil", "Raelynn", "Hugo", "Emerson", "Abram", "Cecilia", "Hank", "Isabelle", "Major", "Laila", "Wayne", "Mckenzie", "Ace", "Adalynn", "Apollo", "Hope", "Bodhi", "Fiona", "Cohen", "Alana", "Denver", "Angelina", "Kason", "Leilani", "Paxton", "Alaia", "Pierce", "Daniela", "Royal", "Gracie", "Solomon", "Lila", "Watson", "Catalina", "Dante", "Summer", "Ford", "Melanie", "Zane", "Gianna", "Iker", "Athena", "Jensen", "Ayla", "Kian", "Oaklynn", "Luka", "Adalyn", "Ander", "Lyric", "Kylo", "Juniper", "Camilo", "Valerie", "Dalton", "Adaline", "Koda", "Jocelyn", "Larry", "Lainey", "Reid", "Rosalie", "Tyson", "Noelle", "Allen", "Ximena", "Forest", "Georgia", "Harry", "Amaya", "Winston", "Blake", "Zeke", "Dream", "Heath", "Remi", "Wilder", "Magnolia", "Armando", "Lilliana", "Emory", "Raegan", "Wells", "Londyn", "Baker", "Aniyah", "Emir", "Charlie", "Dane", "Selah", "Jedidiah", "Sutton", "Kole", "Fatima", "Ledger", "Alia", "Magnus", "Blakely", "Yusuf", "Sawyer", "Jaxx", "Ember", "Kohen", "Malaysia", "Miller", "Cataleya", "Dallas", "Oaklyn", "Finnegan", "Journee", "Makai", "Annalise", "Memphis", "Octavia", "Caspian", "Elora", "Wesson", "Maren", "Maximus", "Aspen", "Jamie", "Alani", "Cade", "Elise", "Khalid", "Ainsley", "Kaysen", "Lia", "Randy", "Anaya", "Colt", "Presley", "Gideon", "Charlee", "Jones", "Rebecca", "Kye", "Myla", "Noe", "Amora", "Tripp", "Ariana", "Ayan", "Freya", "Aziel", "Juliana", "Ahmad", "Finley", "Bishop", "Alayah", "Boston", "Journi", "Case", "Paris", "Corey", "Laura", "Jerry", "Amina", "Keaton", "Lennon", "Lachlan", "Amari", "Musa", "Catalina", "Adan", "Dream", "Harlan", "Giselle", "Kalel", "Justine", "Korbin", "Noa", "Seven", "Journei", "Stone", "Legacy", "Alaric", "Zola", "Avi", "Zara", "Bear", "Mabel", "Bode", "Princess", "Crosby", "Whitley", "Darwin", "Poppy", "Esteban", "Salem", "Idris", "Aitana", "Kabir", "Lexi", "Marcellus", "Eileen", "Zaid", "Remedy", "Cain", "Denise", "Kenji", "Royalty", "Rhys", "Vada", "Shepard", "Harmoni", "Ben", "Sevyn", "Casey", "Tiana", "Maverick", "India", "Santos", "Estrella", "Torin", "Colette", "Brodie", "Hattie", "Colter", "Stevie", "Marvin", "Rowan", "Fisher", "Mina", "Gilbert", "Paulina", "Jed", "Katalina", "Reuben", "Myra", "Jagger", "Celine", "Vincenzo", "Libby", "Zakai", "Hayden", "Arturo", "Zaria", "Azrael", "Emmie", "Bridger", "Laney", "Dario", "Mercy"],
   locations: ["London", "Manchester", "Birmingham", "Glasgow", "Bristol", "Liverpool", "Edinburgh", "Leeds", "Cardiff", "Belfast", "New York", "Los Angeles", "Chicago", "Houston", "Phoenix", "Philadelphia", "San Antonio", "San Diego", "Dallas", "San Jose", "Austin", "Jacksonville", "Fort Worth", "Columbus", "Charlotte", "San Francisco", "Indianapolis", "Seattle", "Denver", "Washington", "Boston", "El Paso", "Nashville", "Detroit", "Oklahoma City", "Portland", "Las Vegas", "Memphis", "Louisville", "Baltimore", "Milwaukee", "Albuquerque", "Tucson", "Fresno", "Sacramento", "Kansas City", "Long Beach", "Mesa", "Atlanta", "Colorado Springs", "Virginia Beach", "Raleigh", "Omaha", "Miami", "Oakland", "Minneapolis", "Tulsa", "Wichita", "New Orleans", "Arlington"],
   productNouns: ["Sofa", "Bed", "Armchair", "Mattress", "Recliner", "Sectional", "Divan", "U-Shape Sofa"],
 };
