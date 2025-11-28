@@ -2,7 +2,7 @@
 "use client";
 
 import Link from "next/link";
-import { ShoppingCart, Menu, Heart } from "lucide-react";
+import { ShoppingCart, Menu, Heart, ChevronDown } from "lucide-react";
 import { Button } from "./ui/button";
 import { useCart } from "@/context/cart-context";
 import { useWishlist } from "@/context/wishlist-context";
@@ -15,6 +15,12 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { useState } from "react";
 import { Separator } from "./ui/separator";
 import AuthButton from "./auth-button";
@@ -26,8 +32,19 @@ const navLinks = [
   { href: "/products?category=beds", label: "Beds" },
   { href: "/products?category=mattresses", label: "Mattresses" },
   { href: "/clearance", label: "Clearance" },
-  { href: "/blog", label: "Blog" },
-  { href: "/about", label: "About Us" },
+];
+
+const learnMoreLinks = [
+    { href: "/about", label: "About Us" },
+    { href: "/our-story", label: "Our Story" },
+    { href: "/why-choose-us", label: "Why Choose Us" },
+    { href: "/sustainability-commitment", label: "Sustainability" },
+    { href: "/our-materials", label: "Our Materials" },
+    { href: "/how-sofa-beds-are-made", label: "How Sofa Beds Are Made" },
+    { href: "/size-guide", label: "Size Guide" },
+    { href: "/color-guide", label: "Color Guide" },
+    { href: "/frame-structure-details", label: "Frame Structure" },
+    { href: "/fabric-care-guide", label: "Fabric Care" },
 ];
 
 export default function Header() {
@@ -61,6 +78,30 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
+             <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" className="flex items-center gap-1 text-sm font-medium text-muted-foreground px-0 hover:text-primary">
+                  Learn More
+                  <ChevronDown className="h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start">
+                {learnMoreLinks.map((link) => (
+                  <DropdownMenuItem key={link.href} asChild>
+                    <Link href={link.href}>{link.label}</Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+             <Link
+                href="/blog"
+                className={cn(
+                  "transition-colors hover:text-primary",
+                  pathname === "/blog" ? "text-primary" : "text-muted-foreground"
+                )}
+              >
+                Blog
+              </Link>
           </nav>
 
         <div className="flex items-center space-x-1 sm:space-x-2 ml-auto">
@@ -108,10 +149,10 @@ export default function Header() {
                      </SheetTitle>
                   </SheetHeader>
                   
-                  <div className="mt-8 flex-grow">
+                  <div className="mt-8 flex-grow overflow-y-auto">
                     <nav className="flex flex-col space-y-4 pr-6">
                       <p className="text-sm font-semibold text-muted-foreground">Shop</p>
-                      {navLinks.slice(0, 5).map((link) => (
+                      {navLinks.map((link) => (
                         <Link
                           key={link.href}
                           href={link.href}
@@ -127,8 +168,8 @@ export default function Header() {
                     </nav>
                      <Separator className="my-6" />
                     <nav className="flex flex-col space-y-4 pr-6">
-                        <p className="text-sm font-semibold text-muted-foreground">Company</p>
-                        {navLinks.slice(5).map((link) => (
+                        <p className="text-sm font-semibold text-muted-foreground">Learn More</p>
+                        {learnMoreLinks.map((link) => (
                            <Link
                             key={link.href}
                             href={link.href}
@@ -141,6 +182,12 @@ export default function Header() {
                             {link.label}
                             </Link>
                         ))}
+                    </nav>
+                     <Separator className="my-6" />
+                     <nav className="flex flex-col space-y-4 pr-6">
+                        <Link href="/blog" className="text-lg font-medium text-foreground hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
+                          Blog
+                        </Link>
                         <Link href="/contact" className="text-lg font-medium text-foreground hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
                           Contact
                         </Link>
