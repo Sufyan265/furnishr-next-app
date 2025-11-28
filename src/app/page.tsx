@@ -16,6 +16,13 @@ import ProductCard from '@/components/product-card';
 import { heroImages, getImage, worldMapImage, categoryImages } from '@/lib/placeholder-images';
 import StarRating from '@/components/star-rating';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import FeaturedProducts from '@/components/home/featured-products';
+import NewArrivals from '@/components/home/new-arrivals';
+import ShopTheLook from '@/components/home/shop-the-look';
+import Craftsmanship from '@/components/home/craftsmanship';
+import BlogSection from '@/components/home/blog-section';
+import NewsletterSignup from '@/components/home/newsletter-signup';
+import SaleSpotlight from '@/components/home/sale-spotlight';
 
 export default function Home() {
   const chooseUsImage = categoryImages['living-room'];
@@ -109,6 +116,10 @@ export default function Home() {
         </div>
       </section>
 
+      <FeaturedProducts />
+
+      <ShopTheLook />
+
       <section>
         <div className="container mx-auto px-4">
           <div className="text-center">
@@ -160,6 +171,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <NewArrivals />
+      <SaleSpotlight />
 
       <section>
         <div className="container mx-auto px-4">
@@ -263,6 +277,8 @@ export default function Home() {
         </div>
       </section>
 
+      <Craftsmanship />
+
       <section>
         <div className="container mx-auto px-4">
            <div className="text-center mb-12">
@@ -296,6 +312,8 @@ export default function Home() {
         </div>
       </section>
       
+      <BlogSection />
+
       <section className="bg-secondary/30">
         <div className="container mx-auto px-4 py-16 text-center">
           <h2 className="font-headline text-4xl font-bold">Ready to Find Your Perfect Piece?</h2>
@@ -338,6 +356,7 @@ export default function Home() {
         </div>
       </section>
 
+      <NewsletterSignup />
     </div>
   );
 }
