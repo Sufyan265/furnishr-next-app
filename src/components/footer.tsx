@@ -13,7 +13,7 @@ const MastercardIcon = (props: React.SVGProps<SVGSVGElement>) => (
 );
 
 const AmexIcon = (props: React.SVGProps<SVGSVGElement>) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="24" viewBox="0 0 38 24" {...props}><path d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z" fill="#006FCF"/><path fill="#FFF" d="M11.3 12.9h5.1v1.6h-5.1zm3.8-3.4h-5.2v1.6h5.2v-1.6zm-3.8 6.8h5.1v1.6h-5.1v-1.6zm10.7-6.8h5.1v1.6h-5.1zm-2.8 1.7h5.1v1.6h-5.1zm-2.3 1.7h5.1v1.6h-5.1zm2.3 1.7h5.1v1.6h-5.1zm2.8 1.7h5.1v1.6h-5.1z"/><path fill="#006FCF" d="M21.9 12.3h-2.1v-1h2.1v1zM21.9 14.4h-2.1v-1h2.1v1zM19.8 10.2h2.1v-1h-2.1v1zM19.8 16.5h2.1v-1h-2.1v1zM19.8 12.3h-2.1v-1h2.1v1zM19.8 14.4h-2.1v-1h2.1v1zM17.7 10.2h2.1v-1h-2.1v1zM17.7 16.5h2.1v-1h-2.1v1z"/><path fill="#FFF" d="M18.8 13.4a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1zm-2.1 2.1a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1zm-2.1-2.1a1 1_0_0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1zm2.1-2.1a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1zm2.1 2.1a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1zm2.1-2.1a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1zm-2.1 2.1a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1zm2.1-2.1a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1zm2.1 2.1a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="24" viewBox="0 0 38 24" {...props}><path d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z" fill="#006FCF"/><path fill="#FFF" d="M11.3 12.9h5.1v1.6h-5.1zm3.8-3.4h-5.2v1.6h5.2v-1.6zm-3.8 6.8h5.1v1.6h-5.1v-1.6zm10.7-6.8h5.1v1.6h-5.1zm-2.8 1.7h5.1v1.6h-5.1zm-2.3 1.7h5.1v1.6h-5.1zm2.3 1.7h5.1v1.6h-5.1zm2.8 1.7h5.1v1.6h-5.1z"/><path fill="#006FCF" d="M21.9 12.3h-2.1v-1h2.1v1zM21.9 14.4h-2.1v-1h2.1v1zM19.8 10.2h2.1v-1h-2.1v1zM19.8 16.5h2.1v-1h-2.1v1zM19.8 12.3h-2.1v-1h2.1v1zM19.8 14.4h-2.1v-1h2.1v1zM17.7 10.2h2.1v-1h-2.1v1zM17.7 16.5h2.1v-1h-2.1v1z"/><path fill="#FFF" d="M18.8 13.4a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1zm-2.1 2.1a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1zm-2.1-2.1a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1zm2.1-2.1a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1zm2.1 2.1a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1zm2.1-2.1a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1zm-2.1 2.1a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1zm2.1-2.1a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1zm2.1 2.1a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1z"/></svg>
 );
 
 const PaypalIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -28,7 +28,7 @@ export default function Footer() {
   return (
     <footer className="bg-secondary/50 border-t">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="md:col-span-2 lg:col-span-2">
             <h3 className="font-headline text-lg font-semibold">Stay in the Loop</h3>
             <p className="mt-2 text-muted-foreground">Sign up for our newsletter to get the latest on new arrivals, special offers, and design inspiration.</p>
@@ -49,9 +49,17 @@ export default function Footer() {
             <h3 className="font-headline text-lg font-semibold">Help</h3>
             <ul className="mt-4 space-y-2">
               <li><Link href="/faq" className="text-muted-foreground hover:text-primary">FAQs</Link></li>
-              <li><Link href="#" className="text-muted-foreground hover:text-primary">Returns Policy</Link></li>
-              <li><Link href="#" className="text-muted-foreground hover:text-primary">Terms of Service</Link></li>
-              <li><Link href="#" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
+              <li><Link href="/legal/returns-policy" className="text-muted-foreground hover:text-primary">Returns Policy</Link></li>
+            </ul>
+          </div>
+           <div>
+            <h3 className="font-headline text-lg font-semibold">Legal</h3>
+            <ul className="mt-4 space-y-2">
+              <li><Link href="/legal/privacy-policy" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
+              <li><Link href="/legal/terms-and-conditions" className="text-muted-foreground hover:text-primary">Terms & Conditions</Link></li>
+              <li><Link href="/legal/cookie-policy" className="text-muted-foreground hover:text-primary">Cookie Policy</Link></li>
+              <li><Link href="/legal/gdpr-privacy-settings" className="text-muted-foreground hover:text-primary">Privacy Settings</Link></li>
+              <li><Link href="/legal/accessibility-statement" className="text-muted-foreground hover:text-primary">Accessibility</Link></li>
             </ul>
           </div>
         </div>
@@ -77,5 +85,3 @@ export default function Footer() {
     </footer>
   );
 }
-
-    
