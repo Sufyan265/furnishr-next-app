@@ -4,7 +4,7 @@
 import { useUser } from '@/firebase';
 import { useRouter, usePathname } from 'next/navigation';
 import { useEffect, type ReactNode } from 'react';
-import { Loader2, User as UserIcon, MapPin } from 'lucide-react';
+import { Loader2, User as UserIcon } from 'lucide-react';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -14,11 +14,6 @@ const sidebarNavItems = [
         title: "My Profile",
         href: "/account/profile",
         icon: UserIcon,
-    },
-    {
-        title: "Saved Addresses",
-        href: "/account/addresses",
-        icon: MapPin,
     },
 ];
 
