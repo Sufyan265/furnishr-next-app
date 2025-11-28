@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default function FrameStructurePage() {
-  const image = getImage('product-dino-sofa-5');
+  const image = getImage('sofa-frame');
 
   return (
     <div>
@@ -19,7 +19,7 @@ export default function FrameStructurePage() {
           <Image
             src={image.imageUrl}
             alt="Wooden frame of a sofa"
-            data-ai-hint="sofa frame"
+            data-ai-hint={image.imageHint}
             fill
             className="object-cover"
             priority
@@ -60,3 +60,5 @@ export default function FrameStructurePage() {
     </div>
   );
 }
+
+    
