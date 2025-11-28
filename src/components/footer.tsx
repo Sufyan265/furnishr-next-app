@@ -1,8 +1,12 @@
 
+"use client";
+
 import Link from "next/link";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { Facebook, Instagram, Twitter } from "lucide-react";
+import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 const VisaIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="38" height="24" viewBox="0 0 38 24" {...props}><path d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z" fill="#3A5594"/><path d="M28.4 10.1s.1-.1.2-.1h.2c.1 0 .2.1.2.1l2.4 4.9c.1.2.2.3.4.3h2.1c.2 0 .3-.1.4-.2.1-.2.1-.3-.1-.5l-3.8-7.9c-.2-.4-.5-.6-.9-.6h-3.4c-.4 0-.7.2-.9.6L22 14.8c-.1.2-.1.4.1.5.1.1.2.2.4.2h2.1c.2 0 .3-.1.4-.3l2.4-4.6zM13.2 2.6h-3.1c-.4 0-.7.3-.7.7l-2.4 8.4c-.1.4.2.8.6.8h3.1c.4 0 .7-.3.7-.7L13.9 4c.1-.4-.2-.8-.7-.8zm5.7 7.5l-2.5-7.5c-.2-.4-.5-.6-.9-.6h-3.4c-1.2 0-2.3 1-2.3 2.2 0 .8.4 1.5 1 1.9l4.3 2.1c.5.2.8.7.8 1.2 0 .9-.9 1.4-1.9 1.4h-4.3c-.5 0-.9.2-1.2.5l-.8.9c-.2.2-.2.5 0 .7l1.3 1c.2.2.5.2.7 0l.8-.9c.3-.3.7-.5 1.2-.5h4.3c1.2 0 2.3-1 2.3-2.2.1-.8-.4-1.5-1-1.9l-4.3-2.1c-.5-.2-.8-.7-.8-1.2 0-.3.3-.6.7-.6h3.4c.4 0 .7.2.9.6l2.5 7.5c.1.2.3.3.5.3h2.2c.2 0 .4-.1.4-.3v-.1c-.1-.2-.2-.3-.3-.4zM38 3v18c0 1.7-1.3 3-3 3H3c-1.7 0-3-1.3-3-3V3c0-1.7 1.3-3 3-3h32c1.7 0 3 1.3 3 3z" fill="#fff"/></svg>
@@ -25,6 +29,21 @@ const ApplePayIcon = (props: React.SVGProps<SVGSVGElement>) => (
 );
 
 export default function Footer() {
+  const [email, setEmail] = useState('');
+  const { toast } = useToast();
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email) {
+      console.log('Subscribed with:', email);
+      toast({
+        title: 'Subscribed!',
+        description: 'Thank you for joining our newsletter.',
+      });
+      setEmail('');
+    }
+  };
+
   return (
     <footer className="bg-secondary/50 border-t">
       <div className="container mx-auto px-4 py-12">
@@ -32,8 +51,15 @@ export default function Footer() {
           <div className="md:col-span-2 lg:col-span-2">
             <h3 className="font-headline text-lg font-semibold">Stay in the Loop</h3>
             <p className="mt-2 text-muted-foreground">Sign up for our newsletter to get the latest on new arrivals, special offers, and design inspiration.</p>
-            <form className="mt-4 flex w-full max-w-sm items-center space-x-2">
-              <Input type="email" placeholder="Enter your email" className="bg-background" />
+            <form onSubmit={handleSubscribe} className="mt-4 flex w-full max-w-sm items-center space-x-2">
+              <Input 
+                type="email" 
+                placeholder="Enter your email" 
+                className="bg-background"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
               <Button type="submit">Subscribe</Button>
             </form>
           </div>
