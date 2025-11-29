@@ -31,7 +31,6 @@ const navLinks = [
   { href: "/products?category=sofas", label: "Sofas" },
   { href: "/products?category=beds", label: "Beds" },
   { href: "/products?category=mattresses", label: "Mattresses" },
-  { href: "/clearance", label: "Clearance" },
 ];
 
 const learnMoreLinks = [
