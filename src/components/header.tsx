@@ -27,7 +27,7 @@ import AuthButton from "./auth-button";
 import { ThemeToggle } from "./theme-toggle";
 
 const navLinks = [
-  { href: "/products", label: "All Products" },
+  { href: "/", label: "Home" },
   { href: "/products?category=sofas", label: "Sofas" },
   { href: "/products?category=beds", label: "Beds" },
   { href: "/products?category=mattresses", label: "Mattresses" },
