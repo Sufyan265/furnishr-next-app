@@ -13,7 +13,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { useCart } from '@/context/cart-context';
 import { useToast } from '@/hooks/use-toast';
-import { Minus, Plus, ShoppingCart, Percent, Bed, Truck, PackageCheck, ShieldCheck, Lock, ShieldAlert } from 'lucide-react';
+import { Minus, Plus, ShoppingCart, Percent, Bed, Truck, PackageCheck, ShieldCheck, Lock, ShieldAlert, Phone, Mail } from 'lucide-react';
 import type { Product, ProductVariant } from '@/lib/types';
 import { getImages } from '@/lib/placeholder-images';
 import { Badge } from './ui/badge';
@@ -24,6 +24,7 @@ import { RadioGroup, RadioGroupItem } from './ui/radio-group';
 import { Label } from './ui/label';
 import { Switch } from './ui/switch';
 import { Separator } from './ui/separator';
+import Link from 'next/link';
 
 interface ProductInteractionProps {
   product: Product;
@@ -39,6 +40,8 @@ const StockBadge = ({ stock }: { stock: number }) => {
   }
   return <Badge variant="secondary" className="bg-green-100 text-green-800 border-green-200">In Stock</Badge>;
 };
+
+const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
 
 export default function ProductInteraction({ product, isQuickView = false }: ProductInteractionProps) {
   const [quantity, setQuantity] = useState(1);
@@ -172,9 +175,25 @@ export default function ProductInteraction({ product, isQuickView = false }: Pro
             </div>
         )}
 
+        <Separator />
+          <div className="text-sm text-muted-foreground bg-accent/30 p-4 rounded-lg border border-dashed">
+              <p className="mb-2">For available sizes, please check our <Button asChild variant="link" className="p-0 h-auto"><Link href="/size-guide">Size Guide</Link></Button>.</p>
+              <p>For customized size options that perfectly fit your space, please contact us:</p>
+              <div className="flex items-center gap-4 mt-2">
+                   <a href="mailto:orders@furnishr.co.uk" className="flex items-center gap-1 text-primary hover:underline">
+                      <Mail className="h-4 w-4" /> Email
+                   </a>
+                   {whatsappNumber && (
+                    <a href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-primary hover:underline">
+                      <Phone className="h-4 w-4" /> WhatsApp
+                    </a>
+                   )}
+              </div>
+          </div>
+        <Separator />
+
         {hasMattressOption && (
           <>
-          <Separator />
           <div className="flex items-center justify-between rounded-lg border p-4">
               <div className="space-y-0.5">
                   <div className="flex items-center gap-2">
@@ -193,6 +212,7 @@ export default function ProductInteraction({ product, isQuickView = false }: Pro
                   onCheckedChange={setWithMattress}
               />
           </div>
+          <Separator />
           </>
         )}
 
