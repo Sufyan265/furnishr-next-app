@@ -5,6 +5,11 @@ export interface ProductVariant {
   size: string;
   price: number;
   mattressPrice?: number;
+  dimensions?: {
+    width: string;
+    height: string;
+    depth: string;
+  };
 }
 
 export interface Product {

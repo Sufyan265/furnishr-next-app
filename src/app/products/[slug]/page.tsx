@@ -85,6 +85,7 @@ export default function ProductDetailPage() {
                       {product.details.map((detail, i) => <li key={i}>{detail}</li>)}
                     </ul>
                   </div>
+                  { !product.variants && (
                   <div>
                     <h3 className="font-semibold mb-3">Dimensions</h3>
                     <div className="space-y-1 text-muted-foreground">
@@ -93,6 +94,7 @@ export default function ProductDetailPage() {
                       <p><strong>Depth:</strong> {product.dimensions.depth}</p>
                     </div>
                   </div>
+                  )}
                 </div>
               </CardContent>
             </Card>

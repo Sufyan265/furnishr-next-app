@@ -85,6 +85,8 @@ export default function ProductInteraction({ product, isQuickView = false }: Pro
     displayPrice = finalPrice;
     originalPrice = finalPrice;
   }
+  
+  const dimensions = selectedVariant?.dimensions || product.dimensions;
 
   const handleAddToCart = () => {
     addToCart({ ...product, price: displayPrice }, quantity, selectedVariant, withMattress);
@@ -157,6 +159,17 @@ export default function ProductInteraction({ product, isQuickView = false }: Pro
               ))}
             </RadioGroup>
           </div>
+        )}
+        
+        {dimensions && (
+            <div>
+                <h3 className="font-semibold mb-1">Dimensions</h3>
+                <div className="space-y-1 text-muted-foreground text-sm">
+                    <p><strong>Width:</strong> {dimensions.width}</p>
+                    <p><strong>Height:</strong> {dimensions.height}</p>
+                    <p><strong>Depth:</strong> {dimensions.depth}</p>
+                </div>
+            </div>
         )}
 
         {hasMattressOption && (
