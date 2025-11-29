@@ -13,9 +13,9 @@ import {
 import { Button } from '@/components/ui/button';
 import { useCart } from '@/context/cart-context';
 import { useToast } from '@/hooks/use-toast';
-import { Minus, Plus, ShoppingCart, Percent, Bed, Truck, PackageCheck, ShieldCheck, Lock, ShieldAlert, Phone, Mail } from 'lucide-react';
-import type { Product, ProductVariant } from '@/lib/types';
-import { getImages } from '@/lib/placeholder-images';
+import { Minus, Plus, ShoppingCart, Percent, Bed, Truck, PackageCheck, ShieldCheck, Lock, ShieldAlert, Phone, Mail, Palette } from 'lucide-react';
+import type { Product, ProductVariant, ProductColor } from '@/lib/types';
+import { getImages, getImage } from '@/lib/placeholder-images';
 import { Badge } from './ui/badge';
 import { cn } from '@/lib/utils';
 import CountdownTimer from './countdown-timer';
@@ -25,6 +25,12 @@ import { Label } from './ui/label';
 import { Switch } from './ui/switch';
 import { Separator } from './ui/separator';
 import Link from 'next/link';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 
 interface ProductInteractionProps {
   product: Product;
@@ -43,11 +49,59 @@ const StockBadge = ({ stock }: { stock: number }) => {
 
 const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
 
+const ColorSelector = ({ colors, selectedColor, onSelectColor }: { colors: ProductColor[], selectedColor: ProductColor, onSelectColor: (color: ProductColor) => void }) => {
+  const swatchImage = getImage('product-color-swatches');
+  return (
+    <div>
+        <div className="flex items-center justify-between mb-2">
+            <Label className="font-semibold">Color: <span className="font-normal text-muted-foreground">{selectedColor.name}</span></Label>
+            <TooltipProvider>
+                <Tooltip>
+                    <TooltipTrigger asChild>
+                        <div className="flex items-center gap-2 cursor-pointer">
+                            <Palette className="h-5 w-5 text-muted-foreground" />
+                            <span className="text-sm text-muted-foreground">View Swatches</span>
+                        </div>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                        <Image src={swatchImage.imageUrl} alt="Color Swatches" width={200} height={300} />
+                    </TooltipContent>
+                </Tooltip>
+            </TooltipProvider>
+        </div>
+        <div className="flex flex-wrap gap-2">
+        {colors.map(color => (
+            <TooltipProvider key={color.name}>
+                <Tooltip>
+                    <TooltipTrigger asChild>
+                        <button
+                            onClick={() => onSelectColor(color)}
+                            className={cn(
+                            "w-8 h-8 rounded-full border-2 transition-all",
+                            selectedColor.name === color.name ? 'border-primary scale-110' : 'border-border'
+                            )}
+                            style={{ backgroundColor: color.hex }}
+                        />
+                    </TooltipTrigger>
+                    <TooltipContent>
+                        <p>{color.name}</p>
+                    </TooltipContent>
+                </Tooltip>
+            </TooltipProvider>
+        ))}
+        </div>
+    </div>
+  )
+};
+
+
 export default function ProductInteraction({ product, isQuickView = false }: ProductInteractionProps) {
   const [quantity, setQuantity] = useState(1);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [selectedVariant, setSelectedVariant] = useState<ProductVariant | undefined>(product.variants?.[0]);
   const [withMattress, setWithMattress] = useState(false);
+  const [selectedColor, setSelectedColor] = useState<ProductColor>(product.colors?.[0] || { name: 'Default', hex: '#ccc' });
+
 
   const { addToCart } = useCart();
   const { toast } = useToast();
@@ -164,6 +218,13 @@ export default function ProductInteraction({ product, isQuickView = false }: Pro
           </div>
         )}
         
+        {product.colors && (
+            <>
+                <ColorSelector colors={product.colors} selectedColor={selectedColor} onSelectColor={setSelectedColor} />
+                <Separator />
+            </>
+        )}
+
         {dimensions && (
             <div>
                 <h3 className="font-semibold mb-1">Dimensions</h3>

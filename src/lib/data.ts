@@ -1,5 +1,5 @@
 
-import type { Product, Category, Review, BlogPost, Faq } from './types';
+import type { Product, Category, Review, BlogPost, Faq, ProductColor } from './types';
 import { categoryImages, productImages as productImagesMap, blogImages as blogImagesMap, heroImages } from './placeholder-images';
 
 const futureDate = (days: number) => new Date(new Date().getTime() + days * 24 * 60 * 60 * 1000).toISOString();
@@ -17,6 +17,21 @@ export const categories: Category[] = [
   { id: '4', slug: 'clearance', name: 'Clearance', imageId: 'hero-3', imageUrl: heroImages[2].imageUrl, imageHint: 'sale items' },
 ];
 
+export const productColors: ProductColor[] = [
+    { name: 'Steel', hex: '#595959' },
+    { name: 'Silver', hex: '#C0C0C0' },
+    { name: 'Grey', hex: '#808080' },
+    { name: 'Black', hex: '#000000' },
+    { name: 'Mustard', hex: '#FFDB58' },
+    { name: 'Sky', hex: '#87CEEB' },
+    { name: 'Mink', hex: '#8A7968' },
+    { name: 'Turquoise', hex: '#40E0D0' },
+    { name: 'Blue', hex: '#0000FF' },
+    { name: 'Claret', hex: '#722F37' },
+    { name: 'White', hex: '#FFFFFF' },
+    { name: 'Pink', hex: '#FFC0CB' },
+];
+
 export const products: Product[] = [
   {
     id: '1',
@@ -26,6 +41,7 @@ export const products: Product[] = [
     categorySlug: 'sofas',
     price: 280.00,
     color: 'Beige',
+    colors: productColors,
     variants: [
         { size: '1 Seater', price: 250.00 },
         { size: '2 Seater', price: 280.00 },
@@ -50,6 +66,7 @@ export const products: Product[] = [
     categorySlug: 'sofas',
     price: 590.00,
     color: 'Grey',
+    colors: productColors,
     rating: 4.7,
     reviewCount: 35,
     imageIds: ['product-artic-sofa-1', 'product-artic-sofa-2'],
@@ -68,6 +85,7 @@ export const products: Product[] = [
     categorySlug: 'sofas',
     price: 290.00,
     color: 'Grey',
+    colors: productColors,
     variants: [
       { size: '1 Seater', price: 270.00 },
       { size: '2 Seater', price: 290.00 },
@@ -92,6 +110,7 @@ export const products: Product[] = [
     categorySlug: 'sofas',
     price: 440.00,
     color: 'Green',
+    colors: productColors,
     variants: [
         { size: '1 Seater', price: 380.00 },
         { size: '2 Seater', price: 440.00 },
@@ -116,6 +135,7 @@ export const products: Product[] = [
     categorySlug: 'sofas',
     price: 320.00,
     color: 'Grey',
+    colors: productColors,
     variants: [
         { size: '2 Seater', price: 320.00, dimensions: { width: '174cm', depth: '96cm', height: '93cm' } },
         { size: '3 Seater', price: 350.00, dimensions: { width: '204cm', depth: '90cm', height: '90cm' } },
@@ -139,6 +159,7 @@ export const products: Product[] = [
     categorySlug: 'sofas',
     price: 280.00,
     color: 'Blue',
+    colors: productColors,
     variants: [
       { size: '2 Seater', price: 280.00, dimensions: { width: '155cm', depth: '83cm', height: '63cm' } },
       { size: '3 Seater', price: 320.00, dimensions: { width: '190cm', depth: '83cm', height: '63cm' } },
@@ -172,6 +193,7 @@ export const products: Product[] = [
     categorySlug: 'sofas',
     price: 360.00,
     color: 'Black',
+    colors: productColors,
     variants: [
         { size: '1 Seater', price: 299.00 },
         { size: '2 Seater', price: 360.00 },
@@ -197,6 +219,7 @@ export const products: Product[] = [
     categorySlug: 'sofas',
     price: 290.00,
     color: 'Grey',
+    colors: productColors,
     variants: [
       { size: '1 Seater', price: 270.00 },
       { size: '2 Seater', price: 290.00 },
@@ -221,6 +244,7 @@ export const products: Product[] = [
     categorySlug: 'sofas',
     price: 399.00,
     color: 'Grey',
+    colors: productColors,
     rating: 4.5,
     reviewCount: 30,
     imageIds: ['product-ikea-berlin-sofa-1', 'product-ikea-berlin-sofa-2', 'product-ikea-berlin-sofa-3', 'product-ikea-berlin-sofa-4', 'product-ikea-berlin-sofa-5', 'product-ikea-berlin-sofa-6'],
@@ -239,6 +263,7 @@ export const products: Product[] = [
     categorySlug: 'sofas',
     price: 1199.99,
     color: 'Cream',
+    colors: productColors,
     variants: [
       { size: '2 Seater', price: 1199.99 },
       { size: '3 Seater', price: 1399.99 },
@@ -261,6 +286,7 @@ export const products: Product[] = [
     categorySlug: 'sofas',
     price: 540.00,
     color: 'Grey',
+    colors: productColors,
     rating: 4.7,
     reviewCount: 45,
     imageIds: ['product-mini-u-shape-sofa-1', 'product-mini-u-shape-sofa-2', 'product-mini-u-shape-sofa-3', 'product-mini-u-shape-sofa-4', 'product-mini-u-shape-sofa-5', 'product-mini-u-shape-sofa-6', 'product-mini-u-shape-sofa-7'],
@@ -279,6 +305,7 @@ export const products: Product[] = [
     categorySlug: 'sofas',
     price: 360.00,
     color: 'Brown',
+    colors: productColors,
     variants: [
       { size: '1 Seater', price: 299.00 },
       { size: '2 Seater', price: 360.00, dimensions: { width: '144cm', depth: '76cm', height: '90cm' } },
@@ -312,6 +339,7 @@ export const products: Product[] = [
     categorySlug: 'sofas',
     price: 320.00,
     color: 'Grey',
+    colors: productColors,
     variants: [
       { size: '1 Seater', price: 280.00 },
       { size: '2 Seater', price: 320.00 },
@@ -337,6 +365,7 @@ export const products: Product[] = [
     categorySlug: 'sofas',
     price: 360.00,
     color: 'Grey',
+    colors: productColors,
     variants: [
       { size: '1 Seater', price: 299.00 },
       { size: '2 Seater', price: 360.00, dimensions: { width: '158cm', height: '90cm', depth: '90cm' } },
@@ -362,6 +391,7 @@ export const products: Product[] = [
     categorySlug: 'sofas',
     price: 570.00,
     color: 'Grey',
+    colors: productColors,
     rating: 4.8,
     reviewCount: 55,
     imageIds: ['product-verona-u-shape-sofa-1', 'product-verona-u-shape-sofa-2', 'product-verona-u-shape-sofa-3', 'product-verona-u-shape-sofa-4', 'product-verona-u-shape-sofa-5', 'product-verona-u-shape-sofa-6'],
@@ -380,6 +410,7 @@ export const products: Product[] = [
     categorySlug: 'sofas',
     price: 290.00,
     color: 'Cream',
+    colors: productColors,
     variants: [
       { size: '1 Seater', price: 270.00, dimensions: { width: '110cm', height: '95cm', depth: '95cm' } },
       { size: '2 Seater', price: 290.00, dimensions: { width: '156cm', height: '95cm', depth: '95cm' } },
@@ -850,7 +881,7 @@ export const faqs: Faq[] = [
 ];
 
 export const socialProofData = {
-  names: ["John", "Emily", "Michael", "Sarah", "David", "Jessica", "Chris", "Laura", "James", "Olivia", "Liam", "Emma", "Noah", "Ava", "William", "Sophia", "Oliver", "Isabella", "Elijah", "Mia", "Benjamin", "Charlotte", "Lucas", "Amelia", "Henry", "Harper", "Alexander", "Evelyn", "Sebastian", "Abigail", "Jack", "Emily", "Owen", "Elizabeth", "Daniel", "Sofia", "Matthew", "Avery", "Joseph", "Ella", "Samuel", "Scarlett", "David", "Grace", "Carter", "Victoria", "Wyatt", "Madison", "Jayden", "Luna", "Gabriel", "Chloe", "Julian", "Penelope", "Leo", "Layla", "Isaac", "Riley", "Ryan", "Zoey", "Nathan", "Nora", "Caleb", "Lily", "Christian", "Hannah", "Hunter", "Lillian", "Jonathan", "Addison", "Eli", "Eleanor", "Aaron", "Natalie", "Connor", "Stella", "Jeremiah", "Maya", "Thomas", "Leah", "Charles", "Paisley", "Elias", "Audrey", "Josiah", "Skylar", "Cameron", "Violet", "Adrian", "Claire", "Colton", "Bella", "Jordan", "Lucy", "Robert", "Anna", "Angel", "Samantha", "Hudson", "Caroline", "Theodore", "Genesis", "Austin", "Aaliyah", "Adam", "Kennedy", "Dominic", "Kinsley", "Xavier", "Allison", "Jose", "Sarah", "Jaxson", "Madeline", "Ian", "Ruby", "Enzo", "Eva", "Ezekiel", "Alice", "Declan", "Gabriella", "Jesus", "Clara", "Kai", "Naomi", "Micah", "Cora", "Ronan", "Jasmine", "Beau", "Lydia", "Jude", "Quinn", "Milo", "Julia", "Abel", "Willow", "Kingston", "Ariel", "Finn", "Melody", "Zion", "Aurora", "Ali", "Ivy", "Rhett", "Sadie", "Knox", "Isla", "Oscar", "Athena", "Thiago", "Josephine", "Amir", "Adeline", "Cole", "Reagan", "Gael", "Molly", "Hayes", "Sophie", "Kaden", "Valentina", "Louis", "Mary", "Remi", "Delilah", "Max", "Jordyn", "Esther", "Rose", "Atlas", "Jade", "Brooks", "Maria", "Legend", "Annabelle", "Cody", "Valeria", "Kash", "Emilia", "Lane", "Sloane", "Peter", "Rylee", "Saint", "Genevieve", "Warren", "Eliza", "Leon", "Brielle", "Noel", "Payton", "Omar", "Teagan", "Titus", "Alexandra", "Crew", "Katherine", "Atticus", "Eliana", "Walter", "Alaina", "Neil", "Raelynn", "Hugo", "Emerson", "Abram", "Cecilia", "Hank", "Isabelle", "Major", "Laila", "Wayne", "Mckenzie", "Ace", "Adalynn", "Apollo", "Hope", "Bodhi", "Fiona", "Cohen", "Alana", "Denver", "Angelina", "Kason", "Leilani", "Paxton", "Alaia", "Pierce", "Daniela", "Royal", "Gracie", "Solomon", "Lila", "Watson", "Catalina", "Dante", "Summer", "Ford", "Melanie", "Zane", "Gianna", "Iker", "Athena", "Jensen", "Ayla", "Kian", "Oaklynn", "Luka", "Adalyn", "Ander", "Lyric", "Kylo", "Juniper", "Camilo", "Valerie", "Dalton", "Adaline", "Koda", "Jocelyn", "Larry", "Lainey", "Reid", "Rosalie", "Tyson", "Noelle", "Allen", "Ximena", "Forest", "Georgia", "Harry", "Amaya", "Winston", "Blake", "Zeke", "Dream", "Heath", "Remi", "Wilder", "Magnolia", "Armando", "Lilliana", "Emory", "Raegan", "Wells", "Londyn", "Baker", "Aniyah", "Emir", "Charlie", "Dane", "Selah", "Jedidiah", "Sutton", "Kole", "Fatima", "Ledger", "Alia", "Magnus", "Blakely", "Yusuf", "Sawyer", "Jaxx", "Ember", "Kohen", "Malaysia", "Miller", "Cataleya", "Dallas", "Oaklyn", "Finnegan", "Journee", "Makai", "Annalise", "Memphis", "Octavia", "Caspian", "Elora", "Wesson", "Maren", "Maximus", "Aspen", "Jamie", "Alani", "Cade", "Elise", "Khalid", "Ainsley", "Kaysen", "Lia", "Randy", "Anaya", "Colt", "Presley", "Gideon", "Charlee", "Jones", "Rebecca", "Kye", "Myla", "Noe", "Amora", "Tripp", "Ariana", "Ayan", "Freya", "Aziel", "Juliana", "Ahmad", "Finley", "Bishop", "Alayah", "Boston", "Journi", "Case", "Paris", "Corey", "Laura", "Jerry", "Amina", "Keaton", "Lennon", "Lachlan", "Amari", "Musa", "Catalina", "Adan", "Dream", "Harlan", "Giselle", "Kalel", "Justine", "Korbin", "Noa", "Seven", "Journei", "Stone", "Legacy", "Alaric", "Zola", "Avi", "Zara", "Bear", "Mabel", "Bode", "Princess", "Whitley", "Darwin", "Poppy", "Esteban", "Salem", "Idris", "Aitana", "Kabir", "Lexi", "Marcellus", "Eileen", "Zaid", "Remedy", "Cain", "Denise", "Kenji", "Royalty", "Rhys", "Vada", "Shepard", "Harmoni", "Ben", "Sevyn", "Casey", "Tiana", "Maverick", "India", "Santos", "Estrella", "Torin", "Colette", "Brodie", "Hattie", "Colter", "Stevie", "Marvin", "Rowan", "Fisher", "Mina", "Gilbert", "Paulina", "Jed", "Katalina", "Reuben", "Myra", "Jagger", "Celine", "Vincenzo", "Libby", "Zakai", "Hayden", "Arturo", "Zaria", "Azrael", "Emmie", "Bridger", "Laney", "Dario", "Mercy"],
+  names: ["John", "Emily", "Michael", "Sarah", "David", "Jessica", "Chris", "Laura", "James", "Olivia", "Liam", "Emma", "Noah", "Ava", "William", "Sophia", "Oliver", "Isabella", "Elijah", "Mia", "Benjamin", "Charlotte", "Lucas", "Amelia", "Henry", "Harper", "Alexander", "Evelyn", "Sebastian", "Abigail", "Jack", "Emily", "Owen", "Elizabeth", "Daniel", "Sofia", "Matthew", "Avery", "Joseph", "Ella", "Samuel", "Scarlett", "David", "Grace", "Carter", "Victoria", "Wyatt", "Madison", "Jayden", "Luna", "Gabriel", "Chloe", "Julian", "Penelope", "Leo", "Layla", "Isaac", "Riley", "Ryan", "Zoey", "Nathan", "Nora", "Caleb", "Lily", "Christian", "Hannah", "Hunter", "Lillian", "Jonathan", "Addison", "Eli", "Eleanor", "Aaron", "Natalie", "Connor", "Stella", "Jeremiah", "Maya", "Thomas", "Leah", "Charles", "Paisley", "Elias", "Audrey", "Josiah", "Skylar", "Cameron", "Violet", "Adrian", "Claire", "Colton", "Bella", "Jordan", "Lucy", "Robert", "Anna", "Angel", "Samantha", "Hudson", "Caroline", "Theodore", "Genesis", "Austin", "Aaliyah", "Adam", "Kennedy", "Dominic", "Kinsley", "Xavier", "Allison", "Jose", "Sarah", "Jaxson", "Madeline", "Ian", "Ruby", "Enzo", "Eva", "Ezekiel", "Alice", "Declan", "Jesus", "Clara", "Kai", "Naomi", "Micah", "Cora", "Ronan", "Jasmine", "Beau", "Lydia", "Jude", "Quinn", "Milo", "Julia", "Abel", "Willow", "Kingston", "Ariel", "Finn", "Melody", "Zion", "Aurora", "Ali", "Ivy", "Rhett", "Sadie", "Knox", "Isla", "Oscar", "Athena", "Thiago", "Josephine", "Amir", "Adeline", "Cole", "Reagan", "Gael", "Molly", "Hayes", "Sophie", "Kaden", "Valentina", "Louis", "Mary", "Remi", "Delilah", "Max", "Jordyn", "Esther", "Rose", "Atlas", "Jade", "Brooks", "Maria", "Legend", "Annabelle", "Cody", "Valeria", "Kash", "Emilia", "Lane", "Sloane", "Peter", "Rylee", "Saint", "Genevieve", "Warren", "Eliza", "Leon", "Brielle", "Noel", "Payton", "Omar", "Teagan", "Titus", "Alexandra", "Crew", "Katherine", "Atticus", "Eliana", "Walter", "Alaina", "Neil", "Raelynn", "Hugo", "Emerson", "Abram", "Cecilia", "Hank", "Isabelle", "Major", "Laila", "Wayne", "Mckenzie", "Ace", "Adalynn", "Apollo", "Hope", "Bodhi", "Fiona", "Cohen", "Alana", "Denver", "Angelina", "Kason", "Leilani", "Paxton", "Alaia", "Pierce", "Daniela", "Royal", "Gracie", "Solomon", "Lila", "Watson", "Catalina", "Dante", "Summer", "Ford", "Melanie", "Zane", "Gianna", "Iker", "Athena", "Jensen", "Ayla", "Kian", "Oaklynn", "Luka", "Adalyn", "Ander", "Lyric", "Kylo", "Juniper", "Camilo", "Valerie", "Dalton", "Adaline", "Koda", "Jocelyn", "Larry", "Lainey", "Reid", "Rosalie", "Tyson", "Noelle", "Allen", "Ximena", "Forest", "Georgia", "Harry", "Amaya", "Winston", "Blake", "Zeke", "Dream", "Heath", "Remi", "Wilder", "Magnolia", "Armando", "Lilliana", "Emory", "Raegan", "Wells", "Londyn", "Baker", "Aniyah", "Emir", "Charlie", "Dane", "Selah", "Jedidiah", "Sutton", "Kole", "Fatima", "Ledger", "Alia", "Magnus", "Blakely", "Yusuf", "Sawyer", "Jaxx", "Ember", "Kohen", "Malaysia", "Miller", "Cataleya", "Dallas", "Oaklyn", "Finnegan", "Journee", "Makai", "Annalise", "Memphis", "Octavia", "Caspian", "Elora", "Wesson", "Maren", "Maximus", "Aspen", "Jamie", "Alani", "Cade", "Elise", "Khalid", "Ainsley", "Kaysen", "Lia", "Randy", "Anaya", "Colt", "Presley", "Gideon", "Charlee", "Jones", "Rebecca", "Kye", "Myla", "Noe", "Amora", "Tripp", "Ariana", "Ayan", "Freya", "Aziel", "Juliana", "Ahmad", "Finley", "Bishop", "Alayah", "Boston", "Journi", "Case", "Paris", "Corey", "Laura", "Jerry", "Amina", "Keaton", "Lennon", "Lachlan", "Amari", "Musa", "Catalina", "Adan", "Dream", "Harlan", "Giselle", "Kalel", "Justine", "Korbin", "Noa", "Seven", "Journei", "Stone", "Legacy", "Alaric", "Zola", "Avi", "Zara", "Bear", "Mabel", "Bode", "Princess", "Whitley", "Darwin", "Poppy", "Esteban", "Salem", "Idris", "Aitana", "Kabir", "Lexi", "Marcellus", "Eileen", "Zaid", "Remedy", "Cain", "Denise", "Kenji", "Royalty", "Rhys", "Vada", "Shepard", "Harmoni", "Ben", "Sevyn", "Casey", "Tiana", "Maverick", "India", "Santos", "Estrella", "Torin", "Colette", "Brodie", "Hattie", "Colter", "Stevie", "Marvin", "Rowan", "Fisher", "Mina", "Gilbert", "Paulina", "Jed", "Katalina", "Reuben", "Myra", "Jagger", "Celine", "Vincenzo", "Libby", "Zakai", "Hayden", "Arturo", "Zaria", "Azrael", "Emmie", "Bridger", "Laney", "Dario", "Mercy"],
   locations: ["London", "Manchester", "Birmingham", "Glasgow", "Bristol", "Liverpool", "Edinburgh", "Leeds", "Cardiff", "Belfast", "New York", "Los Angeles", "Chicago", "Houston", "Phoenix", "Philadelphia", "San Antonio", "San Diego", "Dallas", "San Jose", "Austin", "Jacksonville", "Fort Worth", "Columbus", "Charlotte", "San Francisco", "Indianapolis", "Seattle", "Denver", "Washington", "Boston", "El Paso", "Nashville", "Detroit", "Oklahoma City", "Portland", "Las Vegas", "Memphis", "Louisville", "Baltimore", "Milwaukee", "Albuquerque", "Tucson", "Fresno", "Sacramento", "Kansas City", "Long Beach", "Mesa", "Atlanta", "Colorado Springs", "Virginia Beach", "Raleigh", "Omaha", "Miami", "Oakland", "Minneapolis", "Tulsa", "Wichita", "New Orleans", "Arlington"],
   productNouns: ["Sofa", "Bed", "Armchair", "Mattress", "Recliner", "Sectional", "Divan", "U-Shape Sofa"],
 };

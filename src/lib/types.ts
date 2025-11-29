@@ -12,6 +12,11 @@ export interface ProductVariant {
   };
 }
 
+export interface ProductColor {
+  name: string;
+  hex: string;
+}
+
 export interface Product {
   id: string;
   slug: string;
@@ -34,6 +39,7 @@ export interface Product {
   style: string;
   material: string;
   color?: string;
+  colors?: ProductColor[];
   stock: number;
   deal?: {
     discountPercentage: number;
