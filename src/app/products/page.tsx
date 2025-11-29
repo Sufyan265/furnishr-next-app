@@ -16,8 +16,6 @@ import { LayoutGrid, List } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getImage } from '@/lib/placeholder-images';
-import ProductFilters from '@/components/product-filters';
-import type { FilterState } from '@/components/product-filters';
 import QuickViewDialog from '@/components/quick-view';
 import { Product } from '@/lib/types';
 
@@ -28,13 +26,6 @@ export default function ProductsPage({
 }) {
   const [view, setView] = useState('grid');
   const [sortBy, setSortBy] = useState('featured');
-  const [filters, setFilters] = useState<FilterState>({
-    priceRange: [0, 2000],
-    rating: 0,
-    materials: [],
-    colors: [],
-  });
-
   const [quickViewProduct, setQuickViewProduct] = useState<Product | null>(null);
 
   const selectedCategory = searchParams.category as string | undefined;
@@ -44,25 +35,6 @@ export default function ProductsPage({
       ? products.filter(p => p.categorySlug === selectedCategory)
       : products;
     
-    // Filtering logic
-    tempProducts = tempProducts.filter(product => {
-        const { priceRange, rating, materials, colors } = filters;
-
-        if (product.price < priceRange[0] || product.price > priceRange[1]) {
-            return false;
-        }
-        if (rating > 0 && product.rating < rating) {
-            return false;
-        }
-        if (materials.length > 0 && (!product.material || !materials.includes(product.material))) {
-            return false;
-        }
-        if (colors.length > 0 && (!product.color || !colors.includes(product.color))) {
-            return false;
-        }
-        return true;
-    });
-
     // Sorting logic
     switch (sortBy) {
         case 'price-asc':
@@ -85,16 +57,8 @@ export default function ProductsPage({
     }
 
     return tempProducts;
-  }, [selectedCategory, filters, sortBy]);
+  }, [selectedCategory, sortBy]);
   
-  const handleClearFilters = () => {
-    setFilters({
-        priceRange: [0, 2000],
-        rating: 0,
-        materials: [],
-        colors: [],
-    });
-  };
 
   return (
     <>
@@ -111,13 +75,6 @@ export default function ProductsPage({
       </div>
 
       <div className="flex flex-col md:flex-row gap-8 lg:gap-12">
-        <aside className="w-full md:w-64 lg:w-72">
-           <ProductFilters 
-                filters={filters} 
-                onFiltersChange={setFilters} 
-                onClearFilters={handleClearFilters}
-            />
-        </aside>
         <main className="w-full">
           <div className="flex flex-col sm:flex-row justify-between items-center mb-4 gap-4">
             <p className="text-muted-foreground text-sm">{filteredProducts.length} products</p>
@@ -148,7 +105,6 @@ export default function ProductsPage({
           {filteredProducts.length === 0 ? (
              <div className="text-center py-16">
                 <p className="text-xl text-muted-foreground">No products match your current filters.</p>
-                <Button onClick={handleClearFilters} className="mt-4">Clear Filters</Button>
              </div>
           ) : view === 'grid' ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-8">
