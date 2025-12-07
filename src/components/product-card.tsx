@@ -45,7 +45,7 @@ export default function ProductCard({ product, onQuickView }: ProductCardProps) 
       <CardHeader className="p-0 relative">
         <Link href={`/products/${product.slug}`} className="block">
           <Image
-            src={primaryImage.imageUrl}
+            src={primaryImage.imageUrl} 
             alt={product.name}
             data-ai-hint={primaryImage.imageHint}
             width={500}

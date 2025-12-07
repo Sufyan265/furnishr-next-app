@@ -2,7 +2,7 @@
 
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import * as z from "zod";
+import { submitContactForm, ContactFormValues, formSchema } from "./actions";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -16,22 +16,6 @@ import type { Metadata } from 'next';
 // It would need to be in a parent layout or page file.
 // For this app structure, we'll omit dynamic metadata for this page.
 
-const formSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
-  email: z.string().email({ message: "Please enter a valid email address." }),
-  message: z.string().min(10, { message: "Message must be at least 10 characters." }),
-});
-
-type ContactFormValues = z.infer<typeof formSchema>;
-
-async function submitContactForm(data: ContactFormValues) {
-  "use server";
-  console.log("Contact form submitted:", data);
-  // Here you would typically send an email or save to a database.
-  // We'll simulate a successful submission.
-  await new Promise(resolve => setTimeout(resolve, 1000));
-  return { success: true, message: "Thank you for your message! We'll be in touch soon." };
-}
 
 export default function ContactPage() {
   const { toast } = useToast();

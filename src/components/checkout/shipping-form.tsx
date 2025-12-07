@@ -14,6 +14,7 @@ export const shippingFormSchema = z.object({
   fullName: z.string().min(2, { message: "Full name must be at least 2 characters." }),
   email: z.string().email({ message: "Please enter a valid email address." }),
   address: z.string().min(5, { message: "Address must be at least 5 characters." }),
+  phone: z.string().min(10, { message: "Phone number must be at least 10 characters." }),
   city: z.string().min(2, { message: "City must be at least 2 characters." }),
   postcode: z.string().min(4, { message: "Postcode must be at least 4 characters." }),
   country: z.string().min(2, { message: "Country must be at least 2 characters." }),
@@ -32,6 +33,7 @@ export default function ShippingForm({ onSubmit }: ShippingFormProps) {
       fullName: "",
       email: "",
       address: "",
+      phone: "",
       city: "",
       postcode: "",
       country: "United Kingdom",
@@ -60,19 +62,34 @@ export default function ShippingForm({ onSubmit }: ShippingFormProps) {
                 </FormItem>
               )}
             />
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Email</FormLabel>
-                  <FormControl>
-                    <Input placeholder="you@example.com" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Email</FormLabel>
+                    <FormControl>
+                      <Input placeholder="you@example.com" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="phone"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Phone Number</FormLabel>
+                    <FormControl>
+                      <Input placeholder="+44 123 456 7890" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
             <FormField
               control={form.control}
               name="address"
@@ -113,7 +130,7 @@ export default function ShippingForm({ onSubmit }: ShippingFormProps) {
                   </FormItem>
                 )}
               />
-               <FormField
+              <FormField
                 control={form.control}
                 name="country"
                 render={({ field }) => (

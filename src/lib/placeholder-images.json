@@ -3,7 +3,7 @@
     {
       "id": "hero-1",
       "description": "Stylish modern living room with a comfortable sofa and large windows.",
-      "imageUrl": "https://images.unsplash.com/photo-1540574163024-5884d2563add?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bW9kZXJuJTIwc29mYXxlbnwwfHx8fDE3NjM5NjI2MTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1633505899118-4ca6bd143043?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "imageHint": "living room"
     },
     {
@@ -21,7 +21,7 @@
     {
       "id": "product-sofa-1",
       "description": "Front view of the 'Aokland' sectional sofa.",
-      "imageUrl": "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "imageUrl": "/images/sofas/aokland-sofa/4_7227c4cf-f2ed-454b-b30a-7af239d97d50_1200x1200.webp",
       "imageHint": "modern sofa"
     },
     {
@@ -33,7 +33,7 @@
     {
       "id": "product-sofa-3",
       "description": "Close-up of the 'Aokland' sofa fabric.",
-      "imageUrl": "https://images.unsplash.com/photo-1596701042331-3144186c0c27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYWJyaWMlMjB0ZXh0dXJlfGVufDB8fHx8MTc2NDc2ODk4MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/aokland-sofa/images-(1).jpeg",
       "imageHint": "fabric texture"
     },
     {
@@ -69,13 +69,13 @@
     {
       "id": "product-sofa-9",
       "description": "Overhead view of the Aokland sofa.",
-      "imageUrl": "https://images.unsplash.com/photo-1653295016206-6568f32a370e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzb2ZhJTIwb3ZlcmhlYWR8ZW58MHx8fHwxNzY0MDcxNDgwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/aokland-sofa/Oakland-2c2-Hero.png",
       "imageHint": "sofa overhead"
     },
     {
       "id": "product-artic-sofa-1",
       "description": "Front view of the 'Artic' sofa bed in a light gray fabric.",
-      "imageUrl": "https://images.unsplash.com/photo-1540574163024-5884d2563add?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzb2ZhJTIwYmVkfGVufDB8fHx8MTc2NDc3MjY3NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/artic-sofa-bed/images-(1).jpeg",
       "imageHint": "sofa bed"
     },
     {
@@ -87,19 +87,19 @@
     {
       "id": "product-ashwin-sofa-1",
       "description": "Front view of the 'Ashwin' sofa bed in a modern living room.",
-      "imageUrl": "https://images.unsplash.com/photo-1550581190-2c6b5b546399?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzb2ZhJTIwYmVkfGVufDB8fHx8MTc2NDg1NjgwNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/ashwin-sofa/61oaUCRsHEL.jpg",
       "imageHint": "modern sofabed"
     },
     {
       "id": "product-ashwin-sofa-2",
       "description": "The 'Ashwin' sofa bed converted to a bed.",
-      "imageUrl": "https://images.unsplash.com/photo-1615875617253-15b5b5f0782a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzb2ZhJTIwYmVkfGVufDB8fHx8MTc2NDg1NjgwNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/ashwin-sofa/4675230092.webp",
       "imageHint": "sofa bed"
     },
     {
       "id": "product-ashwin-sofa-3",
       "description": "Close-up of the 'Ashwin' sofa bed fabric.",
-      "imageUrl": "https://images.unsplash.com/photo-1629838029988-56788a892b1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzb2ZhJTIwZmFicmljfGVufDB8fHx8MTc2NDg1Njg5NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/ashwin-sofa/Ashwin-Black-32-2-scaled.webp",
       "imageHint": "sofa fabric"
     },
     {
@@ -111,7 +111,7 @@
     {
       "id": "product-ashwin-sofa-5",
       "description": "Close-up of the textured fabric on the Ashwin Sofa Bed.",
-      "imageUrl": "https://images.unsplash.com/photo-1560032999-a761e0892a40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxncmV5JTIwc29mYSUyMHRleHR1cmV8ZW58MHx8fHwxNzY1NDI2OTQxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/ashwin-sofa/images-(3).jpeg",
       "imageHint": "grey fabric"
     },
     {
@@ -123,7 +123,7 @@
     {
       "id": "product-ashwin-sofa-7",
       "description": "Detail of the pull-out mechanism for the Ashwin Sofa Bed.",
-      "imageUrl": "https://images.unsplash.com/photo-1615875617253-15b5b5f0782a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzb2ZhJTIwYmVkfGVufDB8fHx8MTc2NDg1NjgwNnww&ixlib.rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/ashwin-sofa/IMG_2007.webp",
       "imageHint": "sofabed mechanism"
     },
     {
@@ -141,13 +141,13 @@
     {
       "id": "product-chesterfield-sofa-2",
       "description": "An angled view of a leather Chesterfield sofa.",
-      "imageUrl": "https://images.unsplash.com/photo-1549187774-b4e6b054244e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjaGVzdGVyZmllbGQlMjBzb2ZhfGVufDB8fHx8MTc2NTI0NjYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/chesterfield-sofa/chesterfield-sofa-decorum-pakistan.jpg",
       "imageHint": "leather sofa"
     },
     {
       "id": "product-chesterfield-sofa-3",
       "description": "A close-up of the button tufting on a Chesterfield sofa.",
-      "imageUrl": "https://images.unsplash.com/photo-1621293299295-a4e6b81804e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzb2ZhJTIwdHVmdGluZ3xlbnwwfHx8fDE3NjUyNDY2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/chesterfield-sofa/hertford-faux-leather-corner-sofa-vintage-grey1.jpg",
       "imageHint": "sofa tufting"
     },
     {
@@ -159,13 +159,13 @@
     {
       "id": "product-chesterfield-sofa-5",
       "description": "Detail of the rolled arm on the Chesterfield sofa.",
-      "imageUrl": "https://images.unsplash.com/photo-1616627447432-6804652c4224?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzb2ZhJTIwYXJtcmVzdHxlbnwwfHx8fDE3NjU1OTk2NzV8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/chesterfield-sofa/images-(1).jpeg",
       "imageHint": "sofa armrest"
     },
     {
       "id": "product-chesterfield-sofa-6",
       "description": "Full view of a Chesterfield sofa in a different living room setting.",
-      "imageUrl": "https://images.unsplash.com/photo-1540574163024-5884d2563add?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxsZWF0aGVyJTIwc29mYXxlbnwwfHx8fDE3NjU1OTk2NzV8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/chesterfield-sofa/images.jpeg",
       "imageHint": "leather sofa"
     },
     {
@@ -177,19 +177,19 @@
     {
       "id": "product-dino-sofa-1",
       "description": "A modern Dino sofa with large cushions in a contemporary living room.",
-      "imageUrl": "https://images.unsplash.com/photo-1512212681594-358c213481b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb21mb3J0YWJsZSUyMHNvZmF8ZW58MHx8fHwxNzY1MjQ3MjY0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/dino-sofa/71+vWpbZ9uL.jpg",
       "imageHint": "comfortable sofa"
     },
     {
       "id": "product-dino-sofa-2",
       "description": "Angled view of the Dino sofa showcasing its depth and comfort.",
-      "imageUrl": "https://images.unsplash.com/photo-1567016432779-1fee8422c589?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb21mb3J0YWJsZSUyMHNvZmF8ZW58MHx8fHwxNzY1MjQ3MjY0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/dino-sofa/Dino_Black_and_Grey_3_Seater_Scatter_Back__16609.jpg",
       "imageHint": "deep sofa"
     },
     {
       "id": "product-dino-sofa-3",
       "description": "Close-up of the textured fabric on the Dino sofa.",
-      "imageUrl": "https://images.unsplash.com/photo-1629838029988-56788a892b1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzb2ZhJTIwZmFicmljfGVufDB8fHx8MTc2NDg1Njg5NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/dino-sofa/Dino_Sofa_3_2_Brown_c2946907-2b67-4c67-8c8c-44502160a603.webp",
       "imageHint": "sofa fabric"
     },
     {
@@ -207,7 +207,7 @@
     {
       "id": "product-dino-sofa-6",
       "description": "A close shot of the Dino sofa's cushions.",
-      "imageUrl": "https://images.unsplash.com/photo-1595152772105-a13480309f40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzb2ZhJTIwY3VzaGlvbnN8ZW58MHx8fHwxNzY1NzA0MDUxfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/harrison-sofa/images-(1).jpeg",
       "imageHint": "sofa cushions"
     },
     {
@@ -219,7 +219,7 @@
     {
       "id": "product-dino-sofa-8",
       "description": "The armrest of the Dino sofa.",
-      "imageUrl": "https://images.unsplash.com/photo-1616627447432-6804652c4224?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxzb2ZhJTIwYXJtcmVzdHxlbnwwfHx8fDE3NjU1OTk2NzV8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/shannon-sofa/mds-Shannon-32-black-and-grey_.jpg",
       "imageHint": "sofa armrest"
     },
     {
@@ -243,31 +243,31 @@
     {
       "id": "product-dylan-sofa-2",
       "description": "Angled view of the 'Dylan' sofa showing its sleek profile.",
-      "imageUrl": "https://images.unsplash.com/photo-1540574163024-5884d2563add?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzb2ZhJTIwYmVkfGVufDB8fHx8MTc2NDc3MjY3NHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/dylan/1e8eb7fa88d95cf4d2cb0ae15d353f55-700x700.jpg",
       "imageHint": "modern sofa"
     },
     {
       "id": "product-dylan-sofa-3",
       "description": "Close-up of the 'Dylan' sofa's velvet fabric texture.",
-      "imageUrl": "https://images.unsplash.com/photo-1599568723850-14196ee0f991?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxibHVlJTIwdmVsdmV0JTIwdGV4dHVyZXxlbnwwfHx8fDE3NjUyNDc2MzB8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/dylan/714gEDCruzL._AC_SL1500_.jpg",
       "imageHint": "velvet texture"
     },
     {
       "id": "product-dylan-sofa-4",
       "description": "Dylan sofa shown in a different color velvet.",
-      "imageUrl": "https://images.unsplash.com/photo-1611637041359-d6d7c6778f69?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHx2ZWx2ZXQlMjBzb2ZhfGVufDB8fHx8MTc2NTcwNTIwM3ww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/dylan/dillon-corner-p-silikon-jumbo-charcoal_5__1.webp",
       "imageHint": "velvet sofa"
     },
     {
       "id": "product-dylan-sofa-5",
       "description": "The Dylan sofa with decorative cushions.",
-      "imageUrl": "https://images.unsplash.com/photo-1583947582967-a4b37c95ab47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxzb2ZhJTIwY3VzaGlvbnN8ZW58MHx8fHwxNzY1NzA1MjAzfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/dylan/dylan_3os_2022-04_soro_23_1500x1021.jpg",
       "imageHint": "sofa cushions"
     },
     {
       "id": "product-dylan-sofa-6",
       "description": "Side profile of the Dylan sofa.",
-      "imageUrl": "https://images.unsplash.com/photo-1567016421869-1e37492a54e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxzb2ZhJTIwcHJvZmlsZXxlbnwwfHx8fDE3NjU3MDUyMDN8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/dylan/Dylan-Jumbo-Cord-Grey-Corner-Sofa.jpg",
       "imageHint": "sofa profile"
     },
     {
@@ -279,7 +279,7 @@
     {
       "id": "product-dylan-sofa-8",
       "description": "A close-up view of the slim track arms of the Dylan sofa.",
-      "imageUrl": "https://images.unsplash.com/photo-1616627447432-6804652c4224?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxzb2ZhJTIwYXJtcmVzdHxlbnwwfHx8fDE3NjU1OTk2NzV8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/shannon-sofa/mds-Shannon-32-black-and-grey_.jpg",
       "imageHint": "sofa armrest"
     },
     {
@@ -303,37 +303,37 @@
     {
       "id": "product-electric-recliner-2",
       "description": "A person relaxing on an electric recliner sofa.",
-      "imageUrl": "https://images.unsplash.com/photo-1550226891-b39213872283?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxyZWNsaW5lciUyMHNvZmF8ZW58MHx8fHwxNzY1MjUwMzU4fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/sorrento-fabric-recliner/sorrento-grey-recliner-sofa-fabric-recliner-sofa-3-2-seater~2223231314324_02c_MP.webp",
       "imageHint": "reclining sofa"
     },
     {
       "id": "product-electric-recliner-3",
       "description": "Close-up of the control buttons and USB port on an electric recliner.",
-      "imageUrl": "https://images.unsplash.com/photo-1628198944510-4a817d9342e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxyZWNsaW5lciUyMGJ1dHRvbnN8ZW58MHx8fHwxNzY1MjUwMzU4fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/electric-recliner-sofa/B16qeDWgp7L.jpg",
       "imageHint": "recliner controls"
     },
     {
       "id": "product-harrison-sofa-1",
       "description": "Front view of the 'Harrison' sofa, showcasing its clean lines.",
-      "imageUrl": "https://images.unsplash.com/photo-1558211624-ac070a2a7a46?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb250ZW1wb3JhcnklMjBzb2ZhfGVufDB8fHx8MTc2NTI1MTAzNnww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/harrison-sofa/harrisongrey-(1).webp",
       "imageHint": "contemporary sofa"
     },
     {
       "id": "product-harrison-sofa-2",
       "description": "Angled view of the 'Harrison' sofa in a modern setting.",
-      "imageUrl": "https://images.unsplash.com/photo-1567016421869-1e37492a54e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb250ZW1wb3JhcnklMjBzb2ZhfGVufDB8fHx8MTc2NTI1MTAzNnww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/harrison-sofa/HarrsionBlack.webp",
       "imageHint": "modern sofa"
     },
     {
       "id": "product-harrison-sofa-3",
       "description": "Close-up of the 'Harrison' sofa's woven fabric.",
-      "imageUrl": "https://images.unsplash.com/photo-1629838029988-56788a892b1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzb2ZhJTIwZmFicmljfGVufDB8fHx8MTc2NDg1Njg5NHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/harrison-sofa/images.jpeg",
       "imageHint": "sofa fabric"
     },
     {
       "id": "product-harrison-sofa-4",
       "description": "The Harrison sofa in a living room with natural light.",
-      "imageUrl": "https://images.unsplash.com/photo-1540574163024-5884d2563add?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxtb2Rlcm4lMjBmYWJyaWMlMjBzb2ZhfGVufDB8fHx8MTc2NTQyNTAwMHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/harrison-sofa/images-(2).jpeg",
       "imageHint": "fabric sofa"
     },
     {
@@ -345,7 +345,7 @@
     {
       "id": "product-harrison-sofa-6",
       "description": "Close-up of the Harrison Sofa cushions.",
-      "imageUrl": "https://images.unsplash.com/photo-1595152772105-a13480309f40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzb2ZhJTIwY3VzaGlvbnN8ZW58MHx8fHwxNzY1NzA0MDUxfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/harrison-sofa/images-(1).jpeg",
       "imageHint": "sofa cushions"
     },
     {
@@ -357,19 +357,19 @@
     {
       "id": "product-ikea-berlin-sofa-1",
       "description": "Front view of the 'Ikea Berlin Sofa Bed' in a modern living space.",
-      "imageUrl": "https://images.unsplash.com/photo-1618220179428-22790b461013?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxtb2Rlcm4lMjBzb2ZhfGVufDB8fHx8MTc2NTQyMDIzOHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/ikea-berlin-sofa-bed/Berlin-Sofa-bed-with-storage-14.webp",
       "imageHint": "modern sofabed"
     },
     {
       "id": "product-ikea-berlin-sofa-2",
       "description": "The 'Ikea Berlin Sofa Bed' converted to a bed with linens.",
-      "imageUrl": "https://images.unsplash.com/photo-1633505899118-4ca6bd140f43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxtb2Rlcm4lMjBzb2ZhfGVufDB8fHx8MTc2NTQyMDIzOHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/ikea-berlin-sofa-bed/photo-output-7-scaled.webp",
       "imageHint": "sofabed open"
     },
     {
       "id": "product-ikea-berlin-sofa-3",
       "description": "Close-up of the grey fabric on the 'Ikea Berlin Sofa Bed'.",
-      "imageUrl": "https://images.unsplash.com/photo-1596701042331-3144186c0c27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMXx8Z3JleSUyMHNvZmElMjBmYWJyaWN8ZW58MHx8fHwxNzY1NDIwMjM4fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/ikea-berlin-sofa-bed/images-(1).jpeg",
       "imageHint": "grey fabric"
     },
     {
@@ -393,19 +393,19 @@
     {
       "id": "product-lilly-sofa-1",
       "description": "A chic and modern 'Lilly' sofa in a light, airy living room.",
-      "imageUrl": "https://images.unsplash.com/photo-1540574163024-5884d2563add?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzb2ZhJTIwYmVkfGVufDB8fHx8MTc2NDc3MjY3NHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/dylan/1e8eb7fa88d95cf4d2cb0ae15d353f55-700x700.jpg",
       "imageHint": "chic sofa"
     },
     {
       "id": "product-lilly-sofa-2",
       "description": "Side view of the 'Lilly' sofa showing its elegant silhouette.",
-      "imageUrl": "https://images.unsplash.com/photo-1618220179428-22790b461013?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBzb2ZhfGVufDB8fHx8MTc2NTQyMDIzOHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/lilly-sofa/81OiKP7sxlL._AC_SX679_.jpg",
       "imageHint": "modern sofa"
     },
     {
       "id": "product-lilly-sofa-3",
       "description": "Close-up of the 'Lilly' sofa's soft fabric.",
-      "imageUrl": "https://images.unsplash.com/photo-1596701042331-3144186c0c27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMXx8Z3JleSUyMHNvZmElMjBmYWJyaWN8ZW58MHx8fHwxNzY1NDIwMjM4fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/lilly-sofa/Green.webp",
       "imageHint": "soft fabric"
     },
     {
@@ -417,13 +417,13 @@
     {
       "id": "product-mini-u-shape-sofa-2",
       "description": "Top-down view of the mini u-shape sofa showcasing its form.",
-      "imageUrl": "https://images.unsplash.com/photo-1633505899118-4ca6bd140f43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx1LXNoYXBlJTIwc29mYXxlbnwwfHx8fDE3NjU0MjI4NTB8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/mini-u-shape-sofa/Carnaby_FDO_1.webp",
       "imageHint": "sofa layout"
     },
     {
       "id": "product-mini-u-shape-sofa-3",
       "description": "Detail of the upholstery on the mini u-shape sofa.",
-      "imageUrl": "https://images.unsplash.com/photo-1608304223637-2565c82a5142?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzb2ZhJTIwdGV4dHVyZXxlbnwwfHx8fDE3NjU0MjI4NTB8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/mini-u-shape-sofa/PRODZFRSP000000000059827_emilia_small-corner-sofa__lifestyle.webp",
       "imageHint": "sofa texture"
     },
     {
@@ -441,13 +441,13 @@
     {
       "id": "product-mini-u-shape-sofa-6",
       "description": "The Mini U-Shape Sofa styled with colorful throw pillows.",
-      "imageUrl": "https://images.unsplash.com/photo-1583947582967-a4b37c95ab47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxzb2ZhJTIwY3VzaGlvbnN8ZW58MHx8fHwxNzY1NzA1MjAzfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/dylan/dylan_3os_2022-04_soro_23_1500x1021.jpg",
       "imageHint": "sofa pillows"
     },
     {
       "id": "product-mini-u-shape-sofa-7",
       "description": "Another angle of the Mini U-Shape Sofa in a contemporary room.",
-      "imageUrl": "https://images.unsplash.com/photo-1633505899118-4ca6bd140f43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHx1LXNoYXBlJTIwc29mYXxlbnwwfHx8fDE3NjU0MjI4NTB8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/mini-u-shape-sofa/teddy_bear_mini_u_shape.jpg",
       "imageHint": "u-shape sofa"
     },
     {
@@ -459,19 +459,19 @@
     {
       "id": "product-roma-recliner-2",
       "description": "The Roma sofa in a reclined position, showing ultimate comfort.",
-      "imageUrl": "https://images.unsplash.com/photo-1550226891-b39213872283?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxyZWNsaW5lciUyMHNvZmF8ZW58MHx8fHwxNzY1MjUwMzU4fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/sorrento-fabric-recliner/sorrento-grey-recliner-sofa-fabric-recliner-sofa-3-2-seater~2223231314324_02c_MP.webp",
       "imageHint": "reclining sofa"
     },
     {
       "id": "product-roma-recliner-3",
       "description": "Close-up of the premium leather texture on the Roma recliner sofa.",
-      "imageUrl": "https://images.unsplash.com/photo-1609342122563-a43ac8917a3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxsZWF0aGVyJTIwdGV4dHVyZXxlbnwwfHx8fDE3NjU0MjQ2NTB8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/roma-leather-recliner-sofa/il_fullxfull.2787364510_1qzr.webp",
       "imageHint": "leather texture"
     },
     {
       "id": "product-roma-recliner-4",
       "description": "Angled view of the Roma Leather Recliner Sofa.",
-      "imageUrl": "https://images.unsplash.com/photo-1540574163024-5884d2563add?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxsZWF0aGVyJTIwcmVjbGluZXJ8ZW58MHx8fHwxNzY3NjE2NzQwfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/roma-leather-recliner-sofa/ilkeston-3-piece-cognac-leather-reclining-living-room-set.jpg",
       "imageHint": "leather recliner"
     },
     {
@@ -483,7 +483,7 @@
     {
       "id": "product-roma-recliner-6",
       "description": "Detail of the stitching on the Roma Leather Recliner.",
-      "imageUrl": "https://images.unsplash.com/photo-1609342122563-a43ac8917a3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxsZWF0aGVyJTIwdGV4dHVyZXxlbnwwfHx8fDE3NjU0MjQ2NTB8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/roma-leather-recliner-sofa/images.jpeg",
       "imageHint": "leather stitching"
     },
     {
@@ -501,7 +501,7 @@
     {
       "id": "product-shannon-sofa-1",
       "description": "Front view of the 'Shannon' sofa in a modern living room.",
-      "imageUrl": "https://images.unsplash.com/photo-1540574163024-5884d2563add?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxtb2Rlcm4lMjBmYWJyaWMlMjBzb2ZhfGVufDB8fHx8MTc2NTQyNTAwMHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/shannon-sofa/417528429_919352990190296_7619376326696411000_n_1200x1200.jpg",
       "imageHint": "modern sofa"
     },
     {
@@ -513,19 +513,19 @@
     {
       "id": "product-shannon-sofa-3",
       "description": "Close-up of the 'Shannon' sofa's fabric.",
-      "imageUrl": "https://images.unsplash.com/photo-1567016421869-1e37492a54e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxtb2Rlcm4lMjBmYWJyaWMlMjBzb2ZhfGVufDB8fHx8MTc2NTQyNTAwMHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/shannon-sofa/Beige-Brown-Corner-01.webp",
       "imageHint": "sofa fabric"
     },
     {
       "id": "product-shannon-sofa-4",
       "description": "The Shannon sofa with contrasting scatter cushions.",
-      "imageUrl": "https://images.unsplash.com/photo-1583947582967-a4b37c95ab47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxzb2ZhJTIwY3VzaGlvbnN8ZW58MHx8fHwxNzY1NzA1MjAzfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/dylan/dylan_3os_2022-04_soro_23_1500x1021.jpg",
       "imageHint": "scatter cushions"
     },
     {
       "id": "product-shannon-sofa-5",
       "description": "A close up of the elegant curved arms of the Shannon sofa.",
-      "imageUrl": "https://images.unsplash.com/photo-1616627447432-6804652c4224?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxzb2ZhJTIwYXJtcmVzdHxlbnwwfHx8fDE3NjU1OTk2NzV8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/shannon-sofa/mds-Shannon-32-black-and-grey_.jpg",
       "imageHint": "curved armrest"
     },
     {
@@ -543,31 +543,31 @@
     {
       "id": "product-sorrento-recliner-2",
       "description": "The Sorrento fabric recliner in a partially reclined position.",
-      "imageUrl": "https://images.unsplash.com/photo-1567016421869-1e37492a54e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxjb250ZW1wb3JhcnklMjBzb2ZhfGVufDB8fHx8MTc2NTI1MTAzNnww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/sorrento-fabric-recliner/product-main--RS10002803-01.webp",
       "imageHint": "reclining sofa"
     },
     {
       "id": "product-sorrento-recliner-3",
       "description": "Close-up of the soft chenille fabric on the Sorrento recliner.",
-      "imageUrl": "https://images.unsplash.com/photo-1596701042331-3144186c0c27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxmYWJyaWMlMjB0ZXh0dXJlfGVufDB8fHx8MTc2NDc2ODk4MXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/sorrento-fabric-recliner/sorrento-2-seater-1.jpg",
       "imageHint": "chenille fabric"
     },
     {
       "id": "product-sorrento-recliner-4",
       "description": "The Sorrento recliner in a fully reclined position.",
-      "imageUrl": "https://images.unsplash.com/photo-1550226891-b39213872283?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxyZWNsaW5lciUyMHNvZmF8ZW58MHx8fHwxNzY1MjUwMzU4fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/sorrento-fabric-recliner/sorrento-grey-recliner-sofa-fabric-recliner-sofa-3-2-seater~2223231314324_02c_MP.webp",
       "imageHint": "fully reclined"
     },
     {
       "id": "product-sorrento-recliner-5",
       "description": "Overhead view of the Sorrento fabric recliner.",
-      "imageUrl": "https://images.unsplash.com/photo-1512212681594-358c213481b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxjb21mb3J0YWJsZSUyMHNvZmF8ZW58MHx8fHwxNzY1MjQ3MjY0fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/sorrento-fabric-recliner/Sorrentocornersofa.webp",
       "imageHint": "comfortable sofa"
     },
     {
       "id": "product-verona-u-shape-sofa-1",
       "description": "A large, modern Verona u-shape sofa in a spacious living room.",
-      "imageUrl": "https://images.unsplash.com/photo-1633216823527-7a8y7974d6b62?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHx1LXNoYXBlJTIwc29mYXxlbnwwfHx8fDE3NjU0MjI4NTB8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/u shape/39_a88af29b-38dd-4c19-9a66-ae8749681471.webp",
       "imageHint": "large sofa"
     },
     {
@@ -579,7 +579,7 @@
     {
       "id": "product-verona-u-shape-sofa-3",
       "description": "Detail of the soft, textured upholstery of the Verona u-shape sofa.",
-      "imageUrl": "https://images.unsplash.com/photo-1608304223637-2565c82a5142?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxzb2ZhJTIwdGV4dHVyZXxlbnwwfHx8fDE3NjU0MjI4NTB8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/u shape/beige_u_shaped_sofa_958f26dd-0d97-4950-9fea-d8f616265371.webp",
       "imageHint": "sofa texture"
     },
     {
@@ -591,7 +591,7 @@
     {
       "id": "product-verona-u-shape-sofa-5",
       "description": "Close-up of the cushions on the Verona U-Shape Sofa.",
-      "imageUrl": "https://images.unsplash.com/photo-1595152772105-a13480309f40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxzb2ZhJTIwY3VzaGlvbnN8ZW58MHx8fHwxNzY1NzA0MDUxfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/u shape/unnamed.png",
       "imageHint": "sofa cushions"
     },
     {
@@ -603,7 +603,7 @@
     {
       "id": "product-verona-sofa-1",
       "description": "Front view of the 'Verona' sofa in a stylish living room.",
-      "imageUrl": "https://images.unsplash.com/photo-1540574163024-5884d2563add?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxtb2Rlcm4lMjBmYWJyaWMlMjBzb2ZhfGVufDB8fHx8MTc2NTQyNTAwMHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/verona-sofa/$_57.jpeg",
       "imageHint": "modern sofa"
     },
     {
@@ -615,7 +615,7 @@
     {
       "id": "product-verona-sofa-3",
       "description": "Close-up of the 'Verona' sofa fabric.",
-      "imageUrl": "https://images.unsplash.com/photo-1567016421869-1e37492a54e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxtb2Rlcm4lMjBmYWJyaWMlMjBzb2ZhfGVufDB8fHx8MTc2NTQyNTAwMHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/shannon-sofa/Beige-Brown-Corner-01.webp",
       "imageHint": "sofa fabric"
     },
     {
@@ -627,19 +627,19 @@
     {
       "id": "product-verona-sofa-5",
       "description": "Side profile of the Verona sofa.",
-      "imageUrl": "https://images.unsplash.com/photo-1567016432779-1fee8422c589?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxjb21mb3J0YWJsZSUyMHNvZmF8ZW58MHx8fHwxNzY1MjQ3MjY0fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/verona-sofa/DIAMONDS_-_SOFA_WORLD._29780337-GREEN.webp",
       "imageHint": "sofa profile"
     },
     {
       "id": "product-verona-sofa-6",
       "description": "The Verona sofa with decorative throw pillows.",
-      "imageUrl": "https://images.unsplash.com/photo-1583947582967-a4b37c95ab47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxzb2ZhJTIwY3VzaGlvbnN8ZW58MHx8fHwxNzY1NzA1MjAzfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/dylan/dylan_3os_2022-04_soro_23_1500x1021.jpg",
       "imageHint": "sofa pillows"
     },
     {
       "id": "product-verona-sofa-7",
       "description": "Close-up of the armrest on the Verona sofa.",
-      "imageUrl": "https://images.unsplash.com/photo-1616627447432-6804652c4224?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxzb2ZhJTIwYXJtcmVzdHxlbnwwfHx8fDE3NjU1OTk2NzV8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/shannon-sofa/mds-Shannon-32-black-and-grey_.jpg",
       "imageHint": "sofa armrest"
     },
     {
@@ -663,13 +663,13 @@
     {
       "id": "product-verona-sofa-11",
       "description": "The texture of the fabric on the Verona sofa.",
-      "imageUrl": "https://images.unsplash.com/photo-1596701042331-3144186c0c27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxzb2ZhJTIwZmFicmljfGVufDB8fHx8MTc2NDc2ODk4MXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/verona-sofa/Verona-32-dark-grey.jpg",
       "imageHint": "fabric texture"
     },
     {
       "id": "product-verona-sofa-12",
       "description": "Overhead shot of the Verona sofa.",
-      "imageUrl": "https://images.unsplash.com/photo-1653295016206-6568f32a370e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxzb2ZhJTIwb3ZlcmhlYWR8ZW58MHx8fHwxNzY0MDcxNDgwfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/sofas/verona-sofa/verona-corner-sofa-suite-living-room-sofa~8000800080036_01c_MP.jpeg",
       "imageHint": "sofa overhead"
     },
     {
@@ -765,7 +765,7 @@
     {
       "id": "product-bed-ambassador-1",
       "description": "A luxurious Ambassador bed with a tall, buttoned headboard.",
-      "imageUrl": "https://images.unsplash.com/photo-1560185127-6ed189bf02a4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "imageUrl": "/images/beds/ambassador-bed/42.jpg",
       "imageHint": "luxury bed"
     },
     {
@@ -777,13 +777,13 @@
     {
       "id": "product-bed-ambassador-3",
       "description": "Close up on the deep buttoned headboard of the Ambassador bed.",
-      "imageUrl": "https://images.unsplash.com/photo-1571576404938-1a052d921387?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "imageUrl": "/images/beds/ambassador-bed/Ambassador-side-.webp",
       "imageHint": "buttoned headboard"
     },
     {
       "id": "product-bed-ambassador-4",
       "description": "Ambassador bed in a master bedroom setting.",
-      "imageUrl": "https://images.unsplash.com/photo-1582285843339-2033d59e3a7c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "imageUrl": "/images/beds/ambassador-bed/Ambassador_Bed_-_Comfy_Sleeps_Home-5194159.webp",
       "imageHint": "master bedroom"
     },
     {
@@ -807,7 +807,7 @@
     {
       "id": "product-bed-ambassador-8",
       "description": "Ambassador bed shown with matching bedside tables.",
-      "imageUrl": "https://images.unsplash.com/photo-1595526114035-0d45ed16433d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "imageUrl": "/images/beds/ambassador-bed/ambassadorbedframe.webp",
       "imageHint": "bedroom furniture"
     },
     {
@@ -819,7 +819,7 @@
     {
       "id": "product-bed-ambassador-10",
       "description": "A lifestyle shot of the Ambassador bed in a decorated room.",
-      "imageUrl": "https://images.unsplash.com/photo-1615875995438-d6b535875f28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "imageUrl": "/images/beds/ambassador-bed/ambasador-2.webp",
       "imageHint": "luxury bedroom"
     },
     {
@@ -903,7 +903,7 @@
     {
       "id": "product-bed-divan-3",
       "description": "Close-up of the Divan Ottoman Bed headboard.",
-      "imageUrl": "https://images.unsplash.com/photo-1596959393217-b7a338118278?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxiZWQlMjBoZWFkYm9hcmR8ZW58MHx8fHwxNzYzOTEwNDA4fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/beds/divan-ottoman-bed/8K _ 9K18-800x800.jpg",
       "imageHint": "bed headboard"
     },
     {
@@ -927,7 +927,7 @@
     {
       "id": "product-bed-divan-7",
       "description": "Divan Ottoman Bed from an angle.",
-      "imageUrl": "https://images.unsplash.com/photo-1648401443998-7c49da9481db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxvdHRvbWFuJTIwYmVkfGVufDB8fHx8MTc2NDAwNTczMXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/beds/divan-ottoman-bed/eclat_ottoman_end_open_d_1.jpg",
       "imageHint": "ottoman bed"
     },
     {
@@ -945,7 +945,7 @@
     {
       "id": "product-bed-divan-10",
       "description": "Leg detail of the Divan Ottoman Bed.",
-      "imageUrl": "https://images.unsplash.com/photo-1763062690820-7a4264fd4cc6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmdXJuaXR1cmUlMjBsZWd8ZW58MHx8fHwxNzY0MDA1NTQ5fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/beds/divan-ottoman-bed/18_0004_H25_54_F17_SideLift_Deep_Open.webp",
       "imageHint": "furniture leg"
     },
     {
@@ -987,7 +987,7 @@
     {
       "id": "product-bed-mirror-6",
       "description": "Florida Mirror Bed in a master bedroom setting.",
-      "imageUrl": "https://images.unsplash.com/photo-1762195021888-d025550b5121?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxnbGFtb3JvdXMlMjBiZWRyb29tfGVufDB8fHx8MTc2NDAwNTkxN3ww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/beds/mirror-bed/51jZkOIF2nL._AC_SX569_.jpg",
       "imageHint": "glamorous bedroom"
     },
     {
@@ -1101,7 +1101,7 @@
     {
       "id": "product-bed-panel-line-6",
       "description": "Panel Line Bed from an angle.",
-      "imageUrl": "https://images.unsplash.com/photo-1633505899118-4ca6bd140f43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxwYW5lbCUyMGJlZHxlbnwwfHx8fDE3NjQwMDU5MTd8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/beds/panel-line-bed/71++GT9jN0L.jpg",
       "imageHint": "panel bed"
     },
     {
@@ -1167,7 +1167,7 @@
     {
       "id": "product-bed-panel-wing-back-7",
       "description": "Panel Wing Back Bed from an angle.",
-      "imageUrl": "https://images.unsplash.com/photo-1689626698503-47934d011285?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3aW5nYmFjayUyMGJlZHxlbnwwfHx8fDE3NjM5MTI1NTB8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/beds/panel-wing-back-bed/219a5f1f-0bcd-40f8-b87e-267b8927be7f.webp",
       "imageHint": "wingback bed"
     },
     {

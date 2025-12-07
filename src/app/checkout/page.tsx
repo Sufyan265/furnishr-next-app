@@ -32,9 +32,9 @@ export default function CheckoutPage() {
     setCurrentStep('review');
   };
 
-  const handlePlaceOrder = () => {
+  const handlePlaceOrder = async () => {
     // In a real app, this is where you would process the payment and create the order
-    console.log("Placing order with:", { shippingData, cart });
+    // console.log("Placing order with:", { shippingData, cart });
 
     const discountedSubtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
   
@@ -52,10 +52,7 @@ export default function CheckoutPage() {
 
     let message = `New Order Received!\n\n`;
     message += `*Payment Method*: Cash on Delivery\n\n`;
-    message += `*Customer Details*:\n`;
-    message += `Name: ${shippingData?.fullName}\n`;
-    message += `Email: ${shippingData?.email}\n`;
-    message += `Address: ${shippingData?.address}, ${shippingData?.city}, ${shippingData?.postcode}, ${shippingData?.country}\n\n`;
+
     message += `*Order Items*:\n`;
     cart.forEach(item => {
         message += `- ${item.name} (x${item.quantity}) - £${(item.price * item.quantity).toFixed(2)}\n`;
@@ -67,28 +64,45 @@ export default function CheckoutPage() {
         }
     });
     message += `\n*Total: £${total.toFixed(2)}*`;
+    
+    try {
+      const res = await fetch("/api/send-order-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: shippingData?.fullName,
+          email: shippingData?.email,
+          phone: shippingData?.phone,
+          address: `${shippingData?.address}, ${shippingData?.city}, ${shippingData?.postcode}, ${shippingData?.country}`,
+          order: message,
+        }),
+      });
 
-    if (!whatsappNumber) {
-        console.error('WhatsApp number is not configured.');
-        toast({
-            variant: 'destructive',
-            title: "Configuration Error",
-            description: "Could not send order notification. Please contact support.",
-        });
-        return;
-    }
-    
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-    
-    // Simulate API call
-    toast({
+      if (!res.ok) {
+        const errorData = await res.json();
+        throw new Error(errorData.error || 'Failed to send order email');
+      }
+
+      const data = await res.json();
+      // console.log('Order email sent successfully:', data);
+
+      toast({
         title: "Order Placed!",
         description: "Thank you for your purchase. We will contact you for confirmation.",
-    });
+      });
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      console.error('Error placing order:', errorMessage);
+      toast({
+        variant: 'destructive',
+        title: "Error",
+        description: `Failed to place order: ${errorMessage}`,
+      });
+      return;
+    }
 
     clearCart();
-    
-    window.open(whatsappUrl, '_blank');
+    router.push('/cart');
   };
 
   const steps: { id: CheckoutStep; name: string }[] = [

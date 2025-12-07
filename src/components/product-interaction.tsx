@@ -135,8 +135,8 @@ export default function ProductInteraction({ product, isQuickView = false }: Pro
     isDealActive = true;
   } else if (individualDeal) {
     displayPrice = finalPrice; // The price from data is the discounted price
-    originalPrice = finalPrice / (1 - product.deal.discountPercentage / 100); // Calculate original price
-    discountPercentage = product.deal.discountPercentage;
+    originalPrice = finalPrice / (1 - product.deal!.discountPercentage / 100); // Calculate original price
+    discountPercentage = product.deal!.discountPercentage;
     isDealActive = true;
   } else {
     displayPrice = finalPrice;

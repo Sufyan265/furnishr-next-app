@@ -26,8 +26,21 @@ import BlogSection from '@/components/home/blog-section';
 import NewsletterSignup from '@/components/home/newsletter-signup';
 import SaleSpotlight from '@/components/home/sale-spotlight';
 import AuthDialog from '@/components/auth-dialog';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
+
+function AuthDialogWrapper() {
+  const [isAuthDialogOpen, setAuthDialogOpen] = useState(false);
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    if (searchParams.get('auth') === 'login') {
+      setAuthDialogOpen(true);
+    }
+  }, [searchParams]);
+
+  return <AuthDialog open={isAuthDialogOpen} onOpenChange={setAuthDialogOpen} />;
+}
 
 export default function Home() {
   const chooseUsImage = categoryImages['living-room'];
@@ -49,15 +62,6 @@ export default function Home() {
     { id: 5, imageId: "product-sofa-3" },
     { id: 6, imageId: "product-bed-divan-1" },
   ];
-
-  const [isAuthDialogOpen, setAuthDialogOpen] = useState(false);
-  const searchParams = useSearchParams();
-
-  useEffect(() => {
-    if (searchParams.get('auth') === 'login') {
-      setAuthDialogOpen(true);
-    }
-  }, [searchParams]);
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
@@ -376,7 +380,9 @@ export default function Home() {
 
       <NewsletterSignup />
 
-      <AuthDialog open={isAuthDialogOpen} onOpenChange={setAuthDialogOpen} />
+      <Suspense fallback={null}>
+        <AuthDialogWrapper />
+      </Suspense>
     </div>
   );
 }

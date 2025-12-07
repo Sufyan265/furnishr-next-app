@@ -1,6 +1,6 @@
 
 import type { Metadata } from 'next';
-import { UniversalAccess } from 'lucide-react';
+import { Users } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Accessibility Statement | Furnishr',
@@ -13,7 +13,7 @@ export default function AccessibilityStatementPage() {
       <section className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
-            <UniversalAccess className="h-12 w-12 mx-auto text-primary" />
+            <Users className="h-12 w-12 mx-auto text-primary" />
             <h1 className="font-headline text-4xl md:text-5xl font-bold mt-4">Accessibility Statement</h1>
             <p className="mt-4 text-lg text-muted-foreground">
               We are committed to making our website accessible to everyone.
