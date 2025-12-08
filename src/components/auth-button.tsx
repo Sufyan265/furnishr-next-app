@@ -54,7 +54,7 @@ export default function AuthButton() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" className="relative h-8 w-8 rounded-full">
+        <Button variant="ghost" className="relative h-8 sm:w-8 w-7 rounded-full">
           <Avatar className="h-8 w-8">
             <AvatarFallback>
               <UserIcon className="h-5 w-5" />

@@ -57,7 +57,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
-        <Link href="/" className="mr-6 flex items-center space-x-2">
+        <Link href="/" className="sm:mr-6 mr-2 flex items-center space-x-2">
           <Sofa className="h-7 w-7 text-primary" />
           <span className="font-headline text-2xl font-bold tracking-wide">Furnishr</span>
         </Link>
@@ -106,7 +106,7 @@ export default function Header() {
         <div className="flex items-center space-x-1 sm:space-x-2 ml-auto">
             <ThemeToggle />
             <AuthButton />
-            <Button variant="ghost" size="icon" asChild>
+            <Button variant="ghost" size="icon" asChild className="sm:w-10 w-7">
               <Link href="/wishlist" aria-label="Wishlist">
                 <div className="relative">
                   <Heart className="h-5 w-5" />
@@ -118,7 +118,7 @@ export default function Header() {
                 </div>
               </Link>
             </Button>
-            <Button variant="ghost" size="icon" asChild>
+            <Button variant="ghost" size="icon" asChild className="sm:w-10 w-7">
               <Link href="/cart" aria-label="Shopping Cart">
                 <div className="relative">
                   <ShoppingCart className="h-5 w-5" />

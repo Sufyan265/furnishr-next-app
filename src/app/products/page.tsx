@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useState, useMemo } from 'react';
+import { use, useState, useMemo } from 'react';
 import { products, categories } from '@/lib/data';
 import ProductCard from '@/components/product-card';
 import {
@@ -22,13 +22,14 @@ import { Product } from '@/lib/types';
 export default function ProductsPage({
   searchParams,
 }: {
-  searchParams: { [key: string]: string | string[] | undefined };
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
   const [view, setView] = useState('grid');
   const [sortBy, setSortBy] = useState('featured');
   const [quickViewProduct, setQuickViewProduct] = useState<Product | null>(null);
 
-  const selectedCategory = searchParams.category as string | undefined;
+  const resolvedSearchParams = use(searchParams);
+  const selectedCategory = resolvedSearchParams.category as string | undefined;
 
   const filteredProducts = useMemo(() => {
     let tempProducts = selectedCategory

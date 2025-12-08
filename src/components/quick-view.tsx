@@ -20,7 +20,7 @@ export default function QuickViewDialog({ product, isOpen, onOpenChange }: Quick
     return (
         <Dialog open={isOpen} onOpenChange={onOpenChange}>
             <DialogContent className="max-w-4xl p-0">
-                <div className="grid md:grid-cols-2">
+                <div className="grid md:grid-cols-1">
                     <div className="md:hidden p-6 border-b">
                          <DialogHeader>
                             <DialogTitle className="font-headline text-2xl">{product.name}</DialogTitle>

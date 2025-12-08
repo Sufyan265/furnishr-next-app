@@ -218,7 +218,7 @@ export default function ProductInteraction({ product, isQuickView = false }: Pro
             <CarouselPrevious className="left-2" />
             <CarouselNext className="right-2" />
           </Carousel>
-          <div className="flex gap-2 mt-4 justify-center">
+          <div className="flex gap-2 mt-4 justify-center md:flex-nowrap flex-wrap">
             {productImages.map((image, index) => (
               <button
                 key={index}
@@ -385,7 +385,7 @@ export default function ProductInteraction({ product, isQuickView = false }: Pro
           <CarouselPrevious className="left-2" />
           <CarouselNext className="right-2" />
         </Carousel>
-        <div className="flex gap-2 mt-4 justify-center">
+        <div className="flex gap-2 mt-4 justify-center md:flex-nowrap flex-wrap">
           {productImages.map((image, index) => (
             <button
               key={index}
