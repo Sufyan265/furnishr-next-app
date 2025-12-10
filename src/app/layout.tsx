@@ -12,6 +12,7 @@ import { FirebaseClientProvider } from '@/firebase';
 import SocialProofPopup from '@/components/social-proof-popup';
 import { ThemeProvider } from '@/components/theme-provider';
 import BackToTopButton from '@/components/back-to-top-button';
+import TawkTo from '@/components/TawkTo';
 
 export const metadata: Metadata = {
   title: 'Furnishr - Modern Furniture for Your Home',
@@ -43,6 +44,7 @@ export default function RootLayout({
                 <Header />
                 <main className="flex-grow">
                   {children}
+                  <TawkTo />
                 </main>
                 <Footer />
               </CartProvider>
