@@ -40,13 +40,9 @@ export const products: Product[] = [
     price: 280.00,
     color: 'Beige',
     colors: [
-      { name: 'Steel', hex: '#595959' },
-      { name: 'Silver', hex: '#C0C0C0' },
-      { name: 'Grey', hex: '#808080' },
+      { name: 'Claret', hex: '#531D29' },
+      { name: 'Mink', hex: '#8A7968' },
       { name: 'Black', hex: '#1c1c1c' },
-      { name: 'Mink Brown', hex: '#9F7357' },
-      { name: 'Fawn', hex: '#e3b172' },
-      { name: 'Claret', hex: '#522b1d' },
     ],
     variants: [
       { size: '1 Seater', price: 250.00 },
@@ -100,8 +96,7 @@ export const products: Product[] = [
       { name: 'Grey', hex: '#808080' },
       { name: 'Black', hex: '#1c1c1c' },
       { name: 'Mink', hex: '#8A7968' },
-      { name: 'Blue', hex: '#1c4b97' },
-      { name: 'Dark Blue', hex: '#14194c' },
+      { name: 'Blue', hex: '#061f4c' },
     ],
     variants: [
       { size: '1 Seater', price: 270.00 },
@@ -128,12 +123,11 @@ export const products: Product[] = [
     price: 440.00,
     color: 'Green',
     colors: [
+      { name: 'Blue', hex: '#061f4c' },
+      { name: 'Claret', hex: '#531D29' },
       { name: 'Steel', hex: '#595959' },
-      { name: 'Silver', hex: '#C0C0C0' },
-      { name: 'Grey', hex: '#808080' },
       { name: 'Black', hex: '#1c1c1c' },
-      { name: 'Green', hex: '#1A352C' },
-      { name: 'Blue', hex: '#1b4c74' },
+      { name: 'Turquoise', hex: '#448D9D' },
     ],
     variants: [
       { size: '1 Seater', price: 380.00 },
@@ -160,12 +154,9 @@ export const products: Product[] = [
     price: 320.00,
     color: 'Grey',
     colors: [
-      { name: 'Steel', hex: '#595959' },
-      { name: 'Silver', hex: '#C0C0C0' },
+      { name: 'Mink', hex: '#8A7968' },
       { name: 'Grey', hex: '#808080' },
       { name: 'Black', hex: '#1c1c1c' },
-      { name: 'Mink', hex: '#8A7968' },
-      { name: 'Clove Dye', hex: '#aa6131' },
     ],
     variants: [
       { size: '2 Seater', price: 320.00, dimensions: { width: '174cm', depth: '96cm', height: '93cm' } },
@@ -195,8 +186,8 @@ export const products: Product[] = [
       { name: 'Silver', hex: '#C0C0C0' },
       { name: 'Grey', hex: '#808080' },
       { name: 'Black', hex: '#1c1c1c' },
-      { name: 'Ice Blue', hex: '#99cfe0' },
-      { name: 'Dark Green', hex: '#3a6754' },
+      { name: 'Mink', hex: '#8A7968' },
+      { name: 'Turquoise', hex: '#448D9D' },
     ],
     variants: [
       { size: '2 Seater', price: 280.00, dimensions: { width: '155cm', depth: '83cm', height: '63cm' } },
@@ -260,10 +251,10 @@ export const products: Product[] = [
     price: 290.00,
     color: 'Grey',
     colors: [
-      { name: 'Steel', hex: '#595959' },
       { name: 'Silver', hex: '#C0C0C0' },
       { name: 'Grey', hex: '#808080' },
       { name: 'Black', hex: '#1c1c1c' },
+      { name: 'White', hex: '#FFFFFF' },
     ],
     variants: [
       { size: '1 Seater', price: 270.00 },
@@ -290,11 +281,9 @@ export const products: Product[] = [
     price: 399.00,
     color: 'Grey',
     colors: [
+      { name: 'Blue', hex: '#061f4c' },
       { name: 'Silver', hex: '#C0C0C0' },
-      { name: 'Grey', hex: '#808080' },
       { name: 'Mink', hex: '#8A7968' },
-      { name: 'Blue', hex: '#1c4b97' },
-      { name: 'Dark Green', hex: '#3a6754' },
     ],
     rating: 4.5,
     reviewCount: 30,
@@ -317,7 +306,6 @@ export const products: Product[] = [
     colors: [
       { name: 'Steel', hex: '#595959' },
       { name: 'Grey', hex: '#808080' },
-      { name: 'Balmy Palm Tree', hex: '#5b6f63' },
     ],
     variants: [
       { size: '2 Seater', price: 1199.99 },
@@ -342,9 +330,10 @@ export const products: Product[] = [
     price: 540.00,
     color: 'Grey',
     colors: [
+      { name: 'White', hex: '#FFFFFF' },
       { name: 'Silver', hex: '#C0C0C0' },
       { name: 'Grey', hex: '#808080' },
-      { name: 'Fawn', hex: '#e3b172' },
+      { name: 'Steel', hex: '#595959' },
     ],
     rating: 4.7,
     reviewCount: 45,
@@ -366,11 +355,10 @@ export const products: Product[] = [
     color: 'Brown',
     colors: [
       { name: 'Steel', hex: '#595959' },
-      { name: 'Silver', hex: '#C0C0C0' },
+      { name: 'Grey', hex: '#808080' },
       { name: 'Black', hex: '#1c1c1c' },
-      { name: 'Fawn', hex: '#e3b172' },
-      { name: 'Claret', hex: '#722F37' },
-      { name: 'Rum Chocolate', hex: '#440c13' },
+      { name: 'Mink', hex: '#8A7968' },
+      { name: 'Claret', hex: '#531D29' },
     ],
     variants: [
       { size: '1 Seater', price: 299.00 },
@@ -408,7 +396,6 @@ export const products: Product[] = [
     colors: [
       { name: 'Steel', hex: '#595959' },
       { name: 'Silver', hex: '#C0C0C0' },
-      { name: 'Grey', hex: '#808080' },
       { name: 'Black', hex: '#1c1c1c' },
       { name: 'Mink', hex: '#8A7968' },
     ],
@@ -439,7 +426,6 @@ export const products: Product[] = [
     color: 'Grey',
     colors: [
       { name: 'Steel', hex: '#595959' },
-      { name: 'Silver', hex: '#C0C0C0' },
       { name: 'Grey', hex: '#808080' },
     ],
     variants: [
@@ -470,6 +456,7 @@ export const products: Product[] = [
     colors: [
       { name: 'Silver', hex: '#C0C0C0' },
       { name: 'Grey', hex: '#808080' },
+      { name: 'White', hex: '#FFFFFF' },
     ],
     rating: 4.8,
     reviewCount: 55,
@@ -494,9 +481,8 @@ export const products: Product[] = [
       { name: 'Silver', hex: '#C0C0C0' },
       { name: 'Grey', hex: '#808080' },
       { name: 'Black', hex: '#1c1c1c' },
-      { name: 'Balmy Palm Tree', hex: '#5b6f63' },
-      { name: 'Fawn', hex: '#e3b172' },
-      { name: 'Rum Chocolate', hex: '#440c13' },
+      { name: 'Mink', hex: '#8A7968' },
+      { name: 'Blue', hex: '#061f4c' },
     ],
     variants: [
       { size: '1 Seater', price: 270.00, dimensions: { width: '110cm', height: '95cm', depth: '95cm' } },
@@ -695,7 +681,7 @@ export const products: Product[] = [
     categorySlug: 'beds',
     price: 320.00,
     color: 'Grey',
-      colors: [
+    colors: [
       { name: 'Sandstone', hex: '#7b7162' },
       { name: 'Grey Cloud', hex: '#bbb8b2' },
     ],

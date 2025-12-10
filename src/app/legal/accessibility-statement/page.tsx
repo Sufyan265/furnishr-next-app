@@ -38,7 +38,7 @@ export default function AccessibilityStatementPage() {
             <h2 className="font-headline text-2xl font-semibold text-foreground pt-4">Feedback</h2>
             <p>We welcome your feedback on the accessibility of our website. Please let us know if you encounter accessibility barriers:</p>
             <ul className="list-disc list-inside space-y-2">
-              <li>Phone: +44 (0)20 1234 5678</li>
+              <li>Phone: +44 7522 971029</li>
               <li>E-mail: hello@furnishr.co.uk</li>
               <li>Visitor Address: 123 Design Street, London, EC1V 9DD, United Kingdom</li>
             </ul>

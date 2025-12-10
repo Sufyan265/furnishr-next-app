@@ -142,7 +142,7 @@ export default function ContactPage() {
                         <div>
                             <h3 className="font-headline text-xl font-semibold">Call Us</h3>
                             <p className="text-muted-foreground">Mon - Fri, 9am - 5pm GMT</p>
-                            <a href="tel:+442012345678" className="text-primary font-medium hover:underline">+44 (0)20 1234 5678</a>
+                            <a href="tel:+442012345678" className="text-primary font-medium hover:underline">+44 7522 971029</a>
                         </div>
                     </div>
                     <div className="flex items-start gap-4">
