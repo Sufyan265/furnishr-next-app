@@ -57,55 +57,64 @@ export default function CartPage() {
                 <div className="divide-y">
                   {cart.map(item => {
                     const isSaleApplicable = siteWideSale.isActive && !['ambassador-park-lane-bed', 'astral-sleigh-bed', 'divan-ottoman-bed'].includes(item.slug);
-                    
+
                     const itemPrice = item.price;
                     let itemOriginalPrice = item.price;
 
                     if (isSaleApplicable) {
-                        itemOriginalPrice = item.price / (1 - (siteWideSale.discountPercentage / 100));
+                      itemOriginalPrice = item.price / (1 - (siteWideSale.discountPercentage / 100));
                     }
 
                     return (
-                    <div key={item.id + (item.variant?.size || '') + (item.withMattress ? '-mattress' : '')} className="flex items-center p-4 sm:p-6">
-                      <div className="relative h-24 w-24 sm:h-32 sm:w-32 rounded-md overflow-hidden flex-shrink-0">
-                        <Image
-                          src={getImage(item.imageIds[0]).imageUrl}
-                          alt={item.name}
-                          data-ai-hint={getImage(item.imageIds[0]).imageHint}
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                      <div className="ml-4 sm:ml-6 flex-grow grid sm:grid-cols-2 gap-4 items-center">
-                        <div>
-                          <h3 className="font-headline text-lg sm:text-xl font-semibold">
-                            <Link href={`/products/${item.slug}`}>{item.name}</Link>
-                          </h3>
-                          {item.variant && <p className="text-muted-foreground text-sm">{item.variant.size}</p>}
-                          {item.withMattress && <p className="text-sm text-primary font-medium">+ Mattress</p>}
-                          <p className="text-muted-foreground text-sm">{item.category}</p>
-                          <div className="mt-2">
-                             <p className="text-lg font-bold text-destructive">£{itemPrice.toFixed(2)}</p>
-                             {isSaleApplicable && <p className="text-sm text-muted-foreground line-through">£{itemOriginalPrice.toFixed(2)}</p>}
+                      <div key={item.id + (item.variant?.size || '') + (item.withMattress ? '-mattress' : '')} className="flex items-center p-4 sm:p-6">
+                        <div className="relative h-24 w-24 sm:h-32 sm:w-32 rounded-md overflow-hidden flex-shrink-0">
+                          <Image
+                            src={getImage(item.imageIds[0]).imageUrl}
+                            alt={item.name}
+                            data-ai-hint={getImage(item.imageIds[0]).imageHint}
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
+                        <div className="ml-4 sm:ml-6 flex-grow grid sm:grid-cols-2 gap-4 items-center">
+                          <div>
+                            <h3 className="font-headline text-lg sm:text-xl font-semibold">
+                              <Link href={`/products/${item.slug}`}>{item.name}</Link>
+                            </h3>
+                            <div className="flex items-center gap-2">
+                              {item.variant && <p className="text-muted-foreground text-sm">{item.variant.size}</p>}
+                              {item.selectedColor && (
+                                <div className="flex items-center gap-2 mt-1">
+                                  <div className="w-4 h-4 rounded-full border border-border" style={{ backgroundColor: item.selectedColor.hex }}></div>
+                                  <p className="text-muted-foreground text-sm">{item.selectedColor.name}</p>
+                                </div>
+                              )}
+                            </div>
+                            {item.withMattress && <p className="text-sm text-primary font-medium">+ Mattress</p>}
+                            <p className="text-muted-foreground text-sm">{item.category}</p>
+                            <div className="mt-2">
+                              <p className="text-lg font-bold text-destructive">£{itemPrice.toFixed(2)}</p>
+                              {isSaleApplicable && <p className="text-sm text-muted-foreground line-through">£{itemOriginalPrice.toFixed(2)}</p>}
+                            </div>
+                          </div>
+                          <div className="flex items-center justify-between sm:justify-self-end sm:flex-col sm:items-end sm:gap-2">
+                            <div className="flex items-center border rounded-md">
+                              <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => updateQuantity(item.id, item.quantity - 1, item.variant?.size)} disabled={item.quantity === 1}>
+                                <Minus className="h-4 w-4" />
+                              </Button>
+                              <span className="w-8 text-center text-sm font-bold">{item.quantity}</span>
+                              <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => updateQuantity(item.id, item.quantity + 1, item.variant?.size)}>
+                                <Plus className="h-4 w-4" />
+                              </Button>
+                            </div>
+                            <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-destructive" onClick={() => removeFromCart(item.id, item.variant?.size)}>
+                              <Trash2 className="h-4 w-4" />
+                            </Button>
                           </div>
                         </div>
-                        <div className="flex items-center justify-between sm:justify-self-end sm:flex-col sm:items-end sm:gap-2">
-                          <div className="flex items-center border rounded-md">
-                            <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => updateQuantity(item.id, item.quantity - 1, item.variant?.size)} disabled={item.quantity === 1}>
-                              <Minus className="h-4 w-4" />
-                            </Button>
-                            <span className="w-8 text-center text-sm font-bold">{item.quantity}</span>
-                            <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => updateQuantity(item.id, item.quantity + 1, item.variant?.size)}>
-                              <Plus className="h-4 w-4" />
-                            </Button>
-                          </div>
-                          <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-destructive" onClick={() => removeFromCart(item.id, item.variant?.size)}>
-                            <Trash2 className="h-4 w-4" />
-                          </Button>
-                        </div>
                       </div>
-                    </div>
-                  )})}
+                    )
+                  })}
                 </div>
               </CardContent>
             </Card>
@@ -121,13 +130,13 @@ export default function CartPage() {
                   <span className="text-muted-foreground">Subtotal</span>
                   <span className="font-semibold">£{discountedSubtotal.toFixed(2)}</span>
                 </div>
-                 {totalSavings > 0.01 && (
+                {totalSavings > 0.01 && (
                   <>
                     <div className="flex justify-between text-destructive">
                       <span className="font-semibold">Sale Discount</span>
                       <span className="font-semibold">-£{totalSavings.toFixed(2)}</span>
                     </div>
-                     <div className="flex justify-between text-xs text-muted-foreground">
+                    <div className="flex justify-between text-xs text-muted-foreground">
                       <span>Original price</span>
                       <span className="line-through">£{originalSubtotal.toFixed(2)}</span>
                     </div>

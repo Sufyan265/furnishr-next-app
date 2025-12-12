@@ -15,9 +15,10 @@ interface ReviewStepProps {
   shippingData: ShippingFormData;
   onPlaceOrder: () => void;
   onBack: () => void;
+  isPlacingOrder?: boolean;
 }
 
-export default function ReviewStep({ shippingData, onPlaceOrder, onBack }: ReviewStepProps) {
+export default function ReviewStep({ shippingData, onPlaceOrder, onBack, isPlacingOrder = false }: ReviewStepProps) {
   const { cart } = useCart();
   const discountedSubtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
   
@@ -82,6 +83,12 @@ export default function ReviewStep({ shippingData, onPlaceOrder, onBack }: Revie
                     <div>
                       <p className="font-semibold">{item.name} <span className="text-muted-foreground text-sm">x {item.quantity}</span></p>
                       {item.variant && <p className="text-sm text-muted-foreground">{item.variant.size}</p>}
+                      {item.selectedColor && (
+                        <div className="flex items-center gap-2 mt-1">
+                          <div className="w-3 h-3 rounded-full border border-border" style={{ backgroundColor: item.selectedColor.hex }}></div>
+                          <p className="text-xs text-muted-foreground">{item.selectedColor.name}</p>
+                        </div>
+                      )}
                     </div>
                   </div>
                   <p className="font-semibold">£{(item.price * item.quantity).toFixed(2)}</p>
@@ -120,11 +127,11 @@ export default function ReviewStep({ shippingData, onPlaceOrder, onBack }: Revie
         </CardContent>
         <CardFooter>
             <div className="flex flex-col-reverse sm:flex-row-reverse gap-4 w-full">
-                <Button size="lg" className="font-bold w-full sm:w-auto" onClick={onPlaceOrder}>
+                <Button size="lg" className="font-bold w-full sm:w-auto" onClick={onPlaceOrder} disabled={isPlacingOrder}>
                     <CheckCircle className="mr-2 h-5 w-5" />
-                    Place Order
+                    {isPlacingOrder ? 'Processing...' : 'Place Order'}
                 </Button>
-                <Button type="button" variant="outline" onClick={onBack} className="w-full sm:w-auto">
+                <Button type="button" variant="outline" onClick={onBack} className="w-full sm:w-auto" disabled={isPlacingOrder}>
                     <ArrowLeft className="mr-2 h-5 w-5" />
                     Back to Shipping
                 </Button>

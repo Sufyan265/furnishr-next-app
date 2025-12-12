@@ -1,15 +1,19 @@
 import nodemailer from "nodemailer";
 
-export async function POST(req: any) {
+export async function POST(req: any,) {
   try {
-    const gmailAddress = process.env.GMAIL_ADDRESS;
-    const gmailAppPassword = process.env.GMAIL_APP_PASSWORD;
+    const smtpHost = process.env.SMTP_HOST;
+    const smtpPort = process.env.SMTP_PORT;
+    const smtpUser = process.env.SMTP_USER;
+    const smtpPass = process.env.SMTP_PASS;
     const adminEmail = process.env.ADMIN_EMAIL;
 
-    if (!gmailAddress || !gmailAppPassword || !adminEmail) {
+    if (!smtpHost || !smtpPort || !smtpUser || !smtpPass || !adminEmail) {
       console.error('Missing email configuration:', {
-        gmailAddress: !!gmailAddress,
-        gmailAppPassword: !!gmailAppPassword,
+        smtpHost: !!smtpHost,
+        smtpPort: !!smtpPort,
+        smtpUser: !!smtpUser,
+        smtpPass: !!smtpPass,
         adminEmail: !!adminEmail,
       });
       return Response.json(
@@ -29,19 +33,22 @@ export async function POST(req: any) {
     }
 
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: smtpHost,
+      port: parseInt(smtpPort),
+      secure: true,
       auth: {
-        user: gmailAddress,
-        pass: gmailAppPassword,
+        user: smtpUser,
+        pass: smtpPass,
       },
+      tls: {
+        rejectUnauthorized: false
+      }
     });
 
-    await transporter.verify();
-
     const mailOptions = {
-      from: gmailAddress,
+      from: smtpUser,
       to: adminEmail,
-      subject: "New Order Notification",
+      subject: "New Order Notification - Furnishr",
       html: `
         <html>
         <body style="font-family: Arial, sans-serif, Helvetica; background: #f5f5f5; padding: 20px;">
@@ -70,7 +77,7 @@ export async function POST(req: any) {
                   <tr>
                     <td style="padding-top: 15px;">
                       <h3 style="margin: 0; color: #333; border-bottom: 1px solid #ddd; padding-bottom: 8px;">Order Details</h3>
-                      <pre style="background: #fafafa; padding: 15px; border-radius: 6px; color: #333; border: 1px solid #eee; white-space: pre-wrap; font-size: 14px;">
+                      <pre style="background: #fafafa; padding: 15px; border-radius: 6px; color: #333; border: 1px solid #eee; white-space: pre-wrap; font-size: 14px; font-family: Arial, sans-serif;">
                         ${order}
                       </pre>
                     </td>

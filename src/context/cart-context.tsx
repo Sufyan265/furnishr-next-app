@@ -2,12 +2,12 @@
 "use client";
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import type { CartItem, Product, ProductVariant } from '@/lib/types';
+import type { CartItem, Product, ProductVariant, ProductColor } from '@/lib/types';
 import { siteWideSale } from '@/lib/data';
 
 interface CartContextType {
   cart: CartItem[];
-  addToCart: (product: Product, quantity: number, variant?: ProductVariant, withMattress?: boolean) => void;
+  addToCart: (product: Product, quantity: number, variant?: ProductVariant, withMattress?: boolean, selectedColor?: ProductColor) => void;
   removeFromCart: (productId: string, variantSize?: string) => void;
   updateQuantity: (productId: string, quantity: number, variantSize?: string) => void;
   clearCart: () => void;
@@ -33,32 +33,33 @@ export function CartProvider({ children }: { children: ReactNode }) {
     localStorage.setItem('furnishr_cart', JSON.stringify(cart));
   }, [cart]);
 
-  const addToCart = (product: Product, quantity: number, variant?: ProductVariant, withMattress?: boolean) => {
+  const addToCart = (product: Product, quantity: number, variant?: ProductVariant, withMattress?: boolean, selectedColor?: ProductColor) => {
     setCart(prevCart => {
-      const existingItem = prevCart.find(item => 
-        item.id === product.id && 
+      const existingItem = prevCart.find(item =>
+        item.id === product.id &&
         item.variant?.size === variant?.size &&
-        item.withMattress === withMattress
+        item.withMattress === withMattress &&
+        item.selectedColor?.name === selectedColor?.name
       );
-      
+
       if (existingItem) {
         return prevCart.map(item =>
-          item.id === product.id && item.variant?.size === variant?.size && item.withMattress === withMattress
+          item.id === product.id && item.variant?.size === variant?.size && item.withMattress === withMattress && item.selectedColor?.name === selectedColor?.name
             ? { ...item, quantity: item.quantity + quantity }
             : item
         );
       }
-      
+
       let price = product.price;
 
-      const cartItem: CartItem = { ...product, quantity, price, variant, withMattress };
-      
+      const cartItem: CartItem = { ...product, quantity, price, variant, withMattress, selectedColor };
+
       return [...prevCart, cartItem];
     });
   };
 
   const removeFromCart = (productId: string, variantSize?: string) => {
-    setCart(prevCart => prevCart.filter(item => 
+    setCart(prevCart => prevCart.filter(item =>
       !(item.id === productId && item.variant?.size === variantSize)
     ));
   };
@@ -71,7 +72,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
     setCart(prevCart =>
       prevCart.map(item =>
         item.id === productId && item.variant?.size === variantSize
-         ? { ...item, quantity } : item
+          ? { ...item, quantity } : item
       )
     );
   };

@@ -158,7 +158,7 @@ export default function ProductInteraction({ product, isQuickView = false }: Pro
   const dimensions = selectedVariant?.dimensions || product.dimensions;
 
   const handleAddToCart = () => {
-    addToCart({ ...product, price: displayPrice }, quantity, selectedVariant, withMattress);
+    addToCart({ ...product, price: displayPrice }, quantity, selectedVariant, withMattress, selectedColor);
     let description = `${quantity} x ${product.name}`;
     if (selectedVariant) {
       description += ` (${selectedVariant.size})`;

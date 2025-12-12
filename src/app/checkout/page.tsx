@@ -26,6 +26,7 @@ export default function CheckoutPage() {
   const router = useRouter();
   const [currentStep, setCurrentStep] = useState<CheckoutStep>('shipping');
   const [shippingData, setShippingData] = useState<ShippingFormData | null>(null);
+  const [isPlacingOrder, setIsPlacingOrder] = useState(false);
 
   const handleShippingSubmit = (data: ShippingFormData) => {
     setShippingData(data);
@@ -33,11 +34,12 @@ export default function CheckoutPage() {
   };
 
   const handlePlaceOrder = async () => {
+    setIsPlacingOrder(true);
     // In a real app, this is where you would process the payment and create the order
     // console.log("Placing order with:", { shippingData, cart });
 
     const discountedSubtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-  
+
     const originalSubtotal = cart.reduce((sum, item) => {
       const isSaleApplicable = siteWideSale.isActive && !['ambassador-park-lane-bed', 'astral-sleigh-bed', 'divan-ottoman-bed'].includes(item.slug);
       let itemPrice = item.price;
@@ -46,7 +48,7 @@ export default function CheckoutPage() {
       }
       return sum + itemPrice * item.quantity;
     }, 0);
-  
+
     const shipping = discountedSubtotal > 250 ? 0 : 49.99;
     const total = discountedSubtotal + shipping;
 
@@ -55,16 +57,19 @@ export default function CheckoutPage() {
 
     message += `*Order Items*:\n`;
     cart.forEach(item => {
-        message += `- ${item.name} (x${item.quantity}) - £${(item.price * item.quantity).toFixed(2)}\n`;
-        if (item.variant) {
-            message += `  Size: ${item.variant.size}\n`;
-        }
-        if (item.withMattress) {
-            message += '  + Mattress\n';
-        }
+      message += `- ${item.name} (x${item.quantity}) - £${(item.price * item.quantity).toFixed(2)}\n`;
+      if (item.variant) {
+        message += `  Size: ${item.variant.size}\n`;
+      }
+      if (item.selectedColor) {
+        message += `  Color: ${item.selectedColor.name}\n`;
+      }
+      if (item.withMattress) {
+        message += '  + Mattress\n';
+      }
     });
     message += `\n*Total: £${total.toFixed(2)}*`;
-    
+
     try {
       const res = await fetch("/api/send-order-email", {
         method: "POST",
@@ -98,7 +103,10 @@ export default function CheckoutPage() {
         title: "Error",
         description: `Failed to place order: ${errorMessage}`,
       });
+      setIsPlacingOrder(false);
       return;
+    } finally {
+      setIsPlacingOrder(false);
     }
 
     clearCart();
@@ -130,19 +138,20 @@ export default function CheckoutPage() {
     <div className="container mx-auto px-4 py-8 md:py-16">
       <div className="max-w-2xl mx-auto">
         <CheckoutStepper steps={steps} currentStep={currentStep} />
-        
-        <div className="mt-12">
-            {currentStep === 'shipping' && (
-                <ShippingForm onSubmit={handleShippingSubmit} />
-            )}
 
-            {currentStep === 'review' && shippingData && (
-                <ReviewStep
-                    shippingData={shippingData}
-                    onPlaceOrder={handlePlaceOrder}
-                    onBack={() => setCurrentStep('shipping')}
-                />
-            )}
+        <div className="mt-12">
+          {currentStep === 'shipping' && (
+            <ShippingForm onSubmit={handleShippingSubmit} />
+          )}
+
+          {currentStep === 'review' && shippingData && (
+            <ReviewStep
+              shippingData={shippingData}
+              onPlaceOrder={handlePlaceOrder}
+              onBack={() => setCurrentStep('shipping')}
+              isPlacingOrder={isPlacingOrder}
+            />
+          )}
         </div>
       </div>
     </div>

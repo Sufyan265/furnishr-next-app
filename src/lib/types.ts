@@ -105,6 +105,7 @@ export interface CartItem extends Product {
   quantity: number;
   variant?: ProductVariant;
   withMattress?: boolean;
+  selectedColor?: ProductColor;
 }
 
 export type WishlistItem = Product;
