@@ -2,10 +2,10 @@ import nodemailer from "nodemailer";
 
 export async function POST(req: any,) {
   try {
-    const smtpHost = process.env.SMTP_HOST;
-    const smtpPort = process.env.SMTP_PORT;
-    const smtpUser = process.env.SMTP_USER;
-    const smtpPass = process.env.SMTP_PASS;
+    const smtpHost = process.env.BREVO_HOST;
+    const smtpPort = process.env.BREVO_PORT;
+    const smtpUser = process.env.BREVO_USER;
+    const smtpPass = process.env.BREVO_SMTP_KEY;
     const adminEmail = process.env.ADMIN_EMAIL;
 
     if (!smtpHost || !smtpPort || !smtpUser || !smtpPass || !adminEmail) {
@@ -35,18 +35,18 @@ export async function POST(req: any,) {
     const transporter = nodemailer.createTransport({
       host: smtpHost,
       port: parseInt(smtpPort),
-      secure: true,
+      secure: false,
       auth: {
         user: smtpUser,
         pass: smtpPass,
       },
       tls: {
-        rejectUnauthorized: false
+        ciphers: 'SSLv3'
       }
     });
 
     const mailOptions = {
-      from: smtpUser,
+      from: `"Furnishr" <${adminEmail}>`,
       to: adminEmail,
       subject: "New Order Notification - Furnishr",
       html: `
